@@ -1,0 +1,33 @@
+000|Nacional - Tributada integralmente|0|T
+010|Nacional - Tributada e com cobrança do ICMS por substituição tributária|0|T
+020|Nacional - Com redução de base de cálculo|0|T
+030|Nacional - Isenta ou não tributada e com cobrança do ICMS por substituição tributária|0|T
+040|Nacional - Isenta|0|T
+041|Nacional - Não tributada|0|T
+050|Nacional - Suspensão|0|T
+051|Nacional - Diferimento|0|T
+060|Nacional - ICMS cobrado anteriormente por substituição tributária|0|T
+070|Nacional - Com redução de base de cálculo e cobrança do ICMS por substituição tributária|0|T
+090|Nacional - Outras|0|T
+100|Estrangeira - Importação direta - Tributada integralmente|1|T
+110|Estrangeira - Importação direta - Tributada e com cobrança do ICMS por substituição tributária|1|T
+120|Estrangeira - Importação direta - Com redução de base de cálculo|1|T
+130|Estrangeira - Importação direta - Isenta ou não tributada e com cobrança do ICMS por substituição tributária|1|T
+140|Estrangeira - Importação direta - Isenta|1|T
+141|Estrangeira - Importação direta - Não tributada|1|T
+150|Estrangeira - Importação direta - Suspensão|1|T
+151|Estrangeira - Importação direta - Diferimento|1|T
+160|Estrangeira - Importação direta - ICMS cobrado anteriormente por substituição tributária|1|T
+170|Estrangeira - Importação direta - Com redução de base de cálculo e cobrança do ICMS por substituição tributária|1|T
+190|Estrangeira - Importação direta - Outras|1|T
+200|Estrangeira - Adquirida no mercado interno - Tributada integralmente|1|T
+210|Estrangeira - Adquirida no mercado interno - Tributada e com cobrança do ICMS por substituição tributária|1|T
+220|Estrangeira - Adquirida no mercado interno - Com redução de base de cálculo|1|T
+230|Estrangeira - Adquirida no mercado interno - Isenta ou não tributada e com cobrança do ICMS por substituição tributária|1|T
+240|Estrangeira - Adquirida no mercado interno - Isenta|1|T
+241|Estrangeira - Adquirida no mercado interno - Não tributada|1|T
+250|Estrangeira - Adquirida no mercado interno - Suspensão|1|T
+251|Estrangeira - Adquirida no mercado interno - Diferimento|1|T
+260|Estrangeira - Adquirida no mercado interno - ICMS cobrado anteriormente por substituição tributária|1|T
+270|Estrangeira - Adquirida no mercado interno - Com redução de base de cálculo e cobrança do ICMS por substituição tributária|1|T
+290|Estrangeira - Adquirida no mercado interno - Outras|1|T
