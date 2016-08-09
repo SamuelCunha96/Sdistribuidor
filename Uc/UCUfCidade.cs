@@ -48,6 +48,7 @@ namespace Sdistribuidor.View.UC
             set
             {
                 CboUF.SelectedValue = value;
+                Cidade(value);
             }
         }
 

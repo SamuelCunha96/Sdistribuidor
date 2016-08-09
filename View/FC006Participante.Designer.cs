@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbDadosParticipante = new System.Windows.Forms.TabPage();
-            this.tpCadastroLocalEntrega = new System.Windows.Forms.TabPage();
+            this.lblIE = new System.Windows.Forms.Label();
+            this.txtIE = new System.Windows.Forms.TextBox();
+            this.lblIdParticipante = new System.Windows.Forms.Label();
             this.chkComercial = new System.Windows.Forms.CheckBox();
             this.ucUfCidade1 = new Sdistribuidor.View.UC.UCUfCidade();
             this.TxtBairro = new System.Windows.Forms.TextBox();
@@ -56,6 +58,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCnpjCpf = new System.Windows.Forms.Label();
+            this.tpCadastroLocalEntrega = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtObs = new System.Windows.Forms.TextBox();
+            this.grdListaLocalEntrega = new System.Windows.Forms.DataGridView();
+            this.BtnAdd = new System.Windows.Forms.Button();
             this.ucUfCidadeLocalEntrega = new Sdistribuidor.View.UC.UCUfCidade();
             this.TxtBairroEntrega = new System.Windows.Forms.TextBox();
             this.MskTelefoneEntrega = new System.Windows.Forms.MaskedTextBox();
@@ -65,16 +72,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.BtnAdd = new System.Windows.Forms.Button();
-            this.grdListaPedidos = new System.Windows.Forms.DataGridView();
             this.ColEntUF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEntCidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEntBairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEntLogradouro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEntNrEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEntTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TxtObs = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.ColParticipante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcBase.SuspendLayout();
             this.tpPesquisa.SuspendLayout();
             this.tpDados.SuspendLayout();
@@ -82,7 +87,7 @@
             this.tabControl1.SuspendLayout();
             this.tbDadosParticipante.SuspendLayout();
             this.tpCadastroLocalEntrega.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListaPedidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListaLocalEntrega)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnCancelar
@@ -139,6 +144,9 @@
             // 
             // tbDadosParticipante
             // 
+            this.tbDadosParticipante.Controls.Add(this.lblIE);
+            this.tbDadosParticipante.Controls.Add(this.txtIE);
+            this.tbDadosParticipante.Controls.Add(this.lblIdParticipante);
             this.tbDadosParticipante.Controls.Add(this.chkComercial);
             this.tbDadosParticipante.Controls.Add(this.ucUfCidade1);
             this.tbDadosParticipante.Controls.Add(this.TxtBairro);
@@ -165,28 +173,34 @@
             this.tbDadosParticipante.Text = "Participante";
             this.tbDadosParticipante.UseVisualStyleBackColor = true;
             // 
-            // tpCadastroLocalEntrega
+            // lblIE
             // 
-            this.tpCadastroLocalEntrega.Controls.Add(this.label10);
-            this.tpCadastroLocalEntrega.Controls.Add(this.TxtObs);
-            this.tpCadastroLocalEntrega.Controls.Add(this.grdListaPedidos);
-            this.tpCadastroLocalEntrega.Controls.Add(this.BtnAdd);
-            this.tpCadastroLocalEntrega.Controls.Add(this.ucUfCidadeLocalEntrega);
-            this.tpCadastroLocalEntrega.Controls.Add(this.TxtBairroEntrega);
-            this.tpCadastroLocalEntrega.Controls.Add(this.MskTelefoneEntrega);
-            this.tpCadastroLocalEntrega.Controls.Add(this.TxtEndEntrega);
-            this.tpCadastroLocalEntrega.Controls.Add(this.TxtLogEntrega);
-            this.tpCadastroLocalEntrega.Controls.Add(this.label2);
-            this.tpCadastroLocalEntrega.Controls.Add(this.label3);
-            this.tpCadastroLocalEntrega.Controls.Add(this.label4);
-            this.tpCadastroLocalEntrega.Controls.Add(this.label9);
-            this.tpCadastroLocalEntrega.Location = new System.Drawing.Point(4, 22);
-            this.tpCadastroLocalEntrega.Name = "tpCadastroLocalEntrega";
-            this.tpCadastroLocalEntrega.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCadastroLocalEntrega.Size = new System.Drawing.Size(631, 293);
-            this.tpCadastroLocalEntrega.TabIndex = 1;
-            this.tpCadastroLocalEntrega.Text = "Local de Entrega";
-            this.tpCadastroLocalEntrega.UseVisualStyleBackColor = true;
+            this.lblIE.AutoSize = true;
+            this.lblIE.Location = new System.Drawing.Point(141, 29);
+            this.lblIE.Name = "lblIE";
+            this.lblIE.Size = new System.Drawing.Size(17, 13);
+            this.lblIE.TabIndex = 19;
+            this.lblIE.Text = "IE";
+            this.lblIE.Visible = false;
+            // 
+            // txtIE
+            // 
+            this.txtIE.Location = new System.Drawing.Point(144, 45);
+            this.txtIE.MaxLength = 100;
+            this.txtIE.Name = "txtIE";
+            this.txtIE.Size = new System.Drawing.Size(131, 21);
+            this.txtIE.TabIndex = 18;
+            this.txtIE.Visible = false;
+            // 
+            // lblIdParticipante
+            // 
+            this.lblIdParticipante.AutoSize = true;
+            this.lblIdParticipante.Location = new System.Drawing.Point(477, 243);
+            this.lblIdParticipante.Name = "lblIdParticipante";
+            this.lblIdParticipante.Size = new System.Drawing.Size(78, 13);
+            this.lblIdParticipante.TabIndex = 17;
+            this.lblIdParticipante.Text = "Nome Fantasia";
+            this.lblIdParticipante.Visible = false;
             // 
             // chkComercial
             // 
@@ -244,6 +258,7 @@
             this.rbCNPJ.TabStop = true;
             this.rbCNPJ.Text = "CNPJ";
             this.rbCNPJ.UseVisualStyleBackColor = true;
+            this.rbCNPJ.Click += new System.EventHandler(this.rbCNPJ_Click);
             // 
             // rbCPF
             // 
@@ -256,6 +271,7 @@
             this.rbCPF.TabStop = true;
             this.rbCPF.Text = "CPF";
             this.rbCPF.UseVisualStyleBackColor = true;
+            this.rbCPF.Click += new System.EventHandler(this.rbCPF_Click);
             // 
             // TxtFantasia
             // 
@@ -352,6 +368,105 @@
             this.lblCnpjCpf.TabIndex = 10;
             this.lblCnpjCpf.Text = "CPF";
             // 
+            // tpCadastroLocalEntrega
+            // 
+            this.tpCadastroLocalEntrega.Controls.Add(this.label10);
+            this.tpCadastroLocalEntrega.Controls.Add(this.TxtObs);
+            this.tpCadastroLocalEntrega.Controls.Add(this.grdListaLocalEntrega);
+            this.tpCadastroLocalEntrega.Controls.Add(this.BtnAdd);
+            this.tpCadastroLocalEntrega.Controls.Add(this.ucUfCidadeLocalEntrega);
+            this.tpCadastroLocalEntrega.Controls.Add(this.TxtBairroEntrega);
+            this.tpCadastroLocalEntrega.Controls.Add(this.MskTelefoneEntrega);
+            this.tpCadastroLocalEntrega.Controls.Add(this.TxtEndEntrega);
+            this.tpCadastroLocalEntrega.Controls.Add(this.TxtLogEntrega);
+            this.tpCadastroLocalEntrega.Controls.Add(this.label2);
+            this.tpCadastroLocalEntrega.Controls.Add(this.label3);
+            this.tpCadastroLocalEntrega.Controls.Add(this.label4);
+            this.tpCadastroLocalEntrega.Controls.Add(this.label9);
+            this.tpCadastroLocalEntrega.Location = new System.Drawing.Point(4, 22);
+            this.tpCadastroLocalEntrega.Name = "tpCadastroLocalEntrega";
+            this.tpCadastroLocalEntrega.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCadastroLocalEntrega.Size = new System.Drawing.Size(631, 293);
+            this.tpCadastroLocalEntrega.TabIndex = 1;
+            this.tpCadastroLocalEntrega.Text = "Local de Entrega";
+            this.tpCadastroLocalEntrega.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(397, 46);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(26, 13);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "Obs";
+            // 
+            // TxtObs
+            // 
+            this.TxtObs.Location = new System.Drawing.Point(400, 62);
+            this.TxtObs.MaxLength = 50;
+            this.TxtObs.Name = "TxtObs";
+            this.TxtObs.Size = new System.Drawing.Size(164, 21);
+            this.TxtObs.TabIndex = 16;
+            // 
+            // grdListaLocalEntrega
+            // 
+            this.grdListaLocalEntrega.AllowUserToAddRows = false;
+            this.grdListaLocalEntrega.AllowUserToDeleteRows = false;
+            this.grdListaLocalEntrega.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdListaLocalEntrega.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdListaLocalEntrega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdListaLocalEntrega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColEntUF,
+            this.ColEntCidade,
+            this.ColEntBairro,
+            this.ColEntLogradouro,
+            this.ColEntNrEnd,
+            this.ColEntTelefone,
+            this.ColParticipante,
+            this.ColID});
+            this.grdListaLocalEntrega.EnableHeadersVisualStyles = false;
+            this.grdListaLocalEntrega.Location = new System.Drawing.Point(7, 91);
+            this.grdListaLocalEntrega.Name = "grdListaLocalEntrega";
+            this.grdListaLocalEntrega.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdListaLocalEntrega.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.grdListaLocalEntrega.RowHeadersVisible = false;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.grdListaLocalEntrega.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.grdListaLocalEntrega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdListaLocalEntrega.Size = new System.Drawing.Size(616, 198);
+            this.grdListaLocalEntrega.TabIndex = 18;
+            this.grdListaLocalEntrega.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdListaLocalEntrega_KeyDown);
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.BtnAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnAdd.FlatAppearance.BorderSize = 2;
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.ForeColor = System.Drawing.Color.White;
+            this.BtnAdd.Location = new System.Drawing.Point(565, 54);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(59, 34);
+            this.BtnAdd.TabIndex = 17;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
             // ucUfCidadeLocalEntrega
             // 
             this.ucUfCidadeLocalEntrega.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -430,68 +545,12 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Logradouro";
             // 
-            // BtnAdd
-            // 
-            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.BtnAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BtnAdd.FlatAppearance.BorderSize = 2;
-            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdd.ForeColor = System.Drawing.Color.White;
-            this.BtnAdd.Location = new System.Drawing.Point(565, 54);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(59, 34);
-            this.BtnAdd.TabIndex = 17;
-            this.BtnAdd.Text = "Add";
-            this.BtnAdd.UseVisualStyleBackColor = false;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // grdListaPedidos
-            // 
-            this.grdListaPedidos.AllowUserToAddRows = false;
-            this.grdListaPedidos.AllowUserToDeleteRows = false;
-            this.grdListaPedidos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdListaPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.grdListaPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdListaPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColEntUF,
-            this.ColEntCidade,
-            this.ColEntBairro,
-            this.ColEntLogradouro,
-            this.ColEntNrEnd,
-            this.ColEntTelefone});
-            this.grdListaPedidos.EnableHeadersVisualStyles = false;
-            this.grdListaPedidos.Location = new System.Drawing.Point(7, 91);
-            this.grdListaPedidos.Name = "grdListaPedidos";
-            this.grdListaPedidos.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdListaPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.grdListaPedidos.RowHeadersVisible = false;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.grdListaPedidos.RowsDefaultCellStyle = dataGridViewCellStyle14;
-            this.grdListaPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdListaPedidos.Size = new System.Drawing.Size(616, 198);
-            this.grdListaPedidos.TabIndex = 18;
-            // 
             // ColEntUF
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Format = "N0";
-            dataGridViewCellStyle9.NullValue = null;
-            this.ColEntUF.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColEntUF.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColEntUF.HeaderText = "Uf";
             this.ColEntUF.Name = "ColEntUF";
             this.ColEntUF.ReadOnly = true;
@@ -512,9 +571,9 @@
             // 
             // ColEntLogradouro
             // 
-            dataGridViewCellStyle10.Format = "g";
-            dataGridViewCellStyle10.NullValue = null;
-            this.ColEntLogradouro.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Format = "g";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ColEntLogradouro.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColEntLogradouro.HeaderText = "Logradouro";
             this.ColEntLogradouro.Name = "ColEntLogradouro";
             this.ColEntLogradouro.ReadOnly = true;
@@ -522,8 +581,8 @@
             // 
             // ColEntNrEnd
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColEntNrEnd.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColEntNrEnd.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColEntNrEnd.HeaderText = "Nr. End.";
             this.ColEntNrEnd.Name = "ColEntNrEnd";
             this.ColEntNrEnd.ReadOnly = true;
@@ -531,29 +590,26 @@
             // 
             // ColEntTelefone
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "N2";
-            this.ColEntTelefone.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.ColEntTelefone.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColEntTelefone.HeaderText = "Telefone";
             this.ColEntTelefone.Name = "ColEntTelefone";
             this.ColEntTelefone.ReadOnly = true;
             // 
-            // TxtObs
+            // ColParticipante
             // 
-            this.TxtObs.Location = new System.Drawing.Point(400, 62);
-            this.TxtObs.MaxLength = 50;
-            this.TxtObs.Name = "TxtObs";
-            this.TxtObs.Size = new System.Drawing.Size(164, 21);
-            this.TxtObs.TabIndex = 16;
+            this.ColParticipante.HeaderText = "Participante";
+            this.ColParticipante.Name = "ColParticipante";
+            this.ColParticipante.ReadOnly = true;
+            this.ColParticipante.Visible = false;
             // 
-            // label10
+            // ColID
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(397, 46);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 13);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "Obs";
+            this.ColID.HeaderText = "ID";
+            this.ColID.Name = "ColID";
+            this.ColID.ReadOnly = true;
+            this.ColID.Visible = false;
             // 
             // FC006Participante
             // 
@@ -572,7 +628,7 @@
             this.tbDadosParticipante.PerformLayout();
             this.tpCadastroLocalEntrega.ResumeLayout(false);
             this.tpCadastroLocalEntrega.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListaPedidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListaLocalEntrega)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -610,14 +666,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnAdd;
-        private System.Windows.Forms.DataGridView grdListaPedidos;
+        private System.Windows.Forms.DataGridView grdListaLocalEntrega;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TxtObs;
+        private System.Windows.Forms.Label lblIdParticipante;
+        private System.Windows.Forms.Label lblIE;
+        private System.Windows.Forms.TextBox txtIE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEntUF;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEntCidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEntBairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEntLogradouro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEntNrEnd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEntTelefone;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TxtObs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColParticipante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
     }
 }

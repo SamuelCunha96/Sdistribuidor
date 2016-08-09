@@ -40,6 +40,20 @@ namespace Sdistribuidor.Model
 
             return EntUf;
         }
+        public Entidade_UF Uf(string descUf)
+        {
+            EntUf = new Entidade_UF();
+
+            var Dt = BancoDados.Consultar("SELECT *  FROM uf WHERE desc_uf ='" + descUf + "'");
+
+            if (Dt.Rows.Count > 0)
+            {
+                EntUf.id_uf = Convert.ToInt32(Dt.Rows[0][0]);
+                EntUf.desc_uf = Dt.Rows[0][1].ToString();
+            }
+
+            return EntUf;
+        }
         public List<Entidade_UF> Pesquisa(string Nome)
         {
             var Dt = BancoDados.Consultar("SELECT *  FROM uf WHERE desc_uf like '%" + Nome + "%'");

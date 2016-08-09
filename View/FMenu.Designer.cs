@@ -34,6 +34,7 @@
             this.btnPagamento = new System.Windows.Forms.Button();
             this.btnPedido = new System.Windows.Forms.Button();
             this.TbCadastro = new System.Windows.Forms.TabPage();
+            this.btnParticipante = new System.Windows.Forms.Button();
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnGrupo = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -42,7 +43,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnAux = new System.Windows.Forms.Button();
-            this.btnParticipante = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -114,6 +114,22 @@
             this.TbCadastro.Size = new System.Drawing.Size(747, 95);
             this.TbCadastro.TabIndex = 0;
             this.TbCadastro.Text = "Cadastro";
+            // 
+            // btnParticipante
+            // 
+            this.btnParticipante.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnParticipante.FlatAppearance.BorderSize = 0;
+            this.btnParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnParticipante.Image")));
+            this.btnParticipante.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnParticipante.Location = new System.Drawing.Point(153, 3);
+            this.btnParticipante.Name = "btnParticipante";
+            this.btnParticipante.Size = new System.Drawing.Size(80, 89);
+            this.btnParticipante.TabIndex = 2;
+            this.btnParticipante.Text = "Participantes";
+            this.btnParticipante.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnParticipante.UseVisualStyleBackColor = true;
+            this.btnParticipante.Click += new System.EventHandler(this.btnParticipante_Click);
             // 
             // btnProduto
             // 
@@ -228,22 +244,6 @@
             this.btnAux.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAux.UseVisualStyleBackColor = true;
             this.btnAux.Click += new System.EventHandler(this.btnAux_Click);
-            // 
-            // btnParticipante
-            // 
-            this.btnParticipante.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnParticipante.FlatAppearance.BorderSize = 0;
-            this.btnParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnParticipante.Image")));
-            this.btnParticipante.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnParticipante.Location = new System.Drawing.Point(153, 3);
-            this.btnParticipante.Name = "btnParticipante";
-            this.btnParticipante.Size = new System.Drawing.Size(75, 89);
-            this.btnParticipante.TabIndex = 2;
-            this.btnParticipante.Text = "Participante";
-            this.btnParticipante.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnParticipante.UseVisualStyleBackColor = true;
-            this.btnParticipante.Click += new System.EventHandler(this.btnParticipante_Click);
             // 
             // FMenu
             // 

@@ -25,6 +25,8 @@ namespace Sdistribuidor.Entidade
         public virtual string telefone { get; set; }
         public virtual bool flcomercio { get; set; }
 
+        public List<Entidade_LocalEntrega> ListLocalEntrega { get; set; }
+        
         public virtual string ParticipanteNomeCpfCnpj
         {
             get

@@ -24,7 +24,7 @@ namespace Sdistribuidor.View
         Participante modPart;
         UF modUf;
         Cidade modCidade;
-        C_ModuloGeral cModGeral;
+        C_ModuloGeral cModGeral = new C_ModuloGeral();
         DataGridViewTextBoxColumn NewText;
         DataGridView DGV;
         List<Entidade_LocalEntrega> ListEntLocalEntrega = new List<Entidade_LocalEntrega>();
@@ -32,6 +32,8 @@ namespace Sdistribuidor.View
         {
             MskCpfCnpj.Mask = "999,999,999-99";
             lblCnpjCpf.Text = "CPF";
+            lblIE.Visible = false;
+            txtIE.Visible = false;
             TxtFantasia.Visible = false;
             LblNomeFantasia.Visible = false;
         }
@@ -40,6 +42,8 @@ namespace Sdistribuidor.View
         {
             MskCpfCnpj.Mask = "99,999,999/0000-00";
             lblCnpjCpf.Text = "CNPJ";
+            lblIE.Visible = true;
+            txtIE.Visible = true;
             TxtFantasia.Visible = true;
             LblNomeFantasia.Visible = true;
         }
@@ -111,6 +115,7 @@ namespace Sdistribuidor.View
             EntParticipante.id_cidade = modCidade.Pesquisa(ucUfCidade1.IdCidade);
 
             EntParticipante.cnpjcpf = cModGeral.TiraCampos(MskCpfCnpj.Text);
+            EntParticipante.ie = txtIE.Text;
             EntParticipante.nome = TxtNome.Text.Trim();
             EntParticipante.nomefantasia = TxtFantasia.Text.Trim();
             EntParticipante.razaosocial = TxtNome.Text.Trim();
@@ -120,9 +125,85 @@ namespace Sdistribuidor.View
             EntParticipante.telefone = cModGeral.TiraCampos(mskTelefone.Text).Trim();
             EntParticipante.flcomercio = chkComercial.Checked;
 
-            modPart.Incluir(EntParticipante);
+            modPart.Incluir(EntParticipante, ListEntLocalEntrega);
 
             return true;
+        }
+        public override bool Editar()
+        {
+            modPart = new Participante();
+            modCidade = new Cidade();
+            modUf = new UF();
+            cModGeral = new C_ModuloGeral();
+            Entidade_Participante EntParticipante = new Entidade_Participante();
+
+            EntParticipante.id_uf = modUf.Pesquisa(ucUfCidade1.IdUf);
+            EntParticipante.id_cidade = modCidade.Pesquisa(ucUfCidade1.IdCidade);
+
+            EntParticipante.cnpjcpf = cModGeral.TiraCampos(MskCpfCnpj.Text);
+            EntParticipante.nome = TxtNome.Text.Trim();
+            EntParticipante.nomefantasia = TxtFantasia.Text.Trim();
+            EntParticipante.razaosocial = TxtNome.Text.Trim();
+            EntParticipante.lagradouro = TxtLogradouro.Text.Trim();
+            EntParticipante.bairro = TxtBairro.Text.Trim();
+            EntParticipante.numero_end = TxtNrEnder.Text.Trim();
+            EntParticipante.telefone = cModGeral.TiraCampos(mskTelefone.Text).Trim();
+            EntParticipante.flcomercio = chkComercial.Checked;
+
+            modPart.Update(EntParticipante, ListEntLocalEntrega);
+
+            return true;
+        }
+        public override void PesquisarDados(string Pesquisar, object ID)
+        {
+            if(Convert.ToInt32(ID) > 0)
+            {
+                modPart = new Participante();
+                modUf = new UF();
+                modCidade = new Cidade();
+
+                var DtPart = modPart.Pesquisa(Convert.ToInt32(ID));
+                if(DtPart.cnpjcpf.Length == 14)
+                {
+                    MskCpfCnpj.Mask = "99,999,999/0000-00";
+                    MskCpfCnpj.Text = DtPart.cnpjcpf;
+                    lblCnpjCpf.Text = "CNPJ";
+                    TxtFantasia.Visible = true;
+                    LblNomeFantasia.Visible = true;
+                    rbCNPJ.Enabled = true;
+                    rbCPF.Enabled = false;
+                }
+                else
+                {
+                    MskCpfCnpj.Mask = "999,999,999-99";
+                    MskCpfCnpj.Text = DtPart.cnpjcpf;
+                    lblCnpjCpf.Text = "CPF";
+                    TxtFantasia.Visible = false;
+                    LblNomeFantasia.Visible = false;
+                    rbCNPJ.Enabled = false;
+                    rbCPF.Enabled = true;
+                }
+                TxtNome.Text = DtPart.nome;
+                TxtFantasia.Text = DtPart.nomefantasia;
+                TxtLogradouro.Text = DtPart.lagradouro;
+                TxtBairro.Text = DtPart.bairro;
+                TxtNrEnder.Text = DtPart.numero_end;
+                mskTelefone.Text = DtPart.telefone;
+                chkComercial.Checked = DtPart.flcomercio;
+                ucUfCidade1.IdUf = DtPart.id_uf.id_uf;
+                ucUfCidade1.IdCidade = DtPart.id_cidade.id;
+                lblIdParticipante.Text = DtPart.id.ToString();
+
+                if (DtPart.ListLocalEntrega.Count > 0)
+                {
+                    foreach (var item in DtPart.ListLocalEntrega)
+                    {
+                        var uf = modUf.Pesquisa(item.id_uf);
+                        var cidade = modCidade.Pesquisa(item.id_cidade);
+                        grdListaLocalEntrega.Rows.Add(uf.desc_uf, cidade.desc_municipio, item.bairro, item.lagradouro, item.end_numero, item.telefone, item.id_participante, item.id);
+                    }
+                }
+            }
         }
         public override void CarregarDados()
         {
@@ -134,13 +215,19 @@ namespace Sdistribuidor.View
 
             ucUfCidade1.CarregarCombos();
             ucUfCidadeLocalEntrega.CarregarCombos();
+
+            rbCNPJ.Enabled = true;
+            rbCPF.Enabled = true;
+            lblIdParticipante.Text = string.Empty;
         }
         public override void CamposGrid()
         {
+
             DGV = new DataGridView();
+            
             NewText = new DataGridViewTextBoxColumn();
             NewText.HeaderText = "Código";
-            NewText.Name = "ColID";
+            NewText.Name = "ColIDPartipante";
             NewText.DataPropertyName = "id_participante";
             NewText.Width = 40;
 
@@ -178,13 +265,65 @@ namespace Sdistribuidor.View
             EntLocalEntrega.end_numero = TxtEndEntrega.Text;
             EntLocalEntrega.id_uf = ucUfCidadeLocalEntrega.IdUf;
             EntLocalEntrega.id_cidade = ucUfCidadeLocalEntrega.IdCidade;
-            EntLocalEntrega.telefone = MskTelefoneEntrega.Text;
+            EntLocalEntrega.telefone = cModGeral.TiraCampos(MskTelefoneEntrega.Text).Trim(); 
             EntLocalEntrega.obs = TxtObs.Text;
             EntLocalEntrega.FlExcluirLocalEntrega = false;
-
+            EntLocalEntrega.id_participante = lblIdParticipante.Text == string.Empty ? 0 : Convert.ToInt32(lblIdParticipante.Text);
             ListEntLocalEntrega.Add(EntLocalEntrega);
 
-            grdListaPedidos.Rows.Add(ucUfCidadeLocalEntrega.GetUF.desc_uf, ucUfCidadeLocalEntrega.GetCidade.desc_municipio,TxtBairroEntrega.Text,TxtLogEntrega.Text,TxtEndEntrega.Text,MskTelefoneEntrega.Text);
+            grdListaLocalEntrega.Rows.Add(ucUfCidadeLocalEntrega.GetUF.desc_uf, ucUfCidadeLocalEntrega.GetCidade.desc_municipio,TxtBairroEntrega.Text,TxtLogEntrega.Text,TxtEndEntrega.Text,MskTelefoneEntrega.Text,EntLocalEntrega.id_participante);
+        }
+
+        private void grdListaPedidos_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void grdListaLocalEntrega_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Delete)
+            {
+                if (MessageBox.Show("Deseja excluir o local de entrega," + grdListaLocalEntrega.Rows[grdListaLocalEntrega.CurrentRow.Index].Cells[0].Value.ToString() + "?", "Aténção", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (Convert.ToInt32(grdListaLocalEntrega.Rows[grdListaLocalEntrega.CurrentRow.Index].Cells["ColParticipante"].Value) > 0)
+                    {
+                        EntLocalEntrega.id = Convert.ToInt32(grdListaLocalEntrega.Rows[grdListaLocalEntrega.CurrentRow.Index].Cells["ColID"].Value);
+                        EntLocalEntrega.id_participante = Convert.ToInt32(grdListaLocalEntrega.Rows[grdListaLocalEntrega.CurrentRow.Index].Cells["ColParticipante"].Value);
+                        EntLocalEntrega.FlExcluirLocalEntrega = true;
+                        ListEntLocalEntrega.Add(EntLocalEntrega);
+                    }
+                    grdListaLocalEntrega.Rows.RemoveAt(grdListaLocalEntrega.CurrentRow.Index);
+                }
+            }
+        }
+        public override void LimpaCampos()
+        {
+            MskCpfCnpj.Mask = "999,999,999-99";
+            MskCpfCnpj.Text = string.Empty;
+            lblCnpjCpf.Text = "CPF";
+            TxtFantasia.Visible = false;
+            LblNomeFantasia.Visible = false;
+            rbCNPJ.Enabled = false;
+            rbCPF.Enabled = true;
+            TxtNome.Text = string.Empty;
+            TxtFantasia.Text = string.Empty;
+            TxtLogradouro.Text = string.Empty;
+            TxtBairro.Text = string.Empty;
+            TxtNrEnder.Text = string.Empty;
+            mskTelefone.Text = string.Empty;
+            chkComercial.Checked = false;
+            ucUfCidade1.IdUf = 0;
+            ucUfCidade1.IdCidade =0;
+            lblIdParticipante.Text = string.Empty;
+            //Local Entrega
+            TxtBairroEntrega.Text = string.Empty;
+            TxtLogEntrega.Text = string.Empty;
+            TxtEndEntrega.Text = string.Empty;
+            TxtObs.Text = string.Empty;
+            ucUfCidadeLocalEntrega.IdUf = 0;
+            ucUfCidadeLocalEntrega.IdCidade = 0;
+            MskTelefoneEntrega.Text = string.Empty;
+            grdListaLocalEntrega.Rows.Clear();
         }
     }
 }
