@@ -80,7 +80,6 @@ namespace Sdistribuidor.View
         }
         public virtual bool Salvar()
         {
-            
             return false;
         }
         public virtual bool Editar()
@@ -132,6 +131,7 @@ namespace Sdistribuidor.View
             cModGeral = new C_ModuloGeral();
             DataGridViewRow Row = grdBase.CurrentRow;
 
+            LimpaCampos();
             TpAcao = TipoAcao.Editar;
             PesquisarDados(string.Empty, cModGeral.TiraCampos(Row.Cells[0].Value.ToString()));
 

@@ -18,6 +18,7 @@ namespace Sdistribuidor.Entidade
         public string nm_fantasia { get; set; }
         public string cnpj { get; set; }
         public string ie { get; set; }
+        public string bairro { get; set; }
         public string logradouro { get; set; }
         public string nro { get; set; }
         public string compl { get; set; }

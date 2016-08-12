@@ -51,6 +51,7 @@
             this.mskCep = new System.Windows.Forms.MaskedTextBox();
             this.TxtDescricaoNome = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.tcBase.SuspendLayout();
             this.tpPesquisa.SuspendLayout();
             this.tpDados.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             // tpDados
             // 
+            this.tpDados.Controls.Add(this.lblID);
             this.tpDados.Controls.Add(this.label9);
             this.tpDados.Controls.Add(this.TxtDescricaoNome);
             this.tpDados.Controls.Add(this.mskCep);
@@ -108,6 +110,7 @@
             this.tpDados.Controls.SetChildIndex(this.mskCep, 0);
             this.tpDados.Controls.SetChildIndex(this.TxtDescricaoNome, 0);
             this.tpDados.Controls.SetChildIndex(this.label9, 0);
+            this.tpDados.Controls.SetChildIndex(this.lblID, 0);
             // 
             // ucUfCidade1
             // 
@@ -312,6 +315,15 @@
             this.label9.TabIndex = 35;
             this.label9.Text = "Nome";
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(308, 216);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 13);
+            this.lblID.TabIndex = 36;
+            this.lblID.Visible = false;
+            // 
             // FC001Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,5 +365,6 @@
         private System.Windows.Forms.MaskedTextBox mskCep;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtDescricaoNome;
+        private System.Windows.Forms.Label lblID;
     }
 }

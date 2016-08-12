@@ -16,6 +16,15 @@ namespace Sdistribuidor.Model
 
         NpgsqlCommand command;
         NpgsqlTransaction BeginTrans;
+        Entidade_Pedido EntPedido;
+        Entidade_ItemPedido EntItemPedido;
+        List<Entidade_ItemPedido> EntListItemPedido;
+        Participante mParticipante;
+        FormaPagtoItemFormaPagto mFormPagto;
+        Vendedor mVendedor;
+        Produtos mProdutos;
+        Unidade mUnidade;
+        
 
         public ICollection<Entidade_Pedido> Pesquisa()
         {
@@ -32,7 +41,54 @@ namespace Sdistribuidor.Model
         }
         public Entidade_Pedido Pesquisa(int ID)
         {
-            return null;
+            var Dt = BancoDados.Consultar("SELECT * FROM pedido p " +
+                                          "INNER JOIN itempedido it ON p.id_pedido = it.id_pedido WHERE p.id_pedido =" + ID);
+
+            EntPedido = new Entidade_Pedido();
+            if (Dt.Rows.Count > 0)
+            {
+                mParticipante = new Participante();
+                mFormPagto = new FormaPagtoItemFormaPagto();
+                mVendedor = new Vendedor();
+                mProdutos = new Produtos();
+                mUnidade = new Unidade();
+                EntListItemPedido = new List<Entidade_ItemPedido>();
+
+                EntPedido.id_pedido = Convert.ToInt32(Dt.Rows[0]["id_pedido"]);
+                EntPedido.id_participante = mParticipante.Pesquisa(Convert.ToInt32(Dt.Rows[0]["id_participante"]));
+                EntPedido.id_formpagto = mFormPagto.Pesquisa(Convert.ToInt32(Dt.Rows[0]["id_formpagto"]));
+                EntPedido.id_usuario = mVendedor.Pesquisar(Convert.ToInt32(Dt.Rows[0]["id_vendedor"]));
+                
+                EntPedido.vl_pedido = Convert.ToInt32(Dt.Rows[0]["vl_pedido"]);
+                EntPedido.vl_desconto = Convert.ToInt32(Dt.Rows[0]["vl_desconto"]);
+                EntPedido.stentrega = Dt.Rows[0]["stentrega"].ToString();
+                EntPedido.obspedido = Dt.Rows[0]["obspedido"].ToString();
+                EntPedido.dt_pedido = Convert.ToDateTime(Dt.Rows[0]["dt_pedido"]);
+                EntPedido.id_localentrega = string.IsNullOrEmpty(Dt.Rows[0]["id_localentrega"].ToString()) == true ? 0 : Convert.ToInt32(Dt.Rows[0]["id_localentrega"]);
+
+                for (int i = 0; i < Dt.Rows.Count; i++)
+                {
+                    EntItemPedido = new Entidade_ItemPedido();
+
+                    EntItemPedido.id_item_pedido = Convert.ToInt32(Dt.Rows[i]["id_item_pedido"]);
+                    EntItemPedido.id_pedido = EntPedido;
+                    EntItemPedido.id_produto = mProdutos.Pesquisa(Convert.ToInt32(Dt.Rows[i]["id_produto"]));
+                    EntItemPedido.Qt_Pedido = Convert.ToDouble(Dt.Rows[i]["qt_pedido"]);
+                    EntItemPedido.Vl_Unitario = Convert.ToDouble(Dt.Rows[i]["vl_unitario"]);
+                    EntItemPedido.CdUnidade = mUnidade.Pesquisa(Dt.Rows[i]["cdunidade"].ToString());
+                    EntItemPedido.Vl_Desconto = Convert.ToDouble(Dt.Rows[i]["vl_desconto"]);
+                    EntItemPedido.qt_pedido_conv = Convert.ToDouble(Dt.Rows[i]["qt_pedido_conv"]);
+                    EntItemPedido.cdunidade_conv = Dt.Rows[i]["cdunidade_conv"].ToString();
+
+                    EntListItemPedido.Add(EntItemPedido);
+                }
+
+                EntPedido.ItemPedidos = EntListItemPedido;
+
+                return EntPedido;
+            }
+            else
+                return EntPedido;
         }
         public ICollection<Entidade_Pedido> Pesquisa(string Nome)
         {

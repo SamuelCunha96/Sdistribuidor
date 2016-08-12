@@ -56,7 +56,7 @@ namespace Sdistribuidor.View
             EntLoja = new Entidade_Loja();
             mLoja = new Loja();
 
-            EntLoja.cnpj = MskCpfCnpj.Text.Replace(".", "").Replace("-", "");
+            EntLoja.cnpj = MskCpfCnpj.Text.Replace(".", "").Replace("-", "").Replace("/", "");
             EntLoja.ie = txtIE.Text;
             EntLoja.nmloja = TxtDescricaoNome.Text;
             EntLoja.nm_fantasia = TxtFantasia.Text;
@@ -74,6 +74,61 @@ namespace Sdistribuidor.View
             else
                 return false;
 
+        }
+
+        public override bool Editar()
+        {
+            EntLoja = new Entidade_Loja();
+            mLoja = new Loja();
+
+            EntLoja.id = Convert.ToInt32(lblID.Text);
+            EntLoja.cnpj = MskCpfCnpj.Text.Replace(".", "").Replace("-", "").Replace("/", "");
+            EntLoja.ie = txtIE.Text;
+            EntLoja.nmloja = TxtDescricaoNome.Text;
+            EntLoja.nm_fantasia = TxtFantasia.Text;
+            EntLoja.razao_social = TxtNome.Text;
+            EntLoja.bairro = TxtBairro.Text;
+            EntLoja.logradouro = TxtLogradouro.Text;
+            EntLoja.nro = TxtNrEnder.Text;
+            EntLoja.cep = mskCep.Text.Replace(".", "").Replace("-", "");
+            EntLoja.fone = mskTelefone.Text.Replace(".", "").Replace("-", "").Replace("(", "").Replace(")", "");
+            EntLoja.id_uf = ucUfCidade1.IdUf;
+            EntLoja.id_cidade = ucUfCidade1.IdCidade;
+            EntLoja.tipo_regime = CboRegime.SelectedIndex.ToString();
+
+            if (mLoja.Update(EntLoja))
+                return true;
+            else
+                return false;
+
+        }
+        public override void PesquisarDados(string Pesquisar, object ID)
+        {
+            if (Convert.ToInt32(ID) > 0)
+            {
+                mLoja = new Loja();
+
+                var DtPart = mLoja.Pesquisa(Convert.ToInt32(ID));
+                MskCpfCnpj.Mask = "99,999,999/0000-00";
+                MskCpfCnpj.Text = DtPart.Rows[0]["cnpj"].ToString();
+                lblCnpjCpf.Text = "CNPJ";
+                TxtFantasia.Visible = true;
+                LblNomeFantasia.Visible = true;
+
+                lblID.Text = DtPart.Rows[0]["id"].ToString();
+                txtIE.Text = DtPart.Rows[0]["ie"].ToString();
+                TxtDescricaoNome.Text = DtPart.Rows[0]["nmloja"].ToString();
+                TxtFantasia.Text = DtPart.Rows[0]["nm_fantasia"].ToString();
+                TxtBairro.Text = DtPart.Rows[0]["bairro"].ToString();
+                TxtNome.Text = DtPart.Rows[0]["razao_social"].ToString();
+                TxtLogradouro.Text = DtPart.Rows[0]["logradouro"].ToString();
+                TxtNrEnder.Text = DtPart.Rows[0]["nro"].ToString();
+                mskCep.Text = DtPart.Rows[0]["cep"].ToString();
+                mskTelefone.Text = DtPart.Rows[0]["fone"].ToString();
+                ucUfCidade1.IdUf = Convert.ToInt32(DtPart.Rows[0]["id_uf"]);
+                ucUfCidade1.IdCidade = Convert.ToInt32(DtPart.Rows[0]["id_cidade"]);
+                CboRegime.SelectedIndex =Convert.ToInt32(DtPart.Rows[0]["tipo_regime"]);
+            }
         }
 
         public override void CarregarDados()
@@ -149,6 +204,22 @@ namespace Sdistribuidor.View
             }
             else
                 return true;
+        }
+        public override void LimpaCampos()
+        {
+            lblID.Text = string.Empty;
+            txtIE.Text = string.Empty;
+            TxtDescricaoNome.Text = string.Empty;
+            TxtFantasia.Text = string.Empty;
+            TxtBairro.Text = string.Empty;
+            TxtNome.Text = string.Empty;
+            TxtLogradouro.Text = string.Empty;
+            TxtNrEnder.Text = string.Empty;
+            mskCep.Text = string.Empty;
+            mskTelefone.Text = string.Empty;
+            ucUfCidade1.IdUf = 0;
+            ucUfCidade1.IdCidade = 0;
+            CboRegime.SelectedIndex = 0;
         }
     }
 }

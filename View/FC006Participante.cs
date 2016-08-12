@@ -140,7 +140,9 @@ namespace Sdistribuidor.View
             EntParticipante.id_uf = modUf.Pesquisa(ucUfCidade1.IdUf);
             EntParticipante.id_cidade = modCidade.Pesquisa(ucUfCidade1.IdCidade);
 
+            EntParticipante.id = Convert.ToInt32(lblIdParticipante.Text);
             EntParticipante.cnpjcpf = cModGeral.TiraCampos(MskCpfCnpj.Text);
+            EntParticipante.ie = txtIE.Text;
             EntParticipante.nome = TxtNome.Text.Trim();
             EntParticipante.nomefantasia = TxtFantasia.Text.Trim();
             EntParticipante.razaosocial = TxtNome.Text.Trim();
@@ -260,18 +262,25 @@ namespace Sdistribuidor.View
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            EntLocalEntrega.lagradouro = TxtLogEntrega.Text;
-            EntLocalEntrega.bairro = TxtBairroEntrega.Text;
-            EntLocalEntrega.end_numero = TxtEndEntrega.Text;
-            EntLocalEntrega.id_uf = ucUfCidadeLocalEntrega.IdUf;
-            EntLocalEntrega.id_cidade = ucUfCidadeLocalEntrega.IdCidade;
-            EntLocalEntrega.telefone = cModGeral.TiraCampos(MskTelefoneEntrega.Text).Trim(); 
-            EntLocalEntrega.obs = TxtObs.Text;
-            EntLocalEntrega.FlExcluirLocalEntrega = false;
-            EntLocalEntrega.id_participante = lblIdParticipante.Text == string.Empty ? 0 : Convert.ToInt32(lblIdParticipante.Text);
-            ListEntLocalEntrega.Add(EntLocalEntrega);
+            EntLocalEntrega = new Entidade_LocalEntrega();
 
-            grdListaLocalEntrega.Rows.Add(ucUfCidadeLocalEntrega.GetUF.desc_uf, ucUfCidadeLocalEntrega.GetCidade.desc_municipio,TxtBairroEntrega.Text,TxtLogEntrega.Text,TxtEndEntrega.Text,MskTelefoneEntrega.Text,EntLocalEntrega.id_participante);
+            if (ValidaAddEntrega())
+            {
+                EntLocalEntrega.lagradouro = TxtLogEntrega.Text;
+                EntLocalEntrega.bairro = TxtBairroEntrega.Text;
+                EntLocalEntrega.end_numero = TxtEndEntrega.Text;
+                EntLocalEntrega.id_uf = ucUfCidadeLocalEntrega.IdUf;
+                EntLocalEntrega.id_cidade = ucUfCidadeLocalEntrega.IdCidade;
+                EntLocalEntrega.telefone = cModGeral.TiraCampos(MskTelefoneEntrega.Text).Trim();
+                EntLocalEntrega.obs = TxtObs.Text;
+                EntLocalEntrega.FlExcluirLocalEntrega = false;
+                EntLocalEntrega.id_participante = lblIdParticipante.Text == string.Empty ? 0 : Convert.ToInt32(lblIdParticipante.Text);
+                ListEntLocalEntrega.Add(EntLocalEntrega);
+
+                grdListaLocalEntrega.Rows.Add(ucUfCidadeLocalEntrega.GetUF.desc_uf, ucUfCidadeLocalEntrega.GetCidade.desc_municipio, TxtBairroEntrega.Text, TxtLogEntrega.Text, TxtEndEntrega.Text, MskTelefoneEntrega.Text, EntLocalEntrega.id_participante);
+
+                LimpaCampoLocalEntrega();
+            }
         }
 
         private void grdListaPedidos_KeyDown(object sender, KeyEventArgs e)
@@ -287,6 +296,7 @@ namespace Sdistribuidor.View
                 {
                     if (Convert.ToInt32(grdListaLocalEntrega.Rows[grdListaLocalEntrega.CurrentRow.Index].Cells["ColParticipante"].Value) > 0)
                     {
+                        EntLocalEntrega = new Entidade_LocalEntrega();
                         EntLocalEntrega.id = Convert.ToInt32(grdListaLocalEntrega.Rows[grdListaLocalEntrega.CurrentRow.Index].Cells["ColID"].Value);
                         EntLocalEntrega.id_participante = Convert.ToInt32(grdListaLocalEntrega.Rows[grdListaLocalEntrega.CurrentRow.Index].Cells["ColParticipante"].Value);
                         EntLocalEntrega.FlExcluirLocalEntrega = true;
@@ -316,6 +326,11 @@ namespace Sdistribuidor.View
             ucUfCidade1.IdCidade =0;
             lblIdParticipante.Text = string.Empty;
             //Local Entrega
+            LimpaCampoLocalEntrega();
+        }
+
+        void LimpaCampoLocalEntrega()
+        {
             TxtBairroEntrega.Text = string.Empty;
             TxtLogEntrega.Text = string.Empty;
             TxtEndEntrega.Text = string.Empty;
@@ -324,6 +339,34 @@ namespace Sdistribuidor.View
             ucUfCidadeLocalEntrega.IdCidade = 0;
             MskTelefoneEntrega.Text = string.Empty;
             grdListaLocalEntrega.Rows.Clear();
+        }
+
+        bool ValidaAddEntrega()
+        {
+            if (ucUfCidadeLocalEntrega.ValidarCampos() == false)
+            {
+                return false;
+            }
+            else if (TxtBairroEntrega.Text == string.Empty)
+            {
+                MessageBox.Show("Campo Bairro obrigatorio.", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtBairroEntrega.Focus();
+                return false;
+            }
+            else if (TxtLogEntrega.Text == string.Empty)
+            {
+                MessageBox.Show("Campo Logradouro obrigatorio.", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtLogEntrega.Focus();
+                return false;
+            }
+            else if (TxtEndEntrega.Text == string.Empty)
+            {
+                MessageBox.Show("Campo Endereço.", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtEndEntrega.Focus();
+                return false;
+            }
+            else
+                return true;
         }
     }
 }

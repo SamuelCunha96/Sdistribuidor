@@ -17,12 +17,24 @@ namespace Sdistribuidor.Model
         {
             try
             {
-                BancoDados.InsertAlterarExcluir("INSERT INTO Loja (nmloja,razao_social,nm_fantasia,cnpj,ie,logradouro,nro,compl,cep,id_uf,id_cidade,fone,tipo_regime)" +
-                                                "VALUES('" + EntLoja.nmloja + "','" + EntLoja.razao_social + "','" + EntLoja.nm_fantasia + "','" + EntLoja.cnpj + "','" + EntLoja.ie + "','" + EntLoja.logradouro + "','" + EntLoja.nro + "','" + EntLoja.compl + "','" + EntLoja.cep + "'," + EntLoja.id_uf + "," + EntLoja.id_cidade + ",'" + EntLoja.fone + "','" + EntLoja.tipo_regime + "')");
+                BancoDados.InsertAlterarExcluir("INSERT INTO Loja (nmloja,razao_social,nm_fantasia,cnpj,ie,logradouro,nro,compl,cep,id_uf,id_cidade,fone,tipo_regime,bairro)" +
+                                                "VALUES('" + EntLoja.nmloja + "','" + EntLoja.razao_social + "','" + EntLoja.nm_fantasia + "','" + EntLoja.cnpj + "','" + EntLoja.ie + "','" + EntLoja.logradouro + "','" + EntLoja.nro + "','" + EntLoja.compl + "','" + EntLoja.cep + "'," + EntLoja.id_uf + "," + EntLoja.id_cidade + ",'" + EntLoja.fone + "','" + EntLoja.tipo_regime + "','" + EntLoja.bairro + "')");
 
                 return true;
             }
             catch(Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool Update(Entidade_Loja EntLoja)
+        {
+            try
+            {
+                BancoDados.InsertAlterarExcluir("update Loja set nmloja ='" + EntLoja.nmloja + "' ,razao_social='" + EntLoja.razao_social + "',nm_fantasia='" + EntLoja.nm_fantasia + "',cnpj='" + EntLoja.cnpj + "',ie='" + EntLoja.ie + "',bairro='"+ EntLoja.bairro +"',logradouro='" + EntLoja.logradouro + "',nro='" + EntLoja.nro + "',compl='" + EntLoja.compl + "',cep='" + EntLoja.cep + "',id_uf=" + EntLoja.id_uf + ",id_cidade=" + EntLoja.id_cidade + ",fone='" + EntLoja.fone + "',tipo_regime='" + EntLoja.tipo_regime + "' WHERE id=" + EntLoja.id);
+                return true;
+            }
+            catch (Exception ex)
             {
                 return false;
             }

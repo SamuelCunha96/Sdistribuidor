@@ -62,10 +62,10 @@
             // 
             this.tabPage2.Controls.Add(this.btnPagamento);
             this.tabPage2.Controls.Add(this.btnPedido);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 21);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(747, 95);
+            this.tabPage2.Size = new System.Drawing.Size(747, 100);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Faturamento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.btnPagamento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPagamento.Location = new System.Drawing.Point(78, 3);
             this.btnPagamento.Name = "btnPagamento";
-            this.btnPagamento.Size = new System.Drawing.Size(75, 89);
+            this.btnPagamento.Size = new System.Drawing.Size(75, 94);
             this.btnPagamento.TabIndex = 2;
             this.btnPagamento.Text = "Pagamento";
             this.btnPagamento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -95,7 +95,7 @@
             this.btnPedido.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPedido.Location = new System.Drawing.Point(3, 3);
             this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(75, 89);
+            this.btnPedido.Size = new System.Drawing.Size(75, 94);
             this.btnPedido.TabIndex = 1;
             this.btnPedido.Text = "Pedido";
             this.btnPedido.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -108,10 +108,10 @@
             this.TbCadastro.Controls.Add(this.btnParticipante);
             this.TbCadastro.Controls.Add(this.btnProduto);
             this.TbCadastro.Controls.Add(this.btnGrupo);
-            this.TbCadastro.Location = new System.Drawing.Point(4, 22);
+            this.TbCadastro.Location = new System.Drawing.Point(4, 21);
             this.TbCadastro.Name = "TbCadastro";
             this.TbCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.TbCadastro.Size = new System.Drawing.Size(747, 95);
+            this.TbCadastro.Size = new System.Drawing.Size(747, 100);
             this.TbCadastro.TabIndex = 0;
             this.TbCadastro.Text = "Cadastro";
             // 
@@ -124,7 +124,7 @@
             this.btnParticipante.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnParticipante.Location = new System.Drawing.Point(153, 3);
             this.btnParticipante.Name = "btnParticipante";
-            this.btnParticipante.Size = new System.Drawing.Size(80, 89);
+            this.btnParticipante.Size = new System.Drawing.Size(80, 94);
             this.btnParticipante.TabIndex = 2;
             this.btnParticipante.Text = "Participantes";
             this.btnParticipante.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -140,7 +140,7 @@
             this.btnProduto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProduto.Location = new System.Drawing.Point(78, 3);
             this.btnProduto.Name = "btnProduto";
-            this.btnProduto.Size = new System.Drawing.Size(75, 89);
+            this.btnProduto.Size = new System.Drawing.Size(75, 94);
             this.btnProduto.TabIndex = 1;
             this.btnProduto.Text = "Produto";
             this.btnProduto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -156,7 +156,7 @@
             this.btnGrupo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGrupo.Location = new System.Drawing.Point(3, 3);
             this.btnGrupo.Name = "btnGrupo";
-            this.btnGrupo.Size = new System.Drawing.Size(75, 89);
+            this.btnGrupo.Size = new System.Drawing.Size(75, 94);
             this.btnGrupo.TabIndex = 0;
             this.btnGrupo.Text = "Grupo";
             this.btnGrupo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -170,19 +170,20 @@
             this.tabControl1.Controls.Add(this.tbPgNotaFiscal);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(755, 121);
+            this.tabControl1.Size = new System.Drawing.Size(755, 125);
             this.tabControl1.TabIndex = 2;
             // 
             // tbPgNotaFiscal
             // 
             this.tbPgNotaFiscal.Controls.Add(this.btnNotaFiscal);
-            this.tbPgNotaFiscal.Location = new System.Drawing.Point(4, 22);
+            this.tbPgNotaFiscal.Location = new System.Drawing.Point(4, 21);
             this.tbPgNotaFiscal.Name = "tbPgNotaFiscal";
             this.tbPgNotaFiscal.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPgNotaFiscal.Size = new System.Drawing.Size(747, 95);
+            this.tbPgNotaFiscal.Size = new System.Drawing.Size(747, 100);
             this.tbPgNotaFiscal.TabIndex = 2;
             this.tbPgNotaFiscal.Text = "Nota Fiscal";
             this.tbPgNotaFiscal.UseVisualStyleBackColor = true;
@@ -196,7 +197,7 @@
             this.btnNotaFiscal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNotaFiscal.Location = new System.Drawing.Point(3, 3);
             this.btnNotaFiscal.Name = "btnNotaFiscal";
-            this.btnNotaFiscal.Size = new System.Drawing.Size(75, 89);
+            this.btnNotaFiscal.Size = new System.Drawing.Size(75, 94);
             this.btnNotaFiscal.TabIndex = 2;
             this.btnNotaFiscal.Text = "NFe";
             this.btnNotaFiscal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -207,10 +208,10 @@
             // 
             this.tabPage1.Controls.Add(this.btnLoja);
             this.tabPage1.Controls.Add(this.btnAux);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 21);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(747, 95);
+            this.tabPage1.Size = new System.Drawing.Size(747, 100);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Configurações";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -220,10 +221,11 @@
             this.btnLoja.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLoja.FlatAppearance.BorderSize = 0;
             this.btnLoja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoja.Image = ((System.Drawing.Image)(resources.GetObject("btnLoja.Image")));
             this.btnLoja.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLoja.Location = new System.Drawing.Point(78, 3);
             this.btnLoja.Name = "btnLoja";
-            this.btnLoja.Size = new System.Drawing.Size(75, 89);
+            this.btnLoja.Size = new System.Drawing.Size(75, 94);
             this.btnLoja.TabIndex = 4;
             this.btnLoja.Text = "Lojas";
             this.btnLoja.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -235,10 +237,11 @@
             this.btnAux.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAux.FlatAppearance.BorderSize = 0;
             this.btnAux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAux.Image = ((System.Drawing.Image)(resources.GetObject("btnAux.Image")));
             this.btnAux.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAux.Location = new System.Drawing.Point(3, 3);
             this.btnAux.Name = "btnAux";
-            this.btnAux.Size = new System.Drawing.Size(75, 89);
+            this.btnAux.Size = new System.Drawing.Size(75, 94);
             this.btnAux.TabIndex = 3;
             this.btnAux.Text = "Tabelas Auxiliares";
             this.btnAux.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

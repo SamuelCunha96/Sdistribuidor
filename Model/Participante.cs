@@ -63,17 +63,20 @@ namespace Sdistribuidor.Model
 
             if (DtEnt.Rows.Count > 0)
             {
-                entLocEnt = new Entidade_LocalEntrega();
-                entLocEnt.id = Convert.ToInt32(DtEnt.Rows[0]["id"]);
-                entLocEnt.id = Convert.ToInt32(DtEnt.Rows[0]["id_participante"]);
-                entLocEnt.lagradouro = DtEnt.Rows[0]["lagradouro"].ToString();
-                entLocEnt.end_numero = DtEnt.Rows[0]["end_numero"].ToString();
-                entLocEnt.bairro = DtEnt.Rows[0]["bairro"].ToString();
-                entLocEnt.id_uf = Convert.ToInt32(DtEnt.Rows[0]["id_uf"]);
-                entLocEnt.id_cidade = Convert.ToInt32(DtEnt.Rows[0]["id_cidade"]);
-                entLocEnt.telefone = DtEnt.Rows[0]["telefone"].ToString();
-                entLocEnt.obs = DtEnt.Rows[0]["obs"].ToString();
-                ListLocalEnt.Add(entLocEnt);
+                for (int i = 0; i < DtEnt.Rows.Count; i++)
+                {
+                    entLocEnt = new Entidade_LocalEntrega();
+                    entLocEnt.id = Convert.ToInt32(DtEnt.Rows[i]["id"]);
+                    entLocEnt.id_participante = Convert.ToInt32(DtEnt.Rows[i]["id_participante"]);
+                    entLocEnt.lagradouro = DtEnt.Rows[i]["lagradouro"].ToString();
+                    entLocEnt.end_numero = DtEnt.Rows[i]["end_numero"].ToString();
+                    entLocEnt.bairro = DtEnt.Rows[i]["bairro"].ToString();
+                    entLocEnt.id_uf = Convert.ToInt32(DtEnt.Rows[i]["id_uf"]);
+                    entLocEnt.id_cidade = Convert.ToInt32(DtEnt.Rows[i]["id_cidade"]);
+                    entLocEnt.telefone = DtEnt.Rows[i]["telefone"].ToString();
+                    entLocEnt.obs = DtEnt.Rows[i]["obs"].ToString();
+                    ListLocalEnt.Add(entLocEnt);
+                }
             }
 
             if (DtEnt.Rows.Count > 0)
@@ -82,10 +85,15 @@ namespace Sdistribuidor.Model
                 return entPart;
             }
             else
+            {
                 if (Dt.Rows.Count > 0)
-                return entPart;
-            else
-                return null;
+                {
+                    entPart.ListLocalEntrega = ListLocalEnt;
+                    return entPart;
+                }
+                else
+                    return null;
+            }
 
         }
         public List<Entidade_Participante> Pesquisa(string Nome)
@@ -199,7 +207,79 @@ namespace Sdistribuidor.Model
         }
         public bool Update(Entidade_Participante Obj, List<Entidade_LocalEntrega> LsLocalEntrega)
         {
-            return true;
+            StringBuilder sb;
+            BancoDados.OpenConection();
+            BeginTrans = BancoDados.conexao.BeginTransaction();
+            try
+            {
+
+                #region ALTERAR PARTICIPANTE
+
+                command = new NpgsqlCommand("spalterarparticipante", BancoDados.conexao);
+                command.Transaction = BeginTrans;
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("id", Obj.id);
+                command.Parameters.AddWithValue("nome", Obj.nome);
+                command.Parameters.AddWithValue("cnpjcpf", Obj.cnpjcpf);
+                command.Parameters.AddWithValue("ie", Obj.ie);
+                command.Parameters.AddWithValue("razaosocial", Obj.razaosocial);
+                command.Parameters.AddWithValue("nomefantasia", Obj.nomefantasia);
+                command.Parameters.AddWithValue("lagradouro", Obj.lagradouro);
+                command.Parameters.AddWithValue("numero_end", Obj.lagradouro);
+                command.Parameters.AddWithValue("bairro", Obj.bairro);
+                command.Parameters.AddWithValue("id_uf", Obj.id_uf.id_uf);
+                command.Parameters.AddWithValue("cidade", Obj.id_cidade.id);
+                command.Parameters.AddWithValue("telefone", Obj.telefone);
+                command.Parameters.AddWithValue("flcomercio", Obj.flcomercio);
+
+                command.ExecuteNonQuery();
+
+                #endregion
+
+                foreach (var item in LsLocalEntrega)
+                {
+                    sb = new StringBuilder();
+                    if (item.FlExcluirLocalEntrega == false)
+                    {
+                        sb.Append(" INSERT INTO localentrega (id_participante,lagradouro,end_numero,bairro,id_uf,id_cidade,telefone,obs) " +
+                                  " VALUES " +
+                                  " (@id_participante,@lagradouro,@end_numero,@bairro,@id_uf,@id_cidade,@telefone,@obs)");
+
+
+                        command = new NpgsqlCommand(sb.ToString(), BancoDados.conexao);
+                        command.Transaction = BeginTrans;
+                        command.CommandType = CommandType.Text;
+                        command.Parameters.AddWithValue("@id_participante", Obj.id);
+                        command.Parameters.AddWithValue("@lagradouro", item.lagradouro);
+                        command.Parameters.AddWithValue("@end_numero", item.end_numero);
+                        command.Parameters.AddWithValue("@bairro", item.bairro);
+                        command.Parameters.AddWithValue("@id_uf", item.id_uf);
+                        command.Parameters.AddWithValue("@id_cidade", item.id_cidade);
+                        command.Parameters.AddWithValue("@telefone", item.telefone);
+                        command.Parameters.AddWithValue("@obs", item.obs);
+
+                        command.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        sb.Append("DELETE FROM localentrega WHERE id = @id");
+
+                        command = new NpgsqlCommand(sb.ToString(), BancoDados.conexao);
+                        command.Transaction = BeginTrans;
+                        command.CommandType = CommandType.Text;
+                        command.Parameters.AddWithValue("@id", Convert.ToInt32(item.id));
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                BeginTrans.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                BeginTrans.Rollback();
+                return false;
+            }
         }
         public bool Delete(Entidade_Participante Obj)
         {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Sdistribuidor.Control;
 
-namespace SI.Entidade
+namespace Sdistribuidor.Entidade
 {
     public class Entidade_Vendedor
     {

@@ -96,6 +96,8 @@
     <Compile Include="Model\RecebCaixa.cs" />
     <Compile Include="Model\UF.cs" />
     <Compile Include="Model\Unidade.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Model\Vendedor.cs" />
     <Compile Include="Uc\UCFormaPagto.cs">
       <SubType>UserControl</SubType>
     </Compile>
