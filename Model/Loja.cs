@@ -42,16 +42,17 @@ namespace Sdistribuidor.Model
 
         public DataTable Pesquisa()
         {
-            return BancoDados.Consultar("SELECT * FROM Loja Order By nmloja");
+            return BancoDados.Consultar("select l.*,u.desc_uf from loja l inner join uf u on l.id_uf = u.id_uf Order By nmloja");
         }
         public DataTable Pesquisa(int id)
         {
-            return BancoDados.Consultar("SELECT * FROM Loja WHERE id=" + id);
+            return BancoDados.Consultar("select l.*,u.desc_uf from loja l inner join uf u on l.id_uf = u.id_uf WHERE id=" + id);
         }
         public DataTable Pesquisa(string descricao)
         {
-            return BancoDados.Consultar("SELECT * FROM Loja WHERE nmloja like '%" + descricao + "%'");
+            return BancoDados.Consultar("select l.*,u.desc_uf from loja l inner join uf u on l.id_uf = u.id_uf WHERE nmloja like '%" + descricao + "%'");
         }
+
 
     }
 }

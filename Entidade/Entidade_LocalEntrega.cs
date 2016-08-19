@@ -13,8 +13,8 @@ namespace Sdistribuidor.Entidade
         public string lagradouro { get; set; }
         public string end_numero { get; set; }
         public string bairro { get; set; }
-        public int id_uf { get; set; }
-        public int id_cidade { get; set; }
+        public Entidade_UF id_uf { get; set; }
+        public Entidade_Cidade id_cidade { get; set; }
         public string telefone { get; set; }
         public string obs { get; set; }
         public bool FlExcluirLocalEntrega { get; set; }

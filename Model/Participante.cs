@@ -71,8 +71,8 @@ namespace Sdistribuidor.Model
                     entLocEnt.lagradouro = DtEnt.Rows[i]["lagradouro"].ToString();
                     entLocEnt.end_numero = DtEnt.Rows[i]["end_numero"].ToString();
                     entLocEnt.bairro = DtEnt.Rows[i]["bairro"].ToString();
-                    entLocEnt.id_uf = Convert.ToInt32(DtEnt.Rows[i]["id_uf"]);
-                    entLocEnt.id_cidade = Convert.ToInt32(DtEnt.Rows[i]["id_cidade"]);
+                    entLocEnt.id_uf = modUF.Pesquisa(Convert.ToInt32(Dt.Rows[i]["id_uf"].ToString()));
+                    entLocEnt.id_cidade = modCidade.Pesquisa(Convert.ToInt32(Dt.Rows[i]["cidade"]));
                     entLocEnt.telefone = DtEnt.Rows[i]["telefone"].ToString();
                     entLocEnt.obs = DtEnt.Rows[i]["obs"].ToString();
                     ListLocalEnt.Add(entLocEnt);

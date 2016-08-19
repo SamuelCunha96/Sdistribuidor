@@ -200,8 +200,8 @@ namespace Sdistribuidor.View
                 {
                     foreach (var item in DtPart.ListLocalEntrega)
                     {
-                        var uf = modUf.Pesquisa(item.id_uf);
-                        var cidade = modCidade.Pesquisa(item.id_cidade);
+                        var uf = modUf.Pesquisa(item.id_uf.id_uf);
+                        var cidade = modCidade.Pesquisa(item.id_cidade.id);
                         grdListaLocalEntrega.Rows.Add(uf.desc_uf, cidade.desc_municipio, item.bairro, item.lagradouro, item.end_numero, item.telefone, item.id_participante, item.id);
                     }
                 }
@@ -264,13 +264,16 @@ namespace Sdistribuidor.View
         {
             EntLocalEntrega = new Entidade_LocalEntrega();
 
+            modCidade = new Cidade();
+            modUf = new UF();
+
             if (ValidaAddEntrega())
             {
                 EntLocalEntrega.lagradouro = TxtLogEntrega.Text;
                 EntLocalEntrega.bairro = TxtBairroEntrega.Text;
                 EntLocalEntrega.end_numero = TxtEndEntrega.Text;
-                EntLocalEntrega.id_uf = ucUfCidadeLocalEntrega.IdUf;
-                EntLocalEntrega.id_cidade = ucUfCidadeLocalEntrega.IdCidade;
+                EntLocalEntrega.id_uf = modUf.Pesquisa(ucUfCidadeLocalEntrega.IdUf);
+                EntLocalEntrega.id_cidade = modCidade.Pesquisa(ucUfCidadeLocalEntrega.IdCidade);
                 EntLocalEntrega.telefone = cModGeral.TiraCampos(MskTelefoneEntrega.Text).Trim();
                 EntLocalEntrega.obs = TxtObs.Text;
                 EntLocalEntrega.FlExcluirLocalEntrega = false;
