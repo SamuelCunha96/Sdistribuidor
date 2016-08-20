@@ -102,9 +102,6 @@ namespace Sdistribuidor.Model
             {
                 #region INCLUINDO PEDIDO
                 command = new NpgsqlCommand("spincluirpedido", BancoDados.conexao);
-                //command = new NpgsqlCommand();
-                //command.Connection = BancoDados.conexao;
-                //command.CommandText = "spincluirpedido";
                 command.Transaction = BeginTrans;
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("id_participante", Obj.id_participante.id);
