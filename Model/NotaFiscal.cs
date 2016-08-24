@@ -21,14 +21,14 @@ namespace Sdistribuidor.Model
             BeginTrans = BancoDados.conexao.BeginTransaction();
             try
             {
-                
+
                 command = new NpgsqlCommand("spincluirnfe", BancoDados.conexao);
                 command.Transaction = BeginTrans;
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("id_loja", EntNotaFiscal.id_loja);
                 command.Parameters.AddWithValue("serienf", EntNotaFiscal.serienf);
                 command.Parameters.AddWithValue("nrnf", EntNotaFiscal.nrnf);
-                command.Parameters.AddWithValue("id_participante", EntNotaFiscal.id_participante);
+                command.Parameters.AddWithValue("id_participante", EntNotaFiscal.id_participante.id);
                 command.Parameters.AddWithValue("dtemissao", EntNotaFiscal.dtemissao);
                 command.Parameters.AddWithValue("dtsaida", EntNotaFiscal.dtsaida);
                 command.Parameters.AddWithValue("vltotal", EntNotaFiscal.vltotal);
@@ -44,16 +44,42 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("id_pedido", EntNotaFiscal.id_pedido);
                 command.Parameters.AddWithValue("flfinalidade", EntNotaFiscal.flfinalidade);
 
+                command.ExecuteNonQuery();
 
+                foreach (var item in EntNotaFiscal.ItemNFe)
+                {
+                    command = new NpgsqlCommand("spincluirnfe", BancoDados.conexao);
+                    command.Transaction = BeginTrans;
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("id_loja", item.id_loja);
+                    command.Parameters.AddWithValue("serienf", item.serienf);
+                    command.Parameters.AddWithValue("nrnf", item.nrnf);
+                    command.Parameters.AddWithValue("id_produto", item.IdProduto);
+                    command.Parameters.AddWithValue("qt_venda", item.qt_venda);
+                    command.Parameters.AddWithValue("vlunitario", item.VlPreco);
+                    command.Parameters.AddWithValue("vlbaseicms", item.vlbaseicms);
+                    command.Parameters.AddWithValue("vlicms", item.vlicms);
+                    command.Parameters.AddWithValue("vlbaseicmssub", item.vlbaseicmssub);
+                    command.Parameters.AddWithValue("vlicmssub", item.vlicmssub);
+                    command.Parameters.AddWithValue("vloutras", item.vloutras);
+                    command.Parameters.AddWithValue("cfop", item.cfop);
+                    command.Parameters.AddWithValue("csticms", item.icms);
+                    command.Parameters.AddWithValue("cstipi", item.ipi);
+                    command.Parameters.AddWithValue("cstpis", item.pis);
+                    command.Parameters.AddWithValue("cstcofins", item.cofins);
+                    command.ExecuteNonQuery();
+                }
 
+                BeginTrans.Commit();
 
+                return true;
 
             }
-            catch(Exception Ex)
+            catch (Exception Ex)
             {
-
+                BeginTrans.Rollback();
+                return true;
             }
-
-            }
+        }
     }
 }

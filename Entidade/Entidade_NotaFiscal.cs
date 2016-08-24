@@ -11,7 +11,7 @@ namespace Sdistribuidor.Entidade
         public int id_loja { get; set; }
         public string serienf { get; set; }
         public int nrnf { get; set; }
-        public int id_participante { get; set; }
+        public Entidade_Participante id_participante { get; set; }
         public DateTime dtemissao { get; set; }
         public DateTime dtsaida { get; set; }
         public double vltotal { get; set; }
@@ -32,7 +32,13 @@ namespace Sdistribuidor.Entidade
         public string dhcontingencia { get; set; }
         public string xjust { get; set; }
         public int id_pedido { get; set; }
-        public string flfinalidade { get; set; }
+        /// <summary>
+        /// 1=NF-e normal;
+        /// 2=NF-e complementar;
+        /// 3=NF-e de ajuste;
+        /// 4=Devolução de mercadoria.
+        /// </summary>
+        public int flfinalidade { get; set; }
         public List<Entidade_ItemNFe> ItemNFe { get; set; }
     }
 }

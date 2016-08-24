@@ -25,9 +25,14 @@ namespace Sdistribuidor.View
         Participante MParticipante;
         Produtos MProdutos;
         LojaSimples mLSimples;
-        Entidade_ItemNFe EntItemNFe = new Entidade_ItemNFe();
+        Entidade_ItemNFe EntItemNFe;
         Entidade_TotaisNota _totnotafiscal;
         Entidade_LojaSimples EntLojaSimples;
+        Entidade_NotaFiscal EntNotaFiscal;
+        Entidade_Participante EntParticipante;
+        List<Entidade_ItemNFe> ListItemNF = new List<Entidade_ItemNFe>();
+
+        // TODO: FALTANDO PEGAR O NÚMERO DA NF E A SÉRIE E LIMPAR OS CAMPOS APÓS A INSERÇÃO
 
         private void FMT003NotaFiscal_Load(object sender, EventArgs e)
         {
@@ -65,9 +70,12 @@ namespace Sdistribuidor.View
                 MProdutos = new Produtos();
                 MParticipante = new Participante();
                 mLSimples = new LojaSimples();
+
+                EntParticipante = new Entidade_Participante();
                 var RetEntLS = mLSimples.Pesquisa(1);
                 var DtPedido = MPedido.Pesquisa(Convert.ToInt32(grdListaPedidos.Rows[e.RowIndex].Cells[0].Value));
 
+                EntParticipante = DtPedido.id_participante;
 
                 lblCliente.Text = DtPedido.id_participante.razaosocial;
                 lblEndereco.Text = DtPedido.id_participante.lagradouro;
@@ -93,13 +101,34 @@ namespace Sdistribuidor.View
 
                 foreach (var item in DtPedido.ItemPedidos)
                 {
+                    EntItemNFe = new Entidade_ItemNFe();
                     var produto = MProdutos.Pesquisa(item.id_produto.IdProduto);
+                    EntItemNFe.IdProduto = produto.IdProduto;
+                    EntItemNFe.qt_venda = item.Qt_Pedido;
+                    EntItemNFe.VlPreco = produto.VlPreco;
+                    EntItemNFe.icms = produto.icms;
+                    EntItemNFe.ipi = produto.ipi;
+                    EntItemNFe.pis = produto.pis;
+                    EntItemNFe.cofins = produto.cofins;
+                    EntItemNFe.cfop = Entidade_GeralInformcoes.uf == lblEstado.Text ? produto.cfop_int : produto.cfop_ext;
+
+
                     if (produto.icms == "00" || produto.icms == "10" || produto.icms == "20" || produto.icms == "70")
                     {
+                        EntItemNFe.vlbaseicms = item.Qt_Pedido * item.Vl_Unitario;
+                        EntItemNFe.vlicms = item.Qt_Pedido * item.Vl_Unitario * (RetEntLS.VlAliqImcs / 100);
+                        EntItemNFe.vlbaseicmssub = 0;
+                        EntItemNFe.vlicms = 0;
+                        EntItemNFe.vloutras = 0;
                         grdProdutoNF.Rows.Add(produto.IdProduto, produto.NmProduto, produto.NCM, produto.icms, produto.ipi, produto.pis, Entidade_GeralInformcoes.uf == lblEstado.Text ? produto.cfop_int : produto.cfop_ext, produto.Unidade.CdUnidade, item.Vl_Desconto, item.Qt_Pedido, item.Vl_Unitario, RetEntLS.VlAliqImcs, item.Qt_Pedido * item.Vl_Unitario, item.Qt_Pedido * item.Vl_Unitario);
                     }
                     else
                     {
+                        EntItemNFe.vlbaseicms = 0;
+                        EntItemNFe.vlicms = 0;
+                        EntItemNFe.vlbaseicmssub = 0;
+                        EntItemNFe.vlicms = 0;
+                        EntItemNFe.vloutras = 0;
                         grdProdutoNF.Rows.Add(produto.IdProduto, produto.NmProduto, produto.NCM, produto.icms, produto.ipi, produto.pis, Entidade_GeralInformcoes.uf == lblEstado.Text ? produto.cfop_int : produto.cfop_ext, produto.Unidade.CdUnidade, item.Vl_Desconto, item.Qt_Pedido, item.Vl_Unitario, 0, 0, item.Qt_Pedido * item.Vl_Unitario);
                     }
                 }
@@ -182,6 +211,64 @@ namespace Sdistribuidor.View
                 else
                     pnlInformacoes.Visible = true;
             }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (ValidaSalvar())
+            {
+                if (Salvar())
+                {
+                    MessageBox.Show("Nota Fiscal gerada com sucesso!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        bool Salvar()
+        {
+            EntNotaFiscal = new Entidade_NotaFiscal();
+            try
+            {
+                EntNotaFiscal.id_loja = Entidade_GeralInformcoes.idloja;
+                EntNotaFiscal.id_participante = EntParticipante;
+                EntNotaFiscal.serienf = string.Empty;
+                EntNotaFiscal.nrnf = 0;
+                EntNotaFiscal.dtemissao = DateTime.Now;
+                EntNotaFiscal.vltotal = Convert.ToDouble(lblVlTotal.Text.Replace(".", ""));
+                EntNotaFiscal.vlbaseicms = Convert.ToDouble(lblVlBaseICms.Text.Replace(".", ""));
+                EntNotaFiscal.vlicms = Convert.ToDouble(lblVlIcms.Text.Replace(".", ""));
+                EntNotaFiscal.vlbaseicmssub = Convert.ToDouble(lblVlBaseIcmsSub.Text.Replace(".", ""));
+                EntNotaFiscal.vlicmssub = Convert.ToDouble(lblVlIcmsSub.Text.Replace(".", ""));
+                EntNotaFiscal.vloutras = Convert.ToDouble(lblVlOutDesp.Text.Replace(".", ""));
+                EntNotaFiscal.vlfrete = Convert.ToDouble(lblVlFrete.Text.Replace(".", ""));
+                EntNotaFiscal.vlseguro = Convert.ToDouble(lblVlSeguro.Text.Replace(".", ""));
+                EntNotaFiscal.txobsfisco = TxtInfFisco.Text;
+                EntNotaFiscal.txobscontribuinte = TxtInfContribuinte.Text;
+                EntNotaFiscal.id_pedido = Convert.ToInt32(lblNumeroPedido.Text);
+                EntNotaFiscal.flfinalidade = 1;
+                EntNotaFiscal.ItemNFe = ListItemNF;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        bool ValidaSalvar()
+        {
+            if (lblNumeroPedido.Text == string.Empty)
+            {
+                MessageBox.Show("Informe um pedido para gerar a nota fiscal", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            else if (grdProdutoNF.Rows.Count == 0)
+            {
+                MessageBox.Show("Pedido sem produto, não será possivel gerar a nota fiscal!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            else
+                return true;
         }
     }
 }
