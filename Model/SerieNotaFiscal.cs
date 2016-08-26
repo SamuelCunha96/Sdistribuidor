@@ -17,13 +17,13 @@ namespace Sdistribuidor.Model
         /// <returns></returns>
         public int NfAtual(int Loja, string modelo)
         {
-            var nrnf = BancoDados.maxId("SELECT nrnf FROM serienf WHERE id_loja=" + 1 + "AND modelo='" + modelo + "'");
-            BancoDados.InsertAlterarExcluir("UPDATE serienf SET nrnf=" + nrnf + " WHERE id_loja=" + 1 + "AND modelo='" + modelo + "'");
+            var nrnf = BancoDados.maxId("SELECT nrnf FROM serienfe WHERE id_loja=" + 1 + "AND modelo='" + modelo + "'");
+            BancoDados.InsertAlterarExcluir("UPDATE serienfe SET nrnf=" + nrnf + " WHERE id_loja=" + 1 + "AND modelo='" + modelo + "'");
             return nrnf;
         }
         public string Serie(int Loja, string modelo)
         {
-            var DtSerie = BancoDados.Consultar("SELECT serie FROM serienf WHERE id_loja=" + 1 + "AND modelo='" + modelo + "'");
+            var DtSerie = BancoDados.Consultar("SELECT serie FROM serienfe WHERE id_loja=" + 1 + "AND modelo='" + modelo + "'");
             if (DtSerie.Rows[0][0].ToString() != string.Empty)
                 return DtSerie.Rows[0][0].ToString();
             else

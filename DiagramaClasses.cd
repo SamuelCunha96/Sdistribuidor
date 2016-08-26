@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sdistribuidor.Entidade.Entidade_CartaoBandeira" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_CartaoBandeira.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Cfop" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_Cfop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Cidade" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAgA=</HashCode>
+      <FileName>Entidade\Entidade_Cidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Cst" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAIAAAgAAA=</HashCode>
+      <FileName>Entidade\Entidade_Cst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Estoque" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_Estoque.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_FormaPagto" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACABAACAAAABAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_FormaPagto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_GeralInformcoes" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAGAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Entidade\Entidade_GeralInformcoes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Grupo" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Entidade\Entidade_Grupo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_ItemFormaPagto" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAIAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_ItemFormaPagto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_ItemNFe" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACCGgAAAAAQAAAAAAAAAAABAQAAACAAAEAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_ItemNFe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_ItemPedido" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAAABAAAAQAAAAgAAAAAAAAAACAAMAgAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_ItemPedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_LocalEntrega" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAQAAIIAAAAAAEIAEAAAAAAAgAAAAAAAAAgA=</HashCode>
+      <FileName>Entidade\Entidade_LocalEntrega.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Loja" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAEAAAAAAAAAASFAAEAEAAAAAAAAAEACgAIiE=</HashCode>
+      <FileName>Entidade\Entidade_Loja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_LojaSimples" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_LojaSimples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_NotaFiscal">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAKkpAQAQAQKAAgIACAAIABAQASAGAQAEAgAIAAA=</HashCode>
+      <FileName>Entidade\Entidade_NotaFiscal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Participante">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCgAAgBAAAAEIAAAAAUEAAEAAAAAQAEAAAAAAAAAgA=</HashCode>
+      <FileName>Entidade\Entidade_Participante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Pedido">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABAAQCAAAAAAACAABAAAACKACAAAAAAAACABAE=</HashCode>
+      <FileName>Entidade\Entidade_Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Produto" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgAAAAAAAAEIIwCAAIACEEQAAIAAAAAAAgAAAAOAA=</HashCode>
+      <FileName>Entidade\Entidade_Produto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_ProdutoUnidade" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAwAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entidade\Entidade_ProdutoUnidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_RecebCaixa" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Entidade\Entidade_RecebCaixa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_SerieNotaFiscal" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Entidade\Entidade_SerieNotaFiscal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_TotaisNota" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AxEAAAAAAAAIIgAIAAAAQAICEBAJIAAQACAABCAAABQ=</HashCode>
+      <FileName>Entidade\Entidade_TotaisNota.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_UF" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAACAAAAAEAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_UF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Unidade" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgCAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_Unidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Usuario" Collapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sdistribuidor.Entidade.Entidade_Vendedor" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAIAgAAQBAAAEAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidade\Entidade_Vendedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

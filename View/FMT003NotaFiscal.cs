@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Sdistribuidor.Model;
 using Sdistribuidor.Entidade;
+using Sdistribuidor.Model;
 
 namespace Sdistribuidor.View
 {
@@ -20,17 +20,19 @@ namespace Sdistribuidor.View
         }
 
 
+        SerieNotaFiscal mSerieNotaFiscal;
         Pagamento Mpagamento;
         Pedido MPedido;
         Participante MParticipante;
         Produtos MProdutos;
         LojaSimples mLSimples;
+        NotaFiscal mNotaFiscal;
         Entidade_ItemNFe EntItemNFe;
         Entidade_TotaisNota _totnotafiscal;
         Entidade_LojaSimples EntLojaSimples;
         Entidade_NotaFiscal EntNotaFiscal;
         Entidade_Participante EntParticipante;
-        List<Entidade_ItemNFe> ListItemNF = new List<Entidade_ItemNFe>();
+        List<Entidade_ItemNFe> ListItemNF;
 
         // TODO: FALTANDO PEGAR O NÚMERO DA NF E A SÉRIE E LIMPAR OS CAMPOS APÓS A INSERÇÃO
 
@@ -98,13 +100,13 @@ namespace Sdistribuidor.View
                     LblLocalEstado.Text = LocalEnt.id_uf.desc_uf;
                     LblLocalCidade.Text = LocalEnt.id_cidade.desc_municipio;
                 }
-
+                ListItemNF = new List<Entidade_ItemNFe>();
                 foreach (var item in DtPedido.ItemPedidos)
                 {
                     EntItemNFe = new Entidade_ItemNFe();
                     var produto = MProdutos.Pesquisa(item.id_produto.IdProduto);
                     EntItemNFe.IdProduto = produto.IdProduto;
-                    EntItemNFe.qt_venda = item.Qt_Pedido;
+                    EntItemNFe.qt_venda = Convert.ToDecimal(item.Qt_Pedido);
                     EntItemNFe.VlPreco = produto.VlPreco;
                     EntItemNFe.icms = produto.icms;
                     EntItemNFe.ipi = produto.ipi;
@@ -115,8 +117,8 @@ namespace Sdistribuidor.View
 
                     if (produto.icms == "00" || produto.icms == "10" || produto.icms == "20" || produto.icms == "70")
                     {
-                        EntItemNFe.vlbaseicms = item.Qt_Pedido * item.Vl_Unitario;
-                        EntItemNFe.vlicms = item.Qt_Pedido * item.Vl_Unitario * (RetEntLS.VlAliqImcs / 100);
+                        EntItemNFe.vlbaseicms = Convert.ToDecimal(item.Qt_Pedido * item.Vl_Unitario);
+                        EntItemNFe.vlicms = Convert.ToDecimal(item.Qt_Pedido * item.Vl_Unitario * (RetEntLS.VlAliqImcs / 100));
                         EntItemNFe.vlbaseicmssub = 0;
                         EntItemNFe.vlicms = 0;
                         EntItemNFe.vloutras = 0;
@@ -131,6 +133,7 @@ namespace Sdistribuidor.View
                         EntItemNFe.vloutras = 0;
                         grdProdutoNF.Rows.Add(produto.IdProduto, produto.NmProduto, produto.NCM, produto.icms, produto.ipi, produto.pis, Entidade_GeralInformcoes.uf == lblEstado.Text ? produto.cfop_int : produto.cfop_ext, produto.Unidade.CdUnidade, item.Vl_Desconto, item.Qt_Pedido, item.Vl_Unitario, 0, 0, item.Qt_Pedido * item.Vl_Unitario);
                     }
+                    ListItemNF.Add(EntItemNFe);
                 }
                 CalcularTributos();
                 tbNotaFiscal.SelectedTab = tbPgDados;
@@ -227,29 +230,37 @@ namespace Sdistribuidor.View
         bool Salvar()
         {
             EntNotaFiscal = new Entidade_NotaFiscal();
+            mSerieNotaFiscal = new SerieNotaFiscal();
+            mNotaFiscal = new NotaFiscal();
             try
             {
                 EntNotaFiscal.id_loja = Entidade_GeralInformcoes.idloja;
                 EntNotaFiscal.id_participante = EntParticipante;
-                EntNotaFiscal.serienf = string.Empty;
-                EntNotaFiscal.nrnf = 0;
+                EntNotaFiscal.serienf = mSerieNotaFiscal.Serie(Entidade_GeralInformcoes.idloja,"55");
+                EntNotaFiscal.nrnf = mSerieNotaFiscal.NfAtual(Entidade_GeralInformcoes.idloja, "55");
                 EntNotaFiscal.dtemissao = DateTime.Now;
-                EntNotaFiscal.vltotal = Convert.ToDouble(lblVlTotal.Text.Replace(".", ""));
-                EntNotaFiscal.vlbaseicms = Convert.ToDouble(lblVlBaseICms.Text.Replace(".", ""));
-                EntNotaFiscal.vlicms = Convert.ToDouble(lblVlIcms.Text.Replace(".", ""));
-                EntNotaFiscal.vlbaseicmssub = Convert.ToDouble(lblVlBaseIcmsSub.Text.Replace(".", ""));
-                EntNotaFiscal.vlicmssub = Convert.ToDouble(lblVlIcmsSub.Text.Replace(".", ""));
-                EntNotaFiscal.vloutras = Convert.ToDouble(lblVlOutDesp.Text.Replace(".", ""));
-                EntNotaFiscal.vlfrete = Convert.ToDouble(lblVlFrete.Text.Replace(".", ""));
-                EntNotaFiscal.vlseguro = Convert.ToDouble(lblVlSeguro.Text.Replace(".", ""));
+                EntNotaFiscal.dtsaida = DateTime.Now;
+                EntNotaFiscal.vltotal = Convert.ToDecimal(lblVlTotal.Text.Replace(".", ""));
+                EntNotaFiscal.vlbaseicms = Convert.ToDecimal(lblVlBaseICms.Text.Replace(".", ""));
+                EntNotaFiscal.vlicms = Convert.ToDecimal(lblVlIcms.Text.Replace(".", ""));
+                EntNotaFiscal.vlbaseicmssub = Convert.ToDecimal(lblVlBaseIcmsSub.Text.Replace(".", ""));
+                EntNotaFiscal.vlicmssub = Convert.ToDecimal(lblVlIcmsSub.Text.Replace(".", ""));
+                EntNotaFiscal.vloutras = Convert.ToDecimal(lblVlOutDesp.Text.Replace(".", ""));
+                EntNotaFiscal.vlfrete = Convert.ToDecimal(lblVlFrete.Text.Replace(".", ""));
+                EntNotaFiscal.vlseguro = Convert.ToDecimal(lblVlSeguro.Text.Replace(".", ""));
                 EntNotaFiscal.txobsfisco = TxtInfFisco.Text;
                 EntNotaFiscal.txobscontribuinte = TxtInfContribuinte.Text;
                 EntNotaFiscal.id_pedido = Convert.ToInt32(lblNumeroPedido.Text);
                 EntNotaFiscal.flfinalidade = 1;
                 EntNotaFiscal.ItemNFe = ListItemNF;
+
+                if (mNotaFiscal.Salvar(EntNotaFiscal))
+                {
+                    MessageBox.Show("Nota Fiscal: " + EntNotaFiscal.serienf + "-" + EntNotaFiscal.nrnf +" gerada com sucesso","Atenção",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }

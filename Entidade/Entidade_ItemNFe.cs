@@ -11,12 +11,12 @@ namespace Sdistribuidor.Entidade
         public int id_loja { get; set; }
         public string serienf { get; set; }
         public int nrnf { get; set; }
-        public double qt_venda { get; set; }
-        public double vlbaseicms { get; set; }
-        public double vlicms { get; set; }
-        public double vlbaseicmssub { get; set; }
-        public double vlicmssub { get; set; }
-        public double vloutras { get; set; }
-        public double cfop { get; set; }
+        public decimal qt_venda { get; set; }
+        public decimal vlbaseicms { get; set; }
+        public decimal vlicms { get; set; }
+        public decimal vlbaseicmssub { get; set; }
+        public decimal vlicmssub { get; set; }
+        public decimal vloutras { get; set; }
+        public int cfop { get; set; }
     }
 }

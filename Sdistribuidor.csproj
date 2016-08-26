@@ -83,6 +83,7 @@
     <Compile Include="Entidade\Entidade_Produto.cs" />
     <Compile Include="Entidade\Entidade_ProdutoUnidade.cs" />
     <Compile Include="Entidade\Entidade_RecebCaixa.cs" />
+    <Compile Include="Entidade\Entidade_SerieNotaFiscal.cs" />
     <Compile Include="Entidade\Entidade_TotaisNota.cs" />
     <Compile Include="Entidade\Entidade_UF.cs" />
     <Compile Include="Entidade\Entidade_Unidade.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Model\Produtos.cs" />
     <Compile Include="Model\ProdutoUnidade.cs" />
     <Compile Include="Model\RecebCaixa.cs" />
+    <Compile Include="Model\SerieNotaFiscal.cs" />
     <Compile Include="Model\UF.cs" />
     <Compile Include="Model\Unidade.cs" />
     <Compile Include="Model\Usuario.cs" />
@@ -272,6 +274,7 @@
     <EmbeddedResource Include="View\FUTabelasAux.resx">
       <DependentUpon>FUTabelasAux.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DiagramaClasses.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

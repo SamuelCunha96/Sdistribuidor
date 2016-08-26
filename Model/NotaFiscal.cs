@@ -42,21 +42,21 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("txobsfisco", EntNotaFiscal.txobsfisco);
                 command.Parameters.AddWithValue("txobscontribuinte", EntNotaFiscal.txobscontribuinte);
                 command.Parameters.AddWithValue("id_pedido", EntNotaFiscal.id_pedido);
-                command.Parameters.AddWithValue("flfinalidade", EntNotaFiscal.flfinalidade);
+                command.Parameters.AddWithValue("flfinalidade", EntNotaFiscal.flfinalidade.ToString());
 
                 command.ExecuteNonQuery();
 
                 foreach (var item in EntNotaFiscal.ItemNFe)
                 {
-                    command = new NpgsqlCommand("spincluirnfe", BancoDados.conexao);
+                    command = new NpgsqlCommand("spincluiritemnfsaida", BancoDados.conexao);
                     command.Transaction = BeginTrans;
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("id_loja", item.id_loja);
-                    command.Parameters.AddWithValue("serienf", item.serienf);
-                    command.Parameters.AddWithValue("nrnf", item.nrnf);
-                    command.Parameters.AddWithValue("id_produto", item.IdProduto);
-                    command.Parameters.AddWithValue("qt_venda", item.qt_venda);
-                    command.Parameters.AddWithValue("vlunitario", item.VlPreco);
+                    command.Parameters.AddWithValue("id_loja", EntNotaFiscal.id_loja);
+                    command.Parameters.AddWithValue("serienf", EntNotaFiscal.serienf);
+                    command.Parameters.AddWithValue("nrnf", EntNotaFiscal.nrnf);
+                    command.Parameters.AddWithValue("id_produto", Convert.ToInt32(item.IdProduto));
+                    command.Parameters.AddWithValue("qt_venda", Convert.ToDecimal(item.qt_venda));
+                    command.Parameters.AddWithValue("vlunitario", Convert.ToDecimal(item.VlPreco));
                     command.Parameters.AddWithValue("vlbaseicms", item.vlbaseicms);
                     command.Parameters.AddWithValue("vlicms", item.vlicms);
                     command.Parameters.AddWithValue("vlbaseicmssub", item.vlbaseicmssub);
@@ -72,13 +72,15 @@ namespace Sdistribuidor.Model
 
                 BeginTrans.Commit();
 
+                BancoDados.InsertAlterarExcluir("UPDATE pedido set status='N' WHERE id_pedido=" + EntNotaFiscal.id_pedido + "");
+
                 return true;
 
             }
             catch (Exception Ex)
             {
                 BeginTrans.Rollback();
-                return true;
+                return false;
             }
         }
     }

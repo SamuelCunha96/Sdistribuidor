@@ -14,14 +14,14 @@ namespace Sdistribuidor.Entidade
         public Entidade_Participante id_participante { get; set; }
         public DateTime dtemissao { get; set; }
         public DateTime dtsaida { get; set; }
-        public double vltotal { get; set; }
-        public double vlbaseicms { get; set; }
-        public double vlicms { get; set; }
-        public double vlbaseicmssub { get; set; }
-        public double vlicmssub { get; set; }
-        public double vloutras { get; set; }
-        public double vlfrete { get; set; }
-        public double vlseguro { get; set; }
+        public decimal vltotal { get; set; }
+        public decimal vlbaseicms { get; set; }
+        public decimal vlicms { get; set; }
+        public decimal vlbaseicmssub { get; set; }
+        public decimal vlicmssub { get; set; }
+        public decimal vloutras { get; set; }
+        public decimal vlfrete { get; set; }
+        public decimal vlseguro { get; set; }
         public string txobsfisco { get; set; }
         public string txobscontribuinte { get; set; }
         public string txchacessonfe { get; set; }
