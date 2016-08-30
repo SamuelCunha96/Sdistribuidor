@@ -11,23 +11,25 @@ namespace Sdistribuidor.Entidade
         public Entidade_Participante()
         { }
 
-        public virtual int id { get; set; }
-        public virtual string nome { get; set; }
-        public virtual string cnpjcpf { get; set; }
-        public virtual string ie { get; set; }
-        public virtual string razaosocial { get; set; }
-        public virtual string nomefantasia { get; set; }
-        public virtual string lagradouro { get; set; }
-        public virtual string numero_end { get; set; }
-        public virtual string bairro { get; set; }
-        public virtual Entidade_Cidade id_cidade { get; set; }
-        public virtual Entidade_UF id_uf { get; set; }
-        public virtual string telefone { get; set; }
-        public virtual bool flcomercio { get; set; }
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string cnpjcpf { get; set; }
+        public string ie { get; set; }
+        public string razaosocial { get; set; }
+        public string nomefantasia { get; set; }
+        public string lagradouro { get; set; }
+        public string numero_end { get; set; }
+        public string bairro { get; set; }
+        public Entidade_Cidade id_cidade { get; set; }
+        public Entidade_UF id_uf { get; set; }
+        public string telefone { get; set; }
+        public bool flcomercio { get; set; }
+        public bool flisento { get; set; }
+        public string cep { get; set; }
 
         public List<Entidade_LocalEntrega> ListLocalEntrega { get; set; }
         
-        public virtual string ParticipanteNomeCpfCnpj
+        public string ParticipanteNomeCpfCnpj
         {
             get
             {

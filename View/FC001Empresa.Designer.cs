@@ -291,7 +291,7 @@
             // mskCep
             // 
             this.mskCep.Location = new System.Drawing.Point(5, 162);
-            this.mskCep.Mask = "0000-000";
+            this.mskCep.Mask = "00000-000";
             this.mskCep.Name = "mskCep";
             this.mskCep.Size = new System.Drawing.Size(84, 21);
             this.mskCep.SkipLiterals = false;

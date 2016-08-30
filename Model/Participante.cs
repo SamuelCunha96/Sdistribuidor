@@ -153,6 +153,8 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("cidade", Obj.id_cidade.id);
                 command.Parameters.AddWithValue("telefone", Obj.telefone);
                 command.Parameters.AddWithValue("flcomercio", Obj.flcomercio);
+                command.Parameters.AddWithValue("flisento", Obj.flisento);
+                command.Parameters.AddWithValue("cep", Obj.cep);
 
                 var Id = command.ExecuteScalar();
 
@@ -231,6 +233,8 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("cidade", Obj.id_cidade.id);
                 command.Parameters.AddWithValue("telefone", Obj.telefone);
                 command.Parameters.AddWithValue("flcomercio", Obj.flcomercio);
+                command.Parameters.AddWithValue("flisento", Obj.flisento);
+                command.Parameters.AddWithValue("cep", Obj.cep);
 
                 command.ExecuteNonQuery();
 

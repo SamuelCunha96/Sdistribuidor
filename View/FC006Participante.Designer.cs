@@ -62,6 +62,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.TxtObs = new System.Windows.Forms.TextBox();
             this.grdListaLocalEntrega = new System.Windows.Forms.DataGridView();
+            this.ColEntUF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEntCidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEntBairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEntLogradouro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEntNrEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEntTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColParticipante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.ucUfCidadeLocalEntrega = new Sdistribuidor.View.UC.UCUfCidade();
             this.TxtBairroEntrega = new System.Windows.Forms.TextBox();
@@ -72,14 +80,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.ColEntUF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntCidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntBairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntLogradouro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntNrEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEntTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColParticipante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mskCep = new System.Windows.Forms.MaskedTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.chkIsento = new System.Windows.Forms.CheckBox();
             this.tcBase.SuspendLayout();
             this.tpPesquisa.SuspendLayout();
             this.tpDados.SuspendLayout();
@@ -144,6 +147,9 @@
             // 
             // tbDadosParticipante
             // 
+            this.tbDadosParticipante.Controls.Add(this.chkIsento);
+            this.tbDadosParticipante.Controls.Add(this.mskCep);
+            this.tbDadosParticipante.Controls.Add(this.label12);
             this.tbDadosParticipante.Controls.Add(this.lblIE);
             this.tbDadosParticipante.Controls.Add(this.txtIE);
             this.tbDadosParticipante.Controls.Add(this.lblIdParticipante);
@@ -227,7 +233,7 @@
             this.TxtBairro.Location = new System.Drawing.Point(243, 122);
             this.TxtBairro.MaxLength = 50;
             this.TxtBairro.Name = "TxtBairro";
-            this.TxtBairro.Size = new System.Drawing.Size(287, 21);
+            this.TxtBairro.Size = new System.Drawing.Size(184, 21);
             this.TxtBairro.TabIndex = 6;
             // 
             // MskCpfCnpj
@@ -451,6 +457,72 @@
             this.grdListaLocalEntrega.TabIndex = 18;
             this.grdListaLocalEntrega.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdListaLocalEntrega_KeyDown);
             // 
+            // ColEntUF
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColEntUF.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColEntUF.HeaderText = "Uf";
+            this.ColEntUF.Name = "ColEntUF";
+            this.ColEntUF.ReadOnly = true;
+            this.ColEntUF.Width = 60;
+            // 
+            // ColEntCidade
+            // 
+            this.ColEntCidade.HeaderText = "Cidade";
+            this.ColEntCidade.Name = "ColEntCidade";
+            this.ColEntCidade.ReadOnly = true;
+            this.ColEntCidade.Width = 70;
+            // 
+            // ColEntBairro
+            // 
+            this.ColEntBairro.HeaderText = "Bairro";
+            this.ColEntBairro.Name = "ColEntBairro";
+            this.ColEntBairro.ReadOnly = true;
+            // 
+            // ColEntLogradouro
+            // 
+            dataGridViewCellStyle3.Format = "g";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ColEntLogradouro.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColEntLogradouro.HeaderText = "Logradouro";
+            this.ColEntLogradouro.Name = "ColEntLogradouro";
+            this.ColEntLogradouro.ReadOnly = true;
+            this.ColEntLogradouro.Width = 130;
+            // 
+            // ColEntNrEnd
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColEntNrEnd.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColEntNrEnd.HeaderText = "Nr. End.";
+            this.ColEntNrEnd.Name = "ColEntNrEnd";
+            this.ColEntNrEnd.ReadOnly = true;
+            this.ColEntNrEnd.Width = 80;
+            // 
+            // ColEntTelefone
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.ColEntTelefone.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ColEntTelefone.HeaderText = "Telefone";
+            this.ColEntTelefone.Name = "ColEntTelefone";
+            this.ColEntTelefone.ReadOnly = true;
+            // 
+            // ColParticipante
+            // 
+            this.ColParticipante.HeaderText = "Participante";
+            this.ColParticipante.Name = "ColParticipante";
+            this.ColParticipante.ReadOnly = true;
+            this.ColParticipante.Visible = false;
+            // 
+            // ColID
+            // 
+            this.ColID.HeaderText = "ID";
+            this.ColID.Name = "ColID";
+            this.ColID.ReadOnly = true;
+            this.ColID.Visible = false;
+            // 
             // BtnAdd
             // 
             this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
@@ -545,71 +617,34 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Logradouro";
             // 
-            // ColEntUF
+            // mskCep
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.ColEntUF.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColEntUF.HeaderText = "Uf";
-            this.ColEntUF.Name = "ColEntUF";
-            this.ColEntUF.ReadOnly = true;
-            this.ColEntUF.Width = 60;
+            this.mskCep.Location = new System.Drawing.Point(429, 122);
+            this.mskCep.Mask = "00000-000";
+            this.mskCep.Name = "mskCep";
+            this.mskCep.Size = new System.Drawing.Size(84, 21);
+            this.mskCep.SkipLiterals = false;
+            this.mskCep.TabIndex = 33;
+            this.mskCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ColEntCidade
+            // label12
             // 
-            this.ColEntCidade.HeaderText = "Cidade";
-            this.ColEntCidade.Name = "ColEntCidade";
-            this.ColEntCidade.ReadOnly = true;
-            this.ColEntCidade.Width = 70;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(427, 106);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(26, 13);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Cep";
             // 
-            // ColEntBairro
+            // chkIsento
             // 
-            this.ColEntBairro.HeaderText = "Bairro";
-            this.ColEntBairro.Name = "ColEntBairro";
-            this.ColEntBairro.ReadOnly = true;
-            // 
-            // ColEntLogradouro
-            // 
-            dataGridViewCellStyle3.Format = "g";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ColEntLogradouro.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColEntLogradouro.HeaderText = "Logradouro";
-            this.ColEntLogradouro.Name = "ColEntLogradouro";
-            this.ColEntLogradouro.ReadOnly = true;
-            this.ColEntLogradouro.Width = 130;
-            // 
-            // ColEntNrEnd
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColEntNrEnd.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ColEntNrEnd.HeaderText = "Nr. End.";
-            this.ColEntNrEnd.Name = "ColEntNrEnd";
-            this.ColEntNrEnd.ReadOnly = true;
-            this.ColEntNrEnd.Width = 80;
-            // 
-            // ColEntTelefone
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            this.ColEntTelefone.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ColEntTelefone.HeaderText = "Telefone";
-            this.ColEntTelefone.Name = "ColEntTelefone";
-            this.ColEntTelefone.ReadOnly = true;
-            // 
-            // ColParticipante
-            // 
-            this.ColParticipante.HeaderText = "Participante";
-            this.ColParticipante.Name = "ColParticipante";
-            this.ColParticipante.ReadOnly = true;
-            this.ColParticipante.Visible = false;
-            // 
-            // ColID
-            // 
-            this.ColID.HeaderText = "ID";
-            this.ColID.Name = "ColID";
-            this.ColID.ReadOnly = true;
-            this.ColID.Visible = false;
+            this.chkIsento.AutoSize = true;
+            this.chkIsento.Location = new System.Drawing.Point(130, 192);
+            this.chkIsento.Name = "chkIsento";
+            this.chkIsento.Size = new System.Drawing.Size(57, 17);
+            this.chkIsento.TabIndex = 35;
+            this.chkIsento.Text = "Isento";
+            this.chkIsento.UseVisualStyleBackColor = true;
             // 
             // FC006Participante
             // 
@@ -680,5 +715,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEntTelefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColParticipante;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
+        private System.Windows.Forms.MaskedTextBox mskCep;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox chkIsento;
     }
 }

@@ -124,6 +124,8 @@ namespace Sdistribuidor.View
             EntParticipante.numero_end = TxtNrEnder.Text.Trim();
             EntParticipante.telefone = cModGeral.TiraCampos(mskTelefone.Text).Trim();
             EntParticipante.flcomercio = chkComercial.Checked;
+            EntParticipante.flisento = chkIsento.Checked;
+            EntParticipante.cep = cModGeral.TiraCampos(mskCep.Text);
 
             modPart.Incluir(EntParticipante, ListEntLocalEntrega);
 
@@ -151,6 +153,8 @@ namespace Sdistribuidor.View
             EntParticipante.numero_end = TxtNrEnder.Text.Trim();
             EntParticipante.telefone = cModGeral.TiraCampos(mskTelefone.Text).Trim();
             EntParticipante.flcomercio = chkComercial.Checked;
+            EntParticipante.flisento = chkIsento.Checked;
+            EntParticipante.cep = cModGeral.TiraCampos(mskCep.Text);
 
             modPart.Update(EntParticipante, ListEntLocalEntrega);
 
@@ -195,6 +199,8 @@ namespace Sdistribuidor.View
                 ucUfCidade1.IdUf = DtPart.id_uf.id_uf;
                 ucUfCidade1.IdCidade = DtPart.id_cidade.id;
                 lblIdParticipante.Text = DtPart.id.ToString();
+                chkIsento.Checked = DtPart.flisento;
+                mskCep.Text = DtPart.cep;
 
                 if (DtPart.ListLocalEntrega.Count > 0)
                 {
@@ -313,6 +319,7 @@ namespace Sdistribuidor.View
         {
             MskCpfCnpj.Mask = "999,999,999-99";
             MskCpfCnpj.Text = string.Empty;
+            mskCep.Text = string.Empty;
             lblCnpjCpf.Text = "CPF";
             TxtFantasia.Visible = false;
             LblNomeFantasia.Visible = false;
@@ -325,6 +332,7 @@ namespace Sdistribuidor.View
             TxtNrEnder.Text = string.Empty;
             mskTelefone.Text = string.Empty;
             chkComercial.Checked = false;
+            chkIsento.Checked = false;
             ucUfCidade1.IdUf = 0;
             ucUfCidade1.IdCidade =0;
             lblIdParticipante.Text = string.Empty;
