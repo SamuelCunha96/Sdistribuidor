@@ -199,6 +199,12 @@
     <Compile Include="View\FMT003NotaFiscal.Designer.cs">
       <DependentUpon>FMT003NotaFiscal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT004NotaFiscalDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT004NotaFiscalDev.Designer.cs">
+      <DependentUpon>FMT004NotaFiscalDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT003NotaFiscal.resx">
       <DependentUpon>FMT003NotaFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT004NotaFiscalDev.resx">
+      <DependentUpon>FMT004NotaFiscalDev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>
