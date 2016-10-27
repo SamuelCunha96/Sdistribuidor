@@ -77,5 +77,12 @@ namespace Sdistribuidor.View
             ObjForm.MdiParent = this;
             ObjForm.Show();
         }
+
+        private void btnNFeOutras_Click(object sender, EventArgs e)
+        {
+            FMT004NotaFiscalDev ObjForm = new FMT004NotaFiscalDev();
+            ObjForm.MdiParent = this;
+            ObjForm.Show();
+        }
     }
 }

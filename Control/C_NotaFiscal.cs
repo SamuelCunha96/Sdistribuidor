@@ -43,7 +43,7 @@ namespace Sdistribuidor.Control
 
         public double SomarGeral(Entidade_TotaisNota _Totais)
         {
-            return (_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlIpi + _Totais.VlFrete + _Totais.VlIcmsSub + _Totais.VlOutrasDesp + _Totais.VlSeguro - _Totais.VlDesconto;
+            return (_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub + _Totais.VlIpi  - _Totais.VlDesconto;
         }
         public double SomarGeralItem(Entidade_TotaisNota _Totais)
         {

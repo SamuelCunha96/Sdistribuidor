@@ -43,6 +43,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnAux = new System.Windows.Forms.Button();
+            this.btnNFeOutras = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -179,6 +180,7 @@
             // 
             // tbPgNotaFiscal
             // 
+            this.tbPgNotaFiscal.Controls.Add(this.btnNFeOutras);
             this.tbPgNotaFiscal.Controls.Add(this.btnNotaFiscal);
             this.tbPgNotaFiscal.Location = new System.Drawing.Point(4, 21);
             this.tbPgNotaFiscal.Name = "tbPgNotaFiscal";
@@ -248,6 +250,22 @@
             this.btnAux.UseVisualStyleBackColor = true;
             this.btnAux.Click += new System.EventHandler(this.btnAux_Click);
             // 
+            // btnNFeOutras
+            // 
+            this.btnNFeOutras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNFeOutras.FlatAppearance.BorderSize = 0;
+            this.btnNFeOutras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNFeOutras.Image = ((System.Drawing.Image)(resources.GetObject("btnNFeOutras.Image")));
+            this.btnNFeOutras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNFeOutras.Location = new System.Drawing.Point(78, 3);
+            this.btnNFeOutras.Name = "btnNFeOutras";
+            this.btnNFeOutras.Size = new System.Drawing.Size(75, 94);
+            this.btnNFeOutras.TabIndex = 3;
+            this.btnNFeOutras.Text = "NFe Outras";
+            this.btnNFeOutras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNFeOutras.UseVisualStyleBackColor = true;
+            this.btnNFeOutras.Click += new System.EventHandler(this.btnNFeOutras_Click);
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +305,6 @@
         private System.Windows.Forms.Button btnAux;
         private System.Windows.Forms.Button btnLoja;
         private System.Windows.Forms.Button btnParticipante;
+        private System.Windows.Forms.Button btnNFeOutras;
     }
 }
