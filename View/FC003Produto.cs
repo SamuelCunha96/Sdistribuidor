@@ -226,10 +226,10 @@ namespace Sdistribuidor.View
                     grdUnidConv.Rows.Add(item.Unidade.CdUnidade, string.Format("{0:N4}", item.vlfatorconv));
                 }
             }
-            else
-            {
-                grdUnidConv.Rows.Add(ObjRet.Unidade.CdUnidade, "1,000");
-            }
+            //else
+            //{
+            //    grdUnidConv.Rows.Add(ObjRet.Unidade.CdUnidade, "1,000");
+            //}
         }
         public override void CamposGrid()
         {

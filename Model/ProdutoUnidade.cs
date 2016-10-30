@@ -79,7 +79,7 @@ namespace Sdistribuidor.Model
         {
             try
             {
-                BancoDados.InsertAlterarExcluir("INSERT INTO produtounidade (id_produto,cdunidade,vlfatorconv) VALUES(" + Obj.id_produto + ",'" + Obj.Unidade.Unidade + "'," + Obj.vlfatorconv.ToString().Replace(".", "").Replace(",", ".") + ")");
+                BancoDados.InsertAlterarExcluir("INSERT INTO produtounidade (id_produto,cdunidade,vlfatorconv) VALUES(" + Obj.id_produto + ",'" + Obj.Unidade.CdUnidade + "'," + Obj.vlfatorconv.ToString().Replace(".", "").Replace(",", ".") + ")");
                 return true;
             }
             catch (Exception ex)

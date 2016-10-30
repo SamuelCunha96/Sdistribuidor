@@ -8,7 +8,7 @@ using System.Xml;
 using System.IO;
 using Sdistribuidor.Model;
 
-namespace Sdistribuidor.Gerais
+namespace Sdistribuidor.Model.Gerais
 {
     class AssinaturaDigital
     {

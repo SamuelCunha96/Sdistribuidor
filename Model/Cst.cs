@@ -12,11 +12,11 @@ namespace Sdistribuidor.Model
     {
         Entidade_Cst EntCst;
         
-        public List<Entidade_Cst> ICMS(string empresa)
+        public List<Entidade_Cst> ICMS(string TipoICMS)
         {
             
             List<Entidade_Cst> ListCst = new List<Entidade_Cst>();
-            var Dt = BancoDados.Consultar("SELECT cst, cst || '-' || descricao as descricao FROM cst WHERE tabela_cst = 'ICMS' AND tipo_icms = '" + empresa +"' ORDER BY cst");
+            var Dt = BancoDados.Consultar("SELECT cst, cst || '-' || descricao as descricao FROM cst WHERE tabela_cst = 'ICMS' AND tipo_icms = '" + TipoICMS + "' ORDER BY cst");
 
             for (int i = 0; i < Dt.Rows.Count; i++)
             {

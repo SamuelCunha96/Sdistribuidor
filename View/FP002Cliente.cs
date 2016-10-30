@@ -21,6 +21,8 @@ namespace Sdistribuidor.View
 
         Participante mParticipante;
 
+        public string Uf { get; set; }
+
         public override void CarregarDados()
         {
             mParticipante = new Participante();
@@ -53,6 +55,20 @@ namespace Sdistribuidor.View
             NewText.Width = 350;
 
             grdBase.Columns.Add(NewText);
+
+
+            NewText = new DataGridViewTextBoxColumn();
+            NewText.HeaderText = "Uf";
+            NewText.Name = "ColUf";
+            NewText.DataPropertyName = "uf";
+            NewText.Width = 80;
+
+            grdBase.Columns.Add(NewText);
+        }
+
+        public override void DadosGrids(DataGridView Dgv)
+        {
+            Uf = Dgv.Rows[0].Cells[3].Value.ToString();
         }
     }
 }

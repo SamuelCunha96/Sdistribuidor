@@ -26,7 +26,7 @@ namespace Sdistribuidor.Model
 
         public DataTable Pesquisa()
         {
-            return BancoDados.Consultar("SELECT * FROM participante order by Nome");
+            return BancoDados.Consultar("SELECT *,spretornodescuf(id_uf) as uf FROM participante order by Nome");
         }
         public int MaxID()
         {

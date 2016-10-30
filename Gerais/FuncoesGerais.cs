@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-namespace SCA.Gerais
+namespace Sdistribuidor.Gerais
 {
-    class FuncoesGerais
+    public class FuncoesGerais
     {
         public FuncoesGerais()
         {
@@ -31,7 +31,7 @@ namespace SCA.Gerais
 
             return i;
         }
-        public bool ItemNumerico(string item)
+        public static bool ItemNumerico(string item)
         {
             bool validarNumerico = false;
             int returnoResultado;

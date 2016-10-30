@@ -24,6 +24,10 @@ namespace Sdistribuidor.View
         ProdutoUnidade objProdUnd;
         Participante objPart;
         Unidade objUnidade;
+        Cst ObjCst;
+        UF ObjUf;
+        Cfop ObjCfop;
+        Loja ObjLoja;
 
         Entidade_TotaisNota EntTotal;
 
@@ -41,13 +45,43 @@ namespace Sdistribuidor.View
             if (ObjPesquisar.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 lblID.Text = Convert.ToString(ObjPesquisar.ID);
+                txtCodCliente.Text = Convert.ToString(ObjPesquisar.ID);
                 lblCliente.Text = ObjPesquisar.Nome;
+                lblUF.Text = ObjPesquisar.Uf;
             }
+        }
+
+        void CarregarCombosICMS()
+        {
+            ObjCst = new Cst();
+
+            cboTribIcms.DisplayMember = "descricao";
+            cboTribIcms.ValueMember = "cst";
+            cboTribIcms.DataSource = ObjCst.ICMS("T");
+            
+            cboTribIpi.DisplayMember = "descricao";
+            cboTribIpi.ValueMember = "cst";
+            cboTribIpi.DataSource = ObjCst.IPI();
+
+            cboTribPis.DisplayMember = "descricao";
+            cboTribPis.ValueMember = "cst";
+            cboTribPis.DataSource = ObjCst.PIS();
+
+            cboTribCofins.DisplayMember = "descricao";
+            cboTribCofins.ValueMember = "cst";
+            cboTribCofins.DataSource = ObjCst.COFINS();
         }
 
         private void btnTribOK_Click(object sender, EventArgs e)
         {
-            gbTributacao.Visible = false;
+            if (ValidaGdTributacao())
+            {
+                lblTribIcms.Text = cboTribIcms.SelectedValue.ToString();
+                lblTribIpi.Text = cboTribIpi.SelectedValue.ToString();
+                lblTribPis.Text = cboTribPis.SelectedValue.ToString();
+                lblTribCofins.Text = cboTribCofins.SelectedValue.ToString();
+                gbTributacao.Visible = false;
+            }
         }
 
         private void btnPesquisaItem_Click(object sender, EventArgs e)
@@ -60,16 +94,25 @@ namespace Sdistribuidor.View
             FP001Produto ObjPesquisar = new FP001Produto();
             if (ObjPesquisar.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                TxtCodItem.Text = ObjPesquisar.ID.ToString();
-                CarregarComboUnidConversao(Convert.ToInt32(ObjPesquisar.ID));
-                PesquisaDados();
-                if (cboTipoNF.SelectedIndex == 1)
+                if (ObjPesquisar.NCM != string.Empty)
                 {
-                    cboUndConv.Enabled = true;
-                    txtVlUnitDev.Enabled = true;
-                    txtQtdConv.Enabled = true;
+                    TxtCodItem.Text = ObjPesquisar.ID.ToString();
+                    lblNCM.Text = ObjPesquisar.NCM;
+                    lblUnidade.Text = ObjPesquisar.Unidade;
+                    CarregarComboUnidConversao(Convert.ToInt32(ObjPesquisar.ID));
+                    PesquisaDados();
+                    if (cboTipoNF.SelectedIndex == 1)
+                    {
+                        cboUndConv.Enabled = true;
+                        txtVlUnitDev.Enabled = true;
+                        txtQtdConv.Enabled = true;
+                    }
+                    txtQtd.Focus();
                 }
-                txtQtd.Focus();
+                else
+                {
+                    MessageBox.Show("Produto sem NCM, por favor alter o cadastro do produto!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -119,6 +162,7 @@ namespace Sdistribuidor.View
                 {
                     if (lblUnidade.Text != cboUndConv.Text)
                     {
+
                         var ObjUnidvlfator = objProdUnd.Pesquisa(Convert.ToInt32(TxtCodItem.Text), cboUndConv.Text);
 
                         if (ObjUnidvlfator == null)
@@ -136,6 +180,10 @@ namespace Sdistribuidor.View
         }
 
         #region --------------- ENTER ---------------
+        private void gbPnlProduto_Enter(object sender, EventArgs e)
+        {
+            TxtCodItem.Focus();
+        }
         private void txtVlUnit_Enter(object sender, EventArgs e)
         {
             if (txtVlUnit.Text == "0,00")
@@ -149,19 +197,6 @@ namespace Sdistribuidor.View
             {
                 LimpaTxtBox(txtVlUnitDev);
             }
-        }
-        void LimpaTxtBox(object Txt)
-        {
-            ((TextBox)Txt).Text = string.Empty;
-        }
-        /// <summary>
-        /// Formata campo de acordo com a nescidade
-        /// </summary>
-        /// <param name="Txt">Objeto a ser utilizado. Ex: TextBox</param>
-        /// <param name="formato">Tipo de Formato por padrão N2</param>
-        void FormataCampoTxtBox(object Txt, string formato = "N2")
-        {
-            ((TextBox)Txt).Text = string.Format("{0:" + formato + "}", Convert.ToDouble(((TextBox)Txt).Text.Replace(".", "")));
         }
 
         private void txtQtd_Enter(object sender, EventArgs e)
@@ -283,6 +318,7 @@ namespace Sdistribuidor.View
                 LimpaTxtBox(txtDesconto);
             }
         }
+
         #endregion
 
         private void txtQtd_TextChanged(object sender, EventArgs e)
@@ -293,6 +329,58 @@ namespace Sdistribuidor.View
                 {
                     TotaisItem();
                 }
+            }
+        }
+
+        void LimpaTxtBox(object Txt)
+        {
+            ((TextBox)Txt).Text = string.Empty;
+        }
+        /// <summary>
+        /// Formata campo de acordo com a nescidade
+        /// </summary>
+        /// <param name="Txt">Objeto a ser utilizado. Ex: TextBox</param>
+        /// <param name="formato">Tipo de Formato por padrão N2</param>
+        void FormataCampoTxtBox(object Txt, string formato = "N2")
+        {
+            ((TextBox)Txt).Text = string.Format("{0:" + formato + "}", Convert.ToDouble(((TextBox)Txt).Text.Replace(".", "")));
+        }
+
+        void TotalGeral()
+        {
+            decimal VlBaseIcms = 0, VlIcms = 0, VlBaseIcmsSub = 0,VlIcmsSub = 0, VlIpi = 0, VlPis = 0, VlCofins = 0, VlOutras = 0, VlFrete = 0, VlSeguro = 0, VlDesconto = 0, VlTotal = 0;
+            
+
+            if(grdProdutoNF.Rows.Count > 0)
+            {
+                for (int i = 0; i < grdProdutoNF.Rows.Count; i++)
+                {
+                    VlBaseIcms += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlBaseIcms"].Value.ToString().Replace(".", ""));
+                    VlIcms += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcms"].Value.ToString().Replace(".", ""));
+                    VlBaseIcmsSub += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlBaseIcmsSub"].Value.ToString().Replace(".", ""));
+                    VlIcmsSub += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcmsSub"].Value.ToString().Replace(".", ""));
+                    VlIpi += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIpi"].Value.ToString().Replace(".", ""));
+                    VlPis += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlPis"].Value.ToString().Replace(".", ""));
+                    VlCofins += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlCofins"].Value.ToString().Replace(".", ""));
+                    VlOutras += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlOutras"].Value.ToString().Replace(".", ""));
+                    VlFrete += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlFrete"].Value.ToString().Replace(".", ""));
+                    //VlSeguro += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlSeguro"].Value.ToString().Replace(".", ""));
+                    VlDesconto += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlDesconto"].Value.ToString().Replace(".", ""));
+                    VlTotal += Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlTotal"].Value.ToString().Replace(".", ""));
+                }
+
+                lblTotVlBaseICms.Text = string.Format("{0:n2}", VlBaseIcms);
+                lblTotVlIcms.Text = string.Format("{0:n2}", VlIcms);
+                lblTotVlBaseIcmsSub.Text = string.Format("{0:n2}", VlBaseIcmsSub);
+                lblTotVlIcmsSub.Text = string.Format("{0:n2}", VlIcmsSub);
+                lblTotVlIpi.Text = string.Format("{0:n2}", VlIpi);
+                lblTotVlPis.Text = string.Format("{0:n2}", VlPis);
+                lblTotVlCofins.Text = string.Format("{0:n2}", VlCofins);
+                lblTotVlOutDesp.Text = string.Format("{0:n2}", VlOutras);
+                lblTotVlSeguro.Text = string.Format("{0:n2}", VlSeguro);
+                lblTotVlDesc.Text = string.Format("{0:n2}", VlDesconto);
+                lblTotVlTotal.Text = string.Format("{0:n2}", VlTotal);
+
             }
         }
 
@@ -334,17 +422,17 @@ namespace Sdistribuidor.View
             txtTotal.Text = string.Format("{0:N2}", cNotaFiscal.SomarGeral(EntTotal));
         }
 
-        private void gbPnlProduto_Enter(object sender, EventArgs e)
-        {
-            TxtCodItem.Focus();
-        }
-
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
-            if (gbPnlProduto.Visible == true)
-                gbPnlProduto.Visible = false;
+            if(txtCodCliente.Text != string.Empty)
+            {
+                CarregarPnlAddItem();
+            }
             else
-                gbPnlProduto.Visible = true;
+            {
+                MessageBox.Show("Informe o Cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCodCliente.Focus();
+            }
         }
 
         private void FMT004NotaFiscalDev_KeyPress(object sender, KeyPressEventArgs e)
@@ -360,10 +448,7 @@ namespace Sdistribuidor.View
             }
             else if (e.KeyData == Keys.F2)
             {
-                if (gbPnlProduto.Visible == true)
-                    gbPnlProduto.Visible = false;
-                else
-                    gbPnlProduto.Visible = true;
+                CarregarPnlAddItem();
             }
             else if (e.KeyData == Keys.F3)
             {
@@ -384,6 +469,18 @@ namespace Sdistribuidor.View
             else if (e.KeyData == Keys.F7)
             {
                 PesquisarProduto();
+            }
+            else if (e.KeyData == Keys.F8)
+            {
+                if(gbPnlProduto.Visible == true)
+                    if (gbTributacao.Visible == true)
+                        gbTributacao.Visible = false;
+                    else
+                        gbTributacao.Visible = true;
+            }
+            else if(e.KeyData  == Keys.F9)
+            {
+                AddProdutoGrid();
             }
         }
 
@@ -648,7 +745,7 @@ namespace Sdistribuidor.View
         }
         #endregion
 
-
+        #region ----------- LEAVE -----------
 
         private void txtVlBcSub_Leave(object sender, EventArgs e)
         {
@@ -826,11 +923,49 @@ namespace Sdistribuidor.View
                 FormataCampoTxtBox(txtDesconto);
         }
 
+        #endregion
+
         private void btnIncluirItemGrid_Click(object sender, EventArgs e)
+        {
+            AddProdutoGrid();
+        }
+
+        void AddProdutoGrid()
         {
             if (ValidaIncluirGrid())
             {
+                grdProdutoNF.Rows.Add(TxtCodItem.Text, lblItemDesc.Text, lblNCM.Text, lblTribIcms.Text, lblTribIpi.Text, lblTribPis.Text + "/" + lblTribCofins.Text, CboCFOP.Text, lblUnidade.Text, txtDesconto.Text, txtQtd.Text, txtVlUnit.Text, txtAliqIcms.Text, txtVlBCIcms.Text, txtVlIcms.Text, txtVlBcSub.Text, txtIcmsSub.Text, txtVlOutras.Text, txtAliqIpi.Text, txtVlIpi.Text, txtAliqPis.Text, txtVlPis.Text, txtAliqCofins.Text, txtVlCofins.Text, txtFrete.Text, txtTotal.Text);
+                gbPnlProduto.Visible = false;
+                LimpaGbAddItem();
+                TotalGeral();
+            }
+        }
+        void CarregarPnlAddItem()
+        {
+            if (txtCodCliente.Text != string.Empty)
+            {
+                ObjLoja = new Loja();
+                ObjCfop = new Cfop();
+                var DtLoja = ObjLoja.Pesquisa(1);
 
+                CboCFOP.DisplayMember = "descricao";
+                CboCFOP.ValueMember = "cfop";
+
+                if (lblUF.Text.ToUpper() == DtLoja.Rows[0]["desc_uf"].ToString().ToUpper())
+                    CboCFOP.DataSource = ObjCfop.Interno();
+                else
+                    CboCFOP.DataSource = ObjCfop.Externo();
+
+                CarregarCombosICMS();
+                if (gbPnlProduto.Visible == true)
+                    gbPnlProduto.Visible = false;
+                else
+                    gbPnlProduto.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Informe o Cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCodCliente.Focus();
             }
         }
 
@@ -846,16 +981,30 @@ namespace Sdistribuidor.View
                 MessageBox.Show("Informe a Quantidade!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
-            else if (lblTribIcms.Text == "000")
+            else if (lblTribIcms.Text == "---")
             {
                 MessageBox.Show("Informe a tributação de ICMS.!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 gbTributacao.Visible = true;
+                return false;
+            }
+            else if ((lblTribIcms.Text == "000" || lblTribIcms.Text == "010" || lblTribIcms.Text == "020") && Convert.ToDecimal(txtAliqIcms.Text) == 0)
+            {
+                MessageBox.Show("A CST de ICMS informado pede uma aliquota de ICMS!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                gbTributacao.Visible = true;
+                cboTribIcms.Focus();
                 return false;
             }
             else if (lblTribIpi.Text == "000")
             {
                 MessageBox.Show("Informe a tributação de IPI.!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 gbTributacao.Visible = true;
+                return false;
+            }
+            else if (lblTribIpi.Text == "50" && Convert.ToDecimal(txtAliqIpi.Text) == 0)
+            {
+                MessageBox.Show("A CST de IPI informado pede uma aliquota de IPI!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                gbTributacao.Visible = true;
+                cboTribIpi.Focus();
                 return false;
             }
             else if (lblTribPis.Text == "000")
@@ -872,6 +1021,138 @@ namespace Sdistribuidor.View
             }
             else
                 return true;
+        }
+
+        bool ValidaGdTributacao()
+        {
+            if (cboTribIcms.Text == string.Empty)
+            {
+                MessageBox.Show("Selecione a tribuação de ICMS.", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (cboTribIpi.Text == string.Empty)
+            {
+                MessageBox.Show("Selecione a tribuação de IPI.", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (cboTribPis.Text == string.Empty)
+            {
+                MessageBox.Show("Selecione a tribuação de PIS.", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (cboTribCofins.Text == string.Empty)
+            {
+                MessageBox.Show("Selecione a tribuação de COFINS.", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+                return true;
+        }
+
+        void LimpaGbAddItem()
+        {
+            TxtCodItem.Text = string.Empty;
+            lblItemDesc.Text = "---";
+            lblNCM.Text = "----------";
+            lblTribIcms.Text = "000";
+            lblTribIpi.Text = "000";
+            lblTribPis.Text = "000";
+            lblTribCofins.Text = "000";
+            CboCFOP.Text = "0000";
+            lblUnidade.Text = "---";
+            txtDesconto.Text = "0,00";
+            txtQtd.Text = "0,00";
+            txtVlUnit.Text = "0,00";
+            txtAliqIcms.Text = "0,00";
+            txtVlBCIcms.Text = "0,00";
+            txtVlBcSub.Text = "0,00";
+            txtIcmsSub.Text = "0,00";
+            txtVlOutras.Text = "0,00";
+            txtAliqPis.Text = "0,00";
+            txtVlPis.Text = "0,00";
+            txtAliqCofins.Text = "0,00";
+            txtVlCofins.Text = "0,00";
+            txtFrete.Text = "0,00";
+            txtTotal.Text = "0,00";
+        }
+
+        private void txtCodCliente_Leave(object sender, EventArgs e)
+        {
+            if(txtCodCliente.Text != string.Empty)
+            {
+                if (Gerais.FuncoesGerais.ItemNumerico(txtCodCliente.Text))
+                {
+                    PesquisarCliente(Convert.ToInt32(txtCodCliente.Text));
+                }
+                else
+                {
+                    MessageBox.Show("Código Digitado é invalido!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodCliente.Text = string.Empty;
+                }
+            }
+        }
+
+        void PesquisarCliente(int Id)
+        {
+            objPart = new Participante();
+
+            var DtRet = objPart.Pesquisa(Id);
+
+            if(DtRet != null)
+            {
+                lblID.Text = DtRet.id.ToString();
+                lblCliente.Text = DtRet.nome;
+                txtCodCliente.Text = DtRet.id.ToString();
+                lblUF.Text = DtRet.id_uf.desc_uf;
+            }
+            else
+            {
+                MessageBox.Show("Cliente não existe!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblID.Text = string.Empty;
+                lblCliente.Text = string.Empty;
+                txtCodCliente.Text = string.Empty;
+                lblUF.Text = string.Empty;
+                txtCodCliente.Focus();
+            }
+        }
+
+        private void TxtCodItem_Leave(object sender, EventArgs e)
+        {
+            if(TxtCodItem.Text != string.Empty)
+            {
+                objProd = new Produtos();
+
+                var DtRetProd = objProd.Pesquisa(long.Parse(TxtCodItem.Text));
+
+                if (DtRetProd != null)
+                {
+                    if (DtRetProd.NCM != string.Empty)
+                    {
+                        TxtCodItem.Text = DtRetProd.IdProduto.ToString();
+                        lblNCM.Text = DtRetProd.NCM;
+                        lblUnidade.Text = DtRetProd.Unidade.CdUnidade;
+                        CarregarComboUnidConversao(Convert.ToInt32(DtRetProd.IdProduto));
+                        PesquisaDados();
+                        if (cboTipoNF.SelectedIndex == 1)
+                        {
+                            cboUndConv.Enabled = true;
+                            txtVlUnitDev.Enabled = true;
+                            txtQtdConv.Enabled = true;
+                        }
+                        txtQtd.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Produto sem NCM, por favor alter o cadastro do produto!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Produto não existe!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TxtCodItem.Text = string.Empty;
+                    TxtCodItem.Focus();
+                }
+            }
         }
     }
 }

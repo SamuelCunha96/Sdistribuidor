@@ -55,8 +55,15 @@ namespace Sdistribuidor.View
                 DialogResult = DialogResult.OK;
                 ID = Convert.ToInt32(grdBase.Rows[e.RowIndex].Cells[0].Value);
                 Nome = grdBase.Rows[e.RowIndex].Cells[2].Value.ToString();
+                DadosGrids(grdBase);
+
                 this.Close();
             }
+        }
+
+        public virtual void DadosGrids(DataGridView Dgv)
+        {
+
         }
     }
 }

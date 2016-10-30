@@ -23,6 +23,7 @@ namespace Sdistribuidor.View
         public long ID { get; set; }
         public string Descricao { get; set; }
         public string Unidade { get; set; }
+        public string NCM { get; set; }
 
         private void FP001Produto_Load(object sender, EventArgs e)
         {
@@ -44,12 +45,12 @@ namespace Sdistribuidor.View
         {
             foreach (var item in ObjProd)
             {
-                grdProduto.Rows.Add(item.IdProduto, item.NmProduto, item.Unidade.CdUnidade, item.VlPreco);
+                grdProduto.Rows.Add(item.IdProduto, item.NmProduto, item.Unidade.CdUnidade, item.VlPreco,item.NCM);
             }
         }
         void PreencherGrid(Entidade_Produto ObjProd)
         {
-            grdProduto.Rows.Add(ObjProd.IdProduto, ObjProd.NmProduto, ObjProd.Unidade.CdUnidade, ObjProd.VlPreco);
+            grdProduto.Rows.Add(ObjProd.IdProduto, ObjProd.NmProduto, ObjProd.Unidade.CdUnidade, ObjProd.VlPreco, ObjProd.NCM);
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
@@ -82,6 +83,7 @@ namespace Sdistribuidor.View
                     ID = long.Parse(grdProduto.Rows[e.RowIndex].Cells[0].Value.ToString());
                     Descricao = grdProduto.Rows[e.RowIndex].Cells[1].Value.ToString();
                     Unidade = grdProduto.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    NCM = grdProduto.Rows[e.RowIndex].Cells[4].Value.ToString();
                     DialogResult = System.Windows.Forms.DialogResult.OK;
                     this.Close();
                 }
