@@ -47,6 +47,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblUF = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.cboTipoNF = new System.Windows.Forms.ComboBox();
             this.lblID = new System.Windows.Forms.Label();
@@ -84,8 +86,8 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSalvaNfe = new System.Windows.Forms.Button();
+            this.btnCancelarNfe = new System.Windows.Forms.Button();
             this.gbPnlProduto = new System.Windows.Forms.GroupBox();
             this.gbTributacao = new System.Windows.Forms.GroupBox();
             this.btnTribOK = new System.Windows.Forms.Button();
@@ -145,6 +147,7 @@
             this.txtQtdConv = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
             this.lblTribCofins = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblTribPis = new System.Windows.Forms.Label();
@@ -164,12 +167,26 @@
             this.btnPesquisaItem = new System.Windows.Forms.Button();
             this.TxtCodItem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.lblUF = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.gbLocalEntrega = new System.Windows.Forms.GroupBox();
+            this.grdLocalEntrega = new System.Windows.Forms.DataGridView();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColLog = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColBairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColObs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPesqLogradouro = new System.Windows.Forms.TextBox();
+            this.gbFaturaNotaFiscal = new System.Windows.Forms.GroupBox();
+            this.BtnSalvarFatura = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.btnF5Observacoes = new System.Windows.Forms.Button();
             this.ColCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNcm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCst = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCstIcms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCstIpi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCstPisCofins = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCFOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -191,7 +208,8 @@
             this.ColVlCofins = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlFrete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label36 = new System.Windows.Forms.Label();
+            this.lblIdLocalEntrega = new System.Windows.Forms.Label();
+            this.ucFormaPagto1 = new Sdistribuidor.Uc.UCFormaPagto();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -204,11 +222,15 @@
             this.panel1.SuspendLayout();
             this.PnlDados.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.gbLocalEntrega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdLocalEntrega)).BeginInit();
+            this.gbFaturaNotaFiscal.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.groupBox3.Controls.Add(this.lblIdLocalEntrega);
             this.groupBox3.Controls.Add(this.lblUF);
             this.groupBox3.Controls.Add(this.label35);
             this.groupBox3.Controls.Add(this.label29);
@@ -225,6 +247,24 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
+            // 
+            // lblUF
+            // 
+            this.lblUF.AutoSize = true;
+            this.lblUF.Location = new System.Drawing.Point(521, 24);
+            this.lblUF.Name = "lblUF";
+            this.lblUF.Size = new System.Drawing.Size(15, 12);
+            this.lblUF.TabIndex = 27;
+            this.lblUF.Text = "--";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(521, 8);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(16, 12);
+            this.label35.TabIndex = 26;
+            this.label35.Text = "Uf";
             // 
             // label29
             // 
@@ -296,6 +336,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.groupBox1.Controls.Add(this.btnF5Observacoes);
             this.groupBox1.Controls.Add(this.btnFatura);
             this.groupBox1.Controls.Add(this.btnLocalEntrega);
             this.groupBox1.Controls.Add(this.BtnAddItem);
@@ -321,6 +362,7 @@
             this.btnFatura.TabIndex = 5;
             this.btnFatura.Text = "F4 - Faturas";
             this.btnFatura.UseVisualStyleBackColor = false;
+            this.btnFatura.Click += new System.EventHandler(this.btnFatura_Click);
             // 
             // btnLocalEntrega
             // 
@@ -336,6 +378,7 @@
             this.btnLocalEntrega.TabIndex = 4;
             this.btnLocalEntrega.Text = "F3 - Local Entrega";
             this.btnLocalEntrega.UseVisualStyleBackColor = false;
+            this.btnLocalEntrega.Click += new System.EventHandler(this.btnLocalEntrega_Click);
             // 
             // BtnAddItem
             // 
@@ -384,7 +427,7 @@
             this.ColCodProd,
             this.ColDesc,
             this.ColNcm,
-            this.ColCst,
+            this.ColCstIcms,
             this.ColCstIpi,
             this.ColCstPisCofins,
             this.ColCFOP,
@@ -418,6 +461,8 @@
             this.grdProdutoNF.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdProdutoNF.Size = new System.Drawing.Size(888, 219);
             this.grdProdutoNF.TabIndex = 3;
+            this.grdProdutoNF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdProdutoNF_KeyDown);
+            this.grdProdutoNF.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grdProdutoNF_KeyUp);
             // 
             // groupBox7
             // 
@@ -469,7 +514,7 @@
             // 
             this.lblTotVlTotal.AutoSize = true;
             this.lblTotVlTotal.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotVlTotal.Location = new System.Drawing.Point(840, 33);
+            this.lblTotVlTotal.Location = new System.Drawing.Point(837, 33);
             this.lblTotVlTotal.Name = "lblTotVlTotal";
             this.lblTotVlTotal.Size = new System.Drawing.Size(40, 16);
             this.lblTotVlTotal.TabIndex = 30;
@@ -674,35 +719,36 @@
             this.label57.TabIndex = 8;
             this.label57.Text = "Vl. Base Icms";
             // 
-            // button3
+            // btnSalvaNfe
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(650, 414);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "F5 - Salvar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSalvaNfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.btnSalvaNfe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSalvaNfe.FlatAppearance.BorderSize = 2;
+            this.btnSalvaNfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvaNfe.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvaNfe.ForeColor = System.Drawing.Color.White;
+            this.btnSalvaNfe.Location = new System.Drawing.Point(650, 414);
+            this.btnSalvaNfe.Name = "btnSalvaNfe";
+            this.btnSalvaNfe.Size = new System.Drawing.Size(118, 23);
+            this.btnSalvaNfe.TabIndex = 32;
+            this.btnSalvaNfe.Text = "F5 - Salvar";
+            this.btnSalvaNfe.UseVisualStyleBackColor = false;
+            this.btnSalvaNfe.Click += new System.EventHandler(this.btnSalvaNfe_Click);
             // 
-            // button4
+            // btnCancelarNfe
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(773, 414);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 23);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "F6 - Cancelar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnCancelarNfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.btnCancelarNfe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancelarNfe.FlatAppearance.BorderSize = 2;
+            this.btnCancelarNfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarNfe.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarNfe.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarNfe.Location = new System.Drawing.Point(773, 414);
+            this.btnCancelarNfe.Name = "btnCancelarNfe";
+            this.btnCancelarNfe.Size = new System.Drawing.Size(118, 23);
+            this.btnCancelarNfe.TabIndex = 33;
+            this.btnCancelarNfe.Text = "F6 - Cancelar";
+            this.btnCancelarNfe.UseVisualStyleBackColor = false;
             // 
             // gbPnlProduto
             // 
@@ -1403,6 +1449,17 @@
             this.panel1.Size = new System.Drawing.Size(782, 26);
             this.panel1.TabIndex = 1;
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Yellow;
+            this.label36.Location = new System.Drawing.Point(22, 6);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(60, 12);
+            this.label36.TabIndex = 9;
+            this.label36.Text = "- Tribuação";
+            // 
             // lblTribCofins
             // 
             this.lblTribCofins.AutoSize = true;
@@ -1615,23 +1672,170 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Código";
             // 
-            // label35
+            // label37
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(521, 8);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(16, 12);
-            this.label35.TabIndex = 26;
-            this.label35.Text = "Uf";
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(6, 14);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(61, 12);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Logradouro";
             // 
-            // lblUF
+            // gbLocalEntrega
             // 
-            this.lblUF.AutoSize = true;
-            this.lblUF.Location = new System.Drawing.Point(521, 24);
-            this.lblUF.Name = "lblUF";
-            this.lblUF.Size = new System.Drawing.Size(15, 12);
-            this.lblUF.TabIndex = 27;
-            this.lblUF.Text = "--";
+            this.gbLocalEntrega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.gbLocalEntrega.Controls.Add(this.grdLocalEntrega);
+            this.gbLocalEntrega.Controls.Add(this.txtPesqLogradouro);
+            this.gbLocalEntrega.Controls.Add(this.label37);
+            this.gbLocalEntrega.ForeColor = System.Drawing.Color.White;
+            this.gbLocalEntrega.Location = new System.Drawing.Point(114, 159);
+            this.gbLocalEntrega.Name = "gbLocalEntrega";
+            this.gbLocalEntrega.Size = new System.Drawing.Size(580, 189);
+            this.gbLocalEntrega.TabIndex = 36;
+            this.gbLocalEntrega.TabStop = false;
+            this.gbLocalEntrega.Text = "Local de Entrega";
+            this.gbLocalEntrega.Visible = false;
+            // 
+            // grdLocalEntrega
+            // 
+            this.grdLocalEntrega.AllowUserToAddRows = false;
+            this.grdLocalEntrega.AllowUserToDeleteRows = false;
+            this.grdLocalEntrega.BackgroundColor = System.Drawing.Color.White;
+            this.grdLocalEntrega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdLocalEntrega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColId,
+            this.ColLog,
+            this.ColNum,
+            this.ColBairro,
+            this.ColUf,
+            this.ColCidade,
+            this.ColTel,
+            this.ColObs});
+            this.grdLocalEntrega.Location = new System.Drawing.Point(8, 53);
+            this.grdLocalEntrega.Name = "grdLocalEntrega";
+            this.grdLocalEntrega.ReadOnly = true;
+            this.grdLocalEntrega.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.grdLocalEntrega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdLocalEntrega.Size = new System.Drawing.Size(565, 129);
+            this.grdLocalEntrega.TabIndex = 2;
+            this.grdLocalEntrega.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdLocalEntrega_CellDoubleClick);
+            // 
+            // ColId
+            // 
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Visible = false;
+            // 
+            // ColLog
+            // 
+            this.ColLog.HeaderText = "Logradouro";
+            this.ColLog.Name = "ColLog";
+            this.ColLog.ReadOnly = true;
+            this.ColLog.Width = 300;
+            // 
+            // ColNum
+            // 
+            this.ColNum.HeaderText = "Número";
+            this.ColNum.Name = "ColNum";
+            this.ColNum.ReadOnly = true;
+            this.ColNum.Width = 80;
+            // 
+            // ColBairro
+            // 
+            this.ColBairro.HeaderText = "Bairro";
+            this.ColBairro.Name = "ColBairro";
+            this.ColBairro.ReadOnly = true;
+            // 
+            // ColUf
+            // 
+            this.ColUf.HeaderText = "Uf";
+            this.ColUf.Name = "ColUf";
+            this.ColUf.ReadOnly = true;
+            this.ColUf.Width = 60;
+            // 
+            // ColCidade
+            // 
+            this.ColCidade.HeaderText = "Cidade";
+            this.ColCidade.Name = "ColCidade";
+            this.ColCidade.ReadOnly = true;
+            this.ColCidade.Width = 70;
+            // 
+            // ColTel
+            // 
+            this.ColTel.HeaderText = "Telefone";
+            this.ColTel.Name = "ColTel";
+            this.ColTel.ReadOnly = true;
+            // 
+            // ColObs
+            // 
+            this.ColObs.HeaderText = "Obs";
+            this.ColObs.Name = "ColObs";
+            this.ColObs.ReadOnly = true;
+            this.ColObs.Width = 200;
+            // 
+            // txtPesqLogradouro
+            // 
+            this.txtPesqLogradouro.Location = new System.Drawing.Point(8, 29);
+            this.txtPesqLogradouro.Name = "txtPesqLogradouro";
+            this.txtPesqLogradouro.Size = new System.Drawing.Size(414, 18);
+            this.txtPesqLogradouro.TabIndex = 1;
+            // 
+            // gbFaturaNotaFiscal
+            // 
+            this.gbFaturaNotaFiscal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.gbFaturaNotaFiscal.Controls.Add(this.BtnSalvarFatura);
+            this.gbFaturaNotaFiscal.Controls.Add(this.ucFormaPagto1);
+            this.gbFaturaNotaFiscal.Controls.Add(this.label39);
+            this.gbFaturaNotaFiscal.ForeColor = System.Drawing.Color.White;
+            this.gbFaturaNotaFiscal.Location = new System.Drawing.Point(347, 174);
+            this.gbFaturaNotaFiscal.Name = "gbFaturaNotaFiscal";
+            this.gbFaturaNotaFiscal.Size = new System.Drawing.Size(368, 74);
+            this.gbFaturaNotaFiscal.TabIndex = 38;
+            this.gbFaturaNotaFiscal.TabStop = false;
+            this.gbFaturaNotaFiscal.Text = "Forma de Pagamento";
+            this.gbFaturaNotaFiscal.Visible = false;
+            // 
+            // BtnSalvarFatura
+            // 
+            this.BtnSalvarFatura.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnSalvarFatura.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnSalvarFatura.FlatAppearance.BorderSize = 2;
+            this.BtnSalvarFatura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalvarFatura.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalvarFatura.ForeColor = System.Drawing.Color.White;
+            this.BtnSalvarFatura.Location = new System.Drawing.Point(259, 38);
+            this.BtnSalvarFatura.Name = "BtnSalvarFatura";
+            this.BtnSalvarFatura.Size = new System.Drawing.Size(100, 23);
+            this.BtnSalvarFatura.TabIndex = 30;
+            this.BtnSalvarFatura.Text = "Salvar";
+            this.BtnSalvarFatura.UseVisualStyleBackColor = false;
+            this.BtnSalvarFatura.Click += new System.EventHandler(this.BtnSalvarFatura_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(6, 20);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(71, 16);
+            this.label39.TabIndex = 8;
+            this.label39.Text = "Selecione";
+            // 
+            // btnF5Observacoes
+            // 
+            this.btnF5Observacoes.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnF5Observacoes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnF5Observacoes.FlatAppearance.BorderSize = 2;
+            this.btnF5Observacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnF5Observacoes.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnF5Observacoes.ForeColor = System.Drawing.Color.White;
+            this.btnF5Observacoes.Location = new System.Drawing.Point(386, 11);
+            this.btnF5Observacoes.Name = "btnF5Observacoes";
+            this.btnF5Observacoes.Size = new System.Drawing.Size(122, 23);
+            this.btnF5Observacoes.TabIndex = 6;
+            this.btnF5Observacoes.Text = "F5 - Observações";
+            this.btnF5Observacoes.UseVisualStyleBackColor = false;
             // 
             // ColCodProd
             // 
@@ -1655,12 +1859,12 @@
             this.ColNcm.ReadOnly = true;
             this.ColNcm.Width = 80;
             // 
-            // ColCst
+            // ColCstIcms
             // 
-            this.ColCst.HeaderText = "Cst Icms";
-            this.ColCst.Name = "ColCst";
-            this.ColCst.ReadOnly = true;
-            this.ColCst.Width = 60;
+            this.ColCstIcms.HeaderText = "Cst Icms";
+            this.ColCstIcms.Name = "ColCstIcms";
+            this.ColCstIcms.ReadOnly = true;
+            this.ColCstIcms.Width = 60;
             // 
             // ColCstIpi
             // 
@@ -1842,25 +2046,34 @@
             this.ColVlTotal.Name = "ColVlTotal";
             this.ColVlTotal.ReadOnly = true;
             // 
-            // label36
+            // lblIdLocalEntrega
             // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Yellow;
-            this.label36.Location = new System.Drawing.Point(22, 6);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(60, 12);
-            this.label36.TabIndex = 9;
-            this.label36.Text = "- Tribuação";
+            this.lblIdLocalEntrega.AutoSize = true;
+            this.lblIdLocalEntrega.Location = new System.Drawing.Point(421, 18);
+            this.lblIdLocalEntrega.Name = "lblIdLocalEntrega";
+            this.lblIdLocalEntrega.Size = new System.Drawing.Size(82, 12);
+            this.lblIdLocalEntrega.TabIndex = 28;
+            this.lblIdLocalEntrega.Text = "IdLocalEntrega";
+            this.lblIdLocalEntrega.Visible = false;
+            // 
+            // ucFormaPagto1
+            // 
+            this.ucFormaPagto1.Location = new System.Drawing.Point(5, 40);
+            this.ucFormaPagto1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ucFormaPagto1.Name = "ucFormaPagto1";
+            this.ucFormaPagto1.Size = new System.Drawing.Size(251, 20);
+            this.ucFormaPagto1.TabIndex = 9;
             // 
             // FMT004NotaFiscalDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 450);
+            this.Controls.Add(this.gbFaturaNotaFiscal);
+            this.Controls.Add(this.gbLocalEntrega);
             this.Controls.Add(this.gbPnlProduto);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCancelarNfe);
+            this.Controls.Add(this.btnSalvaNfe);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1891,6 +2104,11 @@
             this.PnlDados.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.gbLocalEntrega.ResumeLayout(false);
+            this.gbLocalEntrega.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdLocalEntrega)).EndInit();
+            this.gbFaturaNotaFiscal.ResumeLayout(false);
+            this.gbFaturaNotaFiscal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1929,8 +2147,8 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSalvaNfe;
+        private System.Windows.Forms.Button btnCancelarNfe;
         private System.Windows.Forms.Button btnParticipante;
         private System.Windows.Forms.TextBox txtCodCliente;
         private System.Windows.Forms.Label lblCliente;
@@ -2017,10 +2235,28 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label lblUF;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.GroupBox gbLocalEntrega;
+        private System.Windows.Forms.TextBox txtPesqLogradouro;
+        private System.Windows.Forms.DataGridView grdLocalEntrega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColLog;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColBairro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColUf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColObs;
+        private System.Windows.Forms.GroupBox gbFaturaNotaFiscal;
+        private Uc.UCFormaPagto ucFormaPagto1;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Button BtnSalvarFatura;
+        private System.Windows.Forms.Button btnF5Observacoes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNcm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCst;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCstIcms;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCstIpi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCstPisCofins;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCFOP;
@@ -2042,6 +2278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlCofins;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlFrete;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlTotal;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label lblIdLocalEntrega;
     }
 }

@@ -338,6 +338,7 @@ namespace Sdistribuidor.View
             lblIdParticipante.Text = string.Empty;
             //Local Entrega
             LimpaCampoLocalEntrega();
+            grdListaLocalEntrega.Rows.Clear();
         }
 
         void LimpaCampoLocalEntrega()
@@ -349,7 +350,6 @@ namespace Sdistribuidor.View
             ucUfCidadeLocalEntrega.IdUf = 0;
             ucUfCidadeLocalEntrega.IdCidade = 0;
             MskTelefoneEntrega.Text = string.Empty;
-            grdListaLocalEntrega.Rows.Clear();
         }
 
         bool ValidaAddEntrega()

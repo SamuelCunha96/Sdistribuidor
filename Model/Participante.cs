@@ -71,8 +71,10 @@ namespace Sdistribuidor.Model
                     entLocEnt.lagradouro = DtEnt.Rows[i]["lagradouro"].ToString();
                     entLocEnt.end_numero = DtEnt.Rows[i]["end_numero"].ToString();
                     entLocEnt.bairro = DtEnt.Rows[i]["bairro"].ToString();
-                    entLocEnt.id_uf = modUF.Pesquisa(Convert.ToInt32(Dt.Rows[i]["id_uf"].ToString()));
-                    entLocEnt.id_cidade = modCidade.Pesquisa(Convert.ToInt32(Dt.Rows[i]["cidade"]));
+                    if(DtEnt.Rows[i]["id_uf"] != null)
+                        entLocEnt.id_uf = modUF.Pesquisa(Convert.ToInt32(DtEnt.Rows[i]["id_uf"].ToString()));
+                    if(DtEnt.Rows[i]["id_cidade"] != null)
+                        entLocEnt.id_cidade = modCidade.Pesquisa(Convert.ToInt32(DtEnt.Rows[i]["id_cidade"]));
                     entLocEnt.telefone = DtEnt.Rows[i]["telefone"].ToString();
                     entLocEnt.obs = DtEnt.Rows[i]["obs"].ToString();
                     ListLocalEnt.Add(entLocEnt);
@@ -257,8 +259,8 @@ namespace Sdistribuidor.Model
                         command.Parameters.AddWithValue("@lagradouro", item.lagradouro);
                         command.Parameters.AddWithValue("@end_numero", item.end_numero);
                         command.Parameters.AddWithValue("@bairro", item.bairro);
-                        command.Parameters.AddWithValue("@id_uf", item.id_uf);
-                        command.Parameters.AddWithValue("@id_cidade", item.id_cidade);
+                        command.Parameters.AddWithValue("@id_uf", item.id_uf.id_uf);
+                        command.Parameters.AddWithValue("@id_cidade", item.id_cidade.id);
                         command.Parameters.AddWithValue("@telefone", item.telefone);
                         command.Parameters.AddWithValue("@obs", item.obs);
 

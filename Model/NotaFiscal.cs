@@ -43,6 +43,8 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("txobscontribuinte", EntNotaFiscal.txobscontribuinte);
                 command.Parameters.AddWithValue("id_pedido", EntNotaFiscal.id_pedido);
                 command.Parameters.AddWithValue("flfinalidade", EntNotaFiscal.flfinalidade.ToString());
+                command.Parameters.AddWithValue("id_localentrega", EntNotaFiscal.id_localentrega);
+                command.Parameters.AddWithValue("id_formapagto", EntNotaFiscal.id_formapagto);
 
                 command.ExecuteNonQuery();
 
@@ -73,7 +75,6 @@ namespace Sdistribuidor.Model
                 BeginTrans.Commit();
 
                 BancoDados.InsertAlterarExcluir("UPDATE pedido set stpedido='N' WHERE id_pedido=" + EntNotaFiscal.id_pedido + "");
-
                 return true;
 
             }

@@ -39,6 +39,8 @@ namespace Sdistribuidor.Entidade
         /// 4=Devolução de mercadoria.
         /// </summary>
         public int flfinalidade { get; set; }
+        public int id_localentrega { get; set; }
+        public int id_formapagto { get; set; }
         public List<Entidade_ItemNFe> ItemNFe { get; set; }
     }
 }

@@ -33,6 +33,10 @@ namespace Sdistribuidor.View
 
         C_NotaFiscal cNotaFiscal;
 
+        Entidade_NotaFiscal EntNotaFiscal;
+        SerieNotaFiscal mSerieNotaFiscal;
+        NotaFiscal mNotaFiscal;
+
         private void btnParticipante_Click(object sender, EventArgs e)
         {
             ConsultarParticipante();
@@ -48,6 +52,8 @@ namespace Sdistribuidor.View
                 txtCodCliente.Text = Convert.ToString(ObjPesquisar.ID);
                 lblCliente.Text = ObjPesquisar.Nome;
                 lblUF.Text = ObjPesquisar.Uf;
+                PesquisaLogradouroParticipante(ObjPesquisar.ID);
+
             }
         }
 
@@ -380,7 +386,20 @@ namespace Sdistribuidor.View
                 lblTotVlSeguro.Text = string.Format("{0:n2}", VlSeguro);
                 lblTotVlDesc.Text = string.Format("{0:n2}", VlDesconto);
                 lblTotVlTotal.Text = string.Format("{0:n2}", VlTotal);
-
+            }
+            else
+            {
+                lblTotVlBaseICms.Text = string.Format("{0:n2}", VlBaseIcms);
+                lblTotVlIcms.Text = string.Format("{0:n2}", VlIcms);
+                lblTotVlBaseIcmsSub.Text = string.Format("{0:n2}", VlBaseIcmsSub);
+                lblTotVlIcmsSub.Text = string.Format("{0:n2}", VlIcmsSub);
+                lblTotVlIpi.Text = string.Format("{0:n2}", VlIpi);
+                lblTotVlPis.Text = string.Format("{0:n2}", VlPis);
+                lblTotVlCofins.Text = string.Format("{0:n2}", VlCofins);
+                lblTotVlOutDesp.Text = string.Format("{0:n2}", VlOutras);
+                lblTotVlSeguro.Text = string.Format("{0:n2}", VlSeguro);
+                lblTotVlDesc.Text = string.Format("{0:n2}", VlDesconto);
+                lblTotVlTotal.Text = string.Format("{0:n2}", VlTotal);
             }
         }
 
@@ -760,7 +779,7 @@ namespace Sdistribuidor.View
 
         private void txtAliqIcms_Leave(object sender, EventArgs e)
         {
-            if (txtAliqIcms.Text == string.Empty)
+            if (txtAliqIcms.Text.Trim() == string.Empty)
             {
                 txtAliqIcms.Text = "0";
                 FormataCampoTxtBox(txtAliqIcms);
@@ -934,7 +953,7 @@ namespace Sdistribuidor.View
         {
             if (ValidaIncluirGrid())
             {
-                grdProdutoNF.Rows.Add(TxtCodItem.Text, lblItemDesc.Text, lblNCM.Text, lblTribIcms.Text, lblTribIpi.Text, lblTribPis.Text + "/" + lblTribCofins.Text, CboCFOP.Text, lblUnidade.Text, txtDesconto.Text, txtQtd.Text, txtVlUnit.Text, txtAliqIcms.Text, txtVlBCIcms.Text, txtVlIcms.Text, txtVlBcSub.Text, txtIcmsSub.Text, txtVlOutras.Text, txtAliqIpi.Text, txtVlIpi.Text, txtAliqPis.Text, txtVlPis.Text, txtAliqCofins.Text, txtVlCofins.Text, txtFrete.Text, txtTotal.Text);
+                grdProdutoNF.Rows.Add(TxtCodItem.Text, lblItemDesc.Text, lblNCM.Text, lblTribIcms.Text, lblTribIpi.Text, lblTribPis.Text, CboCFOP.Text, lblUnidade.Text, txtDesconto.Text, txtQtd.Text, txtVlUnit.Text, txtAliqIcms.Text, txtVlBCIcms.Text, txtVlIcms.Text, txtVlBcSub.Text, txtIcmsSub.Text, txtVlOutras.Text, txtAliqIpi.Text, txtVlIpi.Text, txtAliqPis.Text, txtVlPis.Text, txtAliqCofins.Text, txtVlCofins.Text, txtFrete.Text, txtTotal.Text);
                 gbPnlProduto.Visible = false;
                 LimpaGbAddItem();
                 TotalGeral();
@@ -948,7 +967,7 @@ namespace Sdistribuidor.View
                 ObjCfop = new Cfop();
                 var DtLoja = ObjLoja.Pesquisa(1);
 
-                CboCFOP.DisplayMember = "descricao";
+                CboCFOP.DisplayMember = "cfop";
                 CboCFOP.ValueMember = "cfop";
 
                 if (lblUF.Text.ToUpper() == DtLoja.Rows[0]["desc_uf"].ToString().ToUpper())
@@ -971,6 +990,9 @@ namespace Sdistribuidor.View
 
         bool ValidaIncluirGrid()
         {
+            if (txtAliqIcms.Text == string.Empty)
+                txtAliqIcms.Text = "0,00";
+
             if (TxtCodItem.Text == string.Empty)
             {
                 MessageBox.Show("Informe um produto!", "Aténção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1023,6 +1045,26 @@ namespace Sdistribuidor.View
                 return true;
         }
 
+        bool ValidarNf()
+        {
+            if (txtCodCliente.Text == string.Empty)
+            {
+                MessageBox.Show("Informe o cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (cboTipoNF.SelectedIndex != 0)
+            {
+                MessageBox.Show("Informe o tipo de NFe!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if(grdProdutoNF.Rows.Count  == 0)
+            {
+                MessageBox.Show("Informe um produto para gerar uma nova Nfe!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+                return true;
+        }
         bool ValidaGdTributacao()
         {
             if (cboTribIcms.Text == string.Empty)
@@ -1083,6 +1125,8 @@ namespace Sdistribuidor.View
                 if (Gerais.FuncoesGerais.ItemNumerico(txtCodCliente.Text))
                 {
                     PesquisarCliente(Convert.ToInt32(txtCodCliente.Text));
+                    PesquisaLogradouroParticipante(Convert.ToInt32(txtCodCliente.Text));
+                    
                 }
                 else
                 {
@@ -1152,6 +1196,175 @@ namespace Sdistribuidor.View
                     TxtCodItem.Text = string.Empty;
                     TxtCodItem.Focus();
                 }
+            }
+        }
+
+        private void btnSalvaNfe_Click(object sender, EventArgs e)
+        {
+            if (ValidarNf())
+            {
+                Salvar();
+            }
+        }
+
+        private void grdLocalEntrega_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex > -1)
+            {
+                if (grdLocalEntrega.Rows[e.RowIndex].Cells[0].Value.ToString() == string.Empty)
+                    MessageBox.Show("Não existe local de entrega!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    lblIdLocalEntrega.Text = grdLocalEntrega.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                    btnLocalEntrega.BackColor = Color.FromArgb(0, 200, 83);
+
+                    gbLocalEntrega.Visible = false;
+                }
+            }
+        }
+
+        private void btnLocalEntrega_Click(object sender, EventArgs e)
+        {
+            if(gbLocalEntrega.Visible == true)
+                gbLocalEntrega.Visible = false;
+            else
+                gbLocalEntrega.Visible = true;
+        }
+
+        void PesquisaLogradouroParticipante(int id)
+        {
+            objPart = new Participante();
+
+            var DtListLog = objPart.Pesquisa(id);
+
+            lblIdLocalEntrega.Text = string.Empty;
+
+            if (DtListLog.ListLocalEntrega.Count > 0)
+            {
+                grdLocalEntrega.Rows.Clear();
+                foreach (var logradouro in DtListLog.ListLocalEntrega)
+                {
+                    grdLocalEntrega.Rows.Add(logradouro.id,logradouro.lagradouro, logradouro.end_numero, logradouro.bairro, logradouro.id_uf.desc_uf, logradouro.id_cidade.desc_municipio, logradouro.telefone, logradouro.obs);
+                }
+            }
+            else
+            {
+                grdLocalEntrega.Rows.Add("NÃO EXISTE LOCAL DE ENTREGA CADASTRADO PARA ESTE CLIENTE!");
+            }
+        }
+
+        private void BtnSalvarFatura_Click(object sender, EventArgs e)
+        {
+            gbFaturaNotaFiscal.Visible = false;
+            if (ucFormaPagto1.ValidaCampos())
+            {
+                btnFatura.BackColor = Color.FromArgb(0, 200, 83);
+            }
+        }
+
+        private void btnFatura_Click(object sender, EventArgs e)
+        {
+            GroupBoxFormaPagamento();
+        }
+
+        void GroupBoxFormaPagamento()
+        {
+            ucFormaPagto1.CarregarFormaPagamento();
+            if (gbFaturaNotaFiscal.Visible == false)
+                gbFaturaNotaFiscal.Visible = true;
+            else
+                gbFaturaNotaFiscal.Visible = false;
+        }
+
+        private void grdProdutoNF_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void grdProdutoNF_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Delete)
+            {
+                if (MessageBox.Show("Deseja excluir o produto," + grdProdutoNF.Rows[grdProdutoNF.CurrentRow.Index].Cells[0].Value.ToString() + "?", "Aténção", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    grdProdutoNF.Rows.RemoveAt(grdProdutoNF.CurrentRow.Index);
+                    TotalGeral();
+                }
+            }
+        }
+
+        bool Salvar()
+        {
+            EntNotaFiscal = new Entidade_NotaFiscal();
+            mSerieNotaFiscal = new SerieNotaFiscal();
+            mNotaFiscal = new NotaFiscal();
+            objPart = new Participante();
+
+            Entidade_ItemNFe ObjItemNfe;
+            List<Entidade_ItemNFe> ObjListItemNfe = new List<Entidade_ItemNFe>();
+
+            try
+            {
+                EntNotaFiscal.id_loja = Entidade_GeralInformcoes.idloja;
+                EntNotaFiscal.id_participante = objPart.Pesquisa(Convert.ToInt32(txtCodCliente.Text));
+                EntNotaFiscal.serienf = mSerieNotaFiscal.Serie(Entidade_GeralInformcoes.idloja, "55");
+                EntNotaFiscal.nrnf = mSerieNotaFiscal.NfAtual(Entidade_GeralInformcoes.idloja, "55");
+                EntNotaFiscal.dtemissao = DateTime.Now;
+                EntNotaFiscal.dtsaida = DateTime.Now;
+                EntNotaFiscal.vltotal = Convert.ToDecimal(lblTotVlTotal.Text.Replace(".", ""));
+                EntNotaFiscal.vlbaseicms = Convert.ToDecimal(lblTotVlBaseICms.Text.Replace(".", ""));
+                EntNotaFiscal.vlicms = Convert.ToDecimal(lblTotVlIcms.Text.Replace(".", ""));
+                EntNotaFiscal.vlbaseicmssub = Convert.ToDecimal(lblTotVlBaseIcmsSub.Text.Replace(".", ""));
+                EntNotaFiscal.vlicmssub = Convert.ToDecimal(lblTotVlIcmsSub.Text.Replace(".", ""));
+                EntNotaFiscal.vloutras = Convert.ToDecimal(lblTotVlOutDesp.Text.Replace(".", ""));
+                EntNotaFiscal.vlfrete = Convert.ToDecimal(lblTotVlFrete.Text.Replace(".", ""));
+                EntNotaFiscal.vlseguro = Convert.ToDecimal(lblTotVlSeguro.Text.Replace(".", ""));
+                EntNotaFiscal.txobsfisco = string.Empty;
+                EntNotaFiscal.txobscontribuinte = string.Empty;
+                EntNotaFiscal.id_pedido = 0;
+                EntNotaFiscal.flfinalidade = cboTipoNF.SelectedIndex + 1;
+                EntNotaFiscal.id_localentrega = lblIdLocalEntrega.Text == string.Empty ? 0 : Convert.ToInt32(lblIdLocalEntrega.Text);
+
+                
+                for (int i = 0; i < grdProdutoNF.Rows.Count; i++)
+                {
+                    ObjItemNfe = new Entidade_ItemNFe();
+
+                    ObjItemNfe.IdProduto = long.Parse(grdProdutoNF.Rows[i].Cells["ColCodProd"].Value.ToString());
+                    ObjItemNfe.qt_venda = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColQtd"].Value.ToString());
+                    ObjItemNfe.VlPreco = Convert.ToDouble(grdProdutoNF.Rows[i].Cells["ColVlUnit"].Value.ToString().Replace(".", ""));
+                    ObjItemNfe.icms = grdProdutoNF.Rows[i].Cells["ColCstIcms"].Value.ToString();
+                    ObjItemNfe.ipi = grdProdutoNF.Rows[i].Cells["ColCstIpi"].Value.ToString();
+                    ObjItemNfe.pis = grdProdutoNF.Rows[i].Cells["ColCstPisCofins"].Value.ToString();
+                    ObjItemNfe.cofins = grdProdutoNF.Rows[i].Cells["ColCstPisCofins"].Value.ToString();
+                    ObjItemNfe.cfop = Convert.ToInt32(grdProdutoNF.Rows[i].Cells["ColCFOP"].Value);
+                    ObjItemNfe.vlbaseicms = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlBaseIcms"].Value.ToString());
+                    ObjItemNfe.vlicms = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcms"].Value.ToString());
+                    ObjItemNfe.vlbaseicmssub = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcms"].Value.ToString()); ;
+                    ObjItemNfe.vlicmssub  = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcmsSub"].Value.ToString()); ;
+                    ObjItemNfe.vloutras = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlOutras"].Value.ToString()); ;
+
+                    ObjListItemNfe.Add(ObjItemNfe);
+
+                }
+
+                EntNotaFiscal.ItemNFe = ObjListItemNfe;
+                if (mNotaFiscal.Salvar(EntNotaFiscal))
+                {
+                    MessageBox.Show("Nota Fiscal: " + EntNotaFiscal.serienf + "-" + EntNotaFiscal.nrnf + " gerada com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao lança a nota fiscal!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao incluir!\nMessangem:" + ex.Message.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
             }
         }
     }
