@@ -20,6 +20,10 @@ namespace Sdistribuidor.Entidade
         public decimal vlbaseicmssub { get; set; }
         public decimal vlicmssub { get; set; }
         public decimal vloutras { get; set; }
+        public decimal vlIpi { get; set; }
+        public decimal vlPis { get; set; }
+        public decimal vlCofins { get; set; }
+        public decimal vlDesconto { get; set; }
         public decimal vlfrete { get; set; }
         public decimal vlseguro { get; set; }
         public string txobsfisco { get; set; }

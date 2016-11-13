@@ -15,6 +15,8 @@ namespace Sdistribuidor.Model
         NpgsqlCommand command;
         NpgsqlTransaction BeginTrans;
 
+
+        #region SALVAR
         public bool Salvar(Entidade_NotaFiscal EntNotaFiscal)
         {
             BancoDados.OpenConection();
@@ -69,6 +71,12 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("cstipi", item.ipi);
                     command.Parameters.AddWithValue("cstpis", item.pis);
                     command.Parameters.AddWithValue("cstcofins", item.cofins);
+                    command.Parameters.AddWithValue("vlaliqicms", item.vlAliqIcms);
+                    command.Parameters.AddWithValue("vlaliqipi", item.vlAliqIpi);
+                    command.Parameters.AddWithValue("vlpis", item.vlPis);
+                    command.Parameters.AddWithValue("vlcofins", item.vlCofins);
+                    command.Parameters.AddWithValue("vlipi", item.vlIpi);
+                    command.Parameters.AddWithValue("vldesconto", item.vlDesconto);
                     command.ExecuteNonQuery();
                 }
 
@@ -83,6 +91,15 @@ namespace Sdistribuidor.Model
                 BeginTrans.Rollback();
                 return false;
             }
+        }
+        #endregion
+
+        public DataTable PesquisaNFe(string sVrSql)
+        {
+            return BancoDados.Consultar(" SELECT id_loja,serienf,nrnf, p.nome,n.txchacessonfe,n.cdretorno,dtemissao,n.vltotal,n.cdretorno " +
+                                        " FROM nfsaida N " +
+                                        " INNER JOIN participante p on n.id_participante = p.id_participante " +
+                                        " WHERE "+ sVrSql);
         }
     }
 }

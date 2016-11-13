@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblIdLocalEntrega = new System.Windows.Forms.Label();
             this.lblUF = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             this.btnParticipante = new System.Windows.Forms.Button();
             this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnF5Observacoes = new System.Windows.Forms.Button();
             this.btnFatura = new System.Windows.Forms.Button();
             this.btnLocalEntrega = new System.Windows.Forms.Button();
             this.BtnAddItem = new System.Windows.Forms.Button();
@@ -182,7 +184,7 @@
             this.gbFaturaNotaFiscal = new System.Windows.Forms.GroupBox();
             this.BtnSalvarFatura = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
-            this.btnF5Observacoes = new System.Windows.Forms.Button();
+            this.ucFormaPagto1 = new Sdistribuidor.Uc.UCFormaPagto();
             this.ColCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNcm = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -194,7 +196,7 @@
             this.ColVlDesconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColVlAliq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAliqIcms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlBaseIcms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlIcms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlBaseIcmsSub = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -208,8 +210,6 @@
             this.ColVlCofins = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlFrete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblIdLocalEntrega = new System.Windows.Forms.Label();
-            this.ucFormaPagto1 = new Sdistribuidor.Uc.UCFormaPagto();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -247,6 +247,16 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
+            // 
+            // lblIdLocalEntrega
+            // 
+            this.lblIdLocalEntrega.AutoSize = true;
+            this.lblIdLocalEntrega.Location = new System.Drawing.Point(421, 18);
+            this.lblIdLocalEntrega.Name = "lblIdLocalEntrega";
+            this.lblIdLocalEntrega.Size = new System.Drawing.Size(82, 12);
+            this.lblIdLocalEntrega.TabIndex = 28;
+            this.lblIdLocalEntrega.Text = "IdLocalEntrega";
+            this.lblIdLocalEntrega.Visible = false;
             // 
             // lblUF
             // 
@@ -348,6 +358,21 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // btnF5Observacoes
+            // 
+            this.btnF5Observacoes.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnF5Observacoes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnF5Observacoes.FlatAppearance.BorderSize = 2;
+            this.btnF5Observacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnF5Observacoes.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnF5Observacoes.ForeColor = System.Drawing.Color.White;
+            this.btnF5Observacoes.Location = new System.Drawing.Point(386, 11);
+            this.btnF5Observacoes.Name = "btnF5Observacoes";
+            this.btnF5Observacoes.Size = new System.Drawing.Size(122, 23);
+            this.btnF5Observacoes.TabIndex = 6;
+            this.btnF5Observacoes.Text = "F5 - Observações";
+            this.btnF5Observacoes.UseVisualStyleBackColor = false;
+            // 
             // btnFatura
             // 
             this.btnFatura.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -414,14 +439,14 @@
             this.grdProdutoNF.AllowUserToAddRows = false;
             this.grdProdutoNF.AllowUserToDeleteRows = false;
             this.grdProdutoNF.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdProdutoNF.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdProdutoNF.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdProdutoNF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdProdutoNF.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCodProd,
@@ -435,7 +460,7 @@
             this.ColVlDesconto,
             this.ColQtd,
             this.ColVlUnit,
-            this.ColVlAliq,
+            this.ColAliqIcms,
             this.ColVlBaseIcms,
             this.ColVlIcms,
             this.ColVlBaseIcmsSub,
@@ -455,9 +480,9 @@
             this.grdProdutoNF.Name = "grdProdutoNF";
             this.grdProdutoNF.ReadOnly = true;
             this.grdProdutoNF.RowHeadersVisible = false;
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.grdProdutoNF.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.grdProdutoNF.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.grdProdutoNF.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdProdutoNF.Size = new System.Drawing.Size(888, 219);
             this.grdProdutoNF.TabIndex = 3;
@@ -1822,20 +1847,13 @@
             this.label39.TabIndex = 8;
             this.label39.Text = "Selecione";
             // 
-            // btnF5Observacoes
+            // ucFormaPagto1
             // 
-            this.btnF5Observacoes.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnF5Observacoes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnF5Observacoes.FlatAppearance.BorderSize = 2;
-            this.btnF5Observacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnF5Observacoes.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnF5Observacoes.ForeColor = System.Drawing.Color.White;
-            this.btnF5Observacoes.Location = new System.Drawing.Point(386, 11);
-            this.btnF5Observacoes.Name = "btnF5Observacoes";
-            this.btnF5Observacoes.Size = new System.Drawing.Size(122, 23);
-            this.btnF5Observacoes.TabIndex = 6;
-            this.btnF5Observacoes.Text = "F5 - Observações";
-            this.btnF5Observacoes.UseVisualStyleBackColor = false;
+            this.ucFormaPagto1.Location = new System.Drawing.Point(5, 40);
+            this.ucFormaPagto1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ucFormaPagto1.Name = "ucFormaPagto1";
+            this.ucFormaPagto1.Size = new System.Drawing.Size(251, 20);
+            this.ucFormaPagto1.TabIndex = 9;
             // 
             // ColCodProd
             // 
@@ -1895,9 +1913,9 @@
             // 
             // ColVlDesconto
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "n2";
-            this.ColVlDesconto.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "n2";
+            this.ColVlDesconto.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColVlDesconto.HeaderText = "Desconto";
             this.ColVlDesconto.Name = "ColVlDesconto";
             this.ColVlDesconto.ReadOnly = true;
@@ -1905,9 +1923,9 @@
             // 
             // ColQtd
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.Format = "n2";
-            this.ColQtd.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "n2";
+            this.ColQtd.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColQtd.HeaderText = "Qtd";
             this.ColQtd.Name = "ColQtd";
             this.ColQtd.ReadOnly = true;
@@ -1915,28 +1933,28 @@
             // 
             // ColVlUnit
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle22.Format = "n2";
-            this.ColVlUnit.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "n2";
+            this.ColVlUnit.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColVlUnit.HeaderText = "Vl. Unit";
             this.ColVlUnit.Name = "ColVlUnit";
             this.ColVlUnit.ReadOnly = true;
             this.ColVlUnit.Width = 90;
             // 
-            // ColVlAliq
+            // ColAliqIcms
             // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle23.Format = "n2";
-            this.ColVlAliq.DefaultCellStyle = dataGridViewCellStyle23;
-            this.ColVlAliq.HeaderText = "Aliq. Icms";
-            this.ColVlAliq.Name = "ColVlAliq";
-            this.ColVlAliq.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "n2";
+            this.ColAliqIcms.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ColAliqIcms.HeaderText = "Aliq. Icms";
+            this.ColAliqIcms.Name = "ColAliqIcms";
+            this.ColAliqIcms.ReadOnly = true;
             // 
             // ColVlBaseIcms
             // 
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle24.Format = "N2";
-            this.ColVlBaseIcms.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.ColVlBaseIcms.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColVlBaseIcms.HeaderText = "Vl. Base Icms";
             this.ColVlBaseIcms.Name = "ColVlBaseIcms";
             this.ColVlBaseIcms.ReadOnly = true;
@@ -1949,120 +1967,102 @@
             // 
             // ColVlBaseIcmsSub
             // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle25.Format = "n2";
-            this.ColVlBaseIcmsSub.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "n2";
+            this.ColVlBaseIcmsSub.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColVlBaseIcmsSub.HeaderText = "Vl. Base Icms Sub.";
             this.ColVlBaseIcmsSub.Name = "ColVlBaseIcmsSub";
             this.ColVlBaseIcmsSub.ReadOnly = true;
             // 
             // ColVlIcmsSub
             // 
-            dataGridViewCellStyle26.Format = "n2";
-            this.ColVlIcmsSub.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Format = "n2";
+            this.ColVlIcmsSub.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColVlIcmsSub.HeaderText = "Vl. Icms Sub.";
             this.ColVlIcmsSub.Name = "ColVlIcmsSub";
             this.ColVlIcmsSub.ReadOnly = true;
             // 
             // ColVlOutras
             // 
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle27.Format = "n2";
-            this.ColVlOutras.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "n2";
+            this.ColVlOutras.DefaultCellStyle = dataGridViewCellStyle9;
             this.ColVlOutras.HeaderText = "Vl. Outras";
             this.ColVlOutras.Name = "ColVlOutras";
             this.ColVlOutras.ReadOnly = true;
             // 
             // ColAliqIpi
             // 
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle28.Format = "n2";
-            this.ColAliqIpi.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "n2";
+            this.ColAliqIpi.DefaultCellStyle = dataGridViewCellStyle10;
             this.ColAliqIpi.HeaderText = "Aliq. Ipi";
             this.ColAliqIpi.Name = "ColAliqIpi";
             this.ColAliqIpi.ReadOnly = true;
             // 
             // ColVlIpi
             // 
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle29.Format = "n2";
-            this.ColVlIpi.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "n2";
+            this.ColVlIpi.DefaultCellStyle = dataGridViewCellStyle11;
             this.ColVlIpi.HeaderText = "Vl. Ipi";
             this.ColVlIpi.Name = "ColVlIpi";
             this.ColVlIpi.ReadOnly = true;
             // 
             // ColAliqPis
             // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle30.Format = "n2";
-            this.ColAliqPis.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "n2";
+            this.ColAliqPis.DefaultCellStyle = dataGridViewCellStyle12;
             this.ColAliqPis.HeaderText = "Aliq. Pis";
             this.ColAliqPis.Name = "ColAliqPis";
             this.ColAliqPis.ReadOnly = true;
             // 
             // ColVlPis
             // 
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle31.Format = "n2";
-            this.ColVlPis.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "n2";
+            this.ColVlPis.DefaultCellStyle = dataGridViewCellStyle13;
             this.ColVlPis.HeaderText = "Vl. Pis";
             this.ColVlPis.Name = "ColVlPis";
             this.ColVlPis.ReadOnly = true;
             // 
             // ColAliqCofins
             // 
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle32.Format = "n2";
-            this.ColAliqCofins.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "n2";
+            this.ColAliqCofins.DefaultCellStyle = dataGridViewCellStyle14;
             this.ColAliqCofins.HeaderText = "Aliq. Cofins";
             this.ColAliqCofins.Name = "ColAliqCofins";
             this.ColAliqCofins.ReadOnly = true;
             // 
             // ColVlCofins
             // 
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle33.Format = "n2";
-            this.ColVlCofins.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.Format = "n2";
+            this.ColVlCofins.DefaultCellStyle = dataGridViewCellStyle15;
             this.ColVlCofins.HeaderText = "Vl. Cofins";
             this.ColVlCofins.Name = "ColVlCofins";
             this.ColVlCofins.ReadOnly = true;
             // 
             // ColVlFrete
             // 
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle34.Format = "n2";
-            this.ColVlFrete.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Format = "n2";
+            this.ColVlFrete.DefaultCellStyle = dataGridViewCellStyle16;
             this.ColVlFrete.HeaderText = "Vl. Frete";
             this.ColVlFrete.Name = "ColVlFrete";
             this.ColVlFrete.ReadOnly = true;
             // 
             // ColVlTotal
             // 
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle35.Format = "N2";
-            dataGridViewCellStyle35.NullValue = null;
-            this.ColVlTotal.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle17.Format = "N2";
+            dataGridViewCellStyle17.NullValue = null;
+            this.ColVlTotal.DefaultCellStyle = dataGridViewCellStyle17;
             this.ColVlTotal.HeaderText = "Total";
             this.ColVlTotal.Name = "ColVlTotal";
             this.ColVlTotal.ReadOnly = true;
-            // 
-            // lblIdLocalEntrega
-            // 
-            this.lblIdLocalEntrega.AutoSize = true;
-            this.lblIdLocalEntrega.Location = new System.Drawing.Point(421, 18);
-            this.lblIdLocalEntrega.Name = "lblIdLocalEntrega";
-            this.lblIdLocalEntrega.Size = new System.Drawing.Size(82, 12);
-            this.lblIdLocalEntrega.TabIndex = 28;
-            this.lblIdLocalEntrega.Text = "IdLocalEntrega";
-            this.lblIdLocalEntrega.Visible = false;
-            // 
-            // ucFormaPagto1
-            // 
-            this.ucFormaPagto1.Location = new System.Drawing.Point(5, 40);
-            this.ucFormaPagto1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.ucFormaPagto1.Name = "ucFormaPagto1";
-            this.ucFormaPagto1.Size = new System.Drawing.Size(251, 20);
-            this.ucFormaPagto1.TabIndex = 9;
             // 
             // FMT004NotaFiscalDev
             // 
@@ -2253,6 +2253,7 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Button BtnSalvarFatura;
         private System.Windows.Forms.Button btnF5Observacoes;
+        private System.Windows.Forms.Label lblIdLocalEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNcm;
@@ -2264,7 +2265,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlDesconto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColQtd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColVlAliq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAliqIcms;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlBaseIcms;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlIcms;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlBaseIcmsSub;
@@ -2278,6 +2279,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlCofins;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlFrete;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlTotal;
-        private System.Windows.Forms.Label lblIdLocalEntrega;
     }
 }

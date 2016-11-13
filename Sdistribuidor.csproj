@@ -205,6 +205,12 @@
     <Compile Include="View\FMT004NotaFiscalDev.Designer.cs">
       <DependentUpon>FMT004NotaFiscalDev.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT005OperancaoNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT005OperancaoNFe.Designer.cs">
+      <DependentUpon>FMT005OperancaoNFe.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,7 @@
     <Compile Include="View\FUTabelasAux.Designer.cs">
       <DependentUpon>FUTabelasAux.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Relatorio\DanfeNFe.rdlc" />
     <EmbeddedResource Include="Uc\UCFormaPagto.resx">
       <DependentUpon>UCFormaPagto.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT004NotaFiscalDev.resx">
       <DependentUpon>FMT004NotaFiscalDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT005OperancaoNFe.resx">
+      <DependentUpon>FMT005OperancaoNFe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>

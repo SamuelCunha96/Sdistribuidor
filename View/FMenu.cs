@@ -84,5 +84,12 @@ namespace Sdistribuidor.View
             ObjForm.MdiParent = this;
             ObjForm.Show();
         }
+
+        private void btnListarNFe_Click(object sender, EventArgs e)
+        {
+            FMT005OperancaoNFe ObjForm = new FMT005OperancaoNFe();
+            ObjForm.MdiParent = this;
+            ObjForm.Show();
+        }
     }
 }

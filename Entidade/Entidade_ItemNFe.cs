@@ -17,6 +17,14 @@ namespace Sdistribuidor.Entidade
         public decimal vlbaseicmssub { get; set; }
         public decimal vlicmssub { get; set; }
         public decimal vloutras { get; set; }
+        public decimal vlDesconto { get; set; }
+        public decimal vlFrete { get; set; }
+        public decimal vlSeguro { get; set; }
+        public decimal vlPis { get; set; }
+        public decimal vlCofins { get; set; }
+        public decimal vlIpi { get; set; }
+        public decimal vlAliqIpi { get; set; }
+        public decimal vlAliqIcms { get; set; }
         public int cfop { get; set; }
     }
 }

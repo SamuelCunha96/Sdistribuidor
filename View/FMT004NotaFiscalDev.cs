@@ -1320,6 +1320,10 @@ namespace Sdistribuidor.View
                 EntNotaFiscal.vloutras = Convert.ToDecimal(lblTotVlOutDesp.Text.Replace(".", ""));
                 EntNotaFiscal.vlfrete = Convert.ToDecimal(lblTotVlFrete.Text.Replace(".", ""));
                 EntNotaFiscal.vlseguro = Convert.ToDecimal(lblTotVlSeguro.Text.Replace(".", ""));
+                EntNotaFiscal.vlIpi = Convert.ToDecimal(lblTotVlIpi.Text.Replace(".", ""));
+                EntNotaFiscal.vlPis = Convert.ToDecimal(lblTotVlPis.Text.Replace(".", ""));
+                EntNotaFiscal.vlCofins = Convert.ToDecimal(lblTotVlCofins.Text.Replace(".", ""));
+                EntNotaFiscal.vlDesconto = Convert.ToDecimal(lblTotVlDesc.Text.Replace(".", ""));
                 EntNotaFiscal.txobsfisco = string.Empty;
                 EntNotaFiscal.txobscontribuinte = string.Empty;
                 EntNotaFiscal.id_pedido = 0;
@@ -1341,9 +1345,15 @@ namespace Sdistribuidor.View
                     ObjItemNfe.cfop = Convert.ToInt32(grdProdutoNF.Rows[i].Cells["ColCFOP"].Value);
                     ObjItemNfe.vlbaseicms = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlBaseIcms"].Value.ToString());
                     ObjItemNfe.vlicms = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcms"].Value.ToString());
-                    ObjItemNfe.vlbaseicmssub = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcms"].Value.ToString()); ;
-                    ObjItemNfe.vlicmssub  = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcmsSub"].Value.ToString()); ;
-                    ObjItemNfe.vloutras = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlOutras"].Value.ToString()); ;
+                    ObjItemNfe.vlbaseicmssub = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcms"].Value.ToString());
+                    ObjItemNfe.vlicmssub  = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIcmsSub"].Value.ToString());
+                    ObjItemNfe.vloutras = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlOutras"].Value.ToString());
+                    ObjItemNfe.vlDesconto = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlDesconto"].Value.ToString()); 
+                    ObjItemNfe.vlIpi = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlIpi"].Value.ToString()); 
+                    ObjItemNfe.vlAliqIpi = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColAliqIpi"].Value.ToString());
+                    ObjItemNfe.vlAliqIcms = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColAliqIcms"].Value.ToString());
+                    ObjItemNfe.vlCofins = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlCofins"].Value.ToString());
+                    ObjItemNfe.vlPis = Convert.ToDecimal(grdProdutoNF.Rows[i].Cells["ColVlPis"].Value.ToString());
 
                     ObjListItemNfe.Add(ObjItemNfe);
 
@@ -1353,7 +1363,9 @@ namespace Sdistribuidor.View
                 if (mNotaFiscal.Salvar(EntNotaFiscal))
                 {
                     MessageBox.Show("Nota Fiscal: " + EntNotaFiscal.serienf + "-" + EntNotaFiscal.nrnf + " gerada com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpaCampos();
                     return true;
+                    
                 }
                 else
                 {
@@ -1366,6 +1378,33 @@ namespace Sdistribuidor.View
                 MessageBox.Show("Erro ao incluir!\nMessangem:" + ex.Message.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return false;
             }
+        }
+        void LimpaCampos()
+        {
+            txtCodCliente.Text = string.Empty;
+            lblCliente.Text = string.Empty;
+            lblIdLocalEntrega.Text = string.Empty;
+            lblUF.Text = string.Empty;
+            cboTipoNF.SelectedIndex = -1;
+            btnLocalEntrega.BackColor = Color.FromName("ControlDark");
+            btnFatura.BackColor = Color.FromName("ControlDark");
+            btnF5Observacoes.BackColor = Color.FromName("ControlDark");
+            grdProdutoNF.Rows.Clear();
+            
+            lblTotVlBaseICms.Text = "0,00";
+            lblTotVlIcms.Text = "0,00";
+            lblTotVlBaseIcmsSub.Text = "0,00";
+            lblTotVlIcmsSub.Text = "0,00";
+            lblTotVlOutDesp.Text = "0,00";
+            lblTotVlFrete.Text = "0,00";
+            lblTotVlSeguro.Text = "0,00";
+
+            lblTotVlIpi.Text = "0,00";
+            lblTotVlPis.Text = "0,00";
+            lblTotVlCofins.Text = "0,00";
+            lblTotVlDesc.Text = "0,00";
+
+            lblTotVlTotal.Text = "0,00";
         }
     }
 }

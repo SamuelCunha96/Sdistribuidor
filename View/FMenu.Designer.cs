@@ -39,11 +39,12 @@
             this.btnGrupo = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbPgNotaFiscal = new System.Windows.Forms.TabPage();
+            this.btnNFeOutras = new System.Windows.Forms.Button();
             this.btnNotaFiscal = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnAux = new System.Windows.Forms.Button();
-            this.btnNFeOutras = new System.Windows.Forms.Button();
+            this.btnListarNFe = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -180,6 +181,7 @@
             // 
             // tbPgNotaFiscal
             // 
+            this.tbPgNotaFiscal.Controls.Add(this.btnListarNFe);
             this.tbPgNotaFiscal.Controls.Add(this.btnNFeOutras);
             this.tbPgNotaFiscal.Controls.Add(this.btnNotaFiscal);
             this.tbPgNotaFiscal.Location = new System.Drawing.Point(4, 21);
@@ -189,6 +191,22 @@
             this.tbPgNotaFiscal.TabIndex = 2;
             this.tbPgNotaFiscal.Text = "Nota Fiscal";
             this.tbPgNotaFiscal.UseVisualStyleBackColor = true;
+            // 
+            // btnNFeOutras
+            // 
+            this.btnNFeOutras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNFeOutras.FlatAppearance.BorderSize = 0;
+            this.btnNFeOutras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNFeOutras.Image = ((System.Drawing.Image)(resources.GetObject("btnNFeOutras.Image")));
+            this.btnNFeOutras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNFeOutras.Location = new System.Drawing.Point(78, 3);
+            this.btnNFeOutras.Name = "btnNFeOutras";
+            this.btnNFeOutras.Size = new System.Drawing.Size(75, 94);
+            this.btnNFeOutras.TabIndex = 3;
+            this.btnNFeOutras.Text = "NFe Outras";
+            this.btnNFeOutras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNFeOutras.UseVisualStyleBackColor = true;
+            this.btnNFeOutras.Click += new System.EventHandler(this.btnNFeOutras_Click);
             // 
             // btnNotaFiscal
             // 
@@ -250,21 +268,21 @@
             this.btnAux.UseVisualStyleBackColor = true;
             this.btnAux.Click += new System.EventHandler(this.btnAux_Click);
             // 
-            // btnNFeOutras
+            // btnListarNFe
             // 
-            this.btnNFeOutras.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnNFeOutras.FlatAppearance.BorderSize = 0;
-            this.btnNFeOutras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNFeOutras.Image = ((System.Drawing.Image)(resources.GetObject("btnNFeOutras.Image")));
-            this.btnNFeOutras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNFeOutras.Location = new System.Drawing.Point(78, 3);
-            this.btnNFeOutras.Name = "btnNFeOutras";
-            this.btnNFeOutras.Size = new System.Drawing.Size(75, 94);
-            this.btnNFeOutras.TabIndex = 3;
-            this.btnNFeOutras.Text = "NFe Outras";
-            this.btnNFeOutras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNFeOutras.UseVisualStyleBackColor = true;
-            this.btnNFeOutras.Click += new System.EventHandler(this.btnNFeOutras_Click);
+            this.btnListarNFe.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnListarNFe.FlatAppearance.BorderSize = 0;
+            this.btnListarNFe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarNFe.Image = ((System.Drawing.Image)(resources.GetObject("btnListarNFe.Image")));
+            this.btnListarNFe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListarNFe.Location = new System.Drawing.Point(153, 3);
+            this.btnListarNFe.Name = "btnListarNFe";
+            this.btnListarNFe.Size = new System.Drawing.Size(75, 94);
+            this.btnListarNFe.TabIndex = 4;
+            this.btnListarNFe.Text = "Listar NFe";
+            this.btnListarNFe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListarNFe.UseVisualStyleBackColor = true;
+            this.btnListarNFe.Click += new System.EventHandler(this.btnListarNFe_Click);
             // 
             // FMenu
             // 
@@ -306,5 +324,6 @@
         private System.Windows.Forms.Button btnLoja;
         private System.Windows.Forms.Button btnParticipante;
         private System.Windows.Forms.Button btnNFeOutras;
+        private System.Windows.Forms.Button btnListarNFe;
     }
 }
