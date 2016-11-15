@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Mono.Security">
       <HintPath>F:\SI\SI\dll\Mono.Security.dll</HintPath>
     </Reference>
@@ -45,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.Ribbon35">
       <HintPath>..\..\..\..\..\Binaries\System.Windows.Forms.Ribbon35.dll</HintPath>
     </Reference>
@@ -113,6 +116,12 @@
     <Compile Include="Model\Unidade.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Model\Vendedor.cs" />
+    <Compile Include="Relatorio\FRDanfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FRDanfe.Designer.cs">
+      <DependentUpon>FRDanfe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\UCFormaPagto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +239,9 @@
       <DependentUpon>FUTabelasAux.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Relatorio\DanfeNFe.rdlc" />
+    <EmbeddedResource Include="Relatorio\FRDanfe.resx">
+      <DependentUpon>FRDanfe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uc\UCFormaPagto.resx">
       <DependentUpon>UCFormaPagto.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +307,7 @@
     </EmbeddedResource>
     <None Include="DiagramaClasses.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_NotaFiscal.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

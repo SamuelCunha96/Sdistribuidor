@@ -25,9 +25,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Left>0.0635cm</Left>
+                <Top>0.03164cm</Top>
+                <Left>0.0675cm</Left>
                 <Height>0.342cm</Height>
-                <Width>12.6075cm</Width>
+                <Width>14.85255cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -40,10 +41,10 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.22225cm</Top>
-            <Left>0.127cm</Left>
+            <Top>0.42cm</Top>
+            <Left>0.06469cm</Left>
             <Height>0.85cm</Height>
-            <Width>18.03675cm</Width>
+            <Width>16.096cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -74,6 +75,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
+                <Top>0.03397cm</Top>
                 <Height>0.34396cm</Height>
                 <Width>2.90078cm</Width>
                 <Style>
@@ -88,10 +90,10 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>1.07643cm</Top>
-            <Left>0.1905cm</Left>
-            <Height>0.81825cm</Height>
-            <Width>3.68725cm</Width>
+            <Top>1.25513cm</Top>
+            <Left>0.06469cm</Left>
+            <Height>0.85cm</Height>
+            <Width>4.1cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -130,8 +132,9 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
                 <Top>0.03175cm</Top>
+                <Left>0.0635cm</Left>
                 <Height>0.36227cm</Height>
-                <Width>4.21543cm</Width>
+                <Width>4.89055cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -144,10 +147,10 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>1.05749cm</Top>
-            <Left>3.87928cm</Left>
+            <Top>1.25513cm</Top>
+            <Left>4.17022cm</Left>
             <Height>0.85cm</Height>
-            <Width>14.29075cm</Width>
+            <Width>11.973cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -163,6 +166,145 @@
           </Rectangle>
           <Rectangle Name="Rectangle5">
             <ReportItems>
+              <Textbox Name="Textbox6">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>N°</Value>
+                        <Style>
+                          <FontFamily>Courier New</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox3</rd:DefaultName>
+                <Top>0.50301cm</Top>
+                <Left>0.07444cm</Left>
+                <Height>0.50223cm</Height>
+                <Width>0.64302cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox7">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>SÉRIE:</Value>
+                        <Style>
+                          <FontFamily>Courier New</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox3</rd:DefaultName>
+                <Top>1.04052cm</Top>
+                <Left>0.07606cm</Left>
+                <Height>0.47639cm</Height>
+                <Width>1.25785cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="TxtCanhotoNrNFe">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!nrnf.Value, "DSNFSaida")</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.52182cm</Top>
+                <Left>0.82446cm</Left>
+                <Height>0.50475cm</Height>
+                <Width>2.25774cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <BackgroundColor>Silver</BackgroundColor>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="TxtCanhotoSerieNFe">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!serienf.Value, "DSNFSaida")</Value>
+                        <Style>
+                          <FontFamily>Courier New</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1.034cm</Top>
+                <Left>1.3833cm</Left>
+                <Height>0.50271cm</Height>
+                <Width>1.6989cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
               <Textbox Name="Textbox5">
                 <CanGrow>true</CanGrow>
                 <KeepTogether>true</KeepTogether>
@@ -184,140 +326,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
-                <Left>1.40586cm</Left>
+                <Top>0.07555cm</Top>
+                <Left>1.12877cm</Left>
                 <Height>0.37571cm</Height>
                 <Width>0.74539cm</Width>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox6">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>N°</Value>
-                        <Style>
-                          <FontFamily>Courier New</FontFamily>
-                          <FontSize>6pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox3</rd:DefaultName>
-                <Top>0.62247cm</Top>
-                <Left>0.13897cm</Left>
-                <Height>0.42343cm</Height>
-                <Width>0.64302cm</Width>
-                <ZIndex>1</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox7">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>SÉRIE:</Value>
-                        <Style>
-                          <FontFamily>Courier New</FontFamily>
-                          <FontSize>6pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox3</rd:DefaultName>
-                <Top>1.13881cm</Top>
-                <Left>0.10046cm</Left>
-                <Height>0.38114cm</Height>
-                <Width>0.95446cm</Width>
-                <ZIndex>2</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="TxtCanhotoNrNFe">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value />
-                        <Style>
-                          <FontSize>6pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.6346cm</Top>
-                <Left>0.88899cm</Left>
-                <Height>0.4095cm</Height>
-                <Width>1.74974cm</Width>
-                <ZIndex>3</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="TxtCanhotoSerieNFe">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value />
-                        <Style />
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <Top>1.1426cm</Top>
-                <Left>1.14299cm</Left>
-                <Height>0.34396cm</Height>
-                <Width>0.47974cm</Width>
                 <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
@@ -331,10 +343,10 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.21511cm</Top>
-            <Left>18.19047cm</Left>
-            <Height>1.70881cm</Height>
-            <Width>2.89272cm</Width>
+            <Top>0.42cm</Top>
+            <Left>16.15203cm</Left>
+            <Height>1.7cm</Height>
+            <Width>3.24095cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -344,10 +356,10 @@
           </Rectangle>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.26141cm</Top>
-        <Left>0.28056cm</Left>
-        <Height>2.11442cm</Height>
-        <Width>21.17844cm</Width>
+        <Top>0.21511cm</Top>
+        <Left>0.02144cm</Left>
+        <Height>2.25107cm</Height>
+        <Width>19.39298cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -362,8 +374,170 @@
           <Rectangle Name="Rectangle8">
             <KeepTogether>true</KeepTogether>
             <Top>0.03175cm</Top>
-            <Height>3.88825cm</Height>
-            <Width>9.9365cm</Width>
+            <Height>3.92cm</Height>
+            <Width>8.857cm</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <RightBorder>
+                <Style>None</Style>
+              </RightBorder>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle11">
+            <ReportItems>
+              <Textbox Name="Textbox19">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Chave de acesso</Value>
+                        <Style>
+                          <FontSize>5pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox11</rd:DefaultName>
+                <Top>0.00975cm</Top>
+                <Height>0.3455cm</Height>
+                <Width>1.75629cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="TxtChAcessoNFe">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value />
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.454cm</Top>
+                <Left>0.46593cm</Left>
+                <Height>0.33012cm</Height>
+                <Width>6.9555cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>1.524cm</Top>
+            <Left>11.585cm</Left>
+            <Height>1cm</Height>
+            <Width>7.71444cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Style>None</Style>
+              </TopBorder>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle12">
+            <ReportItems>
+              <Textbox Name="Textbox18">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Controle do Fisco</Value>
+                        <Style>
+                          <FontSize>5pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox11</rd:DefaultName>
+                <Left>0.0455cm</Left>
+                <Height>0.3455cm</Height>
+                <Width>1.75629cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="CodigoBarrasNFe">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value />
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.45587cm</Top>
+                <Left>0.10269cm</Left>
+                <Height>0.85cm</Height>
+                <Width>7.44574cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>0.03175cm</Top>
+            <Left>11.585cm</Left>
+            <Height>1.48cm</Height>
+            <Width>7.71444cm</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -523,7 +697,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>2.25447cm</Top>
+                <Top>2.12747cm</Top>
                 <Left>0.11867cm</Left>
                 <Height>0.4514cm</Height>
                 <Width>0.42487cm</Width>
@@ -558,10 +732,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>2.89144cm</Top>
+                <Top>2.60569cm</Top>
                 <Left>0.127cm</Left>
                 <Height>0.35963cm</Height>
-                <Width>0.80385cm</Width>
+                <Width>1.27734cm</Width>
                 <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
@@ -593,10 +767,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>3.43118cm</Top>
-                <Left>0.13302cm</Left>
+                <Top>3.24068cm</Top>
+                <Left>0.11867cm</Left>
                 <Height>0.35963cm</Height>
-                <Width>1.1531cm</Width>
+                <Width>1.51421cm</Width>
                 <ZIndex>5</ZIndex>
                 <Style>
                   <Border>
@@ -628,8 +802,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>3.36769cm</Top>
-                <Left>2.13327cm</Left>
+                <Top>3.25159cm</Top>
+                <Left>2.11285cm</Left>
                 <Height>0.35963cm</Height>
                 <Width>0.42285cm</Width>
                 <ZIndex>6</ZIndex>
@@ -650,9 +824,10 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value />
+                        <Value>s</Value>
                         <Style>
                           <FontFamily>Courier New</FontFamily>
+                          <FontSize>8pt</FontSize>
                         </Style>
                       </TextRun>
                     </TextRuns>
@@ -661,10 +836,10 @@
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>2.2315cm</Top>
+                <Top>2.1045cm</Top>
                 <Left>0.77935cm</Left>
-                <Height>0.5365cm</Height>
-                <Width>1.71799cm</Width>
+                <Height>0.49417cm</Height>
+                <Width>1.74974cm</Width>
                 <ZIndex>7</ZIndex>
                 <Style>
                   <Border>
@@ -696,7 +871,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <Top>1.50125cm</Top>
-                <Left>1.9541cm</Left>
+                <Left>2.0811cm</Left>
                 <Height>0.56825cm</Height>
                 <Width>0.47974cm</Width>
                 <ZIndex>8</ZIndex>
@@ -720,6 +895,7 @@
                         <Value>1</Value>
                         <Style>
                           <FontFamily>Courier New</FontFamily>
+                          <FontSize>6pt</FontSize>
                         </Style>
                       </TextRun>
                     </TextRuns>
@@ -728,9 +904,9 @@
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>2.80328cm</Top>
-                <Left>1.68423cm</Left>
-                <Height>0.473cm</Height>
+                <Top>2.61278cm</Top>
+                <Left>1.77948cm</Left>
+                <Height>0.346cm</Height>
                 <Width>0.76549cm</Width>
                 <ZIndex>9</ZIndex>
                 <Style>
@@ -745,240 +921,30 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.03175cm</Top>
-            <Left>9.99422cm</Left>
-            <Height>3.88825cm</Height>
-            <Width>2.67345cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle11">
-            <ReportItems>
-              <Textbox Name="Textbox19">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Chave de acesso</Value>
-                        <Style>
-                          <FontSize>5pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>0.00975cm</Top>
-                <Height>0.3455cm</Height>
-                <Width>1.75629cm</Width>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="TxtChAcessoNFe">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value />
-                        <Style />
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.454cm</Top>
-                <Left>0.75168cm</Left>
-                <Height>0.33012cm</Height>
-                <Width>6.9555cm</Width>
-                <ZIndex>1</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-            </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>1.5875cm</Top>
-            <Left>12.82325cm</Left>
-            <Height>1cm</Height>
-            <Width>8.22225cm</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BottomBorder>
-                <Style>Solid</Style>
-              </BottomBorder>
-            </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle12">
-            <ReportItems>
-              <Textbox Name="Textbox18">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Controle do Fisco</Value>
-                        <Style>
-                          <FontSize>5pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Left>0.0635cm</Left>
-                <Height>0.3455cm</Height>
-                <Width>1.75629cm</Width>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="CodigoBarrasNFe">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value />
-                        <Style />
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.45587cm</Top>
-                <Left>0.53344cm</Left>
-                <Height>0.85cm</Height>
-                <Width>7.15999cm</Width>
-                <ZIndex>1</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-            </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>0.0635cm</Top>
-            <Left>12.837cm</Left>
-            <Height>1.48cm</Height>
-            <Width>8.1905cm</Width>
+            <Top>0.04763cm</Top>
+            <Left>8.86225cm</Left>
+            <Height>3.92cm</Height>
+            <Width>2.65425cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
-              </Border>
-              <BottomBorder>
                 <Style>Solid</Style>
-              </BottomBorder>
+              </Border>
+              <RightBorder>
+                <Style>None</Style>
+              </RightBorder>
             </Style>
           </Rectangle>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>2.54627cm</Top>
-        <Left>0.31231cm</Left>
+        <Left>0.02144cm</Left>
         <Height>4.047cm</Height>
-        <Width>21.12275cm</Width>
+        <Width>19.36275cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
-          </Border>
-        </Style>
-      </Rectangle>
-      <Rectangle Name="Rectangle9">
-        <ReportItems>
-          <Textbox Name="Textbox20">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Consulta de autenticidade no portal nacional da NF-e
-
-www.nfe.fazenda.gov.br/portal
-
-ou no site da Sefaz autorizadora</Value>
-                    <Style>
-                      <FontSize>5pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>2.62138cm</Top>
-            <Left>0.04205cm</Left>
-            <Height>1.21725cm</Height>
-            <Width>4.77264cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-        </ReportItems>
-        <KeepTogether>true</KeepTogether>
-        <Top>2.54627cm</Top>
-        <Left>13.10053cm</Left>
-        <Height>3.92cm</Height>
-        <Width>8.28575cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
           </Border>
         </Style>
       </Rectangle>
@@ -1005,7 +971,7 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Left>0.0635cm</Left>
+            <Left>0.02144cm</Left>
             <Height>0.35963cm</Height>
             <Width>2.89628cm</Width>
             <Style>
@@ -1036,7 +1002,6 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.31047cm</Top>
-            <Left>0.17088cm</Left>
             <Height>0.346cm</Height>
             <Width>12.0688cm</Width>
             <ZIndex>1</ZIndex>
@@ -1053,14 +1018,28 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>6.77164cm</Top>
-        <Left>0.38031cm</Left>
         <Height>0.87169cm</Height>
-        <Width>12.6325cm</Width>
-        <ZIndex>3</ZIndex>
+        <Width>12.09024cm</Width>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
           </Border>
+          <TopBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </TopBorder>
+          <BottomBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Style>None</Style>
+          </LeftBorder>
+          <RightBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </RightBorder>
         </Style>
       </Rectangle>
       <Rectangle Name="Rectangle14">
@@ -1086,9 +1065,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Left>0.09525cm</Left>
             <Height>0.35963cm</Height>
-            <Width>1.65201cm</Width>
+            <Width>3.09794cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1114,14 +1092,13 @@ ou no site da Sefaz autorizadora</Value>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.50011cm</Top>
-            <Left>0.09525cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.346cm</Height>
-            <Width>8.06934cm</Width>
+            <Width>4.78045cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1136,14 +1113,29 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>6.7725cm</Top>
-        <Left>13.0175cm</Left>
-        <Height>0.85cm</Height>
-        <Width>8.34925cm</Width>
-        <ZIndex>4</ZIndex>
+        <Left>12.07233cm</Left>
+        <Height>0.88175cm</Height>
+        <Width>7.24855cm</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
           </Border>
+          <TopBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </TopBorder>
+          <BottomBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Style>None</Style>
+          </LeftBorder>
+          <RightBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </RightBorder>
         </Style>
       </Rectangle>
       <Rectangle Name="Rectangle16">
@@ -1170,7 +1162,6 @@ ou no site da Sefaz autorizadora</Value>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
             <Top>0.03175cm</Top>
-            <Left>0.0635cm</Left>
             <Height>0.35963cm</Height>
             <Width>4.43254cm</Width>
             <Style>
@@ -1202,8 +1193,7 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.45335cm</Top>
-            <Left>0.20826cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.346cm</Height>
             <Width>6.39003cm</Width>
             <ZIndex>1</ZIndex>
@@ -1220,10 +1210,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>7.63981cm</Top>
-        <Left>0.3825cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.87169cm</Height>
-        <Width>6.86cm</Width>
-        <ZIndex>5</ZIndex>
+        <Width>6.47279cm</Width>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1272,99 +1262,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>7.6615cm</Top>
-        <Left>7.26925cm</Left>
+        <Left>6.49694cm</Left>
         <Height>0.85cm</Height>
-        <Width>6.86cm</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <TopBorder>
-            <Style>None</Style>
-          </TopBorder>
-          <LeftBorder>
-            <Style>None</Style>
-          </LeftBorder>
-        </Style>
-      </Rectangle>
-      <Rectangle Name="Rectangle18">
-        <ReportItems>
-          <Textbox Name="Textbox25">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>CNPJ DO EMITENTE</Value>
-                    <Style>
-                      <FontFamily>Courier New</FontFamily>
-                      <FontSize>5pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Left>0.01779cm</Left>
-            <Height>0.35963cm</Height>
-            <Width>2.06192cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="TxtDadosCnpjEmitente">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>1</Value>
-                    <Style>
-                      <FontFamily>Courier New</FontFamily>
-                      <FontSize>6pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.506cm</Top>
-            <Left>0.04688cm</Left>
-            <Height>0.346cm</Height>
-            <Width>6.97621cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-        </ReportItems>
-        <KeepTogether>true</KeepTogether>
-        <Top>7.6615cm</Top>
-        <Left>14.159cm</Left>
-        <Height>0.852cm</Height>
-        <Width>7.20925cm</Width>
-        <ZIndex>7</ZIndex>
+        <Width>6.5425cm</Width>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1399,10 +1300,10 @@ ou no site da Sefaz autorizadora</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>8.46564cm</Top>
-        <Left>0.28056cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.473cm</Height>
         <Width>4.28169cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1434,8 +1335,7 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.0635cm</Left>
-            <Height>0.346cm</Height>
+            <Height>0.34148cm</Height>
             <Width>2.93965cm</Width>
             <Style>
               <Border>
@@ -1467,10 +1367,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.33015cm</Top>
-            <Left>0.12105cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.4095cm</Height>
-            <Width>10.86678cm</Width>
+            <Width>10.32703cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1485,10 +1384,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>8.90799cm</Top>
-        <Left>0.32502cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>11.26763cm</Width>
-        <ZIndex>9</ZIndex>
+        <Width>10.39053cm</Width>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1508,6 +1407,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>5pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1515,9 +1415,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Left>0.06978cm</Left>
-            <Height>0.3443cm</Height>
-            <Width>1.35557cm</Width>
+            <Height>0.34148cm</Height>
+            <Width>2.56207cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1538,7 +1437,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1548,9 +1447,8 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.252cm</Top>
-            <Left>0.1932cm</Left>
-            <Height>0.473cm</Height>
+            <Top>0.30961cm</Top>
+            <Height>0.44125cm</Height>
             <Width>2.92449cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -1566,10 +1464,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>8.90799cm</Top>
-        <Left>11.59265cm</Left>
-        <Height>0.85cm</Height>
-        <Width>3.37438cm</Width>
-        <ZIndex>10</ZIndex>
+        <Left>10.40759cm</Left>
+        <Height>0.852cm</Height>
+        <Width>3.29783cm</Width>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1592,6 +1490,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>5pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1622,7 +1521,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1632,10 +1531,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.22025cm</Top>
-            <Left>0.08769cm</Left>
-            <Height>0.473cm</Height>
-            <Width>2.92449cm</Width>
+            <Top>0.379cm</Top>
+            <Height>0.4095cm</Height>
+            <Width>2.51174cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1649,11 +1547,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>8.90799cm</Top>
-        <Left>14.97409cm</Left>
+        <Top>8.90347cm</Top>
+        <Left>13.72553cm</Left>
         <Height>0.85cm</Height>
-        <Width>3.09988cm</Width>
-        <ZIndex>11</ZIndex>
+        <Width>2.68713cm</Width>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1684,10 +1582,10 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox28</rd:DefaultName>
-            <Top>0.0635cm</Top>
+            <Top>0cm</Top>
             <Left>0.07156cm</Left>
-            <Height>0.31425cm</Height>
-            <Width>1.45436cm</Width>
+            <Height>0.37775cm</Height>
+            <Width>2.14174cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1708,7 +1606,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1718,10 +1616,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.33677cm</Top>
-            <Left>0.09525cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.473cm</Height>
-            <Width>2.67049cm</Width>
+            <Width>2.59132cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1735,11 +1632,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>8.87624cm</Top>
-        <Left>18.19568cm</Left>
-        <Height>0.89254cm</Height>
-        <Width>2.92449cm</Width>
-        <ZIndex>12</ZIndex>
+        <Top>8.90799cm</Top>
+        <Left>16.53437cm</Left>
+        <Height>0.85cm</Height>
+        <Width>2.79749cm</Width>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1767,9 +1664,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.03649cm</Left>
-            <Height>0.346cm</Height>
-            <Width>1.03465cm</Width>
+            <Height>0.31425cm</Height>
+            <Width>2.68023cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1800,10 +1696,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.34725cm</Top>
-            <Left>0.13693cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.4095cm</Height>
-            <Width>10.86678cm</Width>
+            <Width>10.32703cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1818,10 +1713,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>9.78875cm</Top>
-        <Left>0.32636cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>11.26763cm</Width>
-        <ZIndex>13</ZIndex>
+        <Width>10.3921cm</Width>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1864,8 +1759,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Height>0.346cm</Height>
-            <Width>0.84415cm</Width>
+            <Height>0.31326cm</Height>
+            <Width>1.22336cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1886,7 +1781,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1896,8 +1791,7 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.33088cm</Top>
-            <Left>0.14557cm</Left>
+            <Top>0.28575cm</Top>
             <Height>0.473cm</Height>
             <Width>2.92449cm</Width>
             <ZIndex>1</ZIndex>
@@ -1913,11 +1807,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>9.75799cm</Top>
-        <Left>11.62574cm</Left>
-        <Height>0.88076cm</Height>
+        <Top>9.78974cm</Top>
+        <Left>10.37718cm</Left>
+        <Height>0.84901cm</Height>
         <Width>3.34263cm</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1955,7 +1849,7 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Height>0.4095cm</Height>
+            <Height>0.346cm</Height>
             <Width>0.71715cm</Width>
             <Style>
               <Border>
@@ -1977,7 +1871,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1987,10 +1881,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.3155cm</Top>
-            <Left>0.08769cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.473cm</Height>
-            <Width>2.92449cm</Width>
+            <Width>2.54349cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2004,11 +1897,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>9.78875cm</Top>
-        <Left>14.97543cm</Left>
-        <Height>0.85cm</Height>
-        <Width>3.09988cm</Width>
-        <ZIndex>15</ZIndex>
+        <Top>9.757cm</Top>
+        <Left>13.72687cm</Left>
+        <Height>0.89433cm</Height>
+        <Width>2.68579cm</Width>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2047,7 +1940,7 @@ ou no site da Sefaz autorizadora</Value>
             </Paragraphs>
             <rd:DefaultName>Textbox28</rd:DefaultName>
             <Height>0.346cm</Height>
-            <Width>1.45436cm</Width>
+            <Width>2.21039cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2068,7 +1961,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -2078,10 +1971,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.28375cm</Top>
-            <Left>0.12476cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.473cm</Height>
-            <Width>2.67049cm</Width>
+            <Width>2.5589cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2095,15 +1987,30 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>9.78875cm</Top>
-        <Left>18.19859cm</Left>
-        <Height>0.85cm</Height>
-        <Width>2.92cm</Width>
-        <ZIndex>16</ZIndex>
+        <Top>9.757cm</Top>
+        <Left>16.53728cm</Left>
+        <Height>0.889cm</Height>
+        <Width>2.79525cm</Width>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
           </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </LeftBorder>
+          <RightBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </RightBorder>
         </Style>
       </Rectangle>
       <Rectangle Name="Rectangle26">
@@ -2127,7 +2034,6 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
             <Width>1.22884cm</Width>
             <Style>
@@ -2160,10 +2066,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.34725cm</Top>
-            <Left>0.13693cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.4095cm</Height>
-            <Width>10.86678cm</Width>
+            <Width>10.29528cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2178,10 +2083,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>10.646cm</Top>
-        <Left>0.32088cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>11.26763cm</Width>
-        <ZIndex>17</ZIndex>
+        <Width>10.39427cm</Width>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2246,7 +2151,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -2256,8 +2161,7 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.3155cm</Top>
-            <Left>0.20907cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.473cm</Height>
             <Width>2.92449cm</Width>
             <ZIndex>1</ZIndex>
@@ -2273,11 +2177,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>10.646cm</Top>
-        <Left>11.62026cm</Left>
-        <Height>0.85cm</Height>
-        <Width>3.34263cm</Width>
-        <ZIndex>18</ZIndex>
+        <Top>10.67775cm</Top>
+        <Left>10.3717cm</Left>
+        <Height>0.81825cm</Height>
+        <Width>3.34811cm</Width>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2315,6 +2219,7 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
+            <Top>0.05817cm</Top>
             <Height>0.346cm</Height>
             <Width>0.40334cm</Width>
             <Style>
@@ -2337,7 +2242,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -2347,10 +2252,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.28375cm</Top>
-            <Left>0.08769cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.473cm</Height>
-            <Width>2.92449cm</Width>
+            <Width>2.54349cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2364,11 +2268,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>10.646cm</Top>
-        <Left>14.96995cm</Left>
-        <Height>0.85cm</Height>
-        <Width>3.09988cm</Width>
-        <ZIndex>19</ZIndex>
+        <Top>10.65133cm</Top>
+        <Left>13.72139cm</Left>
+        <Height>0.84467cm</Height>
+        <Width>2.69127cm</Width>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2428,7 +2332,7 @@ ou no site da Sefaz autorizadora</Value>
                     <Value>1</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -2438,10 +2342,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.28375cm</Top>
-            <Left>0.12476cm</Left>
+            <Top>0.30961cm</Top>
             <Height>0.473cm</Height>
-            <Width>2.67049cm</Width>
+            <Width>2.56438cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2455,15 +2358,30 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>10.646cm</Top>
-        <Left>18.19311cm</Left>
-        <Height>0.85cm</Height>
-        <Width>2.92cm</Width>
-        <ZIndex>20</ZIndex>
+        <Top>10.67775cm</Top>
+        <Left>16.53437cm</Left>
+        <Height>0.81825cm</Height>
+        <Width>2.79816cm</Width>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
           </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </LeftBorder>
+          <RightBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </RightBorder>
         </Style>
       </Rectangle>
       <Textbox Name="Textbox35">
@@ -2488,10 +2406,10 @@ ou no site da Sefaz autorizadora</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>11.4234cm</Top>
-        <Left>0.32115cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.473cm</Height>
         <Width>1.50001cm</Width>
-        <ZIndex>21</ZIndex>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2524,8 +2442,6 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.00525cm</Top>
-            <Left>0.16793cm</Left>
             <Height>0.4095cm</Height>
             <Width>10.86678cm</Width>
             <Style>
@@ -2540,11 +2456,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>11.93168cm</Top>
-        <Left>0.3592cm</Left>
-        <Height>0.42cm</Height>
-        <Width>20.72764cm</Width>
-        <ZIndex>22</ZIndex>
+        <Top>11.91396cm</Top>
+        <Left>0.02144cm</Left>
+        <Height>0.43772cm</Height>
+        <Width>19.31109cm</Width>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2573,10 +2489,10 @@ ou no site da Sefaz autorizadora</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>12.32346cm</Top>
-        <Left>0.28056cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.473cm</Height>
         <Width>3.70252cm</Width>
-        <ZIndex>23</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2610,7 +2526,7 @@ ou no site da Sefaz autorizadora</Value>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
-            <Width>1.56704cm</Width>
+            <Width>2.13916cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2643,7 +2559,7 @@ ou no site da Sefaz autorizadora</Value>
             <Top>0.41686cm</Top>
             <Left>0.13752cm</Left>
             <Height>0.31425cm</Height>
-            <Width>3.63657cm</Width>
+            <Width>2.97349cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2658,10 +2574,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>12.97285cm</Top>
-        <Left>4.38209cm</Left>
+        <Left>3.73678cm</Left>
         <Height>0.85cm</Height>
-        <Width>4.06cm</Width>
-        <ZIndex>24</ZIndex>
+        <Width>3.19415cm</Width>
+        <ZIndex>22</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2754,10 +2670,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>12.97285cm</Top>
-        <Left>12.51758cm</Left>
+        <Left>11.01502cm</Left>
         <Height>0.85cm</Height>
         <Width>4.15525cm</Width>
-        <ZIndex>25</ZIndex>
+        <ZIndex>23</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2802,7 +2718,7 @@ ou no site da Sefaz autorizadora</Value>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Left>0.02011cm</Left>
             <Height>0.346cm</Height>
-            <Width>2.74886cm</Width>
+            <Width>3.71199cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2835,7 +2751,7 @@ ou no site da Sefaz autorizadora</Value>
             <Top>0.42662cm</Top>
             <Left>0.53221cm</Left>
             <Height>0.31425cm</Height>
-            <Width>3.63657cm</Width>
+            <Width>3.54132cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2850,10 +2766,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>12.96375cm</Top>
-        <Left>16.68799cm</Left>
+        <Left>15.18543cm</Left>
         <Height>0.85cm</Height>
-        <Width>4.32cm</Width>
-        <ZIndex>26</ZIndex>
+        <Width>4.17251cm</Width>
+        <ZIndex>24</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2946,10 +2862,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>13.84154cm</Top>
-        <Left>3.57524cm</Left>
+        <Left>2.61243cm</Left>
         <Height>0.86121cm</Height>
         <Width>3.3cm</Width>
-        <ZIndex>27</ZIndex>
+        <ZIndex>25</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2993,7 +2909,7 @@ ou no site da Sefaz autorizadora</Value>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
-            <Width>2.99773cm</Width>
+            <Width>3.41719cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3041,10 +2957,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>13.84329cm</Top>
-        <Left>10.10732cm</Left>
-        <Height>0.85cm</Height>
+        <Left>8.70001cm</Left>
+        <Height>0.85946cm</Height>
         <Width>3.60572cm</Width>
-        <ZIndex>28</ZIndex>
+        <ZIndex>26</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3086,9 +3002,10 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
+            <Top>0.01659cm</Top>
             <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
-            <Width>1.44198cm</Width>
+            <Width>2.43989cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3136,10 +3053,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>13.84154cm</Top>
-        <Left>13.73386cm</Left>
-        <Height>0.85cm</Height>
+        <Left>12.2948cm</Left>
+        <Height>0.86121cm</Height>
         <Width>3.20475cm</Width>
-        <ZIndex>29</ZIndex>
+        <ZIndex>27</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3181,9 +3098,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
-            <Width>2.68023cm</Width>
+            <Width>2.23573cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3214,9 +3130,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.39487cm</Top>
-            <Left>0.19664cm</Left>
             <Height>0.31425cm</Height>
-            <Width>2.77973cm</Width>
+            <Width>2.23998cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -3231,10 +3146,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>13.85275cm</Top>
-        <Left>0.33574cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>3.3cm</Width>
-        <ZIndex>30</ZIndex>
+        <Width>2.58186cm</Width>
+        <ZIndex>28</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3279,7 +3194,7 @@ ou no site da Sefaz autorizadora</Value>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
-            <Width>2.68023cm</Width>
+            <Width>2.23573cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3310,9 +3225,9 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.42662cm</Top>
-            <Left>0.26014cm</Left>
+            <Left>0.0635cm</Left>
             <Height>0.31425cm</Height>
-            <Width>2.77973cm</Width>
+            <Width>2.23998cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -3327,10 +3242,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>13.85275cm</Top>
-        <Left>6.81274cm</Left>
+        <Left>5.91343cm</Left>
         <Height>0.85cm</Height>
-        <Width>3.3cm</Width>
-        <ZIndex>31</ZIndex>
+        <Width>2.80819cm</Width>
+        <ZIndex>29</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3374,7 +3289,7 @@ ou no site da Sefaz autorizadora</Value>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
-            <Width>2.23573cm</Width>
+            <Width>3.22761cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3405,9 +3320,9 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.42662cm</Top>
-            <Left>0.19564cm</Left>
+            <Left>0.13214cm</Left>
             <Height>0.31425cm</Height>
-            <Width>3.66873cm</Width>
+            <Width>3.60523cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -3422,10 +3337,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>13.8418cm</Top>
-        <Left>16.95438cm</Left>
-        <Height>0.85cm</Height>
-        <Width>4.06cm</Width>
-        <ZIndex>32</ZIndex>
+        <Left>15.48357cm</Left>
+        <Height>0.86095cm</Height>
+        <Width>3.87437cm</Width>
+        <ZIndex>30</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3468,10 +3383,10 @@ ou no site da Sefaz autorizadora</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>14.62161cm</Top>
-        <Left>0.24881cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.473cm</Height>
         <Width>6.64444cm</Width>
-        <ZIndex>33</ZIndex>
+        <ZIndex>31</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3503,7 +3418,6 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
             <Width>2.68023cm</Width>
             <Style>
@@ -3536,9 +3450,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.42662cm</Top>
-            <Left>0.19052cm</Left>
             <Height>0.31425cm</Height>
-            <Width>8.55134cm</Width>
+            <Width>7.2935cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -3553,10 +3466,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.12275cm</Top>
-        <Left>0.30499cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>9.02cm</Width>
-        <ZIndex>34</ZIndex>
+        <Width>7.87563cm</Width>
+        <ZIndex>32</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3634,10 +3547,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.12275cm</Top>
-        <Left>9.31849cm</Left>
+        <Left>7.91118cm</Left>
         <Height>0.85cm</Height>
-        <Width>2.79cm</Width>
-        <ZIndex>35</ZIndex>
+        <Width>2.79215cm</Width>
+        <ZIndex>33</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3729,10 +3642,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.12275cm</Top>
-        <Left>12.10849cm</Left>
+        <Left>10.70118cm</Left>
         <Height>0.85cm</Height>
-        <Width>1.7875cm</Width>
-        <ZIndex>36</ZIndex>
+        <Width>1.78965cm</Width>
+        <ZIndex>34</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3824,10 +3737,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.12275cm</Top>
-        <Left>13.88724cm</Left>
+        <Left>12.47993cm</Left>
         <Height>0.85cm</Height>
-        <Width>2.29cm</Width>
-        <ZIndex>37</ZIndex>
+        <Width>2.29215cm</Width>
+        <ZIndex>35</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3919,10 +3832,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.12275cm</Top>
-        <Left>16.17599cm</Left>
+        <Left>14.76868cm</Left>
         <Height>0.85cm</Height>
-        <Width>0.76cm</Width>
-        <ZIndex>38</ZIndex>
+        <Width>0.76215cm</Width>
+        <ZIndex>36</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4014,10 +3927,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.12275cm</Top>
-        <Left>16.9501cm</Left>
+        <Left>15.54279cm</Left>
         <Height>0.85cm</Height>
-        <Width>4.0035cm</Width>
-        <ZIndex>39</ZIndex>
+        <Width>3.81515cm</Width>
+        <ZIndex>37</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4060,7 +3973,6 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.05528cm</Left>
             <Height>0.346cm</Height>
             <Width>2.68023cm</Width>
             <Style>
@@ -4093,9 +4005,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.42662cm</Top>
-            <Left>0.10733cm</Left>
             <Height>0.31425cm</Height>
-            <Width>8.55134cm</Width>
+            <Width>7.2935cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -4110,10 +4021,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.98cm</Top>
-        <Left>0.30149cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>9.02cm</Width>
-        <ZIndex>40</ZIndex>
+        <Width>7.87563cm</Width>
+        <ZIndex>38</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4206,10 +4117,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.98cm</Top>
-        <Left>9.31849cm</Left>
+        <Left>7.91118cm</Left>
         <Height>0.85cm</Height>
         <Width>6.86cm</Width>
-        <ZIndex>41</ZIndex>
+        <ZIndex>39</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4292,10 +4203,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.98cm</Top>
-        <Left>16.17899cm</Left>
+        <Left>14.80343cm</Left>
         <Height>0.85cm</Height>
-        <Width>0.76cm</Width>
-        <ZIndex>42</ZIndex>
+        <Width>0.72406cm</Width>
+        <ZIndex>40</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4303,100 +4214,6 @@ ou no site da Sefaz autorizadora</Value>
           <TopBorder>
             <Color>Black</Color>
             <Width>1pt</Width>
-          </TopBorder>
-          <BottomBorder>
-            <Color>Black</Color>
-            <Width>1pt</Width>
-          </BottomBorder>
-          <LeftBorder>
-            <Style>None</Style>
-          </LeftBorder>
-          <RightBorder>
-            <Color>Black</Color>
-            <Width>1pt</Width>
-          </RightBorder>
-        </Style>
-      </Rectangle>
-      <Rectangle Name="Rectangle51">
-        <ReportItems>
-          <Textbox Name="Textbox58">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>INSCRIÇÃO ESTADUAL</Value>
-                    <Style>
-                      <FontFamily>Courier New</FontFamily>
-                      <FontSize>5pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Height>0.346cm</Height>
-            <Width>2.25636cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="TxtTransportadorIE">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>1</Value>
-                    <Style>
-                      <FontFamily>Courier New</FontFamily>
-                      <FontSize>6pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.43025cm</Top>
-            <Left>0.52175cm</Left>
-            <Height>0.31425cm</Height>
-            <Width>2.95999cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-        </ReportItems>
-        <KeepTogether>true</KeepTogether>
-        <Top>15.97275cm</Top>
-        <Left>16.93849cm</Left>
-        <Height>0.85725cm</Height>
-        <Width>4.0035cm</Width>
-        <ZIndex>43</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <TopBorder>
-            <Style>None</Style>
           </TopBorder>
           <BottomBorder>
             <Color>Black</Color>
@@ -4432,7 +4249,6 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.05528cm</Left>
             <Height>0.346cm</Height>
             <Width>2.68023cm</Width>
             <Style>
@@ -4465,7 +4281,6 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.39487cm</Top>
-            <Left>0.19402cm</Left>
             <Height>0.31425cm</Height>
             <Width>2.46847cm</Width>
             <ZIndex>1</ZIndex>
@@ -4482,10 +4297,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>16.83725cm</Top>
-        <Left>0.30149cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>2.92cm</Width>
-        <ZIndex>44</ZIndex>
+        <Width>2.96398cm</Width>
+        <ZIndex>41</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4563,7 +4378,7 @@ ou no site da Sefaz autorizadora</Value>
             <Top>0.42662cm</Top>
             <Left>0.10283cm</Left>
             <Height>0.31425cm</Height>
-            <Width>2.80053cm</Width>
+            <Width>2.19728cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -4578,10 +4393,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>16.83725cm</Top>
-        <Left>3.22449cm</Left>
+        <Left>2.99193cm</Left>
         <Height>0.85cm</Height>
-        <Width>3.05cm</Width>
-        <ZIndex>45</ZIndex>
+        <Width>2.41188cm</Width>
+        <ZIndex>42</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4658,7 +4473,7 @@ ou no site da Sefaz autorizadora</Value>
             <Top>0.43025cm</Top>
             <Left>0.12474cm</Left>
             <Height>0.31425cm</Height>
-            <Width>2.80053cm</Width>
+            <Width>2.3674cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -4673,10 +4488,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>16.83cm</Top>
-        <Left>6.30424cm</Left>
+        <Left>5.40493cm</Left>
         <Height>0.85725cm</Height>
-        <Width>3.05cm</Width>
-        <ZIndex>46</ZIndex>
+        <Width>2.49214cm</Width>
+        <ZIndex>43</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4768,10 +4583,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>16.83363cm</Top>
-        <Left>9.38249cm</Left>
+        <Left>7.91168cm</Left>
         <Height>0.85725cm</Height>
         <Width>4.83cm</Width>
-        <ZIndex>47</ZIndex>
+        <ZIndex>44</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4863,10 +4678,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>16.83363cm</Top>
-        <Left>14.23924cm</Left>
+        <Left>12.76843cm</Left>
         <Height>0.85725cm</Height>
         <Width>3.43cm</Width>
-        <ZIndex>48</ZIndex>
+        <ZIndex>45</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -4958,10 +4773,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>16.83362cm</Top>
-        <Left>17.70149cm</Left>
+        <Left>16.19893cm</Left>
         <Height>0.85725cm</Height>
-        <Width>3.2365cm</Width>
-        <ZIndex>49</ZIndex>
+        <Width>3.15901cm</Width>
+        <ZIndex>46</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -5004,10 +4819,10 @@ ou no site da Sefaz autorizadora</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>17.72425cm</Top>
-        <Left>0.35737cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.473cm</Height>
         <Width>5.18394cm</Width>
-        <ZIndex>50</ZIndex>
+        <ZIndex>47</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5018,19 +4833,6 @@ ou no site da Sefaz autorizadora</Value>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Subreport Name="Subreport1">
-        <ReportName />
-        <Top>18.21373cm</Top>
-        <Left>0.29316cm</Left>
-        <Height>6.58019cm</Height>
-        <Width>20.67658cm</Width>
-        <ZIndex>51</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Subreport>
       <Textbox Name="Textbox66">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -5052,11 +4854,11 @@ ou no site da Sefaz autorizadora</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>24.868cm</Top>
-        <Left>0.23178cm</Left>
+        <Top>22.7725cm</Top>
+        <Left>0.02144cm</Left>
         <Height>0.473cm</Height>
         <Width>3.42581cm</Width>
-        <ZIndex>52</ZIndex>
+        <ZIndex>48</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5089,7 +4891,7 @@ ou no site da Sefaz autorizadora</Value>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Height>0.346cm</Height>
-            <Width>4.55849cm</Width>
+            <Width>4.33063cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -5122,7 +4924,7 @@ ou no site da Sefaz autorizadora</Value>
             <Top>0.45837cm</Top>
             <Left>0.16594cm</Left>
             <Height>0.31425cm</Height>
-            <Width>4.74813cm</Width>
+            <Width>4.16469cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -5136,11 +4938,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>25.34625cm</Top>
-        <Left>5.36375cm</Left>
+        <Top>23.25075cm</Top>
+        <Left>4.87719cm</Left>
         <Height>0.85cm</Height>
-        <Width>5.08cm</Width>
-        <ZIndex>53</ZIndex>
+        <Width>4.85cm</Width>
+        <ZIndex>49</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5217,7 +5019,7 @@ ou no site da Sefaz autorizadora</Value>
             <Top>0.42662cm</Top>
             <Left>0.16594cm</Left>
             <Height>0.31425cm</Height>
-            <Width>4.74813cm</Width>
+            <Width>4.16469cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -5231,11 +5033,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>25.34625cm</Top>
-        <Left>10.4755cm</Left>
+        <Top>23.25075cm</Top>
+        <Left>9.70319cm</Left>
         <Height>0.85cm</Height>
-        <Width>5.08cm</Width>
-        <ZIndex>54</ZIndex>
+        <Width>4.85cm</Width>
+        <ZIndex>50</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5310,9 +5112,9 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.45837cm</Top>
-            <Left>0.36481cm</Left>
+            <Left>0.30131cm</Left>
             <Height>0.31425cm</Height>
-            <Width>4.74813cm</Width>
+            <Width>4.16469cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -5326,11 +5128,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>25.34625cm</Top>
-        <Left>15.57735cm</Left>
+        <Top>23.25075cm</Top>
+        <Left>14.58279cm</Left>
         <Height>0.85cm</Height>
-        <Width>5.47774cm</Width>
-        <ZIndex>55</ZIndex>
+        <Width>4.77515cm</Width>
+        <ZIndex>51</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5405,9 +5207,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.45837cm</Top>
-            <Left>0.15549cm</Left>
             <Height>0.31425cm</Height>
-            <Width>4.74813cm</Width>
+            <Width>4.16469cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -5421,11 +5222,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>25.34625cm</Top>
-        <Left>0.28375cm</Left>
+        <Top>23.25075cm</Top>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>5.08cm</Width>
-        <ZIndex>56</ZIndex>
+        <Width>4.85cm</Width>
+        <ZIndex>52</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -5453,11 +5254,11 @@ ou no site da Sefaz autorizadora</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>26.23325cm</Top>
-        <Left>0.22185cm</Left>
+        <Top>24.0425cm</Top>
+        <Left>0.02144cm</Left>
         <Height>0.473cm</Height>
         <Width>3.42581cm</Width>
-        <ZIndex>57</ZIndex>
+        <ZIndex>53</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5521,9 +5322,8 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.48711cm</Top>
-            <Left>0.09206cm</Left>
-            <Height>2.45642cm</Height>
-            <Width>12.44097cm</Width>
+            <Height>1.57886cm</Height>
+            <Width>12.15705cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -5537,11 +5337,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>26.67975cm</Top>
-        <Left>0.3155cm</Left>
-        <Height>3.07cm</Height>
-        <Width>12.696cm</Width>
-        <ZIndex>58</ZIndex>
+        <Top>24.45725cm</Top>
+        <Left>0.02144cm</Left>
+        <Height>2.53025cm</Height>
+        <Width>12.28429cm</Width>
+        <ZIndex>54</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -5583,11 +5383,11 @@ ou no site da Sefaz autorizadora</Value>
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>26.67975cm</Top>
-        <Left>13.03989cm</Left>
-        <Height>3.07cm</Height>
-        <Width>8.00836cm</Width>
-        <ZIndex>59</ZIndex>
+        <Top>24.45725cm</Top>
+        <Left>12.33108cm</Left>
+        <Height>2.53025cm</Height>
+        <Width>7.02686cm</Width>
+        <ZIndex>55</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5630,7 +5430,6 @@ ou no site da Sefaz autorizadora</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
             <Width>2.68023cm</Width>
             <Style>
@@ -5662,10 +5461,9 @@ ou no site da Sefaz autorizadora</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.38736cm</Top>
-            <Left>0.13931cm</Left>
+            <Top>0.41496cm</Top>
             <Height>0.31425cm</Height>
-            <Width>3.81102cm</Width>
+            <Width>3.53895cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -5680,10 +5478,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>12.97475cm</Top>
-        <Left>0.3185cm</Left>
+        <Left>0.02144cm</Left>
         <Height>0.85cm</Height>
-        <Width>4.06cm</Width>
-        <ZIndex>60</ZIndex>
+        <Width>3.72747cm</Width>
+        <ZIndex>56</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -5713,7 +5511,7 @@ ou no site da Sefaz autorizadora</Value>
             <rd:DefaultName>Textbox8</rd:DefaultName>
             <Left>0.03649cm</Left>
             <Height>0.346cm</Height>
-            <Width>2.92665cm</Width>
+            <Width>3.55686cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -5761,10 +5559,10 @@ ou no site da Sefaz autorizadora</Value>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>12.97475cm</Top>
-        <Left>8.41475cm</Left>
+        <Left>6.94394cm</Left>
         <Height>0.85cm</Height>
         <Width>4.06cm</Width>
-        <ZIndex>61</ZIndex>
+        <ZIndex>57</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5786,15 +5584,199 @@ ou no site da Sefaz autorizadora</Value>
           </RightBorder>
         </Style>
       </Rectangle>
+      <Rectangle Name="Rectangle51">
+        <ReportItems>
+          <Textbox Name="Textbox58">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>INSCRIÇÃO ESTADUAL</Value>
+                    <Style>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>5pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox8</rd:DefaultName>
+            <Left>0.03666cm</Left>
+            <Height>0.346cm</Height>
+            <Width>2.25636cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TxtTransportadorIE">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>1</Value>
+                    <Style>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>6pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.43025cm</Top>
+            <Left>0.68541cm</Left>
+            <Height>0.31425cm</Height>
+            <Width>2.95999cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>15.993cm</Top>
+        <Left>15.54279cm</Left>
+        <Height>0.84063cm</Height>
+        <Width>3.81515cm</Width>
+        <ZIndex>58</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Style>None</Style>
+          </LeftBorder>
+          <RightBorder>
+            <Color>Black</Color>
+            <Width>1pt</Width>
+          </RightBorder>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle18">
+        <ReportItems>
+          <Textbox Name="Textbox25">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>CNPJ DO EMITENTE</Value>
+                    <Style>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>5pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox11</rd:DefaultName>
+            <Left>0.01779cm</Left>
+            <Height>0.35963cm</Height>
+            <Width>4.36636cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TxtDadosCnpjEmitente">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>1</Value>
+                    <Style>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>6pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.30961cm</Top>
+            <Left>0.04688cm</Left>
+            <Height>0.346cm</Height>
+            <Width>5.94355cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>7.63463cm</Top>
+        <Left>13.046cm</Left>
+        <Height>0.88175cm</Height>
+        <Width>6.28344cm</Width>
+        <ZIndex>59</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <LeftBorder>
+            <Style>None</Style>
+          </LeftBorder>
+        </Style>
+      </Rectangle>
     </ReportItems>
-    <Height>30.165cm</Height>
+    <Height>27.2cm</Height>
     <Style>
       <Border>
         <Style>Solid</Style>
       </Border>
     </Style>
   </Body>
-  <Width>21.5245cm</Width>
+  <Width>19.41442cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -5806,6 +5788,154 @@ ou no site da Sefaz autorizadora</Value>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="SdistribuidorEntidade">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>c347dcf3-b582-423c-82c2-7baec3c34607</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DSNFSaida">
+      <Query>
+        <DataSourceName>SdistribuidorEntidade</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="cdv">
+          <DataField>cdv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cnf">
+          <DataField>cnf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="dhcontingencia">
+          <DataField>dhcontingencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="dtemissao">
+          <DataField>dtemissao</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="dtsaida">
+          <DataField>dtsaida</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="flfinalidade">
+          <DataField>flfinalidade</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_formapagto">
+          <DataField>id_formapagto</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_localentrega">
+          <DataField>id_localentrega</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_loja">
+          <DataField>id_loja</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_participante">
+          <DataField>id_participante</DataField>
+          <rd:TypeName>Sdistribuidor.Entidade.Entidade_Participante</rd:TypeName>
+        </Field>
+        <Field Name="id_pedido">
+          <DataField>id_pedido</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="nrnf">
+          <DataField>nrnf</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="serienf">
+          <DataField>serienf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tpamb">
+          <DataField>tpamb</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tpemis">
+          <DataField>tpemis</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="txchacessonfe">
+          <DataField>txchacessonfe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="txobscontribuinte">
+          <DataField>txobscontribuinte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="txobsfisco">
+          <DataField>txobsfisco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="vlbaseicms">
+          <DataField>vlbaseicms</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlbaseicmssub">
+          <DataField>vlbaseicmssub</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlCofins">
+          <DataField>vlCofins</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlDesconto">
+          <DataField>vlDesconto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlfrete">
+          <DataField>vlfrete</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlicms">
+          <DataField>vlicms</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlicmssub">
+          <DataField>vlicmssub</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlIpi">
+          <DataField>vlIpi</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vloutras">
+          <DataField>vloutras</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlPis">
+          <DataField>vlPis</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vlseguro">
+          <DataField>vlseguro</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vltotal">
+          <DataField>vltotal</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="xjust">
+          <DataField>xjust</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Sdistribuidor.Entidade</rd:DataSetName>
+        <rd:TableName>Entidade_NotaFiscal</rd:TableName>
+        <rd:ObjectDataSourceType>Sdistribuidor.Entidade.Entidade_NotaFiscal, Sdistribuidor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>f9f6ea1f-56b0-4a7c-819d-6ec938dce750</rd:ReportID>
 </Report>

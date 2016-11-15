@@ -101,5 +101,13 @@ namespace Sdistribuidor.Model
                                         " INNER JOIN participante p on n.id_participante = p.id_participante " +
                                         " WHERE "+ sVrSql);
         }
+
+        public DataTable PesquisaNFe(string serienf,int nrnf)
+        {
+            return BancoDados.Consultar(" SELECT * " +
+                                        " FROM nfsaida N " +
+                                        " INNER JOIN participante p on n.id_participante = p.id_participante " +
+                                        " WHERE serienf ='" + serienf + "' AND nrnf =" + nrnf);
+        }
     }
 }

@@ -39,12 +39,13 @@
             this.btnGrupo = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbPgNotaFiscal = new System.Windows.Forms.TabPage();
+            this.btnListarNFe = new System.Windows.Forms.Button();
             this.btnNFeOutras = new System.Windows.Forms.Button();
             this.btnNotaFiscal = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnAux = new System.Windows.Forms.Button();
-            this.btnListarNFe = new System.Windows.Forms.Button();
+            this.btnDanfe = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -181,6 +182,7 @@
             // 
             // tbPgNotaFiscal
             // 
+            this.tbPgNotaFiscal.Controls.Add(this.btnDanfe);
             this.tbPgNotaFiscal.Controls.Add(this.btnListarNFe);
             this.tbPgNotaFiscal.Controls.Add(this.btnNFeOutras);
             this.tbPgNotaFiscal.Controls.Add(this.btnNotaFiscal);
@@ -191,6 +193,22 @@
             this.tbPgNotaFiscal.TabIndex = 2;
             this.tbPgNotaFiscal.Text = "Nota Fiscal";
             this.tbPgNotaFiscal.UseVisualStyleBackColor = true;
+            // 
+            // btnListarNFe
+            // 
+            this.btnListarNFe.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnListarNFe.FlatAppearance.BorderSize = 0;
+            this.btnListarNFe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarNFe.Image = ((System.Drawing.Image)(resources.GetObject("btnListarNFe.Image")));
+            this.btnListarNFe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListarNFe.Location = new System.Drawing.Point(153, 3);
+            this.btnListarNFe.Name = "btnListarNFe";
+            this.btnListarNFe.Size = new System.Drawing.Size(75, 94);
+            this.btnListarNFe.TabIndex = 4;
+            this.btnListarNFe.Text = "Listar NFe";
+            this.btnListarNFe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListarNFe.UseVisualStyleBackColor = true;
+            this.btnListarNFe.Click += new System.EventHandler(this.btnListarNFe_Click);
             // 
             // btnNFeOutras
             // 
@@ -268,21 +286,21 @@
             this.btnAux.UseVisualStyleBackColor = true;
             this.btnAux.Click += new System.EventHandler(this.btnAux_Click);
             // 
-            // btnListarNFe
+            // btnDanfe
             // 
-            this.btnListarNFe.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnListarNFe.FlatAppearance.BorderSize = 0;
-            this.btnListarNFe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarNFe.Image = ((System.Drawing.Image)(resources.GetObject("btnListarNFe.Image")));
-            this.btnListarNFe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarNFe.Location = new System.Drawing.Point(153, 3);
-            this.btnListarNFe.Name = "btnListarNFe";
-            this.btnListarNFe.Size = new System.Drawing.Size(75, 94);
-            this.btnListarNFe.TabIndex = 4;
-            this.btnListarNFe.Text = "Listar NFe";
-            this.btnListarNFe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnListarNFe.UseVisualStyleBackColor = true;
-            this.btnListarNFe.Click += new System.EventHandler(this.btnListarNFe_Click);
+            this.btnDanfe.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDanfe.FlatAppearance.BorderSize = 0;
+            this.btnDanfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDanfe.Image = ((System.Drawing.Image)(resources.GetObject("btnDanfe.Image")));
+            this.btnDanfe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDanfe.Location = new System.Drawing.Point(228, 3);
+            this.btnDanfe.Name = "btnDanfe";
+            this.btnDanfe.Size = new System.Drawing.Size(75, 94);
+            this.btnDanfe.TabIndex = 5;
+            this.btnDanfe.Text = "Danfe";
+            this.btnDanfe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDanfe.UseVisualStyleBackColor = true;
+            this.btnDanfe.Click += new System.EventHandler(this.btnDanfe_Click);
             // 
             // FMenu
             // 
@@ -325,5 +343,6 @@
         private System.Windows.Forms.Button btnParticipante;
         private System.Windows.Forms.Button btnNFeOutras;
         private System.Windows.Forms.Button btnListarNFe;
+        private System.Windows.Forms.Button btnDanfe;
     }
 }

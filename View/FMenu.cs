@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sdistribuidor.Relatorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,12 +85,19 @@ namespace Sdistribuidor.View
             ObjForm.MdiParent = this;
             ObjForm.Show();
         }
-
+        
         private void btnListarNFe_Click(object sender, EventArgs e)
         {
             FMT005OperancaoNFe ObjForm = new FMT005OperancaoNFe();
             ObjForm.MdiParent = this;
             ObjForm.Show();
+        }
+
+        private void btnDanfe_Click(object sender, EventArgs e)
+        {
+            FRDanfe ObjRelatorio = new FRDanfe();
+            ObjRelatorio.MdiParent = this;
+            ObjRelatorio.Show();
         }
     }
 }
