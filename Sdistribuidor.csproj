@@ -92,6 +92,7 @@
     <Compile Include="Entidade\Entidade_Unidade.cs" />
     <Compile Include="Entidade\Entidade_Usuario.cs" />
     <Compile Include="Entidade\Entidade_Vendedor.cs" />
+    <Compile Include="Entidade\Entidade_VWSaida.cs" />
     <Compile Include="Gerais\AssinaturaDigital.cs" />
     <Compile Include="Gerais\FuncoesGerais.cs" />
     <Compile Include="Gerais\UTF8StringWriter.cs" />
@@ -308,6 +309,7 @@
     <None Include="DiagramaClasses.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_NotaFiscal.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_VWSaida.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
