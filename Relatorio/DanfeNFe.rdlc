@@ -44,7 +44,7 @@
             <Top>0.42cm</Top>
             <Left>0.06469cm</Left>
             <Height>0.85cm</Height>
-            <Width>16.096cm</Width>
+            <Width>16.07853cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -350,8 +350,8 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.42cm</Top>
-            <Left>16.15203cm</Left>
+            <Top>0.43114cm</Top>
+            <Left>16.21479cm</Left>
             <Height>1.68513cm</Height>
             <Width>3.17745cm</Width>
             <ZIndex>3</ZIndex>
@@ -366,7 +366,7 @@
         <Top>0.21511cm</Top>
         <Left>0.02144cm</Left>
         <Height>2.25107cm</Height>
-        <Width>19.39298cm</Width>
+        <Width>19.48749cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -566,6 +566,7 @@
                         <Value>1</Value>
                         <Style>
                           <FontFamily>Courier New</FontFamily>
+                          <FontSize>6pt</FontSize>
                           <FontWeight>Bold</FontWeight>
                         </Style>
                       </TextRun>
@@ -862,40 +863,6 @@
                   <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
-              <Textbox Name="TxtDadosSerie">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=First(Fields!nmserienf.Value, "DSNFSaida")</Value>
-                        <Style>
-                          <FontFamily>Courier New</FontFamily>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Center</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>2.83489cm</Top>
-                <Left>1.51588cm</Left>
-                <Height>0.31425cm</Height>
-                <Width>1.08299cm</Width>
-                <ZIndex>8</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
               <Textbox Name="TxtDadosNFe">
                 <CanGrow>true</CanGrow>
                 <KeepTogether>true</KeepTogether>
@@ -919,7 +886,7 @@
                 <Left>0.865cm</Left>
                 <Height>0.34396cm</Height>
                 <Width>1.74974cm</Width>
-                <ZIndex>9</ZIndex>
+                <ZIndex>8</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -932,10 +899,11 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.04763cm</Top>
-            <Left>8.86225cm</Left>
-            <Height>3.92cm</Height>
-            <Width>2.71775cm</Width>
+            <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
+            <Top>0.03175cm</Top>
+            <Left>8.92585cm</Left>
+            <Height>3.88cm</Height>
+            <Width>2.71cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -5815,7 +5783,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>19.41442cm</Width>
+  <Width>19.50893cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

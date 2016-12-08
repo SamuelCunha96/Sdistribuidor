@@ -30,3 +30,4 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\RdlCompile.cache
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\RdlCompile.compiled
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.exe
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.pdb
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.csprojResolveAssemblyReference.cache
