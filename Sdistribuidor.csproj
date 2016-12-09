@@ -262,6 +262,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Relatorio\DanfeNFe.rdlc" />
+    <EmbeddedResource Include="Relatorio\DanfeNFeItem.rdlc" />
     <EmbeddedResource Include="Relatorio\DanfeNfeNew.resx">
       <DependentUpon>DanfeNfeNew.cs</DependentUpon>
     </EmbeddedResource>
