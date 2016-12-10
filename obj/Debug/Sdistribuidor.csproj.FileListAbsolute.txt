@@ -381,3 +381,4 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\ja\DevExpress.XtraGrid.v1
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\ru\DevExpress.XtraGrid.v15.1.resources.dll
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.DanfeNfeNew.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.exe.licenses
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\BarcodeLib.dll

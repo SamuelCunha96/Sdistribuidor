@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sdistribuidor.Entidade;
 using Sdistribuidor.Model;
+using BarcodeLib;
 
 namespace Sdistribuidor.Relatorio
 {
@@ -21,15 +22,38 @@ namespace Sdistribuidor.Relatorio
         }
 
         Entidade_NotaFiscal ObjNFe;
+        NotaFiscal ObjNF;
         private void FRDanfe_Load(object sender, EventArgs e)
         {
-            NotaFiscal ObjNF = new NotaFiscal();
+            ObjNF = new NotaFiscal();
+            
             var DtRet = ObjNF.PesquisaNFe("1", 16);
             ReportDataSource dsReport = new ReportDataSource("DSNFSaida", DtRet);
+
+            Barcode b128C = new Barcode(DtRet.Rows[0]["TxChAcessoNfe"].ToString(), TYPE.CODE128C);
+            
+            //Image ig = b128C.Encode(TYPE.CODE128C, DtRet.Rows[0]["TxChAcessoNfe"].ToString(),Color.Black,Color.White, 300,40);
+            
+            var strBase64 = Convert.ToBase64String(b128C.Encoded_Image_Bytes);
+
+            ReportParameter ObjPara = new ReportParameter("ImgCodBarra", strBase64,true);
+
+            this.RVDanfeNFe.LocalReport.SetParameters(ObjPara);
+
+            this.RVDanfeNFe.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(SubreportProcessingEventHandler);
             this.RVDanfeNFe.LocalReport.DataSources.Clear();
             this.RVDanfeNFe.LocalReport.DataSources.Add(dsReport);
             this.RVDanfeNFe.LocalReport.Refresh();
+            
             this.RVDanfeNFe.RefreshReport();
+        }
+
+        void SubreportProcessingEventHandler(object sender, SubreportProcessingEventArgs e)
+        {
+            ObjNF = new NotaFiscal();
+            var DtRetItem = ObjNF.PesquisaItemNFe("1", 16);
+            ReportDataSource dsSubReport = new ReportDataSource("DsItemNFe", DtRetItem);
+            e.DataSources.Add(dsSubReport);
         }
 
         private void RVDanfeNFe_Load(object sender, EventArgs e)

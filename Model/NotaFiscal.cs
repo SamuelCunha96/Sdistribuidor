@@ -108,5 +108,12 @@ namespace Sdistribuidor.Model
                                         " FROM vw_nfesaida" +
                                         " WHERE nmserienf ='" + serienf + "' AND nrnf =" + nrnf);
         }
+
+        public DataTable PesquisaItemNFe(string serienf, int nrnf)
+        {
+            return BancoDados.Consultar(" SELECT codigodoproduto as IdProduto,descricaodoproduto as nmproduto,ncm,csticms as icms,cfop,und as Unidade,quantidade as qt_venda,valorunitario as VlPreco,valortotalicms as VlBaseIcms,valoricms as vlicms,valoripi as vlipi,icms as vlAliqicms,ipi as vlAliqipi " +
+                                        " FROM vw_itemnfesaida" +
+                                        " WHERE nmserienf ='" + serienf + "' AND nrnf =" + nrnf);
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.RVDanfeNFe = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Entidade_NotaFiscalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Entidade_NotaFiscalBindingSource)).BeginInit();
@@ -40,9 +40,9 @@
             this.RVDanfeNFe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RVDanfeNFe.Font = new System.Drawing.Font("Courier New", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RVDanfeNFe.IsDocumentMapWidthFixed = true;
-            reportDataSource1.Name = "DSNFSaida";
-            reportDataSource1.Value = this.Entidade_NotaFiscalBindingSource;
-            this.RVDanfeNFe.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DSNFSaida";
+            reportDataSource2.Value = this.Entidade_NotaFiscalBindingSource;
+            this.RVDanfeNFe.LocalReport.DataSources.Add(reportDataSource2);
             this.RVDanfeNFe.LocalReport.ReportEmbeddedResource = "Sdistribuidor.Relatorio.DanfeNFe.rdlc";
             this.RVDanfeNFe.Location = new System.Drawing.Point(0, 0);
             this.RVDanfeNFe.Name = "RVDanfeNFe";

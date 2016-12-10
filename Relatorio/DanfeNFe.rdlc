@@ -382,7 +382,7 @@
             <KeepTogether>true</KeepTogether>
             <Top>0.04763cm</Top>
             <Height>3.92cm</Height>
-            <Width>8.9205cm</Width>
+            <Width>10.09539cm</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -436,6 +436,7 @@
                       <TextRun>
                         <Value>=First(Fields!txchacessonfe.Value, "DSNFSaida")</Value>
                         <Style>
+                          <FontFamily>Courier New</FontFamily>
                           <FontSize>6pt</FontSize>
                         </Style>
                       </TextRun>
@@ -510,37 +511,22 @@
                   <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
-              <Textbox Name="CodigoBarrasNFe">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value />
-                        <Style>
-                          <FontSize>8pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.47174cm</Top>
-                <Left>0.10269cm</Left>
-                <Height>0.85cm</Height>
-                <Width>7.2084cm</Width>
+              <Image Name="imgcodbarra">
+                <Source>Database</Source>
+                <Value>=Parameters!ImgCodBarra.Value</Value>
+                <MIMEType>image/png</MIMEType>
+                <Sizing>FitProportional</Sizing>
+                <Top>0.36958cm</Top>
+                <Left>0.05314cm</Left>
+                <Height>0.97895cm</Height>
+                <Width>7.4167cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
                 </Style>
-              </Textbox>
+              </Image>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.04763cm</Top>
@@ -1122,7 +1108,6 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>0cm</Top>
             <Height>0.35963cm</Height>
             <Width>4.43254cm</Width>
             <Style>
@@ -5663,10 +5648,10 @@
         </Style>
       </Rectangle>
       <Subreport Name="SubDanfeNFeItem">
-        <ReportName />
+        <ReportName>DanfeNFeItem</ReportName>
         <Top>18.19143cm</Top>
         <Left>0.12039cm</Left>
-        <Height>4.5176cm</Height>
+        <Height>4.5cm</Height>
         <Width>18.9693cm</Width>
         <ZIndex>60</ZIndex>
         <Style>
@@ -5949,6 +5934,14 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="ImgCodBarra">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>f9f6ea1f-56b0-4a7c-819d-6ec938dce750</rd:ReportID>
 </Report>
