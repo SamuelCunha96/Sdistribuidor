@@ -46,5 +46,8 @@ namespace Sdistribuidor.Entidade
         public int id_localentrega { get; set; }
         public int id_formapagto { get; set; }
         public List<Entidade_ItemNFe> ItemNFe { get; set; }
+
+
+       
     }
 }

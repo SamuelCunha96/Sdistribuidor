@@ -115,5 +115,55 @@ namespace Sdistribuidor.Model
                                         " FROM vw_itemnfesaida" +
                                         " WHERE nmserienf ='" + serienf + "' AND nrnf =" + nrnf);
         }
+
+
+        public bool CancelarNFe(int idloja,int nrnf, string nmserienf, out string msgerro)
+        {
+            try
+            {
+
+                var DtResult = BancoDados.Consultar("select dtresultprocsefaz from nfsaida n inner join lotenfe l on n.nrlote = l.nrlote where n.nrnf = " + nrnf + " and n.serienf = '"+ nmserienf +"'");
+
+                if (DtResult.Rows.Count > 0)
+                {
+                    BancoDados.InsertAlterarExcluir("INSERT INTO CANCELAMENTONFE (id_loja,nrnf,serienf,dtoperacao) VALUES (" + idloja + "," + nrnf + ",'" + nmserienf + "','" + string.Format("{0:yyyy-MM-dd HH:mm:ss}", Convert.ToDateTime(DtResult.Rows[0][0])) + "')");
+                    msgerro = string.Empty;
+                    return true;
+                }
+                else
+                {
+                    msgerro = "Não existe processamento com a SEFAZ, contate ao Administrador";
+                    return false;
+                }
+            }
+            catch(Exception ex)
+            {
+                msgerro = ex.Message.ToString();
+                return false;
+            }
+        }
+        public bool InutilizacaoNFe(int idloja, int nrnf, string nmserienf,int modNfe, out string msgerro)
+        {
+            try
+            {
+                BancoDados.InsertAlterarExcluir("INSERT INTO INUTILIZACAONFE (id_loja,numero_ini,numero_fim,dtsolicitacao,modnfe,serienf) VALUES (" + idloja + "," + nrnf + "," + nrnf + ",'" + string.Format("{0:yyyy-MM-dd HH:mm:ss}", DateTime.Now) + "',"+ modNfe + ",'" + nmserienf + "')");
+                msgerro = string.Empty;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                msgerro = ex.Message.ToString();
+                return false;
+            }
+        }
+
+        public bool ConsultarEnvioCancelamento(int idloja, int nrnf, string nmserienf)
+        {
+            return BancoDados.CodigoExiste("SELECT * FROM CancelamentoNfe WHERE id_loja= " + idloja + " AND NrNf = " + nrnf + " AND SerieNf='" + nmserienf + "'");
+        }
+        public bool ConsultarEnvioInutilizacao(int idloja, int nrnf, string nmserienf)
+        {
+            return BancoDados.CodigoExiste("SELECT * FROM InutilizacaoNFe WHERE id_loja= " + idloja + " AND NrNf = " + nrnf + " AND SerieNf='" + nmserienf + "'");
+        }
     }
 }

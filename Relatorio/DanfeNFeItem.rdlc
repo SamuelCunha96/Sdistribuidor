@@ -15,25 +15,25 @@
               <Width>1.62687cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.78021cm</Width>
+              <Width>0.72729cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.80667cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.78021cm</Width>
+              <Width>0.72729cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.17708cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.23cm</Width>
+              <Width>1.17708cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.57396cm</Width>
+              <Width>1.62688cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.20354cm</Width>
+              <Width>1.33583cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.36229cm</Width>
@@ -47,7 +47,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.38833cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -61,6 +61,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -93,6 +94,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -125,6 +127,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -157,6 +160,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -189,6 +193,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -221,6 +226,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -253,6 +259,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -281,22 +288,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Vl.Preco</Value>
+                              <Value>Vl.UNIT</Value>
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>UN</Value>
-                              <Style>
-                                <FontFamily>Courier New</FontFamily>
-                                <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -329,6 +325,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -361,6 +358,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -393,6 +391,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -421,24 +420,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ALIQ</Value>
+                              <Value>%ICMS</Value>
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>ICMS</Value>
-                              <Style>
-                                <FontFamily>Courier New</FontFamily>
-                                <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -473,6 +459,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -496,7 +483,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.33542cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -702,6 +689,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -734,6 +722,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -766,6 +755,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -798,6 +788,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -830,6 +821,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -862,6 +854,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -894,6 +887,7 @@
                               <Style>
                                 <FontFamily>Courier New</FontFamily>
                                 <FontSize>6pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -946,8 +940,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DsItemNFe</DataSetName>
-        <Height>1.2cm</Height>
-        <Width>18.87396cm</Width>
+        <Height>0.72375cm</Height>
+        <Width>18.90042cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

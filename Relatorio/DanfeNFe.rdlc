@@ -26,7 +26,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
                 <Top>0.03164cm</Top>
-                <Left>0.0675cm</Left>
+                <Left>0.13219cm</Left>
                 <Height>0.342cm</Height>
                 <Width>14.85255cm</Width>
                 <Style>
@@ -42,9 +42,8 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.42cm</Top>
-            <Left>0.06469cm</Left>
             <Height>0.85cm</Height>
-            <Width>15.74439cm</Width>
+            <Width>15.80908cm</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -73,6 +72,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
                 <Top>0.03397cm</Top>
+                <Left>0.06469cm</Left>
                 <Height>0.34396cm</Height>
                 <Width>2.90078cm</Width>
                 <Style>
@@ -88,9 +88,8 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>1.25513cm</Top>
-            <Left>0.06469cm</Left>
             <Height>0.85cm</Height>
-            <Width>4.1cm</Width>
+            <Width>4.16469cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -159,12 +158,16 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <TopBorder>
-                <Style>Solid</Style>
-              </TopBorder>
               <BottomBorder>
+                <Color>Black</Color>
                 <Style>Solid</Style>
+                <Width>1pt</Width>
               </BottomBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
             </Style>
           </Rectangle>
           <Rectangle Name="Rectangle5">
@@ -285,13 +288,6 @@
                           <FontSize>8pt</FontSize>
                         </Style>
                       </TextRun>
-                      <TextRun>
-                        <Value>------</Value>
-                        <Style>
-                          <FontFamily>Courier New</FontFamily>
-                          <FontSize>8pt</FontSize>
-                        </Style>
-                      </TextRun>
                     </TextRuns>
                     <Style>
                       <TextAlign>Center</TextAlign>
@@ -303,6 +299,7 @@
                 <Height>0.50271cm</Height>
                 <Width>1.6989cm</Width>
                 <ZIndex>3</ZIndex>
+                <ToolTip>=Sum(Fields!nmserienf.Value, "DSNFSaida")</ToolTip>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -382,14 +379,11 @@
             <KeepTogether>true</KeepTogether>
             <Top>0.04763cm</Top>
             <Height>3.92cm</Height>
-            <Width>10.09539cm</Width>
+            <Width>8.51297cm</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
               </Border>
-              <RightBorder>
-                <Style>None</Style>
-              </RightBorder>
             </Style>
           </Rectangle>
           <Rectangle Name="Rectangle11">
@@ -434,20 +428,22 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=First(Fields!txchacessonfe.Value, "DSNFSaida")</Value>
+                        <Value>=First(Fields!txchacessonfeformatada.Value, "DSNFSaida")</Value>
                         <Style>
                           <FontFamily>Courier New</FontFamily>
                           <FontSize>6pt</FontSize>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style />
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.454cm</Top>
-                <Left>0.04439cm</Left>
+                <Top>0.49636cm</Top>
+                <Left>0.03565cm</Left>
                 <Height>0.55237cm</Height>
-                <Width>7.2667cm</Width>
+                <Width>7.67073cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -462,9 +458,9 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>1.524cm</Top>
-            <Left>11.585cm</Left>
+            <Left>11.29688cm</Left>
             <Height>1.10162cm</Height>
-            <Width>7.51351cm</Width>
+            <Width>7.80163cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -498,7 +494,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
                 <Top>0.01587cm</Top>
-                <Left>0.0455cm</Left>
+                <Left>0.01612cm</Left>
                 <Height>0.3455cm</Height>
                 <Width>1.75629cm</Width>
                 <Style>
@@ -517,9 +513,9 @@
                 <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Top>0.36958cm</Top>
-                <Left>0.05314cm</Left>
+                <Left>0.02376cm</Left>
                 <Height>0.97895cm</Height>
-                <Width>7.4167cm</Width>
+                <Width>7.71437cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -530,9 +526,9 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.04763cm</Top>
-            <Left>11.585cm</Left>
+            <Left>11.29688cm</Left>
             <Height>1.49587cm</Height>
-            <Width>7.51351cm</Width>
+            <Width>7.80163cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -562,7 +558,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <Top>1.6373cm</Top>
-                <Left>2.0383cm</Left>
+                <Left>2.08508cm</Left>
                 <Height>0.56825cm</Height>
                 <Width>0.47974cm</Width>
                 <Style>
@@ -609,7 +605,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
                 <Top>1.62981cm</Top>
-                <Left>0.11069cm</Left>
+                <Left>0.15747cm</Left>
                 <Height>0.55148cm</Height>
                 <Width>1.35623cm</Width>
                 <ZIndex>1</ZIndex>
@@ -657,7 +653,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
                 <Top>0.89956cm</Top>
-                <Left>0.09433cm</Left>
+                <Left>0.14111cm</Left>
                 <Height>0.71023cm</Height>
                 <Width>2.38843cm</Width>
                 <ZIndex>2</ZIndex>
@@ -691,7 +687,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
                 <Top>0.13605cm</Top>
-                <Left>0.41579cm</Left>
+                <Left>0.46257cm</Left>
                 <Height>0.66146cm</Height>
                 <Width>1.865cm</Width>
                 <ZIndex>3</ZIndex>
@@ -724,8 +720,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>3.36571cm</Top>
-                <Left>1.85794cm</Left>
+                <Top>3.49271cm</Top>
+                <Left>1.90472cm</Left>
                 <Height>0.37054cm</Height>
                 <Width>0.42285cm</Width>
                 <ZIndex>4</ZIndex>
@@ -758,8 +754,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>3.37662cm</Top>
-                <Left>0.15036cm</Left>
+                <Top>3.51385cm</Top>
+                <Left>0.19714cm</Left>
                 <Height>0.35963cm</Height>
                 <Width>1.51421cm</Width>
                 <ZIndex>5</ZIndex>
@@ -781,7 +777,8 @@
                       <TextRun>
                         <Value>SÉRIE:</Value>
                         <Style>
-                          <FontSize>5pt</FontSize>
+                          <FontFamily>Courier New</FontFamily>
+                          <FontSize>8pt</FontSize>
                           <FontWeight>Bold</FontWeight>
                         </Style>
                       </TextRun>
@@ -792,10 +789,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>2.77338cm</Top>
-                <Left>0.15869cm</Left>
-                <Height>0.32788cm</Height>
-                <Width>1.27734cm</Width>
+                <Top>2.89825cm</Top>
+                <Left>0.11022cm</Left>
+                <Height>0.49741cm</Height>
+                <Width>1.26237cm</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
@@ -815,7 +812,7 @@
                       <TextRun>
                         <Value>N°</Value>
                         <Style>
-                          <FontSize>6pt</FontSize>
+                          <FontFamily>Courier New</FontFamily>
                           <FontWeight>Bold</FontWeight>
                         </Style>
                       </TextRun>
@@ -826,10 +823,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox11</rd:DefaultName>
-                <Top>2.29516cm</Top>
-                <Left>0.15036cm</Left>
-                <Height>0.41965cm</Height>
-                <Width>0.42487cm</Width>
+                <Top>2.23166cm</Top>
+                <Left>0.19714cm</Left>
+                <Height>0.5149cm</Height>
+                <Width>0.58362cm</Width>
                 <ZIndex>7</ZIndex>
                 <Style>
                   <Border>
@@ -855,22 +852,56 @@
                       </TextRun>
                     </TextRuns>
                     <Style>
-                      <TextAlign>Right</TextAlign>
+                      <TextAlign>Left</TextAlign>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>2.24477cm</Top>
-                <Left>0.865cm</Left>
-                <Height>0.53446cm</Height>
-                <Width>1.69743cm</Width>
+                <Top>2.28712cm</Top>
+                <Left>0.69364cm</Left>
+                <Height>0.5149cm</Height>
+                <Width>1.87118cm</Width>
                 <ZIndex>8</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <VerticalAlign>Top</VerticalAlign>
                   <PaddingLeft>2pt</PaddingLeft>
                   <PaddingRight>2pt</PaddingRight>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="TxtCanhotoSerieNFe2">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!nmserienf.Value, "DSNFSaida")</Value>
+                        <Style>
+                          <FontFamily>Courier New</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>SemiBold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.89825cm</Top>
+                <Left>1.2597cm</Left>
+                <Height>0.49918cm</Height>
+                <Width>0.57941cm</Width>
+                <ZIndex>9</ZIndex>
+                <ToolTip>=Sum(Fields!nmserienf.Value, "DSNFSaida")</ToolTip>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
                   <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
@@ -878,19 +909,58 @@
             <KeepTogether>true</KeepTogether>
             <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
             <Top>0.04763cm</Top>
-            <Left>8.89435cm</Left>
+            <Left>8.53007cm</Left>
             <Height>3.92cm</Height>
-            <Width>2.68475cm</Width>
+            <Width>2.73153cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
-                <Style>Solid</Style>
-              </Border>
-              <RightBorder>
                 <Style>None</Style>
-              </RightBorder>
+              </Border>
             </Style>
           </Rectangle>
+          <Textbox Name="Textbox20">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Consulta de autenticidade no portal nacional da NF-e
+www.nfe.fazenda.gov.br/portal
+ou no site da Sefaz autorizadora</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox20</rd:DefaultName>
+            <Top>2.6362cm</Top>
+            <Left>11.29688cm</Left>
+            <Height>1.33143cm</Height>
+            <Width>7.80163cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BottomBorder>
+                <Style>Solid</Style>
+              </BottomBorder>
+              <LeftBorder>
+                <Style>Solid</Style>
+              </LeftBorder>
+              <RightBorder>
+                <Style>Solid</Style>
+              </RightBorder>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>2.54627cm</Top>
@@ -981,21 +1051,6 @@
           <Border>
             <Style>Solid</Style>
           </Border>
-          <TopBorder>
-            <Color>Black</Color>
-            <Width>1pt</Width>
-          </TopBorder>
-          <BottomBorder>
-            <Color>Black</Color>
-            <Width>1pt</Width>
-          </BottomBorder>
-          <LeftBorder>
-            <Style>None</Style>
-          </LeftBorder>
-          <RightBorder>
-            <Color>Black</Color>
-            <Width>1pt</Width>
-          </RightBorder>
         </Style>
       </Rectangle>
       <Rectangle Name="Rectangle14">
@@ -1006,7 +1061,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>DADOS DA NF-e</Value>
+                    <Value>Protocolo de autorização de uso</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>5pt</FontSize>
@@ -1021,7 +1076,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
             <Height>0.35963cm</Height>
-            <Width>3.09794cm</Width>
+            <Width>4.1261cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1038,7 +1093,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value>=First(Fields!ProtocoloAutorizacao.Value, "DSNFSaida") &amp; " " &amp; Format(First(Fields!DataHoraAutorizacao.Value, "DSNFSaida"), "dd/MM/yyyy HH:mm:ss")</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -1052,7 +1107,7 @@
             </Paragraphs>
             <Top>0.37311cm</Top>
             <Height>0.346cm</Height>
-            <Width>4.78045cm</Width>
+            <Width>5.87627cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1329,10 +1384,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!nmrazaosocial_emitente.Value, "DSNFSaida")</Value>
+                    <Value>=First(Fields!nmcliente_destinatario.Value, "DSNFSaida")</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
-                      <FontSize>6pt</FontSize>
+                      <FontSize>7pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1342,8 +1397,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.30961cm</Top>
-            <Height>0.4095cm</Height>
+            <Top>0.27786cm</Top>
+            <Height>0.44125cm</Height>
             <Width>10.32703cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -1570,7 +1625,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!dtsaida.Value, "DSNFSaida")</Value>
+                    <Value>= Format(First(Fields!dtsaida.Value, "DSNFSaida"),"dd/MM/yyy")</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -1917,11 +1972,12 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value>=First(Fields!dtsaida.Value, "DSNFSaida")</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Format>dd/MM/yyyy</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2103,7 +2159,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -2280,11 +2336,12 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value>=First(Fields!dtsaida.Value, "DSNFSaida")</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Format>HH:mm:ss</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2496,6 +2553,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2590,6 +2648,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2684,6 +2743,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2778,6 +2838,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2871,6 +2932,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2965,6 +3027,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3057,6 +3120,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3150,6 +3214,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3243,6 +3308,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3367,7 +3433,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -3426,8 +3492,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Left>0.04793cm</Left>
-            <Height>0.346cm</Height>
+            <Left>0.01618cm</Left>
+            <Height>0.34901cm</Height>
             <Width>2.36273cm</Width>
             <Style>
               <Border>
@@ -3445,7 +3511,40 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value>0:Emitente;1:Destinatário
+2:Terceiros;9:Sem Frete</Value>
+                    <Style>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>4pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.25376cm</Top>
+            <Height>0.50475cm</Height>
+            <Width>2.66206cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TxtTransportadorCodigoANTT2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Sum(Fields!freteporconta.Value, "DSNFSaida")</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -3457,14 +3556,14 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.42662cm</Top>
-            <Left>0.13213cm</Left>
-            <Height>0.31425cm</Height>
-            <Width>2.49398cm</Width>
-            <ZIndex>1</ZIndex>
+            <Top>0.36312cm</Top>
+            <Left>2.6813cm</Left>
+            <Height>0.4095cm</Height>
+            <Width>0.38033cm</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -3477,7 +3576,7 @@
         <Top>15.12275cm</Top>
         <Left>7.91118cm</Left>
         <Height>0.85cm</Height>
-        <Width>2.79215cm</Width>
+        <Width>3.10384cm</Width>
         <ZIndex>33</ZIndex>
         <Style>
           <Border>
@@ -3520,6 +3619,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
+            <Left>0.00366cm</Left>
             <Height>0.346cm</Height>
             <Width>1.41023cm</Width>
             <Style>
@@ -3538,7 +3638,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -3551,7 +3651,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.42662cm</Top>
-            <Left>0.38213cm</Left>
+            <Left>0.39065cm</Left>
             <Height>0.31425cm</Height>
             <Width>1.02324cm</Width>
             <ZIndex>1</ZIndex>
@@ -3568,9 +3668,9 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>15.12275cm</Top>
-        <Left>10.70118cm</Left>
+        <Left>11.01502cm</Left>
         <Height>0.85cm</Height>
-        <Width>1.78965cm</Width>
+        <Width>1.47581cm</Width>
         <ZIndex>34</ZIndex>
         <Style>
           <Border>
@@ -3631,7 +3731,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -3724,7 +3824,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -3817,7 +3917,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -3910,7 +4010,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4003,7 +4103,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4087,7 +4187,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4180,7 +4280,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4273,7 +4373,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4366,7 +4466,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4381,7 +4481,7 @@
             <Top>0.43025cm</Top>
             <Left>0.12474cm</Left>
             <Height>0.31425cm</Height>
-            <Width>2.3674cm</Width>
+            <Width>2.27618cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -4459,7 +4559,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4552,7 +4652,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4645,10 +4745,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value>=Sum(Fields!PesoLiquido.Value, "DSNFSaida")</Value>
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n4</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -4657,9 +4758,9 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.43025cm</Top>
+            <Top>0.3985cm</Top>
             <Left>0.05014cm</Left>
-            <Height>0.31425cm</Height>
+            <Height>0.346cm</Height>
             <Width>2.30412cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -4807,7 +4908,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4900,7 +5001,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -4993,7 +5094,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -5085,7 +5186,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -5098,7 +5199,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.45837cm</Top>
-            <Height>0.31425cm</Height>
+            <Height>0.346cm</Height>
             <Width>4.16469cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -5338,6 +5439,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -5416,6 +5518,7 @@
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -5506,7 +5609,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>1</Value>
+                    <Value />
                     <Style>
                       <FontFamily>Courier New</FontFamily>
                       <FontSize>6pt</FontSize>
@@ -5690,11 +5793,18 @@
       </ConnectionProperties>
       <rd:DataSourceID>c347dcf3-b582-423c-82c2-7baec3c34607</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="SdistribuidorEntidade1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>546a29c2-f0a9-455e-81b1-01033a2912e9</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DSNFSaida">
       <Query>
-        <DataSourceName>SdistribuidorEntidade</DataSourceName>
+        <DataSourceName>SdistribuidorEntidade1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -5737,6 +5847,10 @@
         <Field Name="cdufcidadeibge_emitente">
           <DataField>cdufcidadeibge_emitente</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DataHoraAutorizacao">
+          <DataField>DataHoraAutorizacao</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="dtsaida">
           <DataField>dtsaida</DataField>
@@ -5800,6 +5914,10 @@
         </Field>
         <Field Name="modnfe">
           <DataField>modnfe</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="modnfe2">
+          <DataField>modnfe2</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="naturezaoperacao">
@@ -5870,8 +5988,24 @@
           <DataField>observacao</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="PesoBruto">
+          <DataField>PesoBruto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PesoLiquido">
+          <DataField>PesoLiquido</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ProtocoloAutorizacao">
+          <DataField>ProtocoloAutorizacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="txchacessonfe">
           <DataField>txchacessonfe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="txchacessonfeformatada">
+          <DataField>txchacessonfeformatada</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="vlbaseicms">
