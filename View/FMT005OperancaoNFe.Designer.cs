@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbNFe = new System.Windows.Forms.TabControl();
             this.tpNFeConsulta = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -65,12 +65,29 @@
             this.TxtPesquisa = new System.Windows.Forms.TextBox();
             this.rbCliente = new System.Windows.Forms.RadioButton();
             this.tmNFe = new System.Windows.Forms.Timer(this.components);
+            this.pnlCancelamento = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpDataProcessamento = new System.Windows.Forms.DateTimePicker();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.grdCancelamento = new System.Windows.Forms.DataGridView();
+            this.btnSairPanelCancelamento = new System.Windows.Forms.Button();
+            this.ColSerieCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDataProcessamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Retorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbNFe.SuspendLayout();
             this.tpNFeConsulta.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdNFe)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.pnlData.SuspendLayout();
+            this.pnlCancelamento.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCancelamento)).BeginInit();
             this.SuspendLayout();
             // 
             // tbNFe
@@ -112,14 +129,14 @@
             this.grdNFe.AllowUserToOrderColumns = true;
             this.grdNFe.BackgroundColor = System.Drawing.Color.DimGray;
             this.grdNFe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdNFe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdNFe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.grdNFe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColSerie,
             this.ColNf,
@@ -144,8 +161,8 @@
             // 
             // ColSerie
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColSerie.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColSerie.DefaultCellStyle = dataGridViewCellStyle34;
             this.ColSerie.HeaderText = "Série";
             this.ColSerie.Name = "ColSerie";
             this.ColSerie.ReadOnly = true;
@@ -153,9 +170,9 @@
             // 
             // ColNf
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "n0";
-            this.ColNf.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.Format = "n0";
+            this.ColNf.DefaultCellStyle = dataGridViewCellStyle35;
             this.ColNf.HeaderText = "Documento";
             this.ColNf.Name = "ColNf";
             this.ColNf.ReadOnly = true;
@@ -170,8 +187,8 @@
             // 
             // ColDataEmissao
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColDataEmissao.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColDataEmissao.DefaultCellStyle = dataGridViewCellStyle36;
             this.ColDataEmissao.HeaderText = "Data Emissão";
             this.ColDataEmissao.Name = "ColDataEmissao";
             this.ColDataEmissao.ReadOnly = true;
@@ -179,9 +196,9 @@
             // 
             // ColValorNf
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            this.ColValorNf.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle37.Format = "N2";
+            this.ColValorNf.DefaultCellStyle = dataGridViewCellStyle37;
             this.ColValorNf.HeaderText = "Valor NFe";
             this.ColValorNf.Name = "ColValorNf";
             this.ColValorNf.ReadOnly = true;
@@ -195,8 +212,8 @@
             // 
             // ColCodRet
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColCodRet.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColCodRet.DefaultCellStyle = dataGridViewCellStyle38;
             this.ColCodRet.HeaderText = "Retorno NFe";
             this.ColCodRet.Name = "ColCodRet";
             this.ColCodRet.ReadOnly = true;
@@ -211,10 +228,10 @@
             // 
             // ColCancelar
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.ColCancelar.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.White;
+            this.ColCancelar.DefaultCellStyle = dataGridViewCellStyle39;
             this.ColCancelar.HeaderText = "";
             this.ColCancelar.Name = "ColCancelar";
             this.ColCancelar.ReadOnly = true;
@@ -223,10 +240,10 @@
             // 
             // ColInutilizar
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            this.ColInutilizar.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.White;
+            this.ColInutilizar.DefaultCellStyle = dataGridViewCellStyle40;
             this.ColInutilizar.HeaderText = "";
             this.ColInutilizar.Name = "ColInutilizar";
             this.ColInutilizar.ReadOnly = true;
@@ -393,12 +410,140 @@
             this.tmNFe.Interval = 60000;
             this.tmNFe.Tick += new System.EventHandler(this.tmNFe_Tick);
             // 
+            // pnlCancelamento
+            // 
+            this.pnlCancelamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnlCancelamento.Controls.Add(this.panel2);
+            this.pnlCancelamento.Controls.Add(this.panel1);
+            this.pnlCancelamento.Location = new System.Drawing.Point(170, 153);
+            this.pnlCancelamento.Name = "pnlCancelamento";
+            this.pnlCancelamento.Size = new System.Drawing.Size(553, 180);
+            this.pnlCancelamento.TabIndex = 1;
+            this.pnlCancelamento.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSairPanelCancelamento);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnAlterar);
+            this.panel1.Controls.Add(this.dtpDataProcessamento);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(553, 69);
+            this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cancelamento";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.grdCancelamento);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(553, 111);
+            this.panel2.TabIndex = 1;
+            // 
+            // dtpDataProcessamento
+            // 
+            this.dtpDataProcessamento.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            this.dtpDataProcessamento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataProcessamento.Location = new System.Drawing.Point(6, 43);
+            this.dtpDataProcessamento.Name = "dtpDataProcessamento";
+            this.dtpDataProcessamento.Size = new System.Drawing.Size(200, 21);
+            this.dtpDataProcessamento.TabIndex = 2;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(212, 41);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 3;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(4, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Data de Processamento";
+            // 
+            // grdCancelamento
+            // 
+            this.grdCancelamento.AllowUserToAddRows = false;
+            this.grdCancelamento.AllowUserToDeleteRows = false;
+            this.grdCancelamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdCancelamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColSerieCanc,
+            this.ColNota,
+            this.ColDataProcessamento,
+            this.Retorno});
+            this.grdCancelamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdCancelamento.Location = new System.Drawing.Point(0, 0);
+            this.grdCancelamento.Name = "grdCancelamento";
+            this.grdCancelamento.ReadOnly = true;
+            this.grdCancelamento.Size = new System.Drawing.Size(553, 111);
+            this.grdCancelamento.TabIndex = 0;
+            // 
+            // btnSairPanelCancelamento
+            // 
+            this.btnSairPanelCancelamento.Location = new System.Drawing.Point(292, 41);
+            this.btnSairPanelCancelamento.Name = "btnSairPanelCancelamento";
+            this.btnSairPanelCancelamento.Size = new System.Drawing.Size(75, 23);
+            this.btnSairPanelCancelamento.TabIndex = 5;
+            this.btnSairPanelCancelamento.Text = "Sair";
+            this.btnSairPanelCancelamento.UseVisualStyleBackColor = true;
+            this.btnSairPanelCancelamento.Click += new System.EventHandler(this.btnSairPanelCancelamento_Click);
+            // 
+            // ColSerieCanc
+            // 
+            this.ColSerieCanc.HeaderText = "Série";
+            this.ColSerieCanc.Name = "ColSerieCanc";
+            this.ColSerieCanc.ReadOnly = true;
+            this.ColSerieCanc.Width = 60;
+            // 
+            // ColNota
+            // 
+            this.ColNota.HeaderText = "Documento";
+            this.ColNota.Name = "ColNota";
+            this.ColNota.ReadOnly = true;
+            // 
+            // ColDataProcessamento
+            // 
+            this.ColDataProcessamento.HeaderText = "Data Processamento";
+            this.ColDataProcessamento.Name = "ColDataProcessamento";
+            this.ColDataProcessamento.ReadOnly = true;
+            this.ColDataProcessamento.Width = 130;
+            // 
+            // Retorno
+            // 
+            this.Retorno.HeaderText = "Retorno Cancelamento";
+            this.Retorno.Name = "Retorno";
+            this.Retorno.ReadOnly = true;
+            this.Retorno.Width = 130;
+            // 
             // FMT005OperancaoNFe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(883, 473);
+            this.Controls.Add(this.pnlCancelamento);
             this.Controls.Add(this.tbNFe);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FMT005OperancaoNFe";
@@ -412,6 +557,11 @@
             this.groupBox1.PerformLayout();
             this.pnlData.ResumeLayout(false);
             this.pnlData.PerformLayout();
+            this.pnlCancelamento.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdCancelamento)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,5 +596,18 @@
         private System.Windows.Forms.DataGridViewButtonColumn ColImprimir;
         private System.Windows.Forms.DataGridViewButtonColumn ColCancelar;
         private System.Windows.Forms.DataGridViewButtonColumn ColInutilizar;
+        private System.Windows.Forms.Panel pnlCancelamento;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpDataProcessamento;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView grdCancelamento;
+        private System.Windows.Forms.Button btnSairPanelCancelamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSerieCanc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDataProcessamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Retorno;
     }
 }

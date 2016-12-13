@@ -165,5 +165,37 @@ namespace Sdistribuidor.Model
         {
             return BancoDados.CodigoExiste("SELECT * FROM InutilizacaoNFe WHERE id_loja= " + idloja + " AND NrNf = " + nrnf + " AND SerieNf='" + nmserienf + "'");
         }
+
+        public int ConsultarRetornoCancelamento(int idloja, int nrnf, string nmserienf)
+        {
+            var DtRetCan = BancoDados.Consultar("SELECT cdretorno FROM CancelamentoNfe WHERE id_loja= " + idloja + " AND NrNf = " + nrnf + " AND SerieNf='" + nmserienf + "'");
+
+            if (!string.IsNullOrEmpty(DtRetCan.Rows[0][0].ToString()))
+            {
+                return Convert.ToInt32(DtRetCan.Rows[0][0].ToString());
+            }
+            else
+                return 0;
+        }
+
+        public DataTable ConsultarCancelamento(int idloja, int nrnf, string nmserienf)
+        {
+            return BancoDados.Consultar("SELECT dtoperacao,cdretorno FROM CancelamentoNfe WHERE id_loja= " + idloja + " AND NrNf = " + nrnf + " AND SerieNf='" + nmserienf + "'");
+        }
+
+        public bool CancelamentoAlteraDataProcessamento(int loja,string serienf, int notafiscal, DateTime DtProcCanc, out string ErroMsg)
+        {
+            try
+            {
+                BancoDados.InsertAlterarExcluir("UPDATE CancelamentoNfe SET dtOperacao ='" + string.Format("{0:dd/MM/yyyy HH:mm:ss}", DtProcCanc)+"', cdretorno=null WHERE id_loja= " + loja+" AND serienf ='" + serienf+"' AND NrNf= " + notafiscal );
+                ErroMsg = string.Empty;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ErroMsg = ex.Message.ToString();
+                return false;
+            }
+        }
     }
 }

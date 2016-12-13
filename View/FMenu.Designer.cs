@@ -300,6 +300,7 @@
             this.btnDanfe.Text = "Danfe";
             this.btnDanfe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDanfe.UseVisualStyleBackColor = true;
+            this.btnDanfe.Visible = false;
             this.btnDanfe.Click += new System.EventHandler(this.btnDanfe_Click);
             // 
             // FMenu

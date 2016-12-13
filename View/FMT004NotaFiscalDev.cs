@@ -479,7 +479,14 @@ namespace Sdistribuidor.View
             }
             else if (e.KeyData == Keys.F5)
             {
-
+                if (gbPnlObservações.Visible == true)
+                {
+                    gbPnlObservações.Visible = false;
+                }
+                else
+                {
+                    gbPnlObservações.Visible = true;
+                }
             }
             else if (e.KeyData == Keys.F6)
             {
@@ -501,6 +508,14 @@ namespace Sdistribuidor.View
             {
                 AddProdutoGrid();
             }
+            else if (e.KeyData == Keys.F10)
+            {
+                if(gbPnlObservações.Visible == true)
+                {
+                    gbPnlObservações.Visible = false;
+                }
+            }
+
         }
 
         private void txtQtd_KeyDown(object sender, KeyEventArgs e)
@@ -1324,8 +1339,8 @@ namespace Sdistribuidor.View
                 EntNotaFiscal.vlPis = Convert.ToDecimal(lblTotVlPis.Text.Replace(".", ""));
                 EntNotaFiscal.vlCofins = Convert.ToDecimal(lblTotVlCofins.Text.Replace(".", ""));
                 EntNotaFiscal.vlDesconto = Convert.ToDecimal(lblTotVlDesc.Text.Replace(".", ""));
-                EntNotaFiscal.txobsfisco = string.Empty;
-                EntNotaFiscal.txobscontribuinte = string.Empty;
+                EntNotaFiscal.txobsfisco = txtFisco.Text;
+                EntNotaFiscal.txobscontribuinte = txtContribuinte.Text;
                 EntNotaFiscal.id_pedido = 0;
                 EntNotaFiscal.flfinalidade = cboTipoNF.SelectedIndex + 1;
                 EntNotaFiscal.id_localentrega = lblIdLocalEntrega.Text == string.Empty ? 0 : Convert.ToInt32(lblIdLocalEntrega.Text);
@@ -1405,6 +1420,20 @@ namespace Sdistribuidor.View
             lblTotVlDesc.Text = "0,00";
 
             lblTotVlTotal.Text = "0,00";
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnObservacoes_Click(object sender, EventArgs e)
+        {
+            gbPnlObservações.Visible = false;
+            if(txtContribuinte.Text != string.Empty || txtFisco.Text != string.Empty)
+            {
+                btnFatura.BackColor = Color.FromArgb(0, 200, 83);
+            }
         }
     }
 }
