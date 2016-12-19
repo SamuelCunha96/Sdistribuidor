@@ -99,5 +99,12 @@ namespace Sdistribuidor.View
             ObjRelatorio.MdiParent = this;
             ObjRelatorio.Show();
         }
+
+        private void btnManifestacao_Click(object sender, EventArgs e)
+        {
+            FMT006Manifestacao ObjManifestação = new FMT006Manifestacao();
+            ObjManifestação.MdiParent = this;
+            ObjManifestação.Show();
+        }
     }
 }

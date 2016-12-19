@@ -82,7 +82,10 @@ namespace Sdistribuidor.Model
 
                 BeginTrans.Commit();
 
+                BancoDados.CloseConection();
+
                 BancoDados.InsertAlterarExcluir("UPDATE pedido set stpedido='N' WHERE id_pedido=" + EntNotaFiscal.id_pedido + "");
+                
                 return true;
 
             }

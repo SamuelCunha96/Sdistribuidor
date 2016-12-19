@@ -93,11 +93,13 @@
     <Compile Include="Entidade\Entidade_GeralInformcoes.cs" />
     <Compile Include="Entidade\Entidade_Grupo.cs" />
     <Compile Include="Entidade\Entidade_ItemFormaPagto.cs" />
+    <Compile Include="Entidade\Entidade_ItemManifestacao.cs" />
     <Compile Include="Entidade\Entidade_ItemNFe.cs" />
     <Compile Include="Entidade\Entidade_ItemPedido.cs" />
     <Compile Include="Entidade\Entidade_LocalEntrega.cs" />
     <Compile Include="Entidade\Entidade_Loja.cs" />
     <Compile Include="Entidade\Entidade_LojaSimples.cs" />
+    <Compile Include="Entidade\Entidade_Manifestacao.cs" />
     <Compile Include="Entidade\Entidade_NotaFiscal.cs" />
     <Compile Include="Entidade\Entidade_Participante.cs" />
     <Compile Include="Entidade\Entidade_Pedido.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Model\Grupo.cs" />
     <Compile Include="Model\Loja.cs" />
     <Compile Include="Model\LojaSimples.cs" />
+    <Compile Include="Model\ManifestacaoNFDestinatio.cs" />
     <Compile Include="Model\NotaFiscal.cs" />
     <Compile Include="Model\Pagamento.cs" />
     <Compile Include="Model\Participante.cs" />
@@ -245,6 +248,12 @@
     <Compile Include="View\FMT005OperancaoNFe.Designer.cs">
       <DependentUpon>FMT005OperancaoNFe.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT006Manifestacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT006Manifestacao.Designer.cs">
+      <DependentUpon>FMT006Manifestacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT005OperancaoNFe.resx">
       <DependentUpon>FMT005OperancaoNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT006Manifestacao.resx">
+      <DependentUpon>FMT006Manifestacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>
