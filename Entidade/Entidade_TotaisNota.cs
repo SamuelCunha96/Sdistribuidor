@@ -34,5 +34,8 @@ namespace Sdistribuidor.Entidade
         public double VlFreteConhec { get; set; }
         public double VlBaseIcmsAnt { get; set; }
         public double VlIcmsAnt { get; set; }
+        public double VlPis { get; set; }
+        public double VlCofins { get; set; }
+        public double VlTrib { get; set; }
     }
 }

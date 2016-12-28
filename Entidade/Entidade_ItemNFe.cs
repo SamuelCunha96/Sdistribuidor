@@ -11,6 +11,7 @@ namespace Sdistribuidor.Entidade
         public int id_loja { get; set; }
         public string serienf { get; set; }
         public int nrnf { get; set; }
+        public string UnidFornecedor { get; set; }
         public decimal qt_venda { get; set; }
         public decimal vlbaseicms { get; set; }
         public decimal vlicms { get; set; }
@@ -25,6 +26,10 @@ namespace Sdistribuidor.Entidade
         public decimal vlIpi { get; set; }
         public decimal vlAliqIpi { get; set; }
         public decimal vlAliqIcms { get; set; }
+        public decimal vlAliqPis { get; set; }
+        public decimal vlAliqCofins { get; set; }
+        public decimal vlTotTrib { get; set; }
+        public decimal Total { get; set; }
         public int cfop { get; set; }
     }
 }

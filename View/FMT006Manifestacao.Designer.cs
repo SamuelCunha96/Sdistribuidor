@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbGeral = new System.Windows.Forms.TabControl();
             this.tpConsulta = new System.Windows.Forms.TabPage();
             this.btnManifestar = new System.Windows.Forms.Button();
@@ -47,18 +49,21 @@
             this.tbManifestacao = new System.Windows.Forms.TabPage();
             this.tabManifestacaoDest = new System.Windows.Forms.TabControl();
             this.tpLoteManifestacao = new System.Windows.Forms.TabPage();
+            this.btnRetManifestacao = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.grdChaManRetorno = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.rbDesconhecimento = new System.Windows.Forms.RadioButton();
-            this.rbCiencia = new System.Windows.Forms.RadioButton();
-            this.rbOperacao = new System.Windows.Forms.RadioButton();
+            this.RbNaoRealizacao = new System.Windows.Forms.RadioButton();
+            this.RbDesconhecimento = new System.Windows.Forms.RadioButton();
+            this.RbCiencia = new System.Windows.Forms.RadioButton();
+            this.RbOperacao = new System.Windows.Forms.RadioButton();
             this.tpManifestacaoEnv = new System.Windows.Forms.TabPage();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.grdChaveManifestacao = new System.Windows.Forms.DataGridView();
+            this.ColTxChaveAcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.CboManifestacao = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,7 +71,12 @@
             this.MskChDest = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.trConsultaDest = new System.Windows.Forms.Timer(this.components);
-            this.ColTxChaveAcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColChkRetManifestacao = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColEmitente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDtEmissaoEmitente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColChaveNFeRetMan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColValorNFe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRetornoMan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbGeral.SuspendLayout();
             this.tpConsulta.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,6 +84,8 @@
             this.tbManifestacao.SuspendLayout();
             this.tabManifestacaoDest.SuspendLayout();
             this.tpLoteManifestacao.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdChaManRetorno)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tpManifestacaoEnv.SuspendLayout();
@@ -101,7 +113,7 @@
             this.tpConsulta.Padding = new System.Windows.Forms.Padding(3);
             this.tpConsulta.Size = new System.Drawing.Size(752, 349);
             this.tpConsulta.TabIndex = 0;
-            this.tpConsulta.Text = "Consulta Notas Fiscal ";
+            this.tpConsulta.Text = "Notas Fiscais Sem Manifestação";
             this.tpConsulta.UseVisualStyleBackColor = true;
             // 
             // btnManifestar
@@ -159,8 +171,8 @@
             // ColChAcesso
             // 
             this.ColChAcesso.DataPropertyName = "chacessonfeformatada";
-            dataGridViewCellStyle1.NullValue = null;
-            this.ColChAcesso.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.NullValue = null;
+            this.ColChAcesso.DefaultCellStyle = dataGridViewCellStyle16;
             this.ColChAcesso.HeaderText = "Chave de Acesso";
             this.ColChAcesso.Name = "ColChAcesso";
             this.ColChAcesso.ReadOnly = true;
@@ -183,10 +195,10 @@
             // ColDtEmissao
             // 
             this.ColDtEmissao.DataPropertyName = "dhautorizacao";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "G";
-            dataGridViewCellStyle2.NullValue = null;
-            this.ColDtEmissao.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.Format = "G";
+            dataGridViewCellStyle17.NullValue = null;
+            this.ColDtEmissao.DefaultCellStyle = dataGridViewCellStyle17;
             this.ColDtEmissao.HeaderText = "Dt. Autorização";
             this.ColDtEmissao.Name = "ColDtEmissao";
             this.ColDtEmissao.ReadOnly = true;
@@ -195,9 +207,9 @@
             // ColVlNf
             // 
             this.ColVlNf.DataPropertyName = "vlnfe";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "n2";
-            this.ColVlNf.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle18.Format = "n2";
+            this.ColVlNf.DefaultCellStyle = dataGridViewCellStyle18;
             this.ColVlNf.HeaderText = "Vl. NFe";
             this.ColVlNf.Name = "ColVlNf";
             this.ColVlNf.ReadOnly = true;
@@ -235,6 +247,7 @@
             // 
             // tpLoteManifestacao
             // 
+            this.tpLoteManifestacao.Controls.Add(this.btnRetManifestacao);
             this.tpLoteManifestacao.Controls.Add(this.panel4);
             this.tpLoteManifestacao.Controls.Add(this.panel1);
             this.tpLoteManifestacao.Location = new System.Drawing.Point(4, 22);
@@ -245,13 +258,49 @@
             this.tpLoteManifestacao.Text = "Lote Manifestação";
             this.tpLoteManifestacao.UseVisualStyleBackColor = true;
             // 
+            // btnRetManifestacao
+            // 
+            this.btnRetManifestacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.btnRetManifestacao.FlatAppearance.BorderSize = 0;
+            this.btnRetManifestacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetManifestacao.ForeColor = System.Drawing.Color.White;
+            this.btnRetManifestacao.Location = new System.Drawing.Point(3, 280);
+            this.btnRetManifestacao.Name = "btnRetManifestacao";
+            this.btnRetManifestacao.Size = new System.Drawing.Size(75, 31);
+            this.btnRetManifestacao.TabIndex = 7;
+            this.btnRetManifestacao.Text = "Manifestar";
+            this.btnRetManifestacao.UseVisualStyleBackColor = false;
+            this.btnRetManifestacao.Click += new System.EventHandler(this.btnRetManifestacao_Click);
+            // 
             // panel4
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Controls.Add(this.grdChaManRetorno);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 69);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(732, 245);
+            this.panel4.Size = new System.Drawing.Size(732, 203);
             this.panel4.TabIndex = 4;
+            // 
+            // grdChaManRetorno
+            // 
+            this.grdChaManRetorno.AllowUserToAddRows = false;
+            this.grdChaManRetorno.AllowUserToDeleteRows = false;
+            this.grdChaManRetorno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdChaManRetorno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColChkRetManifestacao,
+            this.ColEmitente,
+            this.ColDtEmissaoEmitente,
+            this.ColChaveNFeRetMan,
+            this.ColValorNFe,
+            this.ColRetornoMan});
+            this.grdChaManRetorno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdChaManRetorno.Location = new System.Drawing.Point(0, 0);
+            this.grdChaManRetorno.Name = "grdChaManRetorno";
+            this.grdChaManRetorno.ReadOnly = true;
+            this.grdChaManRetorno.RowHeadersVisible = false;
+            this.grdChaManRetorno.Size = new System.Drawing.Size(732, 203);
+            this.grdChaManRetorno.TabIndex = 0;
+            this.grdChaManRetorno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdChaManRetorno_CellClick);
             // 
             // panel1
             // 
@@ -275,13 +324,14 @@
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Consultar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.rbDesconhecimento);
-            this.groupBox1.Controls.Add(this.rbCiencia);
-            this.groupBox1.Controls.Add(this.rbOperacao);
+            this.groupBox1.Controls.Add(this.RbNaoRealizacao);
+            this.groupBox1.Controls.Add(this.RbDesconhecimento);
+            this.groupBox1.Controls.Add(this.RbCiencia);
+            this.groupBox1.Controls.Add(this.RbOperacao);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
             this.groupBox1.Location = new System.Drawing.Point(5, 3);
             this.groupBox1.Name = "groupBox1";
@@ -290,51 +340,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecione a Manifestação";
             // 
-            // radioButton1
+            // RbNaoRealizacao
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(433, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(142, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.Text = "Operação não Realizada";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RbNaoRealizacao.AutoSize = true;
+            this.RbNaoRealizacao.ForeColor = System.Drawing.Color.Black;
+            this.RbNaoRealizacao.Location = new System.Drawing.Point(433, 24);
+            this.RbNaoRealizacao.Name = "RbNaoRealizacao";
+            this.RbNaoRealizacao.Size = new System.Drawing.Size(142, 17);
+            this.RbNaoRealizacao.TabIndex = 6;
+            this.RbNaoRealizacao.Text = "Operação não Realizada";
+            this.RbNaoRealizacao.UseVisualStyleBackColor = true;
             // 
-            // rbDesconhecimento
+            // RbDesconhecimento
             // 
-            this.rbDesconhecimento.AutoSize = true;
-            this.rbDesconhecimento.ForeColor = System.Drawing.Color.Black;
-            this.rbDesconhecimento.Location = new System.Drawing.Point(262, 24);
-            this.rbDesconhecimento.Name = "rbDesconhecimento";
-            this.rbDesconhecimento.Size = new System.Drawing.Size(174, 17);
-            this.rbDesconhecimento.TabIndex = 5;
-            this.rbDesconhecimento.Text = "Desconhecimento da Operação";
-            this.rbDesconhecimento.UseVisualStyleBackColor = true;
+            this.RbDesconhecimento.AutoSize = true;
+            this.RbDesconhecimento.ForeColor = System.Drawing.Color.Black;
+            this.RbDesconhecimento.Location = new System.Drawing.Point(262, 24);
+            this.RbDesconhecimento.Name = "RbDesconhecimento";
+            this.RbDesconhecimento.Size = new System.Drawing.Size(174, 17);
+            this.RbDesconhecimento.TabIndex = 5;
+            this.RbDesconhecimento.Text = "Desconhecimento da Operação";
+            this.RbDesconhecimento.UseVisualStyleBackColor = true;
             // 
-            // rbCiencia
+            // RbCiencia
             // 
-            this.rbCiencia.AutoSize = true;
-            this.rbCiencia.ForeColor = System.Drawing.Color.Black;
-            this.rbCiencia.Location = new System.Drawing.Point(151, 23);
-            this.rbCiencia.Name = "rbCiencia";
-            this.rbCiencia.Size = new System.Drawing.Size(115, 17);
-            this.rbCiencia.TabIndex = 4;
-            this.rbCiencia.Text = "Ciência da Emissão";
-            this.rbCiencia.UseVisualStyleBackColor = true;
+            this.RbCiencia.AutoSize = true;
+            this.RbCiencia.ForeColor = System.Drawing.Color.Black;
+            this.RbCiencia.Location = new System.Drawing.Point(151, 23);
+            this.RbCiencia.Name = "RbCiencia";
+            this.RbCiencia.Size = new System.Drawing.Size(115, 17);
+            this.RbCiencia.TabIndex = 4;
+            this.RbCiencia.Text = "Ciência da Emissão";
+            this.RbCiencia.UseVisualStyleBackColor = true;
             // 
-            // rbOperacao
+            // RbOperacao
             // 
-            this.rbOperacao.AutoSize = true;
-            this.rbOperacao.Checked = true;
-            this.rbOperacao.ForeColor = System.Drawing.Color.Black;
-            this.rbOperacao.Location = new System.Drawing.Point(4, 22);
-            this.rbOperacao.Name = "rbOperacao";
-            this.rbOperacao.Size = new System.Drawing.Size(150, 17);
-            this.rbOperacao.TabIndex = 3;
-            this.rbOperacao.TabStop = true;
-            this.rbOperacao.Text = "Confirmação da Operação";
-            this.rbOperacao.UseVisualStyleBackColor = true;
+            this.RbOperacao.AutoSize = true;
+            this.RbOperacao.Checked = true;
+            this.RbOperacao.ForeColor = System.Drawing.Color.Black;
+            this.RbOperacao.Location = new System.Drawing.Point(4, 22);
+            this.RbOperacao.Name = "RbOperacao";
+            this.RbOperacao.Size = new System.Drawing.Size(150, 17);
+            this.RbOperacao.TabIndex = 3;
+            this.RbOperacao.TabStop = true;
+            this.RbOperacao.Text = "Confirmação da Operação";
+            this.RbOperacao.UseVisualStyleBackColor = true;
             // 
             // tpManifestacaoEnv
             // 
@@ -389,6 +439,15 @@
             this.grdChaveManifestacao.RowHeadersVisible = false;
             this.grdChaveManifestacao.Size = new System.Drawing.Size(732, 184);
             this.grdChaveManifestacao.TabIndex = 0;
+            // 
+            // ColTxChaveAcesso
+            // 
+            this.ColTxChaveAcesso.HeaderText = "Chave de Acesso";
+            this.ColTxChaveAcesso.Name = "ColTxChaveAcesso";
+            this.ColTxChaveAcesso.ReadOnly = true;
+            this.ColTxChaveAcesso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColTxChaveAcesso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColTxChaveAcesso.Width = 400;
             // 
             // label1
             // 
@@ -462,14 +521,57 @@
             this.trConsultaDest.Interval = 300000;
             this.trConsultaDest.Tick += new System.EventHandler(this.trConsultaDest_Tick);
             // 
-            // ColTxChaveAcesso
+            // ColChkRetManifestacao
             // 
-            this.ColTxChaveAcesso.HeaderText = "Chave de Acesso";
-            this.ColTxChaveAcesso.Name = "ColTxChaveAcesso";
-            this.ColTxChaveAcesso.ReadOnly = true;
-            this.ColTxChaveAcesso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColTxChaveAcesso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColTxChaveAcesso.Width = 400;
+            this.ColChkRetManifestacao.HeaderText = "";
+            this.ColChkRetManifestacao.Name = "ColChkRetManifestacao";
+            this.ColChkRetManifestacao.ReadOnly = true;
+            this.ColChkRetManifestacao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColChkRetManifestacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColChkRetManifestacao.Width = 30;
+            // 
+            // ColEmitente
+            // 
+            this.ColEmitente.DataPropertyName = "nomeemitente";
+            this.ColEmitente.HeaderText = "Emitente";
+            this.ColEmitente.Name = "ColEmitente";
+            this.ColEmitente.ReadOnly = true;
+            this.ColEmitente.Width = 300;
+            // 
+            // ColDtEmissaoEmitente
+            // 
+            this.ColDtEmissaoEmitente.DataPropertyName = "dhautorizacao";
+            dataGridViewCellStyle19.Format = "G";
+            this.ColDtEmissaoEmitente.DefaultCellStyle = dataGridViewCellStyle19;
+            this.ColDtEmissaoEmitente.HeaderText = "Dt. Aut.";
+            this.ColDtEmissaoEmitente.Name = "ColDtEmissaoEmitente";
+            this.ColDtEmissaoEmitente.ReadOnly = true;
+            this.ColDtEmissaoEmitente.Width = 120;
+            // 
+            // ColChaveNFeRetMan
+            // 
+            this.ColChaveNFeRetMan.DataPropertyName = "chacessonfe";
+            this.ColChaveNFeRetMan.HeaderText = "Chave NFe";
+            this.ColChaveNFeRetMan.Name = "ColChaveNFeRetMan";
+            this.ColChaveNFeRetMan.ReadOnly = true;
+            this.ColChaveNFeRetMan.Width = 240;
+            // 
+            // ColValorNFe
+            // 
+            this.ColValorNFe.DataPropertyName = "vlnfe";
+            dataGridViewCellStyle20.Format = "n2";
+            this.ColValorNFe.DefaultCellStyle = dataGridViewCellStyle20;
+            this.ColValorNFe.HeaderText = "Vl. NFe";
+            this.ColValorNFe.Name = "ColValorNFe";
+            this.ColValorNFe.ReadOnly = true;
+            // 
+            // ColRetornoMan
+            // 
+            this.ColRetornoMan.DataPropertyName = "codretorno";
+            this.ColRetornoMan.HeaderText = "Retorno";
+            this.ColRetornoMan.Name = "ColRetornoMan";
+            this.ColRetornoMan.ReadOnly = true;
+            this.ColRetornoMan.Width = 200;
             // 
             // FMT006Manifestacao
             // 
@@ -490,6 +592,8 @@
             this.tbManifestacao.ResumeLayout(false);
             this.tabManifestacaoDest.ResumeLayout(false);
             this.tpLoteManifestacao.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdChaManRetorno)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -518,10 +622,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton rbDesconhecimento;
-        private System.Windows.Forms.RadioButton rbCiencia;
-        private System.Windows.Forms.RadioButton rbOperacao;
+        private System.Windows.Forms.RadioButton RbNaoRealizacao;
+        private System.Windows.Forms.RadioButton RbDesconhecimento;
+        private System.Windows.Forms.RadioButton RbCiencia;
+        private System.Windows.Forms.RadioButton RbOperacao;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
@@ -540,5 +644,13 @@
         private System.Windows.Forms.MaskedTextBox MskChDest;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTxChaveAcesso;
+        private System.Windows.Forms.DataGridView grdChaManRetorno;
+        private System.Windows.Forms.Button btnRetManifestacao;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColChkRetManifestacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmitente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDtEmissaoEmitente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColChaveNFeRetMan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColValorNFe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColRetornoMan;
     }
 }

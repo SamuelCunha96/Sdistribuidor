@@ -11,9 +11,11 @@ namespace Sdistribuidor.Entidade
         public int id_loja { get; set; }
         public string serienf { get; set; }
         public int nrnf { get; set; }
+        public int modeloNFe { get; set; }
         public Entidade_Participante id_participante { get; set; }
         public DateTime dtemissao { get; set; }
         public DateTime dtsaida { get; set; }
+        public DateTime dtentrada { get; set; }
         public decimal vltotal { get; set; }
         public decimal vlbaseicms { get; set; }
         public decimal vlicms { get; set; }
@@ -26,6 +28,7 @@ namespace Sdistribuidor.Entidade
         public decimal vlDesconto { get; set; }
         public decimal vlfrete { get; set; }
         public decimal vlseguro { get; set; }
+        public decimal vltributos { get; set; }
         public string txobsfisco { get; set; }
         public string txobscontribuinte { get; set; }
         public string txchacessonfe { get; set; }
@@ -51,3 +54,4 @@ namespace Sdistribuidor.Entidade
        
     }
 }
+

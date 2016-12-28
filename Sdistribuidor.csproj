@@ -89,6 +89,7 @@
     <Compile Include="Entidade\Entidade_Cidade.cs" />
     <Compile Include="Entidade\Entidade_Cst.cs" />
     <Compile Include="Entidade\Entidade_Estoque.cs" />
+    <Compile Include="Entidade\Entidade_Fatura.cs" />
     <Compile Include="Entidade\Entidade_FormaPagto.cs" />
     <Compile Include="Entidade\Entidade_GeralInformcoes.cs" />
     <Compile Include="Entidade\Entidade_Grupo.cs" />
@@ -116,10 +117,12 @@
     <Compile Include="Gerais\AssinaturaDigital.cs" />
     <Compile Include="Gerais\FuncoesGerais.cs" />
     <Compile Include="Gerais\UTF8StringWriter.cs" />
+    <Compile Include="Gerais\XmlNFeEntrada.cs" />
     <Compile Include="Model\CartaoBandeira.cs" />
     <Compile Include="Model\Cfop.cs" />
     <Compile Include="Model\Cidade.cs" />
     <Compile Include="Model\Cst.cs" />
+    <Compile Include="Model\DownloadNFe.cs" />
     <Compile Include="Model\FormaPagtoItemFormaPagto.cs" />
     <Compile Include="Model\FuncoesGerais.cs" />
     <Compile Include="Model\Grupo.cs" />
@@ -127,6 +130,7 @@
     <Compile Include="Model\LojaSimples.cs" />
     <Compile Include="Model\ManifestacaoNFDestinatio.cs" />
     <Compile Include="Model\NotaFiscal.cs" />
+    <Compile Include="Model\NotaFiscalEntrada.cs" />
     <Compile Include="Model\Pagamento.cs" />
     <Compile Include="Model\Participante.cs" />
     <Compile Include="Model\Pedido.cs" />
@@ -254,6 +258,12 @@
     <Compile Include="View\FMT006Manifestacao.Designer.cs">
       <DependentUpon>FMT006Manifestacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT007NotaFiscalEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT007NotaFiscalEntrada.Designer.cs">
+      <DependentUpon>FMT007NotaFiscalEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT006Manifestacao.resx">
       <DependentUpon>FMT006Manifestacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT007NotaFiscalEntrada.resx">
+      <DependentUpon>FMT007NotaFiscalEntrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>

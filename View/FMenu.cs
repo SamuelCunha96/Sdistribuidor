@@ -106,5 +106,12 @@ namespace Sdistribuidor.View
             ObjManifestação.MdiParent = this;
             ObjManifestação.Show();
         }
+
+        private void btnNfEntradaXml_Click(object sender, EventArgs e)
+        {
+            FMT007NotaFiscalEntrada ObjNotaFiscalEntradaXml = new FMT007NotaFiscalEntrada();
+            ObjNotaFiscalEntradaXml.MdiParent = this;
+            ObjNotaFiscalEntradaXml.Show();
+        }
     }
 }

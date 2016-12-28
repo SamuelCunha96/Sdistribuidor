@@ -14,6 +14,7 @@ namespace Sdistribuidor.Entidade
         }
 
         public long IdProduto { get; set; }
+        public string IdProdutoEmit { get; set; }
         public string NmProduto { get; set; }
         public Entidade_Grupo IdGrupo { get; set; }
         public Entidade_Unidade Unidade { get; set; }

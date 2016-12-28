@@ -32,17 +32,21 @@ namespace Sdistribuidor.Model
                                         " end as descsitnfe " +
                                         " FROM itemconsultanfdest ic WHERE NOT EXISTS (SELECT * FROM itemmanifestacao im WHERE ic.chacessonfe = im.txchacessonfe)");
         }
+        public DataTable ConsultarNFDestinarioConfirmaOperacao()
+        {
+            return BancoDados.Consultar("SELECT icd.nomeemitente,icd.dhautorizacao,icd.chacessonfe,icd.vlnfe, im.codretorno FROM itemconsultanfdest icd INNER JOIN itemmanifestacao im on icd.chacessonfe = im.txchacessonfe WHERE im.codmanifestacao=210200");
+        }
         public DataTable ConsultarNFDestinarioCiencieEmissao()
         {
-            return BancoDados.Consultar("SELECT * FROM itemmanifestacao im WHERE ic.chacessonfe = im.txchacessonfe AND ic.codmanifestacao=210210");
+            return BancoDados.Consultar("SELECT icd.nomeemitente,icd.dhautorizacao,icd.chacessonfe,icd.vlnfe, im.codretorno FROM itemconsultanfdest icd INNER JOIN itemmanifestacao im on icd.chacessonfe = im.txchacessonfe WHERE im.codmanifestacao=210210");
         }
         public DataTable ConsultarNFDestinarioDesconhecimentoOperacao()
         {
-            return BancoDados.Consultar("SELECT * FROM itemmanifestacao im WHERE ic.chacessonfe = im.txchacessonfe AND ic.codmanifestacao=210220");
+            return BancoDados.Consultar("SELECT icd.nomeemitente,icd.dhautorizacao,icd.chacessonfe,icd.vlnfe, im.codretorno FROM itemconsultanfdest icd INNER JOIN itemmanifestacao im on icd.chacessonfe = im.txchacessonfe WHERE im.codmanifestacao=210220");
         }
         public DataTable ConsultarNFDestinarioOperacaoNaoRealizada()
         {
-            return BancoDados.Consultar("SELECT * FROM itemmanifestacao im WHERE ic.chacessonfe = im.txchacessonfe AND ic.codmanifestacao=210240");
+            return BancoDados.Consultar("SELECT icd.nomeemitente,icd.dhautorizacao,icd.chacessonfe,icd.vlnfe, im.codretorno FROM itemconsultanfdest icd INNER JOIN itemmanifestacao im on icd.chacessonfe = im.txchacessonfe WHERE im.codmanifestacao=210240");
         }
 
         public bool IncluirManifestacao(Entidade_Manifestacao ObjManifestacao, out string messagemerro)

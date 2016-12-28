@@ -23,7 +23,7 @@ namespace Sdistribuidor.View
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            ConsultaNFeManifestacaoRetorno();
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -154,6 +154,67 @@ namespace Sdistribuidor.View
         {
             grdChaveManifestacao.Rows.Clear();
             MskChDest.Text = string.Empty;
+        }
+
+        void ConsultaNFeManifestacaoRetorno()
+        {
+            //grdChaManRetorno.Rows.Clear();
+            if (RbOperacao.Checked)
+            {
+                grdChaManRetorno.DataSource = ObjManDest.ConsultarNFDestinarioConfirmaOperacao();
+            }
+            else if (RbCiencia.Checked)
+            {
+                grdChaManRetorno.DataSource = ObjManDest.ConsultarNFDestinarioCiencieEmissao();
+            }
+            else if (RbDesconhecimento.Checked)
+            {
+                grdChaManRetorno.DataSource = ObjManDest.ConsultarNFDestinarioDesconhecimentoOperacao();
+            }
+            else if (RbNaoRealizacao.Checked)
+            {
+                grdChaManRetorno.DataSource = ObjManDest.ConsultarNFDestinarioOperacaoNaoRealizada();
+            }
+        }
+
+        private void grdChaManRetorno_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                if (Convert.ToBoolean(grdChaManRetorno.Rows[e.RowIndex].Cells[0].Value) == false)
+                {
+                    grdChaManRetorno.Rows[e.RowIndex].Cells[0].Value = true;
+                }
+                else
+                {
+                    grdChaManRetorno.Rows[e.RowIndex].Cells[0].Value = false;
+                }
+            }
+        }
+
+        private void btnRetManifestacao_Click(object sender, EventArgs e)
+        {
+            int contNfe = 0;
+            for (int i = 0; i < grdChaManRetorno.Rows.Count; i++)
+            {
+                if (!string.IsNullOrEmpty(grdChaManRetorno.Rows[i].Cells[5].Value.ToString()))
+                {
+                    if (Convert.ToInt32(grdChaManRetorno.Rows[i].Cells[5].Value) != 135)
+                    {
+                        if (Convert.ToBoolean(grdChaManRetorno.Rows[i].Cells[0].Value) == true)
+                        {
+                            contNfe += 1;
+                            grdChaveManifestacao.Rows.Add(grdChaManRetorno.Rows[i].Cells[3].Value.ToString());
+                        }
+                    }
+                }
+            }
+
+            if (contNfe > 0)
+            {
+                tbGeral.SelectTab(tbManifestacao);
+                tabManifestacaoDest.SelectTab(tpManifestacaoEnv);
+            }
         }
     }
 }
