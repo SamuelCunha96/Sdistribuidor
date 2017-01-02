@@ -408,11 +408,11 @@ namespace Sdistribuidor.View
             cNotaFiscal = new C_NotaFiscal();
             EntTotal = new Entidade_TotaisNota();
 
-            EntTotal.QtItem = Convert.ToDouble(txtQtd.Text.Replace(".", ""));
-            EntTotal.VlUnitario = Convert.ToDouble(txtVlUnit.Text.Replace(".", ""));
-            EntTotal.VlDesconto = Convert.ToDouble(txtDesconto.Text.Replace(".", ""));
-            EntTotal.VlAliqIcms = Convert.ToDouble(txtAliqIcms.Text.Replace(".", ""));
-            EntTotal.VlAliqIpi = Convert.ToDouble(txtAliqIpi.Text.Replace(".", ""));
+            EntTotal.QtItem = Convert.ToDecimal(txtQtd.Text.Replace(".", ""));
+            EntTotal.VlUnitario = Convert.ToDecimal(txtVlUnit.Text.Replace(".", ""));
+            EntTotal.VlDesconto = Convert.ToDecimal(txtDesconto.Text.Replace(".", ""));
+            EntTotal.VlAliqIcms = Convert.ToDecimal(txtAliqIcms.Text.Replace(".", ""));
+            EntTotal.VlAliqIpi = Convert.ToDecimal(txtAliqIpi.Text.Replace(".", ""));
 
             if (EntTotal.VlAliqIcms != 0)
             {
@@ -429,14 +429,14 @@ namespace Sdistribuidor.View
             else
                 txtVlIpi.Text = "0,00";
 
-            EntTotal.VlBaseIcms = Convert.ToDouble(txtVlBCIcms.Text.Replace(".", ""));
-            EntTotal.VlIcms = Convert.ToDouble(txtVlIcms.Text.Replace(".", ""));
-            EntTotal.VlBaseIcmsSub = Convert.ToDouble(txtVlBcSub.Text.Replace(".", ""));
-            EntTotal.VlIcmsSub = Convert.ToDouble(txtIcmsSub.Text.Replace(".", ""));
-            EntTotal.VlOutrasDesp = Convert.ToDouble(txtVlOutras.Text.Replace(".", ""));
-            EntTotal.VlSeguro = Convert.ToDouble(txtVlSeguro.Text.Replace(".", ""));
-            EntTotal.VlFrete = Convert.ToDouble(txtFrete.Text.Replace(".", ""));
-            EntTotal.VlIpi = Convert.ToDouble(txtVlIpi.Text.Replace(".", ""));
+            EntTotal.VlBaseIcms = Convert.ToDecimal(txtVlBCIcms.Text.Replace(".", ""));
+            EntTotal.VlIcms = Convert.ToDecimal(txtVlIcms.Text.Replace(".", ""));
+            EntTotal.VlBaseIcmsSub = Convert.ToDecimal(txtVlBcSub.Text.Replace(".", ""));
+            EntTotal.VlIcmsSub = Convert.ToDecimal(txtIcmsSub.Text.Replace(".", ""));
+            EntTotal.VlOutrasDesp = Convert.ToDecimal(txtVlOutras.Text.Replace(".", ""));
+            EntTotal.VlSeguro = Convert.ToDecimal(txtVlSeguro.Text.Replace(".", ""));
+            EntTotal.VlFrete = Convert.ToDecimal(txtFrete.Text.Replace(".", ""));
+            EntTotal.VlIpi = Convert.ToDecimal(txtVlIpi.Text.Replace(".", ""));
 
             txtTotal.Text = string.Format("{0:N2}", cNotaFiscal.SomarGeral(EntTotal));
         }
@@ -694,6 +694,18 @@ namespace Sdistribuidor.View
         }
 
         private void txtDesconto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!txtDesconto.Text.Contains(e.KeyChar.ToString()))
+            {
+                if (!char.IsNumber(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (e.KeyChar.ToString().Trim() == ",")
+                e.Handled = true;
+        }
+        private void txtVlBcSub_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!txtDesconto.Text.Contains(e.KeyChar.ToString()))
             {
@@ -1435,5 +1447,7 @@ namespace Sdistribuidor.View
                 btnFatura.BackColor = Color.FromArgb(0, 200, 83);
             }
         }
+
+        
     }
 }

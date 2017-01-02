@@ -13,6 +13,7 @@ namespace Sdistribuidor.Entidade
         public int nrnf { get; set; }
         public string UnidFornecedor { get; set; }
         public decimal qt_venda { get; set; }
+        public decimal qt_entrada_fornec { get; set; }
         public decimal vlbaseicms { get; set; }
         public decimal vlicms { get; set; }
         public decimal vlbaseicmssub { get; set; }

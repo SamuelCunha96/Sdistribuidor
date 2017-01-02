@@ -98,11 +98,9 @@ namespace Sdistribuidor.View
                 for (int i = 0; i < grdUnidConv.Rows.Count; i++)
                 {
                     EntProdUnid = new Entidade_ProdutoUnidade();
-                    EntUnidade = new Entidade_Unidade();
-                    EntUnidade.CdUnidade = ucUnidade1.Unidade;
 
                     EntProdUnid.id_produto = Convert.ToInt32(txtID.Text);
-                    EntProdUnid.Unidade = EntUnidade;
+                    EntProdUnid.Unidade = ucUnidade1.Unidade;
                     EntProdUnid.vlfatorconv = Convert.ToDouble(grdUnidConv.Rows[i].Cells[1].Value);
                     ModProdutoUnid.Incluir(EntProdUnid);
                 }
@@ -160,10 +158,8 @@ namespace Sdistribuidor.View
                 for (int i = 0; i < grdUnidConv.Rows.Count; i++)
                 {
                     EntProdUnid = new Entidade_ProdutoUnidade();
-                    EntUnidade = new Entidade_Unidade();
-
-                    EntUnidade.CdUnidade = grdUnidConv.Rows[i].Cells[0].Value.ToString();
-                    EntProdUnid.Unidade = EntUnidade;
+                    
+                    EntProdUnid.Unidade = grdUnidConv.Rows[i].Cells[0].Value.ToString();
                     EntProdUnid.id_produto = Convert.ToInt32(txtID.Text);
                     EntProdUnid.vlfatorconv = Convert.ToDouble(grdUnidConv.Rows[i].Cells[1].Value);
                     ModProdutoUnid.Incluir(EntProdUnid);
@@ -223,7 +219,7 @@ namespace Sdistribuidor.View
             {
                 foreach (var item in ProdUnid)
                 {
-                    grdUnidConv.Rows.Add(item.Unidade.CdUnidade, string.Format("{0:N4}", item.vlfatorconv));
+                    grdUnidConv.Rows.Add(item.Unidade, string.Format("{0:N4}", item.vlfatorconv));
                 }
             }
             //else
@@ -423,6 +419,14 @@ namespace Sdistribuidor.View
 
             CboCfopInterno.DataSource = ModCfop.Interno();
             CboCfopExterno.DataSource = ModCfop.Externo();
+        }
+
+        private void grdUnidConv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex != -1)
+            {
+                
+            }
         }
     }
 }

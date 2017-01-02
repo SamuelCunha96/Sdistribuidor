@@ -40,6 +40,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnManifestacao = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnNfEntradaXml = new System.Windows.Forms.Button();
             this.tbPgNotaFiscal = new System.Windows.Forms.TabPage();
             this.btnDanfe = new System.Windows.Forms.Button();
             this.btnListarNFe = new System.Windows.Forms.Button();
@@ -48,15 +50,16 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnAux = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnNfEntradaXml = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tbPgNotaFiscal.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -177,6 +180,7 @@
             this.tabControl1.Controls.Add(this.TbCadastro);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tbPgNotaFiscal);
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -214,6 +218,33 @@
             this.btnManifestacao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnManifestacao.UseVisualStyleBackColor = true;
             this.btnManifestacao.Click += new System.EventHandler(this.btnManifestacao_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btnNfEntradaXml);
+            this.tabPage4.Location = new System.Drawing.Point(4, 21);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(747, 100);
+            this.tabPage4.TabIndex = 5;
+            this.tabPage4.Text = "Nota Fiscal | Entrada";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnNfEntradaXml
+            // 
+            this.btnNfEntradaXml.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNfEntradaXml.FlatAppearance.BorderSize = 0;
+            this.btnNfEntradaXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNfEntradaXml.Image = ((System.Drawing.Image)(resources.GetObject("btnNfEntradaXml.Image")));
+            this.btnNfEntradaXml.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNfEntradaXml.Location = new System.Drawing.Point(3, 3);
+            this.btnNfEntradaXml.Name = "btnNfEntradaXml";
+            this.btnNfEntradaXml.Size = new System.Drawing.Size(75, 94);
+            this.btnNfEntradaXml.TabIndex = 3;
+            this.btnNfEntradaXml.Text = "NFe Xml";
+            this.btnNfEntradaXml.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNfEntradaXml.UseVisualStyleBackColor = true;
+            this.btnNfEntradaXml.Click += new System.EventHandler(this.btnNfEntradaXml_Click);
             // 
             // tbPgNotaFiscal
             // 
@@ -338,32 +369,31 @@
             this.btnAux.UseVisualStyleBackColor = true;
             this.btnAux.Click += new System.EventHandler(this.btnAux_Click);
             // 
-            // tabPage4
+            // tabPage5
             // 
-            this.tabPage4.Controls.Add(this.btnNfEntradaXml);
-            this.tabPage4.Location = new System.Drawing.Point(4, 21);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(747, 100);
-            this.tabPage4.TabIndex = 5;
-            this.tabPage4.Text = "Nota Fiscal | Entrada";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage5.Controls.Add(this.btnEstoque);
+            this.tabPage5.Location = new System.Drawing.Point(4, 21);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(747, 100);
+            this.tabPage5.TabIndex = 6;
+            this.tabPage5.Text = "Transações";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // btnNfEntradaXml
+            // btnEstoque
             // 
-            this.btnNfEntradaXml.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnNfEntradaXml.FlatAppearance.BorderSize = 0;
-            this.btnNfEntradaXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNfEntradaXml.Image = ((System.Drawing.Image)(resources.GetObject("btnNfEntradaXml.Image")));
-            this.btnNfEntradaXml.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNfEntradaXml.Location = new System.Drawing.Point(3, 3);
-            this.btnNfEntradaXml.Name = "btnNfEntradaXml";
-            this.btnNfEntradaXml.Size = new System.Drawing.Size(75, 94);
-            this.btnNfEntradaXml.TabIndex = 3;
-            this.btnNfEntradaXml.Text = "NFe Xml";
-            this.btnNfEntradaXml.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNfEntradaXml.UseVisualStyleBackColor = true;
-            this.btnNfEntradaXml.Click += new System.EventHandler(this.btnNfEntradaXml_Click);
+            this.btnEstoque.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEstoque.FlatAppearance.BorderSize = 0;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
+            this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEstoque.Location = new System.Drawing.Point(0, 0);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(75, 100);
+            this.btnEstoque.TabIndex = 4;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // FMenu
             // 
@@ -382,9 +412,10 @@
             this.TbCadastro.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tbPgNotaFiscal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +444,7 @@
         private System.Windows.Forms.Button btnManifestacao;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnNfEntradaXml;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button btnEstoque;
     }
 }

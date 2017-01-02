@@ -30,7 +30,6 @@ namespace Sdistribuidor.Model
         {
             List<Entidade_ProdutoUnidade> lsProdUnid = new List<Entidade_ProdutoUnidade>();
             Entidade_ProdutoUnidade EntProd;
-            Entidade_Unidade EntUnid;
 
             var Dt = BancoDados.Consultar("SELECT * FROM produtounidade where id_produto =" + ID);
 
@@ -39,10 +38,7 @@ namespace Sdistribuidor.Model
                 for (int i = 0; i < Dt.Rows.Count; i++)
                 {
                     EntProd = new Entidade_ProdutoUnidade();
-                    EntUnid = new Entidade_Unidade();
-                    EntUnid.CdUnidade = Dt.Rows[i]["CdUnidade"].ToString();
-
-                    EntProd.Unidade = EntUnid;
+                    EntProd.Unidade = Dt.Rows[i]["CdUnidade"].ToString();
                     EntProd.vlfatorconv = Convert.ToDouble(Dt.Rows[i]["vlfatorconv"].ToString());
 
                     lsProdUnid.Add(EntProd);
@@ -57,7 +53,6 @@ namespace Sdistribuidor.Model
         {
             List<Entidade_ProdutoUnidade> lsProdUnid = new List<Entidade_ProdutoUnidade>();
             Entidade_ProdutoUnidade EntProd;
-            Entidade_Unidade EntUnid;
 
             var Dt = BancoDados.Consultar("SELECT * FROM produtounidade where id_produto =" + ID + "AND CdUnidade = '" + Unidade.Trim() + "'");
 
@@ -65,9 +60,8 @@ namespace Sdistribuidor.Model
             {
 
                 EntProd = new Entidade_ProdutoUnidade();
-                EntUnid = new Entidade_Unidade();
-                EntUnid.CdUnidade = Dt.Rows[0]["CdUnidade"].ToString();
-                EntProd.Unidade = EntUnid;
+                
+                EntProd.Unidade = Dt.Rows[0]["CdUnidade"].ToString();
                 EntProd.vlfatorconv = Convert.ToDouble(Dt.Rows[0]["vlfatorconv"].ToString());
                 return EntProd;
             }
@@ -79,7 +73,7 @@ namespace Sdistribuidor.Model
         {
             try
             {
-                BancoDados.InsertAlterarExcluir("INSERT INTO produtounidade (id_produto,cdunidade,vlfatorconv) VALUES(" + Obj.id_produto + ",'" + Obj.Unidade.CdUnidade + "'," + Obj.vlfatorconv.ToString().Replace(".", "").Replace(",", ".") + ")");
+                BancoDados.InsertAlterarExcluir("INSERT INTO produtounidade (id_produto,cdunidade,vlfatorconv) VALUES(" + Obj.id_produto + ",'" + Obj.Unidade + "'," + Obj.vlfatorconv.ToString().Replace(".", "").Replace(",", ".") + ")");
                 return true;
             }
             catch (Exception ex)
@@ -91,7 +85,7 @@ namespace Sdistribuidor.Model
         {
             try
             {
-                BancoDados.InsertAlterarExcluir("UPDATE produtounidade set cdunidade = '"+ Obj.Unidade.Unidade + "',vlfatorconv = '" + Obj.vlfatorconv.ToString().Replace(".", "").Replace(",", ".") + "' WHERE id_produto = " + Obj.id_produto + "");
+                BancoDados.InsertAlterarExcluir("UPDATE produtounidade set cdunidade = '"+ Obj.Unidade + "',vlfatorconv = '" + Obj.vlfatorconv.ToString().Replace(".", "").Replace(",", ".") + "' WHERE id_produto = " + Obj.id_produto + "");
                 return true;
             }
             catch (Exception ex)

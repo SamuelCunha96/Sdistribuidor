@@ -81,6 +81,10 @@ namespace Sdistribuidor.Gerais
                                     {
                                         _NotaFiscal.modeloNFe = Convert.ToInt32(xnode4.InnerText);
                                     }
+                                    else if (xnode4.Name == "indPag")
+                                    {
+                                        _NotaFiscal.id_formapagto = Convert.ToInt32(xnode4.InnerText);
+                                    }
                                 }
                                 break;
                             case "emit":
@@ -93,6 +97,12 @@ namespace Sdistribuidor.Gerais
                                     else if (xnode4.Name == "xNome")
                                     {
                                         _Participante.nome = xnode4.InnerText;
+                                        _Participante.razaosocial = xnode4.InnerText;
+                                        _Participante.nomefantasia = xnode4.InnerText;
+                                    }
+                                    else if (xnode4.Name == "IE")
+                                    {
+                                        _Participante.ie = xnode4.InnerText;
                                     }
                                     else if (xnode4.Name == "enderEmit")
                                     {
@@ -110,15 +120,17 @@ namespace Sdistribuidor.Gerais
                                             {
                                                 _Participante.bairro = xnode5.InnerText;
                                             }
+                                            else if (xnode5.Name == "cMun")
+                                            {
+                                                _Cidade.id_ibge = xnode5.InnerText;
+                                            }
                                             else if (xnode5.Name == "xMun")
                                             {
                                                 _Cidade.desc_municipio = xnode5.InnerText;
-                                                _Participante.id_cidade = _Cidade;
                                             }
                                             else if (xnode5.Name == "UF")
                                             {
                                                 _Uf.nome_uf = xnode5.InnerText;
-                                                _Participante.id_uf = _Uf;
                                             }
                                             else if (xnode5.Name == "CEP")
                                             {
@@ -129,6 +141,8 @@ namespace Sdistribuidor.Gerais
                                                 _Participante.telefone = xnode5.InnerText;
                                             }
                                         }
+                                        _Participante.id_uf = _Uf;
+                                        _Participante.id_cidade = _Cidade;
                                     }
                                 }
                                 _NotaFiscal.id_participante = _Participante;
@@ -405,55 +419,55 @@ namespace Sdistribuidor.Gerais
                                     {
                                         if (xnode5.Name == "vBC")
                                         {
-                                            _TotalNf.VlBaseIcms = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlBaseIcms = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vICMS")
                                         {
-                                            _TotalNf.VlIcms = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlIcms = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vBCST")
                                         {
-                                            _TotalNf.VlBaseIcmsSub = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlBaseIcmsSub = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vST")
                                         {
-                                            _TotalNf.VlIcmsSub = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlIcmsSub = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vProd")
                                         {
-                                            _TotalNf.VlProdutos = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlProdutos = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vFrete")
                                         {
-                                            _TotalNf.VlFrete = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlFrete = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vIPI")
                                         {
-                                            _TotalNf.VlIpi = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlIpi = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vCOFINS")
                                         {
-                                            _TotalNf.VlCofins = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlCofins = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vPIS")
                                         {
-                                            _TotalNf.VlPis = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlPis = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vTotTrib")
                                         {
-                                            _TotalNf.VlTrib = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlTrib = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vDesc")
                                         {
-                                            _TotalNf.VlDesconto = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlDesconto = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vOutro")
                                         {
-                                            _TotalNf.VlOutrasDesp = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlOutrasDesp = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                         else if (xnode5.Name == "vNF")
                                         {
-                                            _TotalNf.VlNf = Convert.ToDouble(xnode5.InnerText.Replace(".", ","));
+                                            _TotalNf.VlNf = Convert.ToDecimal(xnode5.InnerText.Replace(".", ","));
                                         }
                                     }
                                 }

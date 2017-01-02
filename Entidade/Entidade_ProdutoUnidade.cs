@@ -13,14 +13,14 @@ namespace Sdistribuidor.Entidade
 
         }
         public int id_produto { get; set; }
-        public Entidade_Unidade Unidade { get; set; }
+        public string Unidade { get; set; }
         public double vlfatorconv { get; set; }
 
-        public virtual string UndProd
+        public string UndProd
         {
             get
             {
-                return Unidade.CdUnidade;
+                return Unidade;
             }
         }
     }

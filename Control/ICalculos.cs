@@ -8,17 +8,17 @@ namespace Sdistribuidor.Control
 {
     interface ICalculos
     {
-        double SomarGeral(Entidade_TotaisNota _Totais);
-        double SomarGeralItem(Entidade_TotaisNota _Totais);
-        double BaseIcms(Entidade_TotaisNota _Totais);
-        double BaseIcmsReduzida(Entidade_TotaisNota _Totais);
-        double Icms(Entidade_TotaisNota _Totais);
-        double BaseSubTriIcms(Entidade_TotaisNota _Totais);
-        double IcmsSubTrib(Entidade_TotaisNota _Totais);
-        double TotalProdutos(Entidade_TotaisNota _Totais);
-        double ValorIpi(Entidade_TotaisNota _Totais);
-        double ValorPis(Entidade_TotaisNota _Totais);
-        double ValorCofins(Entidade_TotaisNota _Totais);
+        decimal SomarGeral(Entidade_TotaisNota _Totais);
+        decimal SomarGeralItem(Entidade_TotaisNota _Totais);
+        decimal BaseIcms(Entidade_TotaisNota _Totais);
+        decimal BaseIcmsReduzida(Entidade_TotaisNota _Totais);
+        decimal Icms(Entidade_TotaisNota _Totais);
+        decimal BaseSubTriIcms(Entidade_TotaisNota _Totais);
+        decimal IcmsSubTrib(Entidade_TotaisNota _Totais);
+        decimal TotalProdutos(Entidade_TotaisNota _Totais);
+        decimal ValorIpi(Entidade_TotaisNota _Totais);
+        decimal ValorPis(Entidade_TotaisNota _Totais);
+        decimal ValorCofins(Entidade_TotaisNota _Totais);
 
     }
 }

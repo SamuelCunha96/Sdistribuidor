@@ -10,32 +10,32 @@ namespace Sdistribuidor.Entidade
         public Entidade_TotaisNota()
         {
         }
-        public double TotaItem { get; set; }
-        public double QtItem { get; set; }
-        public double VlUnitario { get; set; }
-        public double VlTotalBruto { get; set; }
-        public double VlBaseIcms { get; set; }
-        public double VlIcms { get; set; }
-        public double VlBaseIcmsSub { get; set; }
-        public double VlIcmsSub { get; set; }
-        public double VlProdutos { get; set; }
-        public double VlFrete { get; set; }
-        public double VlSeguro { get; set; }
-        public double VlOutrasDesp { get; set; }
-        public double VlBaseIpi { get; set; }
-        public double VlIpi { get; set; }
-        public double VlNf { get; set; }
-        public double VlDesconto { get; set; }
-        public double VlAliqIpi { get; set; }
-        public double VlAliqIcms { get; set; }
-        public double VlAliqIcmsSub { get; set; }
-        public double VlPesoTotal { get; set; }
-        public double VlIcmsFrete { get; set; }
-        public double VlFreteConhec { get; set; }
-        public double VlBaseIcmsAnt { get; set; }
-        public double VlIcmsAnt { get; set; }
-        public double VlPis { get; set; }
-        public double VlCofins { get; set; }
-        public double VlTrib { get; set; }
+        public decimal TotaItem { get; set; }
+        public decimal QtItem { get; set; }
+        public decimal VlUnitario { get; set; }
+        public decimal VlTotalBruto { get; set; }
+        public decimal VlBaseIcms { get; set; }
+        public decimal VlIcms { get; set; }
+        public decimal VlBaseIcmsSub { get; set; }
+        public decimal VlIcmsSub { get; set; }
+        public decimal VlProdutos { get; set; }
+        public decimal VlFrete { get; set; }
+        public decimal VlSeguro { get; set; }
+        public decimal VlOutrasDesp { get; set; }
+        public decimal VlBaseIpi { get; set; }
+        public decimal VlIpi { get; set; }
+        public decimal VlNf { get; set; }
+        public decimal VlDesconto { get; set; }
+        public decimal VlAliqIpi { get; set; }
+        public decimal VlAliqIcms { get; set; }
+        public decimal VlAliqIcmsSub { get; set; }
+        public decimal VlPesoTotal { get; set; }
+        public decimal VlIcmsFrete { get; set; }
+        public decimal VlFreteConhec { get; set; }
+        public decimal VlBaseIcmsAnt { get; set; }
+        public decimal VlIcmsAnt { get; set; }
+        public decimal VlPis { get; set; }
+        public decimal VlCofins { get; set; }
+        public decimal VlTrib { get; set; }
     }
 }

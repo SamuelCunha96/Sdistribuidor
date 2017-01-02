@@ -384,3 +384,8 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.pdb
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.csprojResolveAssemblyReference.cache
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT006Manifestacao.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT007NotaFiscalEntrada.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.Design.dll
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.dll
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT008SpedFiscal.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT009MovEstoque.resources

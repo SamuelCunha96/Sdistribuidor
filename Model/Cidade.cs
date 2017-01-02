@@ -82,16 +82,22 @@ namespace Sdistribuidor.Model
             }
             return ListCidade;
         }
-        public Entidade_Cidade PesquisaCidadeIbge(string idibge)
+        public Entidade_Cidade PesquisaCidadeIbge(string idibge, out string MsgErro)
         {
-            var Dt = BancoDados.Consultar("SELECT *  FROM cidade WHERE id_ibge = " + idibge);
+            EntCidade = new Entidade_Cidade();
+
+            var Dt = BancoDados.Consultar("SELECT *  FROM cidade WHERE id_ibge = '" + idibge + "'");
             if (Dt.Rows.Count > 0)
             {
-                EntCidade = new Entidade_Cidade();
                 EntCidade.id = Convert.ToInt32(Dt.Rows[0][0]);
                 EntCidade.desc_municipio = Dt.Rows[0][1].ToString();
                 EntCidade.id_ibge = Dt.Rows[0][2].ToString();
                 //EntCidade.id_uf = Convert.ToInt32(Dt.Rows[i][3]);
+                MsgErro = string.Empty;
+            }
+            else
+            {
+                MsgErro = "Cidade não existe";
             }
             return EntCidade;
         }

@@ -78,6 +78,19 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("vlipi", item.vlIpi);
                     command.Parameters.AddWithValue("vldesconto", item.vlDesconto);
                     command.ExecuteNonQuery();
+
+
+                    command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
+                    command.Transaction = BeginTrans;
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("id_loja", EntNotaFiscal.id_loja);
+                    command.Parameters.AddWithValue("id_produto", Convert.ToInt32(item.IdProduto));
+                    command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_venda));
+                    command.Parameters.AddWithValue("tpmov", "S");
+                    command.Parameters.AddWithValue("dtmovimentacao", EntNotaFiscal.dtemissao);
+                    command.Parameters.AddWithValue("obsmovimentacao", "NOTA FISCAL:" + EntNotaFiscal.serienf + " - " + EntNotaFiscal.nrnf); 
+
+                    command.ExecuteNonQuery();
                 }
 
                 BeginTrans.Commit();

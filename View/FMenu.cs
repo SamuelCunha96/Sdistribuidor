@@ -113,5 +113,13 @@ namespace Sdistribuidor.View
             ObjNotaFiscalEntradaXml.MdiParent = this;
             ObjNotaFiscalEntradaXml.Show();
         }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            FMT009MovEstoque ObjMovEstoque = new FMT009MovEstoque();
+            ObjMovEstoque.MdiParent = this;
+            ObjMovEstoque.Show();
+
+        }
     }
 }

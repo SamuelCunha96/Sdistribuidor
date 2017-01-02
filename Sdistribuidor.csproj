@@ -51,6 +51,18 @@
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Mono.Security">
@@ -129,6 +141,7 @@
     <Compile Include="Model\Loja.cs" />
     <Compile Include="Model\LojaSimples.cs" />
     <Compile Include="Model\ManifestacaoNFDestinatio.cs" />
+    <Compile Include="Model\MovimentacaoEstoque.cs" />
     <Compile Include="Model\NotaFiscal.cs" />
     <Compile Include="Model\NotaFiscalEntrada.cs" />
     <Compile Include="Model\Pagamento.cs" />
@@ -264,6 +277,18 @@
     <Compile Include="View\FMT007NotaFiscalEntrada.Designer.cs">
       <DependentUpon>FMT007NotaFiscalEntrada.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT008SpedFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT008SpedFiscal.Designer.cs">
+      <DependentUpon>FMT008SpedFiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FMT009MovEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT009MovEstoque.Designer.cs">
+      <DependentUpon>FMT009MovEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +378,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT007NotaFiscalEntrada.resx">
       <DependentUpon>FMT007NotaFiscalEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT008SpedFiscal.resx">
+      <DependentUpon>FMT008SpedFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT009MovEstoque.resx">
+      <DependentUpon>FMT009MovEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>

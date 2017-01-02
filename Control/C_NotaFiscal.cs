@@ -41,59 +41,59 @@ namespace Sdistribuidor.Control
 
         #region ---- METODOS DA INTERFACE ----
 
-        public double SomarGeral(Entidade_TotaisNota _Totais)
+        public decimal SomarGeral(Entidade_TotaisNota _Totais)
         {
             return (_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub + _Totais.VlIpi  - _Totais.VlDesconto;
         }
-        public double SomarGeralItem(Entidade_TotaisNota _Totais)
+        public decimal SomarGeralItem(Entidade_TotaisNota _Totais)
         {
             return _Totais.VlTotalBruto + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub + _Totais.VlIpi - _Totais.VlDesconto;
         }
-        public double BaseIcms(Entidade_TotaisNota _Totais)
+        public decimal BaseIcms(Entidade_TotaisNota _Totais)
         {
             return _Totais.VlBaseIcms == 0 ? (_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlSeguro + _Totais.VlOutrasDesp - _Totais.VlDesconto : _Totais.VlBaseIcms + _Totais.VlFrete + _Totais.VlSeguro + _Totais.VlOutrasDesp - _Totais.VlDesconto;
         }
-        public double BaseIcmsReduzida(Entidade_TotaisNota _Totais)
+        public decimal BaseIcmsReduzida(Entidade_TotaisNota _Totais)
         {
             return 0;
             //_mNotafiscal = new NotaFiscal();
             //return _Totais.VlBaseIcms == 0 ? ((_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlSeguro + _Totais.VlOutrasDesp) * _mNotafiscal.ConsultarValorPercentualdeReducao() : _Totais.VlBaseIcms + _Totais.VlFrete + _Totais.VlSeguro + _Totais.VlOutrasDesp;
         }
-        public double Icms(Entidade_TotaisNota _Totais)
+        public decimal Icms(Entidade_TotaisNota _Totais)
         {
             return _Totais.VlBaseIcms == 0 ? (_Totais.QtItem * _Totais.VlUnitario) * _Totais.VlAliqIcms / 100 : _Totais.VlBaseIcms * _Totais.VlAliqIcms / 100;
         }
-        public double ValorIpi(Entidade_TotaisNota _Totais)
+        public decimal ValorIpi(Entidade_TotaisNota _Totais)
         {
             return _Totais.VlIpi == 0 ? (_Totais.QtItem * _Totais.VlUnitario) * _Totais.VlAliqIpi / 100 : _Totais.VlIpi * _Totais.VlAliqIpi / 100; 
         }
-        public double TotalProdutos(Entidade_TotaisNota _Totais)
+        public decimal TotalProdutos(Entidade_TotaisNota _Totais)
         {
             return (_Totais.QtItem * _Totais.VlUnitario);
         }
-        public double BaseSubTriIcms(Entidade_TotaisNota _Totais)
+        public decimal BaseSubTriIcms(Entidade_TotaisNota _Totais)
         {
             throw new NotImplementedException();
         }
-        public double IcmsSubTrib(Entidade_TotaisNota _Totais)
+        public decimal IcmsSubTrib(Entidade_TotaisNota _Totais)
         {
             throw new NotImplementedException();
         }
-        public double ValorPis(Entidade_TotaisNota _Totais)
+        public decimal ValorPis(Entidade_TotaisNota _Totais)
         {
             // 1.65
-            return ((_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub) * 0.0165;
+            return ((_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub) * Convert.ToDecimal(0.0165);
         }
-        public double ValorCofins(Entidade_TotaisNota _Totais)
+        public decimal ValorCofins(Entidade_TotaisNota _Totais)
         {
             //7.6
-            return ((_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub) * 0.076;
+            return ((_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub) * Convert.ToDecimal(0.076);
         }
-        public double ValorPisTab(Entidade_TotaisNota _Totais, double vlAliqPis)
+        public decimal ValorPisTab(Entidade_TotaisNota _Totais, decimal vlAliqPis)
         {
             return ((_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub) * vlAliqPis / 100;
         }
-        public double ValorCofinsTab(Entidade_TotaisNota _Totais, double vlAliqCofins)
+        public decimal ValorCofinsTab(Entidade_TotaisNota _Totais, decimal vlAliqCofins)
         {
             return ((_Totais.QtItem * _Totais.VlUnitario) + _Totais.VlFrete + _Totais.VlOutrasDesp + _Totais.VlSeguro + _Totais.VlIcmsSub) * vlAliqCofins / 100;
         }

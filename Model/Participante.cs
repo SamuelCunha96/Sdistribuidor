@@ -98,6 +98,72 @@ namespace Sdistribuidor.Model
             }
 
         }
+        public Entidade_Participante PesquisaCnpj(string cnpjcpf)
+        {
+            entPart = new Entidade_Participante();
+
+
+            modUF = new UF();
+            modCidade = new Cidade();
+            
+            var Dt = BancoDados.Consultar("SELECT * FROM participante WHERE cnpjcpf = '" + cnpjcpf + "'");
+
+            var DtEnt = BancoDados.Consultar("SELECT * FROM localentrega WHERE id_participante = " + Dt.Rows[0]["id_participante"].ToString());
+
+            if (Dt.Rows.Count > 0)
+            {
+                entPart.id = Convert.ToInt32(Dt.Rows[0]["id_participante"]);
+                entPart.nome = Dt.Rows[0]["nome"].ToString();
+                entPart.cnpjcpf = Dt.Rows[0]["cnpjcpf"].ToString();
+                entPart.ie = Dt.Rows[0]["ie"].ToString();
+                entPart.razaosocial = Dt.Rows[0]["razaosocial"].ToString();
+                entPart.nomefantasia = Dt.Rows[0]["nomefantasia"].ToString();
+                entPart.lagradouro = Dt.Rows[0]["lagradouro"].ToString();
+                entPart.numero_end = Dt.Rows[0]["numero_end"].ToString();
+                entPart.bairro = Dt.Rows[0]["bairro"].ToString();
+                entPart.id_uf = modUF.Pesquisa(Convert.ToInt32(Dt.Rows[0]["id_uf"].ToString()));
+                entPart.id_cidade = modCidade.Pesquisa(Convert.ToInt32(Dt.Rows[0]["cidade"]));
+                entPart.telefone = Dt.Rows[0]["telefone"].ToString();
+                entPart.flcomercio = Convert.ToBoolean(Dt.Rows[0]["flcomercio"]);
+            }
+
+            if (DtEnt.Rows.Count > 0)
+            {
+                for (int i = 0; i < DtEnt.Rows.Count; i++)
+                {
+                    entLocEnt = new Entidade_LocalEntrega();
+                    entLocEnt.id = Convert.ToInt32(DtEnt.Rows[i]["id"]);
+                    entLocEnt.id_participante = Convert.ToInt32(DtEnt.Rows[i]["id_participante"]);
+                    entLocEnt.lagradouro = DtEnt.Rows[i]["lagradouro"].ToString();
+                    entLocEnt.end_numero = DtEnt.Rows[i]["end_numero"].ToString();
+                    entLocEnt.bairro = DtEnt.Rows[i]["bairro"].ToString();
+                    if (DtEnt.Rows[i]["id_uf"] != null)
+                        entLocEnt.id_uf = modUF.Pesquisa(Convert.ToInt32(DtEnt.Rows[i]["id_uf"].ToString()));
+                    if (DtEnt.Rows[i]["id_cidade"] != null)
+                        entLocEnt.id_cidade = modCidade.Pesquisa(Convert.ToInt32(DtEnt.Rows[i]["id_cidade"]));
+                    entLocEnt.telefone = DtEnt.Rows[i]["telefone"].ToString();
+                    entLocEnt.obs = DtEnt.Rows[i]["obs"].ToString();
+                    ListLocalEnt.Add(entLocEnt);
+                }
+            }
+
+            if (DtEnt.Rows.Count > 0)
+            {
+                entPart.ListLocalEntrega = ListLocalEnt;
+                return entPart;
+            }
+            else
+            {
+                if (Dt.Rows.Count > 0)
+                {
+                    entPart.ListLocalEntrega = ListLocalEnt;
+                    return entPart;
+                }
+                else
+                    return null;
+            }
+
+        }
         public List<Entidade_Participante> Pesquisa(string Nome)
         {
             List<Entidade_Participante> ListParticipante = new List<Entidade_Participante>();
@@ -146,10 +212,10 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("nome", Obj.nome);
                 command.Parameters.AddWithValue("cnpjcpf", Obj.cnpjcpf);
                 command.Parameters.AddWithValue("ie", Obj.ie);
-                command.Parameters.AddWithValue("razaosocial", Obj.razaosocial);
+                command.Parameters.AddWithValue("razaosocial", Obj.razaosocial.Substring(0,39));
                 command.Parameters.AddWithValue("nomefantasia", Obj.nomefantasia);
                 command.Parameters.AddWithValue("lagradouro", Obj.lagradouro);
-                command.Parameters.AddWithValue("numero_end", Obj.lagradouro);
+                command.Parameters.AddWithValue("numero_end", Obj.numero_end);
                 command.Parameters.AddWithValue("bairro", Obj.bairro);
                 command.Parameters.AddWithValue("id_uf", Obj.id_uf.id_uf);
                 command.Parameters.AddWithValue("cidade", Obj.id_cidade.id);
@@ -162,42 +228,44 @@ namespace Sdistribuidor.Model
 
                 #endregion
 
-
-                foreach (var item in LsLocalEntrega)
+                if (LsLocalEntrega != null)
                 {
-                    sb = new StringBuilder();
-                    if (item.FlExcluirLocalEntrega == false)
+                    foreach (var item in LsLocalEntrega)
                     {
-                        sb.Append(" INSERT INTO localentrega (id_participante,lagradouro,end_numero,bairro,id_uf,id_cidade,telefone,obs) " +
-                                  " VALUES " +
-                                  " (@id_participante,@lagradouro,@end_numero,@bairro,@id_uf,@id_cidade,@telefone,@obs)");
+                        sb = new StringBuilder();
+                        if (item.FlExcluirLocalEntrega == false)
+                        {
+                            sb.Append(" INSERT INTO localentrega (id_participante,lagradouro,end_numero,bairro,id_uf,id_cidade,telefone,obs) " +
+                                      " VALUES " +
+                                      " (@id_participante,@lagradouro,@end_numero,@bairro,@id_uf,@id_cidade,@telefone,@obs)");
 
 
-                        command = new NpgsqlCommand(sb.ToString(), BancoDados.conexao);
-                        command.Transaction = BeginTrans;
-                        command.CommandType = CommandType.Text;
-                        command.Parameters.AddWithValue("@id_participante", Convert.ToInt32(Id));
-                        command.Parameters.AddWithValue("@lagradouro", item.lagradouro);
-                        command.Parameters.AddWithValue("@end_numero", item.end_numero);
-                        command.Parameters.AddWithValue("@bairro", item.bairro);
-                        command.Parameters.AddWithValue("@id_uf", item.id_uf);
-                        command.Parameters.AddWithValue("@id_cidade", item.id_cidade);
-                        command.Parameters.AddWithValue("@telefone", item.telefone);
-                        command.Parameters.AddWithValue("@obs", item.obs);
+                            command = new NpgsqlCommand(sb.ToString(), BancoDados.conexao);
+                            command.Transaction = BeginTrans;
+                            command.CommandType = CommandType.Text;
+                            command.Parameters.AddWithValue("@id_participante", Convert.ToInt32(Id));
+                            command.Parameters.AddWithValue("@lagradouro", item.lagradouro);
+                            command.Parameters.AddWithValue("@end_numero", item.end_numero);
+                            command.Parameters.AddWithValue("@bairro", item.bairro);
+                            command.Parameters.AddWithValue("@id_uf", item.id_uf);
+                            command.Parameters.AddWithValue("@id_cidade", item.id_cidade);
+                            command.Parameters.AddWithValue("@telefone", item.telefone);
+                            command.Parameters.AddWithValue("@obs", item.obs);
 
-                        command.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        sb.Append("DELETE FROM localentrega WHERE id = @id AND id_participante = @id_participante");
+                            command.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            sb.Append("DELETE FROM localentrega WHERE id = @id AND id_participante = @id_participante");
 
-                        command = new NpgsqlCommand(sb.ToString(), BancoDados.conexao);
-                        command.Transaction = BeginTrans;
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@id", Convert.ToInt32(item.id));
-                        command.Parameters.AddWithValue("@id_participante", Convert.ToInt32(item.id_participante));
+                            command = new NpgsqlCommand(sb.ToString(), BancoDados.conexao);
+                            command.Transaction = BeginTrans;
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@id", Convert.ToInt32(item.id));
+                            command.Parameters.AddWithValue("@id_participante", Convert.ToInt32(item.id_participante));
 
-                        command.ExecuteNonQuery();
+                            command.ExecuteNonQuery();
+                        }
                     }
                 }
                 BeginTrans.Commit();
@@ -290,6 +358,11 @@ namespace Sdistribuidor.Model
         public bool Delete(Entidade_Participante Obj)
         {
             return true;
+        }
+
+        public bool ParticipanteExiste(string cnpj)
+        {
+            return BancoDados.CodigoExiste("SELECT id_participante FROM participante where cnpjcpf = '"+ cnpj +"'");
         }
     }
 }

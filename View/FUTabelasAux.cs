@@ -33,6 +33,7 @@ namespace Sdistribuidor.View
         {
             string i;
             string ret;
+            string MsgRetErro;
             string sLine = "";
             string[] campo = null;
             Regex re;
@@ -112,7 +113,7 @@ namespace Sdistribuidor.View
                         ObjEntCid.id_ibge = campo[0].ToString();
                         ObjEntCid.id_uf = ModUF.Pesquisa(Convert.ToInt32(campo[0].ToString().Substring(0,2)));
 
-                        var objRet = ModCidade.PesquisaCidadeIbge(ObjEntCid.id_ibge);
+                        var objRet = ModCidade.PesquisaCidadeIbge(ObjEntCid.id_ibge, out MsgRetErro);
 
                         //if (objRet == null)
                         //    ModCidade.Incluir(ObjEntCid);
