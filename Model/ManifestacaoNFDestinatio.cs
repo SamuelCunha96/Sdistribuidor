@@ -30,7 +30,7 @@ namespace Sdistribuidor.Model
                                              " else " +
                                              " '' " +
                                         " end as descsitnfe " +
-                                        " FROM itemconsultanfdest ic WHERE NOT EXISTS (SELECT * FROM itemmanifestacao im WHERE ic.chacessonfe = im.txchacessonfe)");
+                                        " FROM itemconsultanfdest ic WHERE NOT EXISTS (SELECT * FROM itemmanifestacao im WHERE ic.chacessonfe = im.txchacessonfe) AND NOT EXISTS(SELECT * FROM downloadnfe d WHERE d.txchacessonfe = ic.chacessonfe)");
         }
         public DataTable ConsultarNFDestinarioConfirmaOperacao()
         {

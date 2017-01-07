@@ -34,7 +34,7 @@ namespace Sdistribuidor.Gerais
 
 
         #region -------------- Ler Xml --------------
-        public void LerXml(string XmlNFe, out Entidade_TotaisNota _OutTotaisNota, out Entidade_NotaFiscal _OutNotaFiscal, out List<Entidade_Fatura> _ListOutFatura, out List<Entidade_ItemNFe> _LisOutItens)
+        public void LerXml(string XmlLoadPath, string XmlNFe, out Entidade_TotaisNota _OutTotaisNota, out Entidade_NotaFiscal _OutNotaFiscal, out List<Entidade_Fatura> _ListOutFatura, out List<Entidade_ItemNFe> _LisOutItens)
         {
             int j = 0;
             int d = 0;
@@ -50,7 +50,14 @@ namespace Sdistribuidor.Gerais
             _ItensNotaFiscal = new Entidade_ItemNFe();
             _ListItensNotaFiscal = new List<Entidade_ItemNFe>();
 
-            xmlDOC.LoadXml(XmlNFe);
+            if(XmlLoadPath != string.Empty)
+            {
+                xmlDOC.Load(XmlLoadPath);
+            }
+            else
+            {
+                xmlDOC.LoadXml(XmlNFe);
+            }            
 
             node = xmlDOC.DocumentElement;
 

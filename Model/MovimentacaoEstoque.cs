@@ -17,7 +17,7 @@ namespace Sdistribuidor.Model
         /// <returns></returns>
         public DataTable Pesquisa(int produto)
         {
-            return BancoDados.Consultar("SELECT * FROM vwmovimentacaoestoque WHERE id_produto =" + produto);
+            return BancoDados.Consultar("SELECT * FROM vw_movimentacaoestoque WHERE id_produto =" + produto);
         }
         public DataTable Pesquisa(DateTime DtIni, DateTime DtFim)
         {

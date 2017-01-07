@@ -176,6 +176,8 @@
             this.label35 = new System.Windows.Forms.Label();
             this.TxtUndConvDesc = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
+            this.btnXml = new System.Windows.Forms.Button();
+            this.OFDxml = new System.Windows.Forms.OpenFileDialog();
             this.tcNFEntrada.SuspendLayout();
             this.tpPendentes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1240,6 +1242,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnXml);
             this.groupBox3.Controls.Add(this.dtpEntrada);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.lblVlNFe);
@@ -1483,6 +1486,20 @@
             this.label34.TabIndex = 0;
             this.label34.Text = "Produto";
             // 
+            // btnXml
+            // 
+            this.btnXml.Location = new System.Drawing.Point(766, 12);
+            this.btnXml.Name = "btnXml";
+            this.btnXml.Size = new System.Drawing.Size(111, 29);
+            this.btnXml.TabIndex = 16;
+            this.btnXml.Text = "Selecione Xml";
+            this.btnXml.UseVisualStyleBackColor = true;
+            this.btnXml.Click += new System.EventHandler(this.btnXml_Click);
+            // 
+            // OFDxml
+            // 
+            this.OFDxml.FileName = "openFileDialog1";
+            // 
             // FMT007NotaFiscalEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1647,5 +1664,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlDesconto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlTrib;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlProdutos;
+        private System.Windows.Forms.Button btnXml;
+        private System.Windows.Forms.OpenFileDialog OFDxml;
     }
 }

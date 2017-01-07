@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Sdistribuidor.View;
 using Sdistribuidor.Model;
 using Sdistribuidor.Entidade;
+using Sdistribuidor.Relatorio;
 
 namespace Sdistribuidor
 {
@@ -28,6 +29,12 @@ namespace Sdistribuidor
 
             Entidade_GeralInformcoes.uf = DtLoja.Rows[0]["desc_uf"].ToString();
             Entidade_GeralInformcoes.TipoEmpresa = Convert.ToInt32(DtLoja.Rows[0]["tipo_regime"]);
+
+            FRImpPedido ObjForm = new FRImpPedido();
+
+            ObjForm.IdPedido = 26;
+            ObjForm.Show();
+
 
             Application.Run(new FMenu());
         }

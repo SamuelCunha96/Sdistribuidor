@@ -96,6 +96,8 @@
     <Compile Include="Control\C_ModuloGeral.cs" />
     <Compile Include="Control\ICalculos.cs" />
     <Compile Include="DAO\BancoDados.cs" />
+    <Compile Include="EntidadeView\Entidade_VwImpressaoItemPedido.cs" />
+    <Compile Include="EntidadeView\Entidade_VwImpressaoPedido.cs" />
     <Compile Include="Entidade\Entidade_CartaoBandeira.cs" />
     <Compile Include="Entidade\Entidade_Cfop.cs" />
     <Compile Include="Entidade\Entidade_Cidade.cs" />
@@ -166,6 +168,12 @@
     </Compile>
     <Compile Include="Relatorio\FRDanfe.Designer.cs">
       <DependentUpon>FRDanfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FRImpPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FRImpPedido.Designer.cs">
+      <DependentUpon>FRImpPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Uc\UCFormaPagto.cs">
       <SubType>UserControl</SubType>
@@ -316,6 +324,11 @@
     <EmbeddedResource Include="Relatorio\FRDanfe.resx">
       <DependentUpon>FRDanfe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FRImpPedido.resx">
+      <DependentUpon>FRImpPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\ImpressaoPedido.rdlc" />
+    <EmbeddedResource Include="Relatorio\RItemPedido.rdlc" />
     <EmbeddedResource Include="Uc\UCFormaPagto.resx">
       <DependentUpon>UCFormaPagto.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,8 +406,12 @@
     </EmbeddedResource>
     <None Include="DiagramaClasses.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_ItemPedido.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_NotaFiscal.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_Pedido.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_VWSaida.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VwImpressaoItemPedido.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VwImpressaoPedido.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

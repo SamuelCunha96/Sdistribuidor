@@ -94,6 +94,8 @@ namespace Sdistribuidor.Model
         {
             return null;
         }
+
+        #region INCLUIR PEDIDO
         public bool Incluir(Entidade_Pedido Obj)
         {
             BancoDados.OpenConection();
@@ -151,6 +153,8 @@ namespace Sdistribuidor.Model
                 return false;
             }
         }
+        #endregion
+
         public bool Update(Entidade_Pedido Obj)
         {
             return true;
@@ -158,6 +162,15 @@ namespace Sdistribuidor.Model
         public bool Delete(Entidade_Pedido Obj)
         {
             return true;
+        }
+
+        public DataTable View_ImpressaoPedido(int pedido)
+        {
+            return BancoDados.Consultar(" SELECT * FROM vw_impressao_pedido WHERE id_pedido=" + pedido);
+        }
+        public DataTable View_ImpressaoItemPedido(int pedido)
+        {
+            return BancoDados.Consultar(" SELECT * FROM vw_impressao_itempedido WHERE id_pedido=" + pedido);
         }
     }
 }

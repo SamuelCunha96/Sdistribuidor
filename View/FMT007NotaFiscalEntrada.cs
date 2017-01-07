@@ -46,6 +46,13 @@ namespace Sdistribuidor.View
         private void FMT007NotaFiscalEntrada_Load(object sender, EventArgs e)
         {
             ObjNFEntada = new NotaFiscalEntrada();
+            ObjDownloadNFe = new DownloadNFe();
+            ObjXmlNFeEntrada = new XmlNFeEntrada();
+            ObjTotaisNF = new Entidade_TotaisNota();
+            ObjNotaFiscal = new Entidade_NotaFiscal();
+            ObjListFatura = new List<Entidade_Fatura>();
+            ObjListItemNFe = new List<Entidade_ItemNFe>();
+
             grdNFSemEntrada.DataSource = ObjNFEntada.ConsultaNFeSemEntrada(dtpIni.Value, dtpFim.Value);
         }
 
@@ -76,7 +83,7 @@ namespace Sdistribuidor.View
                     if (FlRetNFe)
                     {
                         LimpaCampos();
-                        CarregarDadosXml(XmlNFeRet);
+                        CarregarDadosXml(string.Empty,XmlNFeRet);
                     }
                 }
                 else
@@ -90,11 +97,11 @@ namespace Sdistribuidor.View
             }
         }
 
-        void CarregarDadosXml(string XmlNFe)
+        void CarregarDadosXml(string PathXml,string XmlNFe)
         {
             ObjNFEntada = new NotaFiscalEntrada();
             ObjParticipante = new Participante();
-            ObjXmlNFeEntrada.LerXml(XmlNFe, out ObjTotaisNF, out ObjNotaFiscal, out ObjListFatura, out ObjListItemNFe);
+            ObjXmlNFeEntrada.LerXml(PathXml, XmlNFe, out ObjTotaisNF, out ObjNotaFiscal, out ObjListFatura, out ObjListItemNFe);
 
             bool FlParticipanteExiste = false;
             bool FlNfExiste = false;
@@ -589,6 +596,15 @@ namespace Sdistribuidor.View
         {
             ObjNFEntada = new NotaFiscalEntrada();
             grdNFSemEntrada.DataSource = ObjNFEntada.ConsultaNFeSemEntrada(dtpIni.Value, dtpFim.Value);
+        }
+
+        private void btnXml_Click(object sender, EventArgs e)
+        {
+            LimpaCampos();
+            if (OFDxml.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                CarregarDadosXml(OFDxml.FileName,string.Empty);
+            }
         }
     }
 }

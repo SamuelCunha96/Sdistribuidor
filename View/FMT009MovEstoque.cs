@@ -45,5 +45,10 @@ namespace Sdistribuidor.View
             pnlData.Visible = true;
             pnlProduto.Visible = false;
         }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

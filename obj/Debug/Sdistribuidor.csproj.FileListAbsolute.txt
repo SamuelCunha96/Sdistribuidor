@@ -206,6 +206,9 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\DevExpress.XtraGauges.v15
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\DevExpress.XtraPrinting.v15.1.dll
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\DevExpress.XtraReports.v15.1.dll
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\DevExpress.XtraReports.v15.1.Extensions.dll
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.Design.dll
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.dll
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\npgsql.dll
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\System.Windows.Forms.Ribbon35.dll
@@ -356,6 +359,7 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\ja\DevExpress.XtraGrid.v1
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\ru\DevExpress.XtraGrid.v15.1.resources.dll
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.DanfeNfeNew.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FRDanfe.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FRImpPedido.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Uc.UCFormaPagto.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Uc.UCGrupo.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.UC.UCUfCidade.resources
@@ -373,6 +377,10 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT002
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT003NotaFiscal.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT004NotaFiscalDev.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT005OperancaoNFe.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT006Manifestacao.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT007NotaFiscalEntrada.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT008SpedFiscal.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT009MovEstoque.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FP001Produto.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FUTabelasAux.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.csproj.GenerateResource.Cache
@@ -382,10 +390,3 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\RdlCompile.compiled
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.exe
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.pdb
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.csprojResolveAssemblyReference.cache
-C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT006Manifestacao.resources
-C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT007NotaFiscalEntrada.resources
-C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.Design.dll
-C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.dll
-C:\Users\dp\Documents\Sistemas\Sdistribuidor\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT008SpedFiscal.resources
-C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT009MovEstoque.resources

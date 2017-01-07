@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.rbProduto = new MetroFramework.Controls.MetroRadioButton();
-            this.rbData = new MetroFramework.Controls.MetroRadioButton();
+            this.btnConsultar = new MetroFramework.Controls.MetroButton();
+            this.pnlProduto = new MetroFramework.Controls.MetroPanel();
+            this.txtProduto = new MetroFramework.Controls.MetroTextBox();
             this.pnlData = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.dtpIni = new MetroFramework.Controls.MetroDateTime();
             this.dtpFim = new MetroFramework.Controls.MetroDateTime();
-            this.pnlProduto = new MetroFramework.Controls.MetroPanel();
-            this.txtProduto = new MetroFramework.Controls.MetroTextBox();
-            this.btnConsultar = new MetroFramework.Controls.MetroButton();
+            this.rbData = new MetroFramework.Controls.MetroRadioButton();
+            this.rbProduto = new MetroFramework.Controls.MetroRadioButton();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.grdMovEstoque = new MetroFramework.Controls.MetroGrid();
             this.ColProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDtMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTipoMovimentacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColQtMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColObs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroPanel1.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
-            this.pnlData.SuspendLayout();
             this.pnlProduto.SuspendLayout();
+            this.pnlData.SuspendLayout();
+            this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMovEstoque)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,94 +69,22 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(641, 61);
+            this.metroPanel1.Size = new System.Drawing.Size(775, 61);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
-            // metroPanel2
+            // btnConsultar
             // 
-            this.metroPanel2.Controls.Add(this.grdMovEstoque);
-            this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(20, 121);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(641, 309);
-            this.metroPanel2.TabIndex = 1;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // rbProduto
-            // 
-            this.rbProduto.AutoSize = true;
-            this.rbProduto.Checked = true;
-            this.rbProduto.Location = new System.Drawing.Point(3, 3);
-            this.rbProduto.Name = "rbProduto";
-            this.rbProduto.Size = new System.Drawing.Size(66, 15);
-            this.rbProduto.TabIndex = 2;
-            this.rbProduto.TabStop = true;
-            this.rbProduto.Text = "Produto";
-            this.rbProduto.UseSelectable = true;
-            this.rbProduto.Click += new System.EventHandler(this.rbProduto_Click);
-            // 
-            // rbData
-            // 
-            this.rbData.AutoSize = true;
-            this.rbData.Location = new System.Drawing.Point(75, 3);
-            this.rbData.Name = "rbData";
-            this.rbData.Size = new System.Drawing.Size(47, 15);
-            this.rbData.TabIndex = 3;
-            this.rbData.Text = "Data";
-            this.rbData.UseSelectable = true;
-            this.rbData.Click += new System.EventHandler(this.rbData_Click);
-            // 
-            // pnlData
-            // 
-            this.pnlData.Controls.Add(this.metroLabel1);
-            this.pnlData.Controls.Add(this.dtpIni);
-            this.pnlData.Controls.Add(this.dtpFim);
-            this.pnlData.HorizontalScrollbarBarColor = true;
-            this.pnlData.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlData.HorizontalScrollbarSize = 10;
-            this.pnlData.Location = new System.Drawing.Point(5, 20);
-            this.pnlData.Name = "pnlData";
-            this.pnlData.Size = new System.Drawing.Size(267, 36);
-            this.pnlData.TabIndex = 5;
-            this.pnlData.VerticalScrollbarBarColor = true;
-            this.pnlData.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlData.VerticalScrollbarSize = 10;
-            this.pnlData.Visible = false;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(117, 14);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(27, 19);
-            this.metroLabel1.TabIndex = 9;
-            this.metroLabel1.Text = "ate";
-            // 
-            // dtpIni
-            // 
-            this.dtpIni.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpIni.Location = new System.Drawing.Point(6, 4);
-            this.dtpIni.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtpIni.Name = "dtpIni";
-            this.dtpIni.Size = new System.Drawing.Size(105, 29);
-            this.dtpIni.TabIndex = 7;
-            // 
-            // dtpFim
-            // 
-            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFim.Location = new System.Drawing.Point(150, 4);
-            this.dtpFim.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtpFim.Name = "dtpFim";
-            this.dtpFim.Size = new System.Drawing.Size(107, 29);
-            this.dtpFim.TabIndex = 8;
+            this.btnConsultar.Location = new System.Drawing.Point(682, 25);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(85, 31);
+            this.btnConsultar.TabIndex = 7;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseSelectable = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pnlProduto
             // 
@@ -202,15 +131,88 @@
             this.txtProduto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtProduto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btnConsultar
+            // pnlData
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(553, 25);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(85, 31);
-            this.btnConsultar.TabIndex = 7;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseSelectable = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            this.pnlData.Controls.Add(this.metroLabel1);
+            this.pnlData.Controls.Add(this.dtpIni);
+            this.pnlData.Controls.Add(this.dtpFim);
+            this.pnlData.HorizontalScrollbarBarColor = true;
+            this.pnlData.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlData.HorizontalScrollbarSize = 10;
+            this.pnlData.Location = new System.Drawing.Point(5, 20);
+            this.pnlData.Name = "pnlData";
+            this.pnlData.Size = new System.Drawing.Size(267, 36);
+            this.pnlData.TabIndex = 5;
+            this.pnlData.VerticalScrollbarBarColor = true;
+            this.pnlData.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlData.VerticalScrollbarSize = 10;
+            this.pnlData.Visible = false;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(117, 14);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(27, 19);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "ate";
+            // 
+            // dtpIni
+            // 
+            this.dtpIni.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpIni.Location = new System.Drawing.Point(6, 4);
+            this.dtpIni.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpIni.Name = "dtpIni";
+            this.dtpIni.Size = new System.Drawing.Size(105, 29);
+            this.dtpIni.TabIndex = 7;
+            // 
+            // dtpFim
+            // 
+            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFim.Location = new System.Drawing.Point(150, 4);
+            this.dtpFim.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpFim.Name = "dtpFim";
+            this.dtpFim.Size = new System.Drawing.Size(107, 29);
+            this.dtpFim.TabIndex = 8;
+            // 
+            // rbData
+            // 
+            this.rbData.AutoSize = true;
+            this.rbData.Location = new System.Drawing.Point(75, 3);
+            this.rbData.Name = "rbData";
+            this.rbData.Size = new System.Drawing.Size(47, 15);
+            this.rbData.TabIndex = 3;
+            this.rbData.Text = "Data";
+            this.rbData.UseSelectable = true;
+            this.rbData.Click += new System.EventHandler(this.rbData_Click);
+            // 
+            // rbProduto
+            // 
+            this.rbProduto.AutoSize = true;
+            this.rbProduto.Checked = true;
+            this.rbProduto.Location = new System.Drawing.Point(3, 3);
+            this.rbProduto.Name = "rbProduto";
+            this.rbProduto.Size = new System.Drawing.Size(66, 15);
+            this.rbProduto.TabIndex = 2;
+            this.rbProduto.TabStop = true;
+            this.rbProduto.Text = "Produto";
+            this.rbProduto.UseSelectable = true;
+            this.rbProduto.Click += new System.EventHandler(this.rbProduto_Click);
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.Controls.Add(this.grdMovEstoque);
+            this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(20, 121);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(775, 309);
+            this.metroPanel2.TabIndex = 1;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
             // 
             // grdMovEstoque
             // 
@@ -221,28 +223,29 @@
             this.grdMovEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdMovEstoque.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdMovEstoque.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMovEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMovEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdMovEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdMovEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColProduto,
             this.ColDtMov,
             this.ColTipoMovimentacao,
-            this.ColQtMov});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdMovEstoque.DefaultCellStyle = dataGridViewCellStyle11;
+            this.ColQtMov,
+            this.ColObs});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdMovEstoque.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdMovEstoque.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMovEstoque.EnableHeadersVisualStyles = false;
             this.grdMovEstoque.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -251,17 +254,17 @@
             this.grdMovEstoque.Name = "grdMovEstoque";
             this.grdMovEstoque.ReadOnly = true;
             this.grdMovEstoque.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMovEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMovEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdMovEstoque.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdMovEstoque.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdMovEstoque.Size = new System.Drawing.Size(641, 309);
+            this.grdMovEstoque.Size = new System.Drawing.Size(775, 309);
             this.grdMovEstoque.TabIndex = 2;
             // 
             // ColProduto
@@ -274,7 +277,7 @@
             // 
             // ColDtMov
             // 
-            this.ColDtMov.DataPropertyName = "qtmovimentada";
+            this.ColDtMov.DataPropertyName = "dtmovimentacao";
             this.ColDtMov.HeaderText = "Dt. Mov.";
             this.ColDtMov.Name = "ColDtMov";
             this.ColDtMov.ReadOnly = true;
@@ -289,28 +292,36 @@
             // ColQtMov
             // 
             this.ColQtMov.DataPropertyName = "qtmovimentada";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "n2";
-            this.ColQtMov.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "n2";
+            this.ColQtMov.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColQtMov.HeaderText = "Qt. Mov.";
             this.ColQtMov.Name = "ColQtMov";
             this.ColQtMov.ReadOnly = true;
+            // 
+            // ColObs
+            // 
+            this.ColObs.DataPropertyName = "obsmovimentacao";
+            this.ColObs.HeaderText = "Obs.";
+            this.ColObs.Name = "ColObs";
+            this.ColObs.ReadOnly = true;
+            this.ColObs.Width = 400;
             // 
             // FMT009MovEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 450);
+            this.ClientSize = new System.Drawing.Size(815, 450);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Name = "FMT009MovEstoque";
             this.Text = "Movimentação  de Estoque";
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
+            this.pnlProduto.ResumeLayout(false);
             this.pnlData.ResumeLayout(false);
             this.pnlData.PerformLayout();
-            this.pnlProduto.ResumeLayout(false);
+            this.metroPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMovEstoque)).EndInit();
             this.ResumeLayout(false);
 
@@ -334,5 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDtMov;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTipoMovimentacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColQtMov;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColObs;
     }
 }
