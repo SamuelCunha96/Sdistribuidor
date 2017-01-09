@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tpProduto = new System.Windows.Forms.TabPage();
+            this.tcCadProd = new System.Windows.Forms.TabControl();
+            this.tpCad = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TxtFatorConv = new System.Windows.Forms.TextBox();
             this.BtnAdd = new System.Windows.Forms.Button();
@@ -79,8 +79,8 @@
             this.tpPesquisa.SuspendLayout();
             this.tpDados.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tpProduto.SuspendLayout();
+            this.tcCadProd.SuspendLayout();
+            this.tpCad.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdUnidConv)).BeginInit();
             this.tpTributacao.SuspendLayout();
@@ -116,12 +116,12 @@
             // 
             // tpDados
             // 
-            this.tpDados.Controls.Add(this.tabControl1);
+            this.tpDados.Controls.Add(this.tcCadProd);
             this.tpDados.Size = new System.Drawing.Size(645, 387);
             this.tpDados.Controls.SetChildIndex(this.BtnSalvar, 0);
             this.tpDados.Controls.SetChildIndex(this.BtnExcluir, 0);
             this.tpDados.Controls.SetChildIndex(this.BtnCancelar, 0);
-            this.tpDados.Controls.SetChildIndex(this.tabControl1, 0);
+            this.tpDados.Controls.SetChildIndex(this.tcCadProd, 0);
             // 
             // groupBox2
             // 
@@ -144,45 +144,45 @@
             this.textBox3.Text = "0,00";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tabControl1
+            // tcCadProd
             // 
-            this.tabControl1.Controls.Add(this.tpProduto);
-            this.tabControl1.Controls.Add(this.tpTributacao);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(639, 344);
-            this.tabControl1.TabIndex = 11;
+            this.tcCadProd.Controls.Add(this.tpCad);
+            this.tcCadProd.Controls.Add(this.tpTributacao);
+            this.tcCadProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tcCadProd.Location = new System.Drawing.Point(3, 3);
+            this.tcCadProd.Name = "tcCadProd";
+            this.tcCadProd.SelectedIndex = 0;
+            this.tcCadProd.Size = new System.Drawing.Size(639, 344);
+            this.tcCadProd.TabIndex = 11;
             // 
-            // tpProduto
+            // tpCad
             // 
-            this.tpProduto.Controls.Add(this.groupBox3);
-            this.tpProduto.Controls.Add(this.TxtCodigoRef);
-            this.tpProduto.Controls.Add(this.label7);
-            this.tpProduto.Controls.Add(this.ucUnidade1);
-            this.tpProduto.Controls.Add(this.ucGrupo1);
-            this.tpProduto.Controls.Add(this.TxtPrecoFin);
-            this.tpProduto.Controls.Add(this.TxtPrecoRest);
-            this.tpProduto.Controls.Add(this.TxtPesoItem);
-            this.tpProduto.Controls.Add(this.TxtNCM);
-            this.tpProduto.Controls.Add(this.txtDescProd);
-            this.tpProduto.Controls.Add(this.txtID);
-            this.tpProduto.Controls.Add(this.label9);
-            this.tpProduto.Controls.Add(this.label8);
-            this.tpProduto.Controls.Add(this.label6);
-            this.tpProduto.Controls.Add(this.label4);
-            this.tpProduto.Controls.Add(this.label3);
-            this.tpProduto.Controls.Add(this.label2);
-            this.tpProduto.Controls.Add(this.TxtVlPreco);
-            this.tpProduto.Controls.Add(this.label5);
-            this.tpProduto.Location = new System.Drawing.Point(4, 22);
-            this.tpProduto.Name = "tpProduto";
-            this.tpProduto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProduto.Size = new System.Drawing.Size(631, 318);
-            this.tpProduto.TabIndex = 0;
-            this.tpProduto.Text = "Produto";
-            this.tpProduto.UseVisualStyleBackColor = true;
+            this.tpCad.Controls.Add(this.groupBox3);
+            this.tpCad.Controls.Add(this.TxtCodigoRef);
+            this.tpCad.Controls.Add(this.label7);
+            this.tpCad.Controls.Add(this.ucUnidade1);
+            this.tpCad.Controls.Add(this.ucGrupo1);
+            this.tpCad.Controls.Add(this.TxtPrecoFin);
+            this.tpCad.Controls.Add(this.TxtPrecoRest);
+            this.tpCad.Controls.Add(this.TxtPesoItem);
+            this.tpCad.Controls.Add(this.TxtNCM);
+            this.tpCad.Controls.Add(this.txtDescProd);
+            this.tpCad.Controls.Add(this.txtID);
+            this.tpCad.Controls.Add(this.label9);
+            this.tpCad.Controls.Add(this.label8);
+            this.tpCad.Controls.Add(this.label6);
+            this.tpCad.Controls.Add(this.label4);
+            this.tpCad.Controls.Add(this.label3);
+            this.tpCad.Controls.Add(this.label2);
+            this.tpCad.Controls.Add(this.TxtVlPreco);
+            this.tpCad.Controls.Add(this.label5);
+            this.tpCad.Location = new System.Drawing.Point(4, 22);
+            this.tpCad.Name = "tpCad";
+            this.tpCad.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCad.Size = new System.Drawing.Size(631, 318);
+            this.tpCad.TabIndex = 0;
+            this.tpCad.Text = "Produto";
+            this.tpCad.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -631,9 +631,9 @@
             this.tpDados.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tpProduto.ResumeLayout(false);
-            this.tpProduto.PerformLayout();
+            this.tcCadProd.ResumeLayout(false);
+            this.tpCad.ResumeLayout(false);
+            this.tpCad.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdUnidConv)).EndInit();
@@ -646,8 +646,8 @@
         #endregion
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tpProduto;
+        private System.Windows.Forms.TabControl tcCadProd;
+        private System.Windows.Forms.TabPage tpCad;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox TxtFatorConv;
         private System.Windows.Forms.Button BtnAdd;

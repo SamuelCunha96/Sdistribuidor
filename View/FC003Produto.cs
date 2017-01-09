@@ -57,6 +57,48 @@ namespace Sdistribuidor.View
                 MessageBox.Show("Selecione uma unidade.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
+            else if (CboIcms.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione o cst de icms.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tcCadProd.SelectTab(tpTributacao);
+                CboIcms.Focus();
+                return false;
+            }
+            else if (CboIpi.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione o cst de ipi.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tcCadProd.SelectTab(tpTributacao);
+                CboIpi.Focus();
+                return false;
+            }
+            else if (CboCofins.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione o cst de Cofins.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tcCadProd.SelectTab(tpTributacao);
+                CboCofins.Focus();
+                return false;
+            }
+            else if (CboPis.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione o cst de Pis.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tcCadProd.SelectTab(tpTributacao);
+                CboPis.Focus();
+                return false;
+            }
+            else if (CboCfopInterno.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione o Cfop Interno.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tcCadProd.SelectTab(tpTributacao);
+                CboCfopInterno.Focus();
+                return false;
+            }
+            else if (CboCfopExterno.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione o Cfop Externo.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tcCadProd.SelectTab(tpTributacao);
+                CboCfopExterno.Focus();
+                return false;
+            }
             else
                 return true;
         }
@@ -177,7 +219,6 @@ namespace Sdistribuidor.View
             var obj = ModProdutos.Pesquisa();
             grdBase.AutoGenerateColumns = false;
             grdBase.DataSource = obj;
-
 
             cboUnidConv.DisplayMember = "CdUnidade";
             cboUnidConv.ValueMember = "CdUnidade";

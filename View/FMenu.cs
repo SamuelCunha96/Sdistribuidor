@@ -121,5 +121,12 @@ namespace Sdistribuidor.View
             ObjMovEstoque.Show();
 
         }
+
+        private void btnMovEstoque_Click(object sender, EventArgs e)
+        {
+            FMT010TransacaoMovEstoque ObjTransMovEstoque = new FMT010TransacaoMovEstoque();
+            ObjTransMovEstoque.MdiParent = this;
+            ObjTransMovEstoque.Show();
+        }
     }
 }

@@ -37,7 +37,7 @@
             this.rvPedido.LocalReport.ReportEmbeddedResource = "Sdistribuidor.Relatorio.ImpressaoPedido.rdlc";
             this.rvPedido.Location = new System.Drawing.Point(0, 0);
             this.rvPedido.Name = "rvPedido";
-            this.rvPedido.Size = new System.Drawing.Size(812, 261);
+            this.rvPedido.Size = new System.Drawing.Size(812, 513);
             this.rvPedido.TabIndex = 0;
             this.rvPedido.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -45,10 +45,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 261);
+            this.ClientSize = new System.Drawing.Size(812, 513);
             this.Controls.Add(this.rvPedido);
             this.Name = "FRImpPedido";
             this.Text = "Imprimir Pedido";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRImpPedido_FormClosing);
             this.Load += new System.EventHandler(this.FRImpPedido_Load);
             this.ResumeLayout(false);
 

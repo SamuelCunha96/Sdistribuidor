@@ -41,6 +41,7 @@ namespace Sdistribuidor.View
                         if (Salvar())
                         {
                             MessageBox.Show("Dados Salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            grdBase.Rows.Clear();
                             LimpaCampos();
                             tcBase.SelectedTab = tpPesquisa;
                             PreencherCamposDados();
@@ -50,12 +51,15 @@ namespace Sdistribuidor.View
             else
             {
                 if (MessageBox.Show("Deseja alterar os dados?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                    if (Editar())
+                    if (ValidaCampos())
                     {
-                        MessageBox.Show("Dados Salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        LimpaCampos();
-                        tcBase.SelectedTab = tpPesquisa;
-                        PreencherCamposDados();
+                        if (Editar())
+                        {
+                            MessageBox.Show("Dados Salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            LimpaCampos();
+                            tcBase.SelectedTab = tpPesquisa;
+                            PreencherCamposDados();
+                        }
                     }
             }
         }
@@ -66,6 +70,7 @@ namespace Sdistribuidor.View
                 if (Excluir())
                 {
                     MessageBox.Show("Dados excluidos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    grdBase.Rows.Clear();
                     LimpaCampos();
                     tcBase.SelectedTab = tpPesquisa;
                     PreencherCamposDados();

@@ -224,6 +224,10 @@ namespace Sdistribuidor.View
                 {
                     MessageBox.Show("Nota Fiscal gerada com sucesso!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else
+                {
+                    MessageBox.Show("Erro ao incluir a Nota Fiscal!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -257,8 +261,14 @@ namespace Sdistribuidor.View
                 if (mNotaFiscal.Salvar(EntNotaFiscal))
                 {
                     MessageBox.Show("Nota Fiscal: " + EntNotaFiscal.serienf + "-" + EntNotaFiscal.nrnf +" gerada com sucesso","Atenção",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    LimpaCampos();
+                    tbNotaFiscal.SelectTab(tbPgListNotaFiscal);
+                    return true;
                 }
-                return true;
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -266,6 +276,39 @@ namespace Sdistribuidor.View
             }
         }
 
+        void LimpaCampos()
+        {
+            lblVlTotal.Text = "0,00";
+            lblVlBaseICms.Text = "0,00";
+            lblVlIcms.Text = "0,00";
+            lblVlBaseIcmsSub.Text = "0,00";
+            lblVlIcmsSub.Text = "0,00";
+            lblVlOutDesp.Text = "0,00";
+            lblVlFrete.Text = "0,00";
+            lblVlSeguro.Text = "0,00";
+            TxtInfFisco.Text = "0,00";
+            TxtInfContribuinte.Text = "0,00";
+            lblNumeroPedido.Text = "0,00";
+            //Cliente
+            lblCliente.Text = string.Empty;
+            lblEndereco.Text = string.Empty;
+            lblBairro.Text = string.Empty;
+            lblCidade.Text = string.Empty;
+            lblEstado.Text = string.Empty;
+
+            lblNumeroPedido.Text = string.Empty;
+            lblData.Text = string.Empty;
+            lblFormPagto.Text = string.Empty;
+            lblValorPedido.Text = string.Empty;
+            //Local de Entrega
+            lblEntregaCliente.Text = string.Empty;
+            lblLocalEnd.Text = string.Empty;
+            LblLocalBairro.Text = string.Empty;
+            LblLocalEstado.Text = string.Empty;
+            LblLocalCidade.Text = string.Empty;
+
+
+        }
         bool ValidaSalvar()
         {
             if (lblNumeroPedido.Text == string.Empty)

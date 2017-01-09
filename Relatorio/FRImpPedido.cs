@@ -50,5 +50,10 @@ namespace Sdistribuidor.Relatorio
         {
 
         }
+
+        private void FRImpPedido_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
     }
 }

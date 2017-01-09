@@ -599,11 +599,23 @@ namespace Sdistribuidor.Gerais
                         _ItensNotaFiscal.vlAliqPis = Convert.ToDecimal(tribPis[i, 2].ToString().Replace(".", ","));
                         _ItensNotaFiscal.vlPis = Convert.ToDecimal(tribPis[i, 3].ToString().Replace(".", ","));
                     }
+                    else
+                    {
+                        _ItensNotaFiscal.pis = "08";
+                        _ItensNotaFiscal.vlAliqPis = 0;
+                        _ItensNotaFiscal.vlPis = 0;
+                    }
                     if (tribConfis[i, 0] != null)
                     {
                         _ItensNotaFiscal.cofins = tribConfis[i, 0];
                         _ItensNotaFiscal.vlAliqCofins = Convert.ToDecimal(tribConfis[i, 2].ToString().Replace(".", ","));
                         _ItensNotaFiscal.vlCofins = Convert.ToDecimal(tribConfis[i, 3].ToString().Replace(".", ","));
+                    }
+                    else
+                    {
+                        _ItensNotaFiscal.cofins = "08";
+                        _ItensNotaFiscal.vlAliqCofins = 0;
+                        _ItensNotaFiscal.vlCofins = 0;
                     }
 
                     //_ItensNotaFiscal.CdItem = 0;

@@ -111,6 +111,43 @@
             this.txtObs = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.grdProdutoNFe = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.lblFaturas = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblEmitUf = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblEmitIE = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblEmitNomeRazao = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblEmitCnpjCpf = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnXml = new System.Windows.Forms.Button();
+            this.dtpEntrada = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblVlNFe = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblDtEmissao = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblDocumento = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblSerie = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblModeloNFe = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.gbCadUnidConversao = new System.Windows.Forms.GroupBox();
+            this.btnConfirmaFator = new System.Windows.Forms.Button();
+            this.TxtUndConvFator = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.TxtUndConvEmit = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.TxtUndConvPadrao = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.TxtUndConvDesc = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.OFDxml = new System.Windows.Forms.OpenFileDialog();
             this.ColCodProdEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDescProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,43 +178,6 @@
             this.ColVlDesconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlTrib = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVlProdutos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.lblFaturas = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblEmitUf = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblEmitIE = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEmitNomeRazao = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblEmitCnpjCpf = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dtpEntrada = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblVlNFe = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblDtEmissao = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblDocumento = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblSerie = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblModeloNFe = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.gbCadUnidConversao = new System.Windows.Forms.GroupBox();
-            this.btnConfirmaFator = new System.Windows.Forms.Button();
-            this.TxtUndConvFator = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.TxtUndConvEmit = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.TxtUndConvPadrao = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.TxtUndConvDesc = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.btnXml = new System.Windows.Forms.Button();
-            this.OFDxml = new System.Windows.Forms.OpenFileDialog();
             this.tcNFEntrada.SuspendLayout();
             this.tpPendentes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -828,286 +828,6 @@
             this.grdProdutoNFe.TabIndex = 0;
             this.grdProdutoNFe.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProdutoNFe_CellEndEdit);
             // 
-            // ColCodProdEmpresa
-            // 
-            this.ColCodProdEmpresa.HeaderText = "Cod. Emp.";
-            this.ColCodProdEmpresa.Name = "ColCodProdEmpresa";
-            this.ColCodProdEmpresa.Width = 80;
-            // 
-            // ColCodProd
-            // 
-            this.ColCodProd.HeaderText = "Cod. Emit.";
-            this.ColCodProd.Name = "ColCodProd";
-            this.ColCodProd.ReadOnly = true;
-            this.ColCodProd.Width = 80;
-            // 
-            // ColDescProd
-            // 
-            this.ColDescProd.HeaderText = "Desc. Produto";
-            this.ColDescProd.Name = "ColDescProd";
-            this.ColDescProd.ReadOnly = true;
-            this.ColDescProd.Width = 300;
-            // 
-            // ColUnid
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColUnid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColUnid.HeaderText = "Und. Emit.";
-            this.ColUnid.Name = "ColUnid";
-            this.ColUnid.ReadOnly = true;
-            this.ColUnid.Width = 80;
-            // 
-            // ColUnidEmpr
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColUnidEmpr.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColUnidEmpr.HeaderText = "Unid. Emp.";
-            this.ColUnidEmpr.Name = "ColUnidEmpr";
-            this.ColUnidEmpr.ReadOnly = true;
-            this.ColUnidEmpr.Width = 80;
-            // 
-            // ColQtEmit
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ColQtEmit.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ColQtEmit.HeaderText = "Qtd. Emit.";
-            this.ColQtEmit.Name = "ColQtEmit";
-            this.ColQtEmit.ReadOnly = true;
-            this.ColQtEmit.Width = 80;
-            // 
-            // ColQtEmp
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            this.ColQtEmp.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ColQtEmp.HeaderText = "Qtd. Emp.";
-            this.ColQtEmp.Name = "ColQtEmp";
-            this.ColQtEmp.ReadOnly = true;
-            this.ColQtEmp.Width = 80;
-            // 
-            // ColVlUnit
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N2";
-            this.ColVlUnit.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ColVlUnit.HeaderText = "Vl. Unit.";
-            this.ColVlUnit.Name = "ColVlUnit";
-            this.ColVlUnit.ReadOnly = true;
-            this.ColVlUnit.Width = 80;
-            // 
-            // ColCFOP
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColCFOP.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ColCFOP.HeaderText = "Cfop";
-            this.ColCFOP.Name = "ColCFOP";
-            this.ColCFOP.Width = 80;
-            // 
-            // ColCstIcms
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColCstIcms.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ColCstIcms.HeaderText = "Cst Icms";
-            this.ColCstIcms.Name = "ColCstIcms";
-            this.ColCstIcms.ReadOnly = true;
-            this.ColCstIcms.Width = 75;
-            // 
-            // ColAliqIcms
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N2";
-            this.ColAliqIcms.DefaultCellStyle = dataGridViewCellStyle9;
-            this.ColAliqIcms.HeaderText = "Aliq. Icms";
-            this.ColAliqIcms.Name = "ColAliqIcms";
-            this.ColAliqIcms.ReadOnly = true;
-            this.ColAliqIcms.Width = 80;
-            // 
-            // ColVlBaseIcms
-            // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "N2";
-            this.ColVlBaseIcms.DefaultCellStyle = dataGridViewCellStyle10;
-            this.ColVlBaseIcms.HeaderText = "Vl. BC. Icms";
-            this.ColVlBaseIcms.Name = "ColVlBaseIcms";
-            this.ColVlBaseIcms.ReadOnly = true;
-            this.ColVlBaseIcms.Width = 85;
-            // 
-            // ColVlIcms
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N2";
-            this.ColVlIcms.DefaultCellStyle = dataGridViewCellStyle11;
-            this.ColVlIcms.HeaderText = "Vl. Icms";
-            this.ColVlIcms.Name = "ColVlIcms";
-            this.ColVlIcms.ReadOnly = true;
-            // 
-            // ColVlBaseIcmsSub
-            // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "N2";
-            this.ColVlBaseIcmsSub.DefaultCellStyle = dataGridViewCellStyle12;
-            this.ColVlBaseIcmsSub.HeaderText = "Vl. BC. Sub";
-            this.ColVlBaseIcmsSub.Name = "ColVlBaseIcmsSub";
-            this.ColVlBaseIcmsSub.ReadOnly = true;
-            this.ColVlBaseIcmsSub.Width = 85;
-            // 
-            // ColVlIcmsSub
-            // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "N2";
-            this.ColVlIcmsSub.DefaultCellStyle = dataGridViewCellStyle13;
-            this.ColVlIcmsSub.HeaderText = "Vl. Icms. Sub";
-            this.ColVlIcmsSub.Name = "ColVlIcmsSub";
-            this.ColVlIcmsSub.ReadOnly = true;
-            this.ColVlIcmsSub.Width = 90;
-            // 
-            // ColCstIpi
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColCstIpi.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ColCstIpi.HeaderText = "Cst Ipi";
-            this.ColCstIpi.Name = "ColCstIpi";
-            this.ColCstIpi.ReadOnly = true;
-            this.ColCstIpi.Width = 70;
-            // 
-            // ColAliqVlIpi
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "N2";
-            this.ColAliqVlIpi.DefaultCellStyle = dataGridViewCellStyle15;
-            this.ColAliqVlIpi.HeaderText = "Aliq. Ipi";
-            this.ColAliqVlIpi.Name = "ColAliqVlIpi";
-            this.ColAliqVlIpi.ReadOnly = true;
-            this.ColAliqVlIpi.Width = 80;
-            // 
-            // ColVlIpi
-            // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N2";
-            this.ColVlIpi.DefaultCellStyle = dataGridViewCellStyle16;
-            this.ColVlIpi.HeaderText = "VlIpi";
-            this.ColVlIpi.Name = "ColVlIpi";
-            this.ColVlIpi.ReadOnly = true;
-            this.ColVlIpi.Width = 80;
-            // 
-            // ColCstPis
-            // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColCstPis.DefaultCellStyle = dataGridViewCellStyle17;
-            this.ColCstPis.HeaderText = "Cst Pis";
-            this.ColCstPis.Name = "ColCstPis";
-            this.ColCstPis.ReadOnly = true;
-            this.ColCstPis.Width = 70;
-            // 
-            // ColAliqPis
-            // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle18.Format = "N2";
-            this.ColAliqPis.DefaultCellStyle = dataGridViewCellStyle18;
-            this.ColAliqPis.HeaderText = "Aliq. Pis";
-            this.ColAliqPis.Name = "ColAliqPis";
-            this.ColAliqPis.ReadOnly = true;
-            this.ColAliqPis.Width = 80;
-            // 
-            // ColVlPis
-            // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.Format = "N2";
-            this.ColVlPis.DefaultCellStyle = dataGridViewCellStyle19;
-            this.ColVlPis.HeaderText = "Vl. Pis";
-            this.ColVlPis.Name = "ColVlPis";
-            this.ColVlPis.ReadOnly = true;
-            this.ColVlPis.Width = 80;
-            // 
-            // ColCstCofins
-            // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColCstCofins.DefaultCellStyle = dataGridViewCellStyle20;
-            this.ColCstCofins.HeaderText = "Cst Cofins";
-            this.ColCstCofins.Name = "ColCstCofins";
-            this.ColCstCofins.ReadOnly = true;
-            this.ColCstCofins.Width = 70;
-            // 
-            // ColAliqCofins
-            // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.Format = "N2";
-            this.ColAliqCofins.DefaultCellStyle = dataGridViewCellStyle21;
-            this.ColAliqCofins.HeaderText = "Aliq. Cofins";
-            this.ColAliqCofins.Name = "ColAliqCofins";
-            this.ColAliqCofins.ReadOnly = true;
-            this.ColAliqCofins.Width = 90;
-            // 
-            // ColVlCofins
-            // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle22.Format = "N2";
-            this.ColVlCofins.DefaultCellStyle = dataGridViewCellStyle22;
-            this.ColVlCofins.HeaderText = "Vl. Cofins";
-            this.ColVlCofins.Name = "ColVlCofins";
-            this.ColVlCofins.ReadOnly = true;
-            this.ColVlCofins.Width = 80;
-            // 
-            // ColVlOutras
-            // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle23.Format = "N2";
-            this.ColVlOutras.DefaultCellStyle = dataGridViewCellStyle23;
-            this.ColVlOutras.HeaderText = "Vl. Outras";
-            this.ColVlOutras.Name = "ColVlOutras";
-            this.ColVlOutras.ReadOnly = true;
-            this.ColVlOutras.Width = 80;
-            // 
-            // ColVlFrete
-            // 
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle24.Format = "N2";
-            this.ColVlFrete.DefaultCellStyle = dataGridViewCellStyle24;
-            this.ColVlFrete.HeaderText = "Vl. Frete";
-            this.ColVlFrete.Name = "ColVlFrete";
-            this.ColVlFrete.ReadOnly = true;
-            this.ColVlFrete.Width = 80;
-            // 
-            // ColVlSeguro
-            // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle25.Format = "N2";
-            this.ColVlSeguro.DefaultCellStyle = dataGridViewCellStyle25;
-            this.ColVlSeguro.HeaderText = "Vl. Seguro";
-            this.ColVlSeguro.Name = "ColVlSeguro";
-            this.ColVlSeguro.ReadOnly = true;
-            this.ColVlSeguro.Width = 80;
-            // 
-            // ColVlDesconto
-            // 
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle26.Format = "N2";
-            this.ColVlDesconto.DefaultCellStyle = dataGridViewCellStyle26;
-            this.ColVlDesconto.HeaderText = "Vl. Desconto";
-            this.ColVlDesconto.Name = "ColVlDesconto";
-            this.ColVlDesconto.ReadOnly = true;
-            this.ColVlDesconto.Width = 90;
-            // 
-            // ColVlTrib
-            // 
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle27.Format = "n2";
-            this.ColVlTrib.DefaultCellStyle = dataGridViewCellStyle27;
-            this.ColVlTrib.HeaderText = "Vl. Trib.";
-            this.ColVlTrib.Name = "ColVlTrib";
-            this.ColVlTrib.ReadOnly = true;
-            // 
-            // ColVlProdutos
-            // 
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle28.Format = "N2";
-            this.ColVlProdutos.DefaultCellStyle = dataGridViewCellStyle28;
-            this.ColVlProdutos.HeaderText = "Vl. Produtos";
-            this.ColVlProdutos.Name = "ColVlProdutos";
-            this.ColVlProdutos.ReadOnly = true;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label31);
@@ -1263,6 +983,16 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "NFe";
+            // 
+            // btnXml
+            // 
+            this.btnXml.Location = new System.Drawing.Point(766, 12);
+            this.btnXml.Name = "btnXml";
+            this.btnXml.Size = new System.Drawing.Size(111, 29);
+            this.btnXml.TabIndex = 16;
+            this.btnXml.Text = "Selecione Xml";
+            this.btnXml.UseVisualStyleBackColor = true;
+            this.btnXml.Click += new System.EventHandler(this.btnXml_Click);
             // 
             // dtpEntrada
             // 
@@ -1486,19 +1216,285 @@
             this.label34.TabIndex = 0;
             this.label34.Text = "Produto";
             // 
-            // btnXml
-            // 
-            this.btnXml.Location = new System.Drawing.Point(766, 12);
-            this.btnXml.Name = "btnXml";
-            this.btnXml.Size = new System.Drawing.Size(111, 29);
-            this.btnXml.TabIndex = 16;
-            this.btnXml.Text = "Selecione Xml";
-            this.btnXml.UseVisualStyleBackColor = true;
-            this.btnXml.Click += new System.EventHandler(this.btnXml_Click);
-            // 
             // OFDxml
             // 
             this.OFDxml.FileName = "openFileDialog1";
+            // 
+            // ColCodProdEmpresa
+            // 
+            this.ColCodProdEmpresa.HeaderText = "Cod. Emp.";
+            this.ColCodProdEmpresa.Name = "ColCodProdEmpresa";
+            this.ColCodProdEmpresa.Width = 80;
+            // 
+            // ColCodProd
+            // 
+            this.ColCodProd.HeaderText = "Cod. Emit.";
+            this.ColCodProd.Name = "ColCodProd";
+            this.ColCodProd.ReadOnly = true;
+            this.ColCodProd.Width = 80;
+            // 
+            // ColDescProd
+            // 
+            this.ColDescProd.HeaderText = "Desc. Produto";
+            this.ColDescProd.Name = "ColDescProd";
+            this.ColDescProd.ReadOnly = true;
+            this.ColDescProd.Width = 300;
+            // 
+            // ColUnid
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColUnid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColUnid.HeaderText = "Und. Emit.";
+            this.ColUnid.Name = "ColUnid";
+            this.ColUnid.ReadOnly = true;
+            this.ColUnid.Width = 80;
+            // 
+            // ColUnidEmpr
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColUnidEmpr.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColUnidEmpr.HeaderText = "Unid. Emp.";
+            this.ColUnidEmpr.Name = "ColUnidEmpr";
+            this.ColUnidEmpr.ReadOnly = true;
+            this.ColUnidEmpr.Width = 80;
+            // 
+            // ColQtEmit
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.ColQtEmit.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColQtEmit.HeaderText = "Qtd. Emit.";
+            this.ColQtEmit.Name = "ColQtEmit";
+            this.ColQtEmit.ReadOnly = true;
+            this.ColQtEmit.Width = 80;
+            // 
+            // ColQtEmp
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.ColQtEmp.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ColQtEmp.HeaderText = "Qtd. Emp.";
+            this.ColQtEmp.Name = "ColQtEmp";
+            this.ColQtEmp.ReadOnly = true;
+            this.ColQtEmp.Width = 80;
+            // 
+            // ColVlUnit
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.ColVlUnit.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ColVlUnit.HeaderText = "Vl. Unit.";
+            this.ColVlUnit.Name = "ColVlUnit";
+            this.ColVlUnit.ReadOnly = true;
+            this.ColVlUnit.Width = 80;
+            // 
+            // ColCFOP
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColCFOP.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ColCFOP.HeaderText = "Cfop";
+            this.ColCFOP.Name = "ColCFOP";
+            this.ColCFOP.Width = 80;
+            // 
+            // ColCstIcms
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColCstIcms.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ColCstIcms.HeaderText = "Cst Icms";
+            this.ColCstIcms.Name = "ColCstIcms";
+            this.ColCstIcms.Width = 75;
+            // 
+            // ColAliqIcms
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            this.ColAliqIcms.DefaultCellStyle = dataGridViewCellStyle9;
+            this.ColAliqIcms.HeaderText = "Aliq. Icms";
+            this.ColAliqIcms.Name = "ColAliqIcms";
+            this.ColAliqIcms.ReadOnly = true;
+            this.ColAliqIcms.Width = 80;
+            // 
+            // ColVlBaseIcms
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N2";
+            this.ColVlBaseIcms.DefaultCellStyle = dataGridViewCellStyle10;
+            this.ColVlBaseIcms.HeaderText = "Vl. BC. Icms";
+            this.ColVlBaseIcms.Name = "ColVlBaseIcms";
+            this.ColVlBaseIcms.ReadOnly = true;
+            this.ColVlBaseIcms.Width = 85;
+            // 
+            // ColVlIcms
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N2";
+            this.ColVlIcms.DefaultCellStyle = dataGridViewCellStyle11;
+            this.ColVlIcms.HeaderText = "Vl. Icms";
+            this.ColVlIcms.Name = "ColVlIcms";
+            this.ColVlIcms.ReadOnly = true;
+            // 
+            // ColVlBaseIcmsSub
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "N2";
+            this.ColVlBaseIcmsSub.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ColVlBaseIcmsSub.HeaderText = "Vl. BC. Sub";
+            this.ColVlBaseIcmsSub.Name = "ColVlBaseIcmsSub";
+            this.ColVlBaseIcmsSub.ReadOnly = true;
+            this.ColVlBaseIcmsSub.Width = 85;
+            // 
+            // ColVlIcmsSub
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "N2";
+            this.ColVlIcmsSub.DefaultCellStyle = dataGridViewCellStyle13;
+            this.ColVlIcmsSub.HeaderText = "Vl. Icms. Sub";
+            this.ColVlIcmsSub.Name = "ColVlIcmsSub";
+            this.ColVlIcmsSub.ReadOnly = true;
+            this.ColVlIcmsSub.Width = 90;
+            // 
+            // ColCstIpi
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColCstIpi.DefaultCellStyle = dataGridViewCellStyle14;
+            this.ColCstIpi.HeaderText = "Cst Ipi";
+            this.ColCstIpi.Name = "ColCstIpi";
+            this.ColCstIpi.Width = 70;
+            // 
+            // ColAliqVlIpi
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.Format = "N2";
+            this.ColAliqVlIpi.DefaultCellStyle = dataGridViewCellStyle15;
+            this.ColAliqVlIpi.HeaderText = "Aliq. Ipi";
+            this.ColAliqVlIpi.Name = "ColAliqVlIpi";
+            this.ColAliqVlIpi.ReadOnly = true;
+            this.ColAliqVlIpi.Width = 80;
+            // 
+            // ColVlIpi
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Format = "N2";
+            this.ColVlIpi.DefaultCellStyle = dataGridViewCellStyle16;
+            this.ColVlIpi.HeaderText = "VlIpi";
+            this.ColVlIpi.Name = "ColVlIpi";
+            this.ColVlIpi.ReadOnly = true;
+            this.ColVlIpi.Width = 80;
+            // 
+            // ColCstPis
+            // 
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColCstPis.DefaultCellStyle = dataGridViewCellStyle17;
+            this.ColCstPis.HeaderText = "Cst Pis";
+            this.ColCstPis.Name = "ColCstPis";
+            this.ColCstPis.Width = 70;
+            // 
+            // ColAliqPis
+            // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle18.Format = "N2";
+            this.ColAliqPis.DefaultCellStyle = dataGridViewCellStyle18;
+            this.ColAliqPis.HeaderText = "Aliq. Pis";
+            this.ColAliqPis.Name = "ColAliqPis";
+            this.ColAliqPis.ReadOnly = true;
+            this.ColAliqPis.Width = 80;
+            // 
+            // ColVlPis
+            // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle19.Format = "N2";
+            this.ColVlPis.DefaultCellStyle = dataGridViewCellStyle19;
+            this.ColVlPis.HeaderText = "Vl. Pis";
+            this.ColVlPis.Name = "ColVlPis";
+            this.ColVlPis.ReadOnly = true;
+            this.ColVlPis.Width = 80;
+            // 
+            // ColCstCofins
+            // 
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColCstCofins.DefaultCellStyle = dataGridViewCellStyle20;
+            this.ColCstCofins.HeaderText = "Cst Cofins";
+            this.ColCstCofins.Name = "ColCstCofins";
+            this.ColCstCofins.Width = 70;
+            // 
+            // ColAliqCofins
+            // 
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.Format = "N2";
+            this.ColAliqCofins.DefaultCellStyle = dataGridViewCellStyle21;
+            this.ColAliqCofins.HeaderText = "Aliq. Cofins";
+            this.ColAliqCofins.Name = "ColAliqCofins";
+            this.ColAliqCofins.ReadOnly = true;
+            this.ColAliqCofins.Width = 90;
+            // 
+            // ColVlCofins
+            // 
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle22.Format = "N2";
+            this.ColVlCofins.DefaultCellStyle = dataGridViewCellStyle22;
+            this.ColVlCofins.HeaderText = "Vl. Cofins";
+            this.ColVlCofins.Name = "ColVlCofins";
+            this.ColVlCofins.ReadOnly = true;
+            this.ColVlCofins.Width = 80;
+            // 
+            // ColVlOutras
+            // 
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle23.Format = "N2";
+            this.ColVlOutras.DefaultCellStyle = dataGridViewCellStyle23;
+            this.ColVlOutras.HeaderText = "Vl. Outras";
+            this.ColVlOutras.Name = "ColVlOutras";
+            this.ColVlOutras.ReadOnly = true;
+            this.ColVlOutras.Width = 80;
+            // 
+            // ColVlFrete
+            // 
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle24.Format = "N2";
+            this.ColVlFrete.DefaultCellStyle = dataGridViewCellStyle24;
+            this.ColVlFrete.HeaderText = "Vl. Frete";
+            this.ColVlFrete.Name = "ColVlFrete";
+            this.ColVlFrete.ReadOnly = true;
+            this.ColVlFrete.Width = 80;
+            // 
+            // ColVlSeguro
+            // 
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle25.Format = "N2";
+            this.ColVlSeguro.DefaultCellStyle = dataGridViewCellStyle25;
+            this.ColVlSeguro.HeaderText = "Vl. Seguro";
+            this.ColVlSeguro.Name = "ColVlSeguro";
+            this.ColVlSeguro.ReadOnly = true;
+            this.ColVlSeguro.Width = 80;
+            // 
+            // ColVlDesconto
+            // 
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Format = "N2";
+            this.ColVlDesconto.DefaultCellStyle = dataGridViewCellStyle26;
+            this.ColVlDesconto.HeaderText = "Vl. Desconto";
+            this.ColVlDesconto.Name = "ColVlDesconto";
+            this.ColVlDesconto.ReadOnly = true;
+            this.ColVlDesconto.Width = 90;
+            // 
+            // ColVlTrib
+            // 
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle27.Format = "n2";
+            this.ColVlTrib.DefaultCellStyle = dataGridViewCellStyle27;
+            this.ColVlTrib.HeaderText = "Vl. Trib.";
+            this.ColVlTrib.Name = "ColVlTrib";
+            this.ColVlTrib.ReadOnly = true;
+            // 
+            // ColVlProdutos
+            // 
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle28.Format = "N2";
+            this.ColVlProdutos.DefaultCellStyle = dataGridViewCellStyle28;
+            this.ColVlProdutos.HeaderText = "Vl. Produtos";
+            this.ColVlProdutos.Name = "ColVlProdutos";
+            this.ColVlProdutos.ReadOnly = true;
             // 
             // FMT007NotaFiscalEntrada
             // 
@@ -1634,6 +1630,8 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Button btnConfirmaFator;
         private System.Windows.Forms.TextBox TxtUndConvFator;
+        private System.Windows.Forms.Button btnXml;
+        private System.Windows.Forms.OpenFileDialog OFDxml;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodProdEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDescProd;
@@ -1664,7 +1662,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlDesconto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlTrib;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVlProdutos;
-        private System.Windows.Forms.Button btnXml;
-        private System.Windows.Forms.OpenFileDialog OFDxml;
     }
 }

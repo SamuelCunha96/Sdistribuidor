@@ -297,6 +297,12 @@
     <Compile Include="View\FMT009MovEstoque.Designer.cs">
       <DependentUpon>FMT009MovEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT010TransacaoMovEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT010TransacaoMovEstoque.Designer.cs">
+      <DependentUpon>FMT010TransacaoMovEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT009MovEstoque.resx">
       <DependentUpon>FMT009MovEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT010TransacaoMovEstoque.resx">
+      <DependentUpon>FMT010TransacaoMovEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>

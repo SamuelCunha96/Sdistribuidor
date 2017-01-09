@@ -52,8 +52,9 @@
             this.ColData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFormPagto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbPgDados = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.pnlInformacoes = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.BtnConfObs = new System.Windows.Forms.Button();
@@ -125,6 +126,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblIDParticipante = new System.Windows.Forms.Label();
             this.chkLocalEntrega = new System.Windows.Forms.CheckBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
@@ -138,9 +140,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblIDParticipante = new System.Windows.Forms.Label();
             this.tbNotaFiscal.SuspendLayout();
             this.tbPgListNotaFiscal.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -171,11 +170,10 @@
             // tbPgListNotaFiscal
             // 
             this.tbPgListNotaFiscal.Controls.Add(this.groupBox2);
-            this.tbPgListNotaFiscal.Controls.Add(this.groupBox1);
             this.tbPgListNotaFiscal.Location = new System.Drawing.Point(4, 21);
             this.tbPgListNotaFiscal.Name = "tbPgListNotaFiscal";
             this.tbPgListNotaFiscal.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPgListNotaFiscal.Size = new System.Drawing.Size(947, 491);
+            this.tbPgListNotaFiscal.Size = new System.Drawing.Size(947, 514);
             this.tbPgListNotaFiscal.TabIndex = 0;
             this.tbPgListNotaFiscal.Text = "Lista de Pedidos";
             this.tbPgListNotaFiscal.UseVisualStyleBackColor = true;
@@ -185,9 +183,9 @@
             this.groupBox2.Controls.Add(this.grdListaPedidos);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.groupBox2.Location = new System.Drawing.Point(3, 69);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(941, 352);
+            this.groupBox2.Size = new System.Drawing.Size(941, 511);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pedidos";
@@ -229,7 +227,7 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
             this.grdListaPedidos.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.grdListaPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdListaPedidos.Size = new System.Drawing.Size(935, 335);
+            this.grdListaPedidos.Size = new System.Drawing.Size(935, 494);
             this.grdListaPedidos.TabIndex = 0;
             this.grdListaPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdListaPedidos_CellContentClick);
             this.grdListaPedidos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdListaPedidos_CellDoubleClick);
@@ -279,18 +277,6 @@
             this.ColValor.Name = "ColValor";
             this.ColValor.ReadOnly = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(941, 66);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisar";
-            // 
             // tbPgDados
             // 
             this.tbPgDados.Controls.Add(this.btnCancelar);
@@ -309,6 +295,37 @@
             this.tbPgDados.Text = "Dados";
             this.tbPgDados.UseVisualStyleBackColor = true;
             this.tbPgDados.Click += new System.EventHandler(this.tbPgDados_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(851, 477);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 34);
+            this.btnCancelar.TabIndex = 36;
+            this.btnCancelar.Text = "F4-Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSalvar.FlatAppearance.BorderSize = 2;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(760, 477);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(90, 34);
+            this.btnSalvar.TabIndex = 35;
+            this.btnSalvar.Text = "F3-Gerar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // pnlInformacoes
             // 
@@ -1064,6 +1081,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
             // 
+            // lblIDParticipante
+            // 
+            this.lblIDParticipante.AutoSize = true;
+            this.lblIDParticipante.Location = new System.Drawing.Point(828, 14);
+            this.lblIDParticipante.Name = "lblIDParticipante";
+            this.lblIDParticipante.Size = new System.Drawing.Size(79, 12);
+            this.lblIDParticipante.TabIndex = 13;
+            this.lblIDParticipante.Text = "IDParticipante";
+            this.lblIDParticipante.Visible = false;
+            // 
             // chkLocalEntrega
             // 
             this.chkLocalEntrega.AutoSize = true;
@@ -1182,47 +1209,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome / Razão Social:";
             // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSalvar.FlatAppearance.BorderSize = 2;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(760, 477);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(90, 34);
-            this.btnSalvar.TabIndex = 35;
-            this.btnSalvar.Text = "F3-Gerar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatAppearance.BorderSize = 2;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(851, 477);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 34);
-            this.btnCancelar.TabIndex = 36;
-            this.btnCancelar.Text = "F4-Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // lblIDParticipante
-            // 
-            this.lblIDParticipante.AutoSize = true;
-            this.lblIDParticipante.Location = new System.Drawing.Point(828, 14);
-            this.lblIDParticipante.Name = "lblIDParticipante";
-            this.lblIDParticipante.Size = new System.Drawing.Size(79, 12);
-            this.lblIDParticipante.TabIndex = 13;
-            this.lblIDParticipante.Text = "IDParticipante";
-            this.lblIDParticipante.Visible = false;
-            // 
             // FMT003NotaFiscal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1266,7 +1252,6 @@
         private System.Windows.Forms.TabPage tbPgListNotaFiscal;
         private System.Windows.Forms.TabPage tbPgDados;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView grdListaPedidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIDPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCliente;

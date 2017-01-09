@@ -24,31 +24,24 @@ namespace Sdistribuidor.View
         {
             ObjMovEstoque = new MovimentacaoEstoque();
             grdMovEstoque.AutoGenerateColumns = false;
-            if (rbData.Checked)
-            {
-                grdMovEstoque.DataSource = ObjMovEstoque.Pesquisa(dtpIni.Value, dtpFim.Value);
-            }
-            else
-            {
-                grdMovEstoque.DataSource = ObjMovEstoque.Pesquisa(Convert.ToInt32(txtProduto.Text));
-            }
-        }
 
-        private void rbProduto_Click(object sender, EventArgs e)
-        {
-            pnlData.Visible = false;
-            pnlProduto.Visible = true;
-        }
-
-        private void rbData_Click(object sender, EventArgs e)
-        {
-            pnlData.Visible = true;
-            pnlProduto.Visible = false;
+            grdMovEstoque.DataSource = ObjMovEstoque.Pesquisa(dtpIni.Value, dtpFim.Value, txtProduto.Text == string.Empty ? 0 : Convert.ToInt32(txtProduto.Text));
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!txtProduto.Text.Contains(e.KeyChar.ToString()))
+            {
+                if (!char.IsNumber(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }

@@ -9,7 +9,11 @@ namespace Sdistribuidor.Entidade
     public class Entidade_Estoque
     {
         public int id_Produto { get; set; }
-        public double qt_estoque { get; set; }
-        public double qt_reservado { get; set; }
+        public decimal qt_estoque { get; set; }
+        public decimal qt_reservado { get; set; }
+        public string tpmov { get; set; }
+        public string obsestoque { get; set; }
+        public string tptbmov { get; set; }
+        
     }
 }

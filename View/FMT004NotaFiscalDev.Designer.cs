@@ -1555,6 +1555,7 @@
             this.txtIcmsSub.Text = "0,00";
             this.txtIcmsSub.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtIcmsSub.Enter += new System.EventHandler(this.txtIcmsSub_Enter);
+            this.txtIcmsSub.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIcmsSub_KeyPress);
             this.txtIcmsSub.Leave += new System.EventHandler(this.txtIcmsSub_Leave);
             // 
             // label16

@@ -1448,6 +1448,17 @@ namespace Sdistribuidor.View
             }
         }
 
-        
+        private void txtIcmsSub_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!txtIcmsSub.Text.Contains(e.KeyChar.ToString()))
+            {
+                if (!char.IsNumber(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (e.KeyChar.ToString().Trim() == ",")
+                e.Handled = true;
+        }
     }
 }

@@ -106,12 +106,28 @@ namespace Sdistribuidor.Model
                     command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
                     command.Transaction = BeginTrans;
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("id_loja", NfEntrada.id_loja);
-                    command.Parameters.AddWithValue("id_produto", Convert.ToInt32(item.IdProduto));
+                    command.Parameters.AddWithValue("idloja", NfEntrada.id_loja);
+                    command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
                     command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_entrada_fornec));
+                    command.Parameters.AddWithValue("qtreservada", Convert.ToDecimal(item.qt_entrada_fornec));
                     command.Parameters.AddWithValue("tpmov", "E");
                     command.Parameters.AddWithValue("dtmovimentacao", NfEntrada.dtentrada);
                     command.Parameters.AddWithValue("obsmovimentacao", "FORNECEDOR: " + NfEntrada.id_participante.nome + " NOTA FISCAL:" + NfEntrada.serienf + " - " + NfEntrada.nrnf);
+                    command.Parameters.AddWithValue("tptbmov", "F");
+
+                    command.ExecuteNonQuery();
+
+                    command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
+                    command.Transaction = BeginTrans;
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("idloja", NfEntrada.id_loja);
+                    command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
+                    command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_entrada_fornec));
+                    command.Parameters.AddWithValue("qtreservada", Convert.ToDecimal(item.qt_entrada_fornec));
+                    command.Parameters.AddWithValue("tpmov", "E");
+                    command.Parameters.AddWithValue("dtmovimentacao", NfEntrada.dtentrada);
+                    command.Parameters.AddWithValue("obsmovimentacao", "FORNECEDOR: " + NfEntrada.id_participante.nome + " NOTA FISCAL:" + NfEntrada.serienf + " - " + NfEntrada.nrnf);
+                    command.Parameters.AddWithValue("tptbmov", "E");
 
                     command.ExecuteNonQuery();
 

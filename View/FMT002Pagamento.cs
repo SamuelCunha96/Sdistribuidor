@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using Sdistribuidor.Entidade;
 using Sdistribuidor.Model;
-
+using Sdistribuidor.Relatorio;
 
 namespace Sdistribuidor.View
 {
@@ -129,6 +129,7 @@ namespace Sdistribuidor.View
 
         private void BtnReceber_Click(object sender, EventArgs e)
         {
+            FRImpPedido ObjForm = new FRImpPedido();
             if (cboBandeiras.Visible == true)
             {
                 if (ValidarPagamento())
@@ -141,7 +142,13 @@ namespace Sdistribuidor.View
                 {
                     if (SalvarPagamento())
                     {
-                        MessageBox.Show("Recebimento salvo com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Pagamento realizado com sucesso!", "Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                        //Impressão de Pedido
+                        ObjForm.IdPedido = Convert.ToInt32(lblID.Text);
+                        if (ObjForm.ShowDialog() == DialogResult.OK)
+                        {
+
+                        }
                         LimparCampos();
                         CarregarPedidos();
                     }
@@ -158,9 +165,18 @@ namespace Sdistribuidor.View
                 {
                     if (SalvarPagamento())
                     {
-                        MessageBox.Show("Recebimento salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Pagamento realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                        ObjForm.IdPedido = Convert.ToInt32(lblID.Text);
+                        if (ObjForm.ShowDialog() == DialogResult.OK)
+                        {
+
+                        }
+
                         LimparCampos();
                         CarregarPedidos();
+
+
                     }
                 }
             }

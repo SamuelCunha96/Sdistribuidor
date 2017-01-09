@@ -34,23 +34,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnConsultar = new MetroFramework.Controls.MetroButton();
-            this.pnlProduto = new MetroFramework.Controls.MetroPanel();
-            this.txtProduto = new MetroFramework.Controls.MetroTextBox();
             this.pnlData = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.dtpIni = new MetroFramework.Controls.MetroDateTime();
             this.dtpFim = new MetroFramework.Controls.MetroDateTime();
-            this.rbData = new MetroFramework.Controls.MetroRadioButton();
-            this.rbProduto = new MetroFramework.Controls.MetroRadioButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.grdMovEstoque = new MetroFramework.Controls.MetroGrid();
+            this.txtProduto = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.ColProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDtMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTransacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTipoMovimentacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColQtMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColObs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroPanel1.SuspendLayout();
-            this.pnlProduto.SuspendLayout();
             this.pnlData.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMovEstoque)).BeginInit();
@@ -59,10 +57,7 @@
             // metroPanel1
             // 
             this.metroPanel1.Controls.Add(this.btnConsultar);
-            this.metroPanel1.Controls.Add(this.pnlProduto);
             this.metroPanel1.Controls.Add(this.pnlData);
-            this.metroPanel1.Controls.Add(this.rbData);
-            this.metroPanel1.Controls.Add(this.rbProduto);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -78,80 +73,36 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(682, 25);
+            this.btnConsultar.Location = new System.Drawing.Point(434, 19);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(85, 31);
+            this.btnConsultar.Size = new System.Drawing.Size(85, 30);
             this.btnConsultar.TabIndex = 7;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseSelectable = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // pnlProduto
-            // 
-            this.pnlProduto.Controls.Add(this.txtProduto);
-            this.pnlProduto.HorizontalScrollbarBarColor = true;
-            this.pnlProduto.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlProduto.HorizontalScrollbarSize = 10;
-            this.pnlProduto.Location = new System.Drawing.Point(3, 21);
-            this.pnlProduto.Name = "pnlProduto";
-            this.pnlProduto.Size = new System.Drawing.Size(163, 32);
-            this.pnlProduto.TabIndex = 6;
-            this.pnlProduto.VerticalScrollbarBarColor = true;
-            this.pnlProduto.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlProduto.VerticalScrollbarSize = 10;
-            // 
-            // txtProduto
-            // 
-            // 
-            // 
-            // 
-            this.txtProduto.CustomButton.Image = null;
-            this.txtProduto.CustomButton.Location = new System.Drawing.Point(133, 1);
-            this.txtProduto.CustomButton.Name = "";
-            this.txtProduto.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtProduto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtProduto.CustomButton.TabIndex = 1;
-            this.txtProduto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtProduto.CustomButton.UseSelectable = true;
-            this.txtProduto.CustomButton.Visible = false;
-            this.txtProduto.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtProduto.Lines = new string[0];
-            this.txtProduto.Location = new System.Drawing.Point(1, 5);
-            this.txtProduto.MaxLength = 32767;
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.PasswordChar = '\0';
-            this.txtProduto.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtProduto.SelectedText = "";
-            this.txtProduto.SelectionLength = 0;
-            this.txtProduto.SelectionStart = 0;
-            this.txtProduto.ShortcutsEnabled = true;
-            this.txtProduto.Size = new System.Drawing.Size(155, 23);
-            this.txtProduto.TabIndex = 5;
-            this.txtProduto.UseSelectable = true;
-            this.txtProduto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtProduto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // pnlData
             // 
+            this.pnlData.Controls.Add(this.metroLabel2);
+            this.pnlData.Controls.Add(this.txtProduto);
             this.pnlData.Controls.Add(this.metroLabel1);
             this.pnlData.Controls.Add(this.dtpIni);
             this.pnlData.Controls.Add(this.dtpFim);
             this.pnlData.HorizontalScrollbarBarColor = true;
             this.pnlData.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlData.HorizontalScrollbarSize = 10;
-            this.pnlData.Location = new System.Drawing.Point(5, 20);
+            this.pnlData.Location = new System.Drawing.Point(5, 3);
             this.pnlData.Name = "pnlData";
-            this.pnlData.Size = new System.Drawing.Size(267, 36);
+            this.pnlData.Size = new System.Drawing.Size(423, 51);
             this.pnlData.TabIndex = 5;
             this.pnlData.VerticalScrollbarBarColor = true;
             this.pnlData.VerticalScrollbarHighlightOnWheel = false;
             this.pnlData.VerticalScrollbarSize = 10;
-            this.pnlData.Visible = false;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(117, 14);
+            this.metroLabel1.Location = new System.Drawing.Point(278, 27);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(27, 19);
             this.metroLabel1.TabIndex = 9;
@@ -160,8 +111,8 @@
             // dtpIni
             // 
             this.dtpIni.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpIni.Location = new System.Drawing.Point(6, 4);
-            this.dtpIni.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpIni.Location = new System.Drawing.Point(167, 17);
+            this.dtpIni.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpIni.Name = "dtpIni";
             this.dtpIni.Size = new System.Drawing.Size(105, 29);
             this.dtpIni.TabIndex = 7;
@@ -169,35 +120,11 @@
             // dtpFim
             // 
             this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFim.Location = new System.Drawing.Point(150, 4);
+            this.dtpFim.Location = new System.Drawing.Point(311, 17);
             this.dtpFim.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpFim.Name = "dtpFim";
             this.dtpFim.Size = new System.Drawing.Size(107, 29);
             this.dtpFim.TabIndex = 8;
-            // 
-            // rbData
-            // 
-            this.rbData.AutoSize = true;
-            this.rbData.Location = new System.Drawing.Point(75, 3);
-            this.rbData.Name = "rbData";
-            this.rbData.Size = new System.Drawing.Size(47, 15);
-            this.rbData.TabIndex = 3;
-            this.rbData.Text = "Data";
-            this.rbData.UseSelectable = true;
-            this.rbData.Click += new System.EventHandler(this.rbData_Click);
-            // 
-            // rbProduto
-            // 
-            this.rbProduto.AutoSize = true;
-            this.rbProduto.Checked = true;
-            this.rbProduto.Location = new System.Drawing.Point(3, 3);
-            this.rbProduto.Name = "rbProduto";
-            this.rbProduto.Size = new System.Drawing.Size(66, 15);
-            this.rbProduto.TabIndex = 2;
-            this.rbProduto.TabStop = true;
-            this.rbProduto.Text = "Produto";
-            this.rbProduto.UseSelectable = true;
-            this.rbProduto.Click += new System.EventHandler(this.rbProduto_Click);
             // 
             // metroPanel2
             // 
@@ -235,6 +162,7 @@
             this.grdMovEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColProduto,
             this.ColDtMov,
+            this.ColTransacao,
             this.ColTipoMovimentacao,
             this.ColQtMov,
             this.ColObs});
@@ -267,6 +195,47 @@
             this.grdMovEstoque.Size = new System.Drawing.Size(775, 309);
             this.grdMovEstoque.TabIndex = 2;
             // 
+            // txtProduto
+            // 
+            // 
+            // 
+            // 
+            this.txtProduto.CustomButton.Image = null;
+            this.txtProduto.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.txtProduto.CustomButton.Name = "";
+            this.txtProduto.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtProduto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtProduto.CustomButton.TabIndex = 1;
+            this.txtProduto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtProduto.CustomButton.UseSelectable = true;
+            this.txtProduto.CustomButton.Visible = false;
+            this.txtProduto.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtProduto.Lines = new string[0];
+            this.txtProduto.Location = new System.Drawing.Point(6, 22);
+            this.txtProduto.MaxLength = 32767;
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.PasswordChar = '\0';
+            this.txtProduto.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtProduto.SelectedText = "";
+            this.txtProduto.SelectionLength = 0;
+            this.txtProduto.SelectionStart = 0;
+            this.txtProduto.ShortcutsEnabled = true;
+            this.txtProduto.Size = new System.Drawing.Size(155, 23);
+            this.txtProduto.TabIndex = 10;
+            this.txtProduto.UseSelectable = true;
+            this.txtProduto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtProduto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProduto_KeyPress);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 2);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(57, 19);
+            this.metroLabel2.TabIndex = 11;
+            this.metroLabel2.Text = "Produto";
+            // 
             // ColProduto
             // 
             this.ColProduto.DataPropertyName = "produto";
@@ -281,6 +250,13 @@
             this.ColDtMov.HeaderText = "Dt. Mov.";
             this.ColDtMov.Name = "ColDtMov";
             this.ColDtMov.ReadOnly = true;
+            // 
+            // ColTransacao
+            // 
+            this.ColTransacao.DataPropertyName = "tptabela";
+            this.ColTransacao.HeaderText = "Transação";
+            this.ColTransacao.Name = "ColTransacao";
+            this.ColTransacao.ReadOnly = true;
             // 
             // ColTipoMovimentacao
             // 
@@ -315,10 +291,8 @@
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Name = "FMT009MovEstoque";
-            this.Text = "Movimentação  de Estoque";
+            this.Text = "Consulta  de Estoque";
             this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
-            this.pnlProduto.ResumeLayout(false);
             this.pnlData.ResumeLayout(false);
             this.pnlData.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
@@ -331,18 +305,17 @@
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private MetroFramework.Controls.MetroRadioButton rbProduto;
-        private MetroFramework.Controls.MetroRadioButton rbData;
         private MetroFramework.Controls.MetroPanel pnlData;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroDateTime dtpIni;
         private MetroFramework.Controls.MetroDateTime dtpFim;
-        private MetroFramework.Controls.MetroPanel pnlProduto;
-        private MetroFramework.Controls.MetroTextBox txtProduto;
         private MetroFramework.Controls.MetroButton btnConsultar;
         private MetroFramework.Controls.MetroGrid grdMovEstoque;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox txtProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDtMov;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTransacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTipoMovimentacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColQtMov;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColObs;

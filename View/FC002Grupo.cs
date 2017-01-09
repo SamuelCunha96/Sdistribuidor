@@ -79,7 +79,7 @@ namespace Sdistribuidor.View
             NewText = new DataGridViewTextBoxColumn();
             NewText.HeaderText = "Código";
             NewText.Name = "ColID";
-            NewText.DataPropertyName = "idgrupo";
+            NewText.DataPropertyName = "id_grupo";
             NewText.Width = 60;
 
             grdBase.Columns.Add(NewText);
@@ -97,7 +97,6 @@ namespace Sdistribuidor.View
         {
             TxtDescGrupo.Text = string.Empty;
             txtID.Text = string.Empty;
-            base.LimpaCampos();
         }
         private void tbDados_Click(object sender, EventArgs e)
         {

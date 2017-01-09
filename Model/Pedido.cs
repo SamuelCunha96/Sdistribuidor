@@ -18,12 +18,15 @@ namespace Sdistribuidor.Model
         NpgsqlTransaction BeginTrans;
         Entidade_Pedido EntPedido;
         Entidade_ItemPedido EntItemPedido;
+        Entidade_Estoque ObjEntEstoque;
+        List<Entidade_Estoque> ObjListEstoque;
         List<Entidade_ItemPedido> EntListItemPedido;
         Participante mParticipante;
         FormaPagtoItemFormaPagto mFormPagto;
         Vendedor mVendedor;
         Produtos mProdutos;
         Unidade mUnidade;
+        MovimentacaoEstoque ObjMovEstoque;
         
 
         public ICollection<Entidade_Pedido> Pesquisa()
@@ -79,7 +82,6 @@ namespace Sdistribuidor.Model
                     EntItemPedido.Vl_Desconto = Convert.ToDouble(Dt.Rows[i]["vl_desconto"]);
                     EntItemPedido.qt_pedido_conv = Convert.ToDouble(Dt.Rows[i]["qt_pedido_conv"]);
                     EntItemPedido.cdunidade_conv = Dt.Rows[i]["cdunidade_conv"].ToString();
-
                     EntListItemPedido.Add(EntItemPedido);
                 }
 
@@ -100,6 +102,10 @@ namespace Sdistribuidor.Model
         {
             BancoDados.OpenConection();
             BeginTrans = BancoDados.conexao.BeginTransaction();
+
+            ObjListEstoque = new List<Entidade_Estoque>();
+            ObjMovEstoque = new MovimentacaoEstoque();
+            string ErroMsg;
             try
             {
                 #region INCLUINDO PEDIDO
@@ -124,6 +130,7 @@ namespace Sdistribuidor.Model
 
                 foreach (var item in Obj.ItemPedidos)
                 {
+                    ObjEntEstoque = new Entidade_Estoque();
                     command = new NpgsqlCommand("SpIncluirItemPedido", BancoDados.conexao);
                     command.CommandType = CommandType.StoredProcedure;
                     command.Transaction = BeginTrans;
@@ -136,9 +143,24 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("qt_pedido_conv", Convert.ToDecimal(item.qt_pedido_conv)); 
                     command.Parameters.AddWithValue("cdunidade_conv", item.cdunidade_conv);
                     command.ExecuteNonQuery();
+
+                    ObjEntEstoque.id_Produto = Convert.ToInt32(item.id_produto.IdProduto.ToString());
+                    ObjEntEstoque.qt_estoque = 0;
+                    ObjEntEstoque.qt_reservado = Convert.ToDecimal(item.Qt_Pedido);
+                    ObjEntEstoque.obsestoque = "RESERVA DE ESTOQUE PEDIDO:" + Convert.ToString(Id);
+                    ObjEntEstoque.tpmov = "R";
+                    ObjEntEstoque.tptbmov = "F";
+                    ObjListEstoque.Add(ObjEntEstoque);
+
                 }
+
+
                 BeginTrans.Commit();
                 BancoDados.CloseConection();
+
+                //Movimentar Estoque - Reservado
+                ObjMovEstoque.MovimentarEstoque(ObjListEstoque, out ErroMsg);
+
                 return true;
                 #endregion
             }

@@ -24,6 +24,7 @@ namespace Sdistribuidor.View
         Participante objPart;
         Pedido objPedido;
         Unidade objUnidade;
+        MovimentacaoEstoque ObjMovEstoque;
 
         Entidade_Pedido EntPedido;
         Entidade_ItemPedido EntItemPedido;
@@ -45,6 +46,7 @@ namespace Sdistribuidor.View
                 {
                     PreencherDados(RetEnt);
                     CarregarComboUnidConversao(Convert.ToInt32(RetEnt.IdProduto));
+                    CalcularTotalItem();
                     TxtQtd.Focus();
                 }
                 else
@@ -179,7 +181,20 @@ namespace Sdistribuidor.View
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            AdicionarGridProduto();
+            if (ValidaEstoque())
+            {
+                double vlret = 0;
+                var RetValor = double.TryParse(TxtQtd.Text, out vlret);
+                if (RetValor == true)
+                {
+                    if (Convert.ToDouble(TxtQtd.Text) > 0)
+                    {
+                        CalcularQuantidadeConversao();
+                    }
+                }
+                CalcularTotalItem();
+                AdicionarGridProduto();
+            }
         }
         public void LimpaCamposAddGrid()
         {
@@ -200,6 +215,31 @@ namespace Sdistribuidor.View
         {
             grdItem.Rows.Add(TxtCodProd.Text, lblDesc.Text, lblUnid.Text, TxtQtd.Text, cboUnidConv.Text, LblQtdConv.Text, TxtVlUnitario.Text, TxtDesconto.Text, Convert.ToDouble(TxtSubTotal.Text.Replace(".", "")), Convert.ToDouble(TxtTotal.Text.Replace(".", "")));
         }
+
+        bool ValidaEstoque()
+        {
+            ObjMovEstoque = new MovimentacaoEstoque();
+
+            var retQtEstoque = ObjMovEstoque.EstoqueQuantidade(Convert.ToInt32(TxtCodProd.Text));
+            if (retQtEstoque < 0)
+            {
+                MessageBox.Show("Estoque atual é negativo para esse produto!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            else if (retQtEstoque == 0)
+            {
+                MessageBox.Show("Estoque atual é Zerado para esse produto!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            else if (retQtEstoque < Convert.ToDecimal(TxtQtd.Text.Replace(".", "")))
+            {
+                MessageBox.Show("A quantidade informada é maior que a quantidade de estoque atual!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            else
+                return true;
+        }
+
         bool ValidaAdicionar()
         {
             int RetCod;
@@ -273,6 +313,7 @@ namespace Sdistribuidor.View
                 if (MessageBox.Show("Deseja excluir o produto," + grdItem.Rows[grdItem.CurrentRow.Index].Cells[0].Value.ToString() + "?", "Aténção", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
                 {
                     grdItem.Rows.RemoveAt(grdItem.CurrentRow.Index);
+                    CalcularTotalGeral();
                 }
             }
         }
@@ -428,6 +469,15 @@ namespace Sdistribuidor.View
 
         private void TxtQtd_Leave(object sender, EventArgs e)
         {
+            double vlret = 0;
+            var RetValor = double.TryParse(TxtQtd.Text, out vlret);
+            if (RetValor == true)
+            {
+                if (Convert.ToDouble(TxtQtd.Text) > 0)
+                {
+                    CalcularQuantidadeConversao();
+                }
+            }
             BtnAdd.Focus();
         }
 
