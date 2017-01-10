@@ -1079,7 +1079,7 @@ namespace Sdistribuidor.View
                 MessageBox.Show("Informe o cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (cboTipoNF.SelectedIndex != 0)
+            else if (cboTipoNF.SelectedIndex == -1)
             {
                 MessageBox.Show("Informe o tipo de NFe!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -1355,9 +1355,12 @@ namespace Sdistribuidor.View
                 EntNotaFiscal.txobscontribuinte = txtContribuinte.Text;
                 EntNotaFiscal.id_pedido = 0;
                 EntNotaFiscal.flfinalidade = cboTipoNF.SelectedIndex + 1;
+                EntNotaFiscal.flRemessa = cboTipoNF.SelectedIndex == 1 ? true : false; //Tipo de NFe Remessa não movimenta Estoque
                 EntNotaFiscal.id_localentrega = lblIdLocalEntrega.Text == string.Empty ? 0 : Convert.ToInt32(lblIdLocalEntrega.Text);
+                EntNotaFiscal.txchacessonfereferencia = TxtChaveRefenciada.Text;
 
-                
+
+
                 for (int i = 0; i < grdProdutoNF.Rows.Count; i++)
                 {
                     ObjItemNfe = new Entidade_ItemNFe();
@@ -1387,7 +1390,7 @@ namespace Sdistribuidor.View
                 }
 
                 EntNotaFiscal.ItemNFe = ObjListItemNfe;
-                if (mNotaFiscal.Salvar(EntNotaFiscal))
+                if (mNotaFiscal.Salvar(EntNotaFiscal,false))
                 {
                     MessageBox.Show("Nota Fiscal: " + EntNotaFiscal.serienf + "-" + EntNotaFiscal.nrnf + " gerada com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpaCampos();
@@ -1459,6 +1462,41 @@ namespace Sdistribuidor.View
             }
             else if (e.KeyChar.ToString().Trim() == ",")
                 e.Handled = true;
+        }
+
+        private void btnChaReferenciada_Click(object sender, EventArgs e)
+        {
+            if(TxtChaveRefenciada.Text != string.Empty)
+            {
+                if(TxtChaveRefenciada.Text.Length != 44)
+                {
+                    MessageBox.Show("Chave incorreta!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    gbChaveReferencia.Visible = false;
+                }
+            }
+            else
+            {
+                if(MessageBox.Show("O tipo de nfe selecionado exige uma chave de referencia, deseja mudar o tipo de nfe, Saída normal?","?",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cboTipoNF.SelectedIndex = 0;
+                    gbChaveReferencia.Visible = false;
+                }
+                else
+                {
+                    TxtChaveRefenciada.Focus();
+                }
+            }
+        }
+
+        private void cboTipoNF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboTipoNF.SelectedIndex == 2)
+            {
+                gbChaveReferencia.Visible = true;
+            }
         }
     }
 }

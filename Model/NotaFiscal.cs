@@ -17,7 +17,7 @@ namespace Sdistribuidor.Model
 
 
         #region SALVAR
-        public bool Salvar(Entidade_NotaFiscal EntNotaFiscal)
+        public bool Salvar(Entidade_NotaFiscal EntNotaFiscal, bool flmovReservado)
         {
             BancoDados.OpenConection();
             BeginTrans = BancoDados.conexao.BeginTransaction();
@@ -47,6 +47,7 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("flfinalidade", EntNotaFiscal.flfinalidade.ToString());
                 command.Parameters.AddWithValue("id_localentrega", EntNotaFiscal.id_localentrega);
                 command.Parameters.AddWithValue("id_formapagto", EntNotaFiscal.id_formapagto);
+                command.Parameters.AddWithValue("txchacessonferef", EntNotaFiscal.txchacessonfereferencia); 
 
                 command.ExecuteNonQuery();
 
@@ -79,34 +80,53 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("vldesconto", item.vlDesconto);
                     command.ExecuteNonQuery();
 
+                    if (EntNotaFiscal.flRemessa == false)
+                    {
+                        if (flmovReservado)
+                        {
+                            command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
+                            command.Transaction = BeginTrans;
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("idloja", EntNotaFiscal.id_loja);
+                            command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
+                            command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_venda));
+                            command.Parameters.AddWithValue("tpmov", "R"); //Reservado
+                            command.Parameters.AddWithValue("tpmovestoque", "-");
+                            command.Parameters.AddWithValue("dtmovimentacao", EntNotaFiscal.dtemissao);
+                            command.Parameters.AddWithValue("obsmovimentacao", "NOTA FISCAL:" + EntNotaFiscal.serienf + " - " + EntNotaFiscal.nrnf);
+                            command.Parameters.AddWithValue("tptbmov", "F"); //Tabela Estoque - F
 
-                    command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
-                    command.Transaction = BeginTrans;
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("idloja", EntNotaFiscal.id_loja);
-                    command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
-                    command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_venda));
-                    command.Parameters.AddWithValue("qtreservada", Convert.ToDecimal(item.qt_venda));
-                    command.Parameters.AddWithValue("tpmov", "S");
-                    command.Parameters.AddWithValue("dtmovimentacao", EntNotaFiscal.dtemissao);
-                    command.Parameters.AddWithValue("obsmovimentacao", "NOTA FISCAL:" + EntNotaFiscal.serienf + " - " + EntNotaFiscal.nrnf);
-                    command.Parameters.AddWithValue("tptbmov", "F"); //Tabela Estoque - F
+                            command.ExecuteNonQuery();
+                        }
 
-                    command.ExecuteNonQuery();
+                        command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
+                        command.Transaction = BeginTrans;
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("idloja", EntNotaFiscal.id_loja);
+                        command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
+                        command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_venda));
+                        command.Parameters.AddWithValue("tpmov", "E"); //Estoque
+                        command.Parameters.AddWithValue("tpmovestoque", "-");
+                        command.Parameters.AddWithValue("dtmovimentacao", EntNotaFiscal.dtemissao);
+                        command.Parameters.AddWithValue("obsmovimentacao", "NOTA FISCAL:" + EntNotaFiscal.serienf + " - " + EntNotaFiscal.nrnf);
+                        command.Parameters.AddWithValue("tptbmov", "F"); //Tabela Estoque - F
 
-                    command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
-                    command.Transaction = BeginTrans;
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("idloja", EntNotaFiscal.id_loja);
-                    command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
-                    command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_venda));
-                    command.Parameters.AddWithValue("qtreservada", Convert.ToDecimal(item.qt_venda));
-                    command.Parameters.AddWithValue("tpmov", "S");
-                    command.Parameters.AddWithValue("dtmovimentacao", EntNotaFiscal.dtemissao);
-                    command.Parameters.AddWithValue("obsmovimentacao", "NOTA FISCAL:" + EntNotaFiscal.serienf + " - " + EntNotaFiscal.nrnf);
-                    command.Parameters.AddWithValue("tptbmov", "E"); //Tabela Estoque - E
+                        command.ExecuteNonQuery();
 
-                    command.ExecuteNonQuery();
+                        command = new NpgsqlCommand("spmovimentacaoestoque", BancoDados.conexao);
+                        command.Transaction = BeginTrans;
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("idloja", EntNotaFiscal.id_loja);
+                        command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
+                        command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_venda));
+                        command.Parameters.AddWithValue("tpmov", "E");
+                        command.Parameters.AddWithValue("tpmovestoque", "-");
+                        command.Parameters.AddWithValue("dtmovimentacao", EntNotaFiscal.dtemissao);
+                        command.Parameters.AddWithValue("obsmovimentacao", "NOTA FISCAL:" + EntNotaFiscal.serienf + " - " + EntNotaFiscal.nrnf);
+                        command.Parameters.AddWithValue("tptbmov", "E"); //Tabela Estoque - E
+
+                        command.ExecuteNonQuery();
+                    }
                 }
 
                 BeginTrans.Commit();

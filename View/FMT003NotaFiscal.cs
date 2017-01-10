@@ -256,9 +256,10 @@ namespace Sdistribuidor.View
                 EntNotaFiscal.txobscontribuinte = TxtInfContribuinte.Text;
                 EntNotaFiscal.id_pedido = Convert.ToInt32(lblNumeroPedido.Text);
                 EntNotaFiscal.flfinalidade = 1;
+                EntNotaFiscal.txchacessonfereferencia = string.Empty;
                 EntNotaFiscal.ItemNFe = ListItemNF;
 
-                if (mNotaFiscal.Salvar(EntNotaFiscal))
+                if (mNotaFiscal.Salvar(EntNotaFiscal, true))
                 {
                     MessageBox.Show("Nota Fiscal: " + EntNotaFiscal.serienf + "-" + EntNotaFiscal.nrnf +" gerada com sucesso","Atenção",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     LimpaCampos();

@@ -32,6 +32,7 @@ namespace Sdistribuidor.Entidade
         public string txobsfisco { get; set; }
         public string txobscontribuinte { get; set; }
         public string txchacessonfe { get; set; }
+        public string txchacessonfereferencia { get; set; }
         public string cnf { get; set; }
         public string tpemis { get; set; }
         public string cdv { get; set; }
@@ -46,6 +47,7 @@ namespace Sdistribuidor.Entidade
         /// 4=Devolução de mercadoria.
         /// </summary>
         public int flfinalidade { get; set; }
+        public bool flRemessa { get; set; }
         public int id_localentrega { get; set; }
         public int id_formapagto { get; set; }
         public List<Entidade_ItemNFe> ItemNFe { get; set; }
