@@ -27,7 +27,7 @@ namespace Sdistribuidor.Model
         Produtos mProdutos;
         Unidade mUnidade;
         MovimentacaoEstoque ObjMovEstoque;
-        
+
 
         public ICollection<Entidade_Pedido> Pesquisa()
         {
@@ -61,7 +61,7 @@ namespace Sdistribuidor.Model
                 EntPedido.id_participante = mParticipante.Pesquisa(Convert.ToInt32(Dt.Rows[0]["id_participante"]));
                 EntPedido.id_formpagto = mFormPagto.Pesquisa(Convert.ToInt32(Dt.Rows[0]["id_formpagto"]));
                 EntPedido.id_usuario = mVendedor.Pesquisar(Convert.ToInt32(Dt.Rows[0]["id_vendedor"]));
-                
+
                 EntPedido.vl_pedido = Convert.ToInt32(Dt.Rows[0]["vl_pedido"]);
                 EntPedido.vl_desconto = Convert.ToInt32(Dt.Rows[0]["vl_desconto"]);
                 EntPedido.stentrega = Dt.Rows[0]["stentrega"].ToString();
@@ -140,15 +140,15 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("vl_unitario", Convert.ToDecimal(item.Vl_Unitario));
                     command.Parameters.AddWithValue("cdunidade", item.CdUnidade.CdUnidade);
                     command.Parameters.AddWithValue("vl_desconto", Convert.ToDecimal(item.Vl_Desconto));
-                    command.Parameters.AddWithValue("qt_pedido_conv", Convert.ToDecimal(item.qt_pedido_conv)); 
+                    command.Parameters.AddWithValue("qt_pedido_conv", Convert.ToDecimal(item.qt_pedido_conv));
                     command.Parameters.AddWithValue("cdunidade_conv", item.cdunidade_conv);
                     command.ExecuteNonQuery();
 
                     ObjEntEstoque.id_Produto = Convert.ToInt32(item.id_produto.IdProduto.ToString());
-                    ObjEntEstoque.qt_estoque = 0;
-                    ObjEntEstoque.qt_reservado = Convert.ToDecimal(item.Qt_Pedido);
+                    ObjEntEstoque.qt_estoque = Convert.ToDecimal(item.Qt_Pedido);
                     ObjEntEstoque.obsestoque = "RESERVA DE ESTOQUE PEDIDO:" + Convert.ToString(Id);
                     ObjEntEstoque.tpmov = "R";
+                    ObjEntEstoque.tpmovestoque = "+";
                     ObjEntEstoque.tptbmov = "F";
                     ObjListEstoque.Add(ObjEntEstoque);
 
@@ -164,7 +164,7 @@ namespace Sdistribuidor.Model
                 return true;
                 #endregion
             }
-            catch(NpgsqlException ex)
+            catch (NpgsqlException ex)
             {
                 BeginTrans.Rollback();
                 return false;
@@ -193,6 +193,58 @@ namespace Sdistribuidor.Model
         public DataTable View_ImpressaoItemPedido(int pedido)
         {
             return BancoDados.Consultar(" SELECT * FROM vw_impressao_itempedido WHERE id_pedido=" + pedido);
+        }
+
+        public DataTable View_PesquisaPedido(int idpedido)
+        {
+            return BancoDados.Consultar(" SELECT * FROM vw_pesquisapedido WHERE id_participante=" + idpedido);
+        }
+
+        public DataTable View_PesquisaPedido(DateTime dtini, DateTime dtfim)
+        {
+            return BancoDados.Consultar(" SELECT * FROM vw_pesquisapedido WHERE dt_pedido between '" + string.Format("{0:dd/MM/yyyy}", dtini) + "' AND '" + string.Format("{0:dd/MM/yyyy} ", dtfim) + " 23:59:59'");
+        }
+        public DataTable View_PesquisaPedido(int idparticiapante, DateTime dtini, DateTime dtfim)
+        {
+            return BancoDados.Consultar(" SELECT * FROM vw_pesquisapedido WHERE id_participante = " + idparticiapante + " dt_pedido between '" + string.Format("{0:dd/MM/yyyy} ", dtini) + "' AND '" + string.Format("{0:dd/MM/yyyy} ", dtfim) + " 23:59:59'");
+        }
+
+        public bool CancelarPedido(int idpedido, bool flrecebcaixa = false)
+        {
+            ObjMovEstoque = new MovimentacaoEstoque();
+            ObjEntEstoque = new Entidade_Estoque();
+            ObjListEstoque = new List<Entidade_Estoque>();
+            string ErroMsg;
+            var DtPedido = Pesquisa(idpedido);
+
+            try
+            {
+                if(flrecebcaixa)
+                {
+                    BancoDados.InsertAlterarExcluir("DELETE FROM recebcaixa WHERE id_pedido=" + idpedido);
+                }
+                BancoDados.InsertAlterarExcluir("UPDATE pedido SET stpedido='C' WHERE id_pedido=" + idpedido);
+                
+
+                foreach (var item in DtPedido.ItemPedidos)
+                {
+                    ObjEntEstoque = new Entidade_Estoque();
+                    ObjEntEstoque.id_Produto = Convert.ToInt32(item.id_produto.IdProduto.ToString());
+                    ObjEntEstoque.qt_estoque = Convert.ToDecimal(item.Qt_Pedido);
+                    ObjEntEstoque.obsestoque = "ESTORNO DE ESTOQUE, PEDIDO N°:" + Convert.ToString(DtPedido.id_pedido);
+                    ObjEntEstoque.tpmov = "R";
+                    ObjEntEstoque.tpmovestoque = "-";
+                    ObjEntEstoque.tptbmov = "F";
+                    ObjListEstoque.Add(ObjEntEstoque);
+                }
+                ObjMovEstoque.MovimentarEstoque(ObjListEstoque, out ErroMsg);
+
+                return true;
+            }
+            catch (Exception Ex)
+            {
+                return false;
+            }
         }
     }
 }

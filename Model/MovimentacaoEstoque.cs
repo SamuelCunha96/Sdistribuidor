@@ -59,8 +59,8 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("idloja", 1);
                     command.Parameters.AddWithValue("idproduto", ObjEntMovEstoque.id_Produto);
                     command.Parameters.AddWithValue("qtmovimentada", ObjEntMovEstoque.qt_estoque);
-                    command.Parameters.AddWithValue("qtreservada", ObjEntMovEstoque.qt_reservado);
                     command.Parameters.AddWithValue("tpmov", ObjEntMovEstoque.tpmov);
+                    command.Parameters.AddWithValue("tpmovestoque", ObjEntMovEstoque.tpmovestoque);
                     command.Parameters.AddWithValue("dtmovimentacao", DateTime.Now);
                     command.Parameters.AddWithValue("obsmovimentacao", ObjEntMovEstoque.obsestoque);
                     command.Parameters.AddWithValue("tptbmov", ObjEntMovEstoque.tptbmov);

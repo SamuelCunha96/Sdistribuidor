@@ -128,5 +128,12 @@ namespace Sdistribuidor.View
             ObjTransMovEstoque.MdiParent = this;
             ObjTransMovEstoque.Show();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            FMT011CancelarPedido ObjFormCancelar = new FMT011CancelarPedido();
+            ObjFormCancelar.MdiParent = this;
+            ObjFormCancelar.Show();
+        }
     }
 }

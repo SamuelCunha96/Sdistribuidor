@@ -44,8 +44,8 @@ namespace Sdistribuidor.View
         void CarregarListaPedidoRecebido()
         {
             Mpagamento = new Pagamento();
-
-            var Dt = Mpagamento.ListaPedidoPagamento("R");
+            //Consulta Pedido todos os pedidos recebidos no caixa + Os pedidos com forma de pagamento a A prazo.
+            var Dt = Mpagamento.ListaPedidoPagamentoNotaFiscal("R");
 
             for (int i = 0; i < Dt.Rows.Count; i++)
             {
@@ -323,6 +323,11 @@ namespace Sdistribuidor.View
             }
             else
                 return true;
+        }
+
+        private void TmConsultaPedido_Tick(object sender, EventArgs e)
+        {
+            CarregarListaPedidoRecebido();
         }
     }
 }

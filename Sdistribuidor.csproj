@@ -303,6 +303,12 @@
     <Compile Include="View\FMT010TransacaoMovEstoque.Designer.cs">
       <DependentUpon>FMT010TransacaoMovEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT011CancelarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT011CancelarPedido.Designer.cs">
+      <DependentUpon>FMT011CancelarPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT010TransacaoMovEstoque.resx">
       <DependentUpon>FMT010TransacaoMovEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT011CancelarPedido.resx">
+      <DependentUpon>FMT011CancelarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>

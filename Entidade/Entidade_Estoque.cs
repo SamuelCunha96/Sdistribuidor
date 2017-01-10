@@ -12,6 +12,7 @@ namespace Sdistribuidor.Entidade
         public decimal qt_estoque { get; set; }
         public decimal qt_reservado { get; set; }
         public string tpmov { get; set; }
+        public string tpmovestoque { get; set; }
         public string obsestoque { get; set; }
         public string tptbmov { get; set; }
         

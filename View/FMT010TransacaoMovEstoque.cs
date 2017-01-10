@@ -61,6 +61,7 @@ namespace Sdistribuidor.View
                     ObjEntEstoque.id_Produto = Convert.ToInt32(txtCodProduto.Text);
                     ObjEntEstoque.qt_estoque = Convert.ToDecimal(TxtQtMov.Text.Replace(".", ""));
                     ObjEntEstoque.tpmov = CboTipoMovEstoque.SelectedIndex == 0 ? "E" : "S";
+                    ObjEntEstoque.tpmovestoque = CboTipoMovEstoque.SelectedIndex == 0 ? "+" : "-";
                     ObjEntEstoque.tptbmov = "F";
                     ObjEntEstoque.obsestoque = txtObs.Text;
 
@@ -73,6 +74,7 @@ namespace Sdistribuidor.View
                     ObjEntEstoque.id_Produto = Convert.ToInt32(txtCodProduto.Text);
                     ObjEntEstoque.qt_estoque = Convert.ToDecimal(TxtQtMov.Text.Replace(".", ""));
                     ObjEntEstoque.tpmov = CboTipoMovEstoque.SelectedIndex == 0 ? "E" : "S";
+                    ObjEntEstoque.tpmovestoque = CboTipoMovEstoque.SelectedIndex == 0 ? "+" : "-";
                     ObjEntEstoque.tptbmov = "E";
                     ObjEntEstoque.obsestoque = txtObs.Text;
 

@@ -285,5 +285,10 @@ namespace Sdistribuidor.View
         {
 
         }
+
+        private void TmPedido_Tick(object sender, EventArgs e)
+        {
+            CarregarPedidos();
+        }
     }
 }

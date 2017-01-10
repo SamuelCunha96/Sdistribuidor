@@ -109,8 +109,8 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("idloja", NfEntrada.id_loja);
                     command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
                     command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_entrada_fornec));
-                    command.Parameters.AddWithValue("qtreservada", Convert.ToDecimal(item.qt_entrada_fornec));
                     command.Parameters.AddWithValue("tpmov", "E");
+                    command.Parameters.AddWithValue("tpmovestoque", "+");
                     command.Parameters.AddWithValue("dtmovimentacao", NfEntrada.dtentrada);
                     command.Parameters.AddWithValue("obsmovimentacao", "FORNECEDOR: " + NfEntrada.id_participante.nome + " NOTA FISCAL:" + NfEntrada.serienf + " - " + NfEntrada.nrnf);
                     command.Parameters.AddWithValue("tptbmov", "F");
@@ -123,8 +123,8 @@ namespace Sdistribuidor.Model
                     command.Parameters.AddWithValue("idloja", NfEntrada.id_loja);
                     command.Parameters.AddWithValue("idproduto", Convert.ToInt32(item.IdProduto));
                     command.Parameters.AddWithValue("qtmovimentada", Convert.ToDecimal(item.qt_entrada_fornec));
-                    command.Parameters.AddWithValue("qtreservada", Convert.ToDecimal(item.qt_entrada_fornec));
                     command.Parameters.AddWithValue("tpmov", "E");
+                    command.Parameters.AddWithValue("tpmovestoque", "+");
                     command.Parameters.AddWithValue("dtmovimentacao", NfEntrada.dtentrada);
                     command.Parameters.AddWithValue("obsmovimentacao", "FORNECEDOR: " + NfEntrada.id_participante.nome + " NOTA FISCAL:" + NfEntrada.serienf + " - " + NfEntrada.nrnf);
                     command.Parameters.AddWithValue("tptbmov", "E");

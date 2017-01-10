@@ -41,6 +41,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnManifestacao = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnMovEstoque = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnNfEntradaXml = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnAux = new System.Windows.Forms.Button();
-            this.btnMovEstoque = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.btnPagamento);
             this.tabPage2.Controls.Add(this.btnPedido);
             this.tabPage2.Location = new System.Drawing.Point(4, 21);
@@ -230,6 +232,22 @@
             this.tabPage5.TabIndex = 6;
             this.tabPage5.Text = "Transações";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // btnMovEstoque
+            // 
+            this.btnMovEstoque.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnMovEstoque.FlatAppearance.BorderSize = 0;
+            this.btnMovEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnMovEstoque.Image")));
+            this.btnMovEstoque.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMovEstoque.Location = new System.Drawing.Point(75, 0);
+            this.btnMovEstoque.Name = "btnMovEstoque";
+            this.btnMovEstoque.Size = new System.Drawing.Size(75, 100);
+            this.btnMovEstoque.TabIndex = 5;
+            this.btnMovEstoque.Text = "Mov. Estoque";
+            this.btnMovEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMovEstoque.UseVisualStyleBackColor = true;
+            this.btnMovEstoque.Click += new System.EventHandler(this.btnMovEstoque_Click);
             // 
             // btnEstoque
             // 
@@ -397,21 +415,21 @@
             this.btnAux.UseVisualStyleBackColor = true;
             this.btnAux.Click += new System.EventHandler(this.btnAux_Click);
             // 
-            // btnMovEstoque
+            // btnCancelar
             // 
-            this.btnMovEstoque.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnMovEstoque.FlatAppearance.BorderSize = 0;
-            this.btnMovEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMovEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnMovEstoque.Image")));
-            this.btnMovEstoque.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMovEstoque.Location = new System.Drawing.Point(75, 0);
-            this.btnMovEstoque.Name = "btnMovEstoque";
-            this.btnMovEstoque.Size = new System.Drawing.Size(75, 100);
-            this.btnMovEstoque.TabIndex = 5;
-            this.btnMovEstoque.Text = "Mov. Estoque";
-            this.btnMovEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMovEstoque.UseVisualStyleBackColor = true;
-            this.btnMovEstoque.Click += new System.EventHandler(this.btnMovEstoque_Click);
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(153, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 94);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar Pedido";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FMenu
             // 
@@ -465,5 +483,6 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnMovEstoque;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

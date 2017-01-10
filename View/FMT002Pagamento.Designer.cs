@@ -28,16 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grdPedidosPagamento = new System.Windows.Forms.DataGridView();
+            this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDtPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColVlPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFlCartao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFormaPagto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFlAvista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.pnlPgMixto = new System.Windows.Forms.Panel();
+            this.OptCartao = new System.Windows.Forms.RadioButton();
+            this.OptDinheiro = new System.Windows.Forms.RadioButton();
+            this.lblID = new System.Windows.Forms.Label();
             this.lbltotal = new System.Windows.Forms.Label();
             this.lblNmBandeiras = new System.Windows.Forms.Label();
             this.cboBandeiras = new System.Windows.Forms.ComboBox();
@@ -49,26 +64,14 @@
             this.grdrecebido = new System.Windows.Forms.DataGridView();
             this.ColPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblID = new System.Windows.Forms.Label();
-            this.pnlPgMixto = new System.Windows.Forms.Panel();
-            this.OptCartao = new System.Windows.Forms.RadioButton();
-            this.OptDinheiro = new System.Windows.Forms.RadioButton();
-            this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDtPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColVlPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFlCartao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFormaPagto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFlAvista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.TmPedido = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPedidosPagamento)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.pnlPgMixto.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdrecebido)).BeginInit();
-            this.pnlPgMixto.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -88,13 +91,13 @@
             this.grdPedidosPagamento.AllowUserToDeleteRows = false;
             this.grdPedidosPagamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdPedidosPagamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle106.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle106.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle106.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle106.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle106.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdPedidosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle106;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdPedidosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdPedidosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPedidosPagamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNome,
@@ -109,18 +112,75 @@
             this.grdPedidosPagamento.Location = new System.Drawing.Point(3, 17);
             this.grdPedidosPagamento.Name = "grdPedidosPagamento";
             this.grdPedidosPagamento.ReadOnly = true;
-            dataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle109.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle109.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle109.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle109.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle109.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle109.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdPedidosPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle109;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdPedidosPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdPedidosPagamento.RowHeadersVisible = false;
             this.grdPedidosPagamento.Size = new System.Drawing.Size(835, 182);
             this.grdPedidosPagamento.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.grdPedidosPagamento, "Click duas vezes no pedido para receber");
             this.grdPedidosPagamento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPedidosPagamento_CellDoubleClick);
+            // 
+            // ColNome
+            // 
+            this.ColNome.HeaderText = "Nome";
+            this.ColNome.Name = "ColNome";
+            this.ColNome.ReadOnly = true;
+            this.ColNome.Width = 300;
+            // 
+            // ColDtPedido
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "g";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColDtPedido.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColDtPedido.HeaderText = "Dt. Pedido";
+            this.ColDtPedido.Name = "ColDtPedido";
+            this.ColDtPedido.ReadOnly = true;
+            this.ColDtPedido.Width = 140;
+            // 
+            // ColVlPedido
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ColVlPedido.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColVlPedido.HeaderText = "Vl. Pedido";
+            this.ColVlPedido.Name = "ColVlPedido";
+            this.ColVlPedido.ReadOnly = true;
+            // 
+            // ColFlCartao
+            // 
+            this.ColFlCartao.HeaderText = "FlCartao";
+            this.ColFlCartao.Name = "ColFlCartao";
+            this.ColFlCartao.ReadOnly = true;
+            this.ColFlCartao.Visible = false;
+            // 
+            // ColFormaPagto
+            // 
+            this.ColFormaPagto.HeaderText = "Forma Pagto";
+            this.ColFormaPagto.Name = "ColFormaPagto";
+            this.ColFormaPagto.ReadOnly = true;
+            this.ColFormaPagto.Width = 120;
+            // 
+            // ColFlAvista
+            // 
+            this.ColFlAvista.HeaderText = "ColFlAvista";
+            this.ColFlAvista.Name = "ColFlAvista";
+            this.ColFlAvista.ReadOnly = true;
+            this.ColFlAvista.Visible = false;
+            // 
+            // ColID
+            // 
+            this.ColID.HeaderText = "ColID";
+            this.ColID.Name = "ColID";
+            this.ColID.ReadOnly = true;
+            this.ColID.Visible = false;
             // 
             // groupBox2
             // 
@@ -147,6 +207,78 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pagamento";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(409, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 12);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Cliente:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(727, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Total:";
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(455, 9);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(0, 12);
+            this.lblCliente.TabIndex = 25;
+            // 
+            // pnlPgMixto
+            // 
+            this.pnlPgMixto.Controls.Add(this.OptCartao);
+            this.pnlPgMixto.Controls.Add(this.OptDinheiro);
+            this.pnlPgMixto.Location = new System.Drawing.Point(308, 51);
+            this.pnlPgMixto.Name = "pnlPgMixto";
+            this.pnlPgMixto.Size = new System.Drawing.Size(124, 22);
+            this.pnlPgMixto.TabIndex = 24;
+            this.pnlPgMixto.Visible = false;
+            // 
+            // OptCartao
+            // 
+            this.OptCartao.AutoSize = true;
+            this.OptCartao.Location = new System.Drawing.Point(66, 4);
+            this.OptCartao.Name = "OptCartao";
+            this.OptCartao.Size = new System.Drawing.Size(56, 16);
+            this.OptCartao.TabIndex = 27;
+            this.OptCartao.Text = "Cartão";
+            this.OptCartao.UseVisualStyleBackColor = true;
+            this.OptCartao.Click += new System.EventHandler(this.OptCartao_Click);
+            // 
+            // OptDinheiro
+            // 
+            this.OptDinheiro.AutoSize = true;
+            this.OptDinheiro.Checked = true;
+            this.OptDinheiro.Location = new System.Drawing.Point(1, 5);
+            this.OptDinheiro.Name = "OptDinheiro";
+            this.OptDinheiro.Size = new System.Drawing.Size(64, 16);
+            this.OptDinheiro.TabIndex = 26;
+            this.OptDinheiro.TabStop = true;
+            this.OptDinheiro.Text = "Dinheiro";
+            this.OptDinheiro.UseVisualStyleBackColor = true;
+            this.OptDinheiro.Click += new System.EventHandler(this.OptDinheiro_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(321, 29);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 12);
+            this.lblID.TabIndex = 23;
+            this.lblID.Visible = false;
             // 
             // lbltotal
             // 
@@ -248,14 +380,14 @@
             this.grdrecebido.AllowUserToAddRows = false;
             this.grdrecebido.AllowUserToDeleteRows = false;
             this.grdrecebido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle110.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle110.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle110.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle110.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdrecebido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle110;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdrecebido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grdrecebido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdrecebido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColPagamento,
@@ -265,14 +397,14 @@
             this.grdrecebido.Location = new System.Drawing.Point(3, 14);
             this.grdrecebido.Name = "grdrecebido";
             this.grdrecebido.ReadOnly = true;
-            dataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle112.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle112.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle112.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle112.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle112.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle112.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdrecebido.RowHeadersDefaultCellStyle = dataGridViewCellStyle112;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdrecebido.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grdrecebido.RowHeadersVisible = false;
             this.grdrecebido.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.grdrecebido.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -289,139 +421,17 @@
             // 
             // ColValor
             // 
-            dataGridViewCellStyle111.Format = "N2";
-            this.ColValor.DefaultCellStyle = dataGridViewCellStyle111;
+            dataGridViewCellStyle6.Format = "N2";
+            this.ColValor.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColValor.HeaderText = "Valor";
             this.ColValor.Name = "ColValor";
             this.ColValor.ReadOnly = true;
             // 
-            // lblID
+            // TmPedido
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(321, 29);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 12);
-            this.lblID.TabIndex = 23;
-            this.lblID.Visible = false;
-            // 
-            // pnlPgMixto
-            // 
-            this.pnlPgMixto.Controls.Add(this.OptCartao);
-            this.pnlPgMixto.Controls.Add(this.OptDinheiro);
-            this.pnlPgMixto.Location = new System.Drawing.Point(308, 51);
-            this.pnlPgMixto.Name = "pnlPgMixto";
-            this.pnlPgMixto.Size = new System.Drawing.Size(124, 22);
-            this.pnlPgMixto.TabIndex = 24;
-            this.pnlPgMixto.Visible = false;
-            // 
-            // OptCartao
-            // 
-            this.OptCartao.AutoSize = true;
-            this.OptCartao.Location = new System.Drawing.Point(66, 4);
-            this.OptCartao.Name = "OptCartao";
-            this.OptCartao.Size = new System.Drawing.Size(56, 16);
-            this.OptCartao.TabIndex = 27;
-            this.OptCartao.Text = "Cartão";
-            this.OptCartao.UseVisualStyleBackColor = true;
-            this.OptCartao.Click += new System.EventHandler(this.OptCartao_Click);
-            // 
-            // OptDinheiro
-            // 
-            this.OptDinheiro.AutoSize = true;
-            this.OptDinheiro.Checked = true;
-            this.OptDinheiro.Location = new System.Drawing.Point(1, 5);
-            this.OptDinheiro.Name = "OptDinheiro";
-            this.OptDinheiro.Size = new System.Drawing.Size(64, 16);
-            this.OptDinheiro.TabIndex = 26;
-            this.OptDinheiro.TabStop = true;
-            this.OptDinheiro.Text = "Dinheiro";
-            this.OptDinheiro.UseVisualStyleBackColor = true;
-            this.OptDinheiro.Click += new System.EventHandler(this.OptDinheiro_Click);
-            // 
-            // ColNome
-            // 
-            this.ColNome.HeaderText = "Nome";
-            this.ColNome.Name = "ColNome";
-            this.ColNome.ReadOnly = true;
-            this.ColNome.Width = 300;
-            // 
-            // ColDtPedido
-            // 
-            dataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle107.Format = "g";
-            dataGridViewCellStyle107.NullValue = null;
-            this.ColDtPedido.DefaultCellStyle = dataGridViewCellStyle107;
-            this.ColDtPedido.HeaderText = "Dt. Pedido";
-            this.ColDtPedido.Name = "ColDtPedido";
-            this.ColDtPedido.ReadOnly = true;
-            this.ColDtPedido.Width = 140;
-            // 
-            // ColVlPedido
-            // 
-            dataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle108.Format = "N2";
-            dataGridViewCellStyle108.NullValue = null;
-            this.ColVlPedido.DefaultCellStyle = dataGridViewCellStyle108;
-            this.ColVlPedido.HeaderText = "Vl. Pedido";
-            this.ColVlPedido.Name = "ColVlPedido";
-            this.ColVlPedido.ReadOnly = true;
-            // 
-            // ColFlCartao
-            // 
-            this.ColFlCartao.HeaderText = "FlCartao";
-            this.ColFlCartao.Name = "ColFlCartao";
-            this.ColFlCartao.ReadOnly = true;
-            this.ColFlCartao.Visible = false;
-            // 
-            // ColFormaPagto
-            // 
-            this.ColFormaPagto.HeaderText = "Forma Pagto";
-            this.ColFormaPagto.Name = "ColFormaPagto";
-            this.ColFormaPagto.ReadOnly = true;
-            this.ColFormaPagto.Width = 120;
-            // 
-            // ColFlAvista
-            // 
-            this.ColFlAvista.HeaderText = "ColFlAvista";
-            this.ColFlAvista.Name = "ColFlAvista";
-            this.ColFlAvista.ReadOnly = true;
-            this.ColFlAvista.Visible = false;
-            // 
-            // ColID
-            // 
-            this.ColID.HeaderText = "ColID";
-            this.ColID.Name = "ColID";
-            this.ColID.ReadOnly = true;
-            this.ColID.Visible = false;
-            // 
-            // lblCliente
-            // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(455, 9);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(0, 12);
-            this.lblCliente.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(727, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 12);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Total:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(409, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 12);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Cliente:";
+            this.TmPedido.Enabled = true;
+            this.TmPedido.Interval = 15000;
+            this.TmPedido.Tick += new System.EventHandler(this.TmPedido_Tick);
             // 
             // FMT002Pagamento
             // 
@@ -440,10 +450,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdPedidosPagamento)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdrecebido)).EndInit();
             this.pnlPgMixto.ResumeLayout(false);
             this.pnlPgMixto.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdrecebido)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +488,7 @@
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer TmPedido;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

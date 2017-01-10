@@ -212,14 +212,14 @@ namespace Sdistribuidor.Model
                 command.Parameters.AddWithValue("nome", Obj.nome);
                 command.Parameters.AddWithValue("cnpjcpf", Obj.cnpjcpf);
                 command.Parameters.AddWithValue("ie", Obj.ie);
-                command.Parameters.AddWithValue("razaosocial", Obj.razaosocial.Substring(0,39));
-                command.Parameters.AddWithValue("nomefantasia", Obj.nomefantasia);
+                command.Parameters.AddWithValue("razaosocial", Obj.razaosocial.Length > 40 ? Obj.razaosocial.Substring(0, 39) : Obj.razaosocial);
+                command.Parameters.AddWithValue("nomefantasia", Obj.nomefantasia.Length > 60 ? Obj.nomefantasia.Substring(0,59) : Obj.nomefantasia);
                 command.Parameters.AddWithValue("lagradouro", Obj.lagradouro);
                 command.Parameters.AddWithValue("numero_end", Obj.numero_end);
                 command.Parameters.AddWithValue("bairro", Obj.bairro);
                 command.Parameters.AddWithValue("id_uf", Obj.id_uf.id_uf);
                 command.Parameters.AddWithValue("cidade", Obj.id_cidade.id);
-                command.Parameters.AddWithValue("telefone", Obj.telefone);
+                command.Parameters.AddWithValue("telefone", Obj.telefone.Length > 10 ? Obj.telefone.Substring(0,9) : Obj.telefone);
                 command.Parameters.AddWithValue("flcomercio", Obj.flcomercio);
                 command.Parameters.AddWithValue("flisento", Obj.flisento);
                 command.Parameters.AddWithValue("cep", Obj.cep);
