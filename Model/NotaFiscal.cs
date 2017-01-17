@@ -249,5 +249,10 @@ namespace Sdistribuidor.Model
                 return false;
             }
         }
+
+        public DataTable ConsultaNotasEmitidas(DateTime DtIni,DateTime DtFim, string VrSql)
+        {
+            return BancoDados.Consultar("SELECT * FROM vw_relatorionfemitida WHERE " + VrSql + " dtemissao between '" + string.Format("{0:dd/MM/yyyy} ", DtIni) + "' AND '" + string.Format("{0:dd/MM/yyyy} ", DtFim) + " 23:59:59'");
+        }
     }
 }

@@ -25,10 +25,10 @@ namespace Sdistribuidor
             Entidade_GeralInformcoes.idloja = 1;
             Entidade_GeralInformcoes.idusuario = 1;
             
-            var DtLoja = mLoja.Pesquisa(1);
+            //var DtLoja = mLoja.Pesquisa(1);
 
-            Entidade_GeralInformcoes.uf = DtLoja.Rows[0]["desc_uf"].ToString();
-            Entidade_GeralInformcoes.TipoEmpresa = Convert.ToInt32(DtLoja.Rows[0]["tipo_regime"]);
+            //Entidade_GeralInformcoes.uf = DtLoja.Rows[0]["desc_uf"].ToString();
+            //Entidade_GeralInformcoes.TipoEmpresa = Convert.ToInt32(DtLoja.Rows[0]["tipo_regime"]);
 
             //FRImpPedido ObjForm = new FRImpPedido();
             //ObjForm.IdPedido = 26;

@@ -392,3 +392,9 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.pdb
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.csprojResolveAssemblyReference.cache
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT010TransacaoMovEstoque.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT011CancelarPedido.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FRelatorio.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FR003Venda.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FR004NfEmitidas.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FR005CurvaABC.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT012ContaPagar.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FC004GrupoFinanceiro.resources

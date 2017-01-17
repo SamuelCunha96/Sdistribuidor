@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sdistribuidor.EntidadeView
 {
-    public class Entidade_VwImpressaoPedido
+    public class Entidade_VWVenda
     {
         public string lojanome { get; set; }
         public string lojanomefantasia { get; set; }

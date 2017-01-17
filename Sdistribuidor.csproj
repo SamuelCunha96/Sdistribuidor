@@ -96,8 +96,11 @@
     <Compile Include="Control\C_ModuloGeral.cs" />
     <Compile Include="Control\ICalculos.cs" />
     <Compile Include="DAO\BancoDados.cs" />
+    <Compile Include="EntidadeView\Entidade_CurvaABC.cs" />
     <Compile Include="EntidadeView\Entidade_VwImpressaoItemPedido.cs" />
     <Compile Include="EntidadeView\Entidade_VwImpressaoPedido.cs" />
+    <Compile Include="EntidadeView\Entidade_VWRelatorioNfEmitida.cs" />
+    <Compile Include="EntidadeView\Entidade_VWVenda.cs" />
     <Compile Include="Entidade\Entidade_CartaoBandeira.cs" />
     <Compile Include="Entidade\Entidade_Cfop.cs" />
     <Compile Include="Entidade\Entidade_Cidade.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="Entidade\Entidade_FormaPagto.cs" />
     <Compile Include="Entidade\Entidade_GeralInformcoes.cs" />
     <Compile Include="Entidade\Entidade_Grupo.cs" />
+    <Compile Include="Entidade\Entidade_GrupoFinanc.cs" />
     <Compile Include="Entidade\Entidade_ItemFormaPagto.cs" />
     <Compile Include="Entidade\Entidade_ItemManifestacao.cs" />
     <Compile Include="Entidade\Entidade_ItemNFe.cs" />
@@ -140,6 +144,7 @@
     <Compile Include="Model\FormaPagtoItemFormaPagto.cs" />
     <Compile Include="Model\FuncoesGerais.cs" />
     <Compile Include="Model\Grupo.cs" />
+    <Compile Include="Model\GrupoFinanc.cs" />
     <Compile Include="Model\Loja.cs" />
     <Compile Include="Model\LojaSimples.cs" />
     <Compile Include="Model\ManifestacaoNFDestinatio.cs" />
@@ -163,11 +168,35 @@
     <Compile Include="Relatorio\DanfeNfeNew.Designer.cs">
       <DependentUpon>DanfeNfeNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="Relatorio\FR003Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FR003Venda.Designer.cs">
+      <DependentUpon>FR003Venda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FR004NfEmitidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FR004NfEmitidas.Designer.cs">
+      <DependentUpon>FR004NfEmitidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FR005CurvaABC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FR005CurvaABC.Designer.cs">
+      <DependentUpon>FR005CurvaABC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relatorio\FRDanfe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Relatorio\FRDanfe.Designer.cs">
       <DependentUpon>FRDanfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FRelatorio.Designer.cs">
+      <DependentUpon>FRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatorio\FRImpPedido.cs">
       <SubType>Form</SubType>
@@ -228,6 +257,12 @@
     </Compile>
     <Compile Include="View\FC003Produto.Designer.cs">
       <DependentUpon>FC003Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FC004GrupoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FC004GrupoFinanceiro.Designer.cs">
+      <DependentUpon>FC004GrupoFinanceiro.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FC006Participante.cs">
       <SubType>Form</SubType>
@@ -309,6 +344,12 @@
     <Compile Include="View\FMT011CancelarPedido.Designer.cs">
       <DependentUpon>FMT011CancelarPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT012ContaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT012ContaPagar.Designer.cs">
+      <DependentUpon>FMT012ContaPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,13 +374,28 @@
     <EmbeddedResource Include="Relatorio\DanfeNfeNew.resx">
       <DependentUpon>DanfeNfeNew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FR003Venda.resx">
+      <DependentUpon>FR003Venda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FR004NfEmitidas.resx">
+      <DependentUpon>FR004NfEmitidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FR005CurvaABC.resx">
+      <DependentUpon>FR005CurvaABC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\FRDanfe.resx">
       <DependentUpon>FRDanfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FRelatorio.resx">
+      <DependentUpon>FRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\FRImpPedido.resx">
       <DependentUpon>FRImpPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\ImpressaoPedido.rdlc" />
+    <EmbeddedResource Include="Relatorio\R003Venda.rdlc" />
+    <EmbeddedResource Include="Relatorio\R004NotasEmitidas.rdlc" />
+    <EmbeddedResource Include="Relatorio\R005CurvaABC.rdlc" />
     <EmbeddedResource Include="Relatorio\RItemPedido.rdlc" />
     <EmbeddedResource Include="Uc\UCFormaPagto.resx">
       <DependentUpon>UCFormaPagto.cs</DependentUpon>
@@ -367,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FC003Produto.resx">
       <DependentUpon>FC003Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FC004GrupoFinanceiro.resx">
+      <DependentUpon>FC004GrupoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FC006Participante.resx">
       <DependentUpon>FC006Participante.cs</DependentUpon>
@@ -416,6 +475,9 @@
     <EmbeddedResource Include="View\FMT011CancelarPedido.resx">
       <DependentUpon>FMT011CancelarPedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT012ContaPagar.resx">
+      <DependentUpon>FMT012ContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,8 +490,11 @@
     <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_NotaFiscal.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_Pedido.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.Entidade.Entidade_VWSaida.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_CurvaABC.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VwImpressaoItemPedido.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VwImpressaoPedido.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VWRelatorioNfEmitida.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VWVenda.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

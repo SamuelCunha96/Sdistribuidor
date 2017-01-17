@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnPagamento = new System.Windows.Forms.Button();
             this.btnPedido = new System.Windows.Forms.Button();
             this.TbCadastro = new System.Windows.Forms.TabPage();
@@ -38,11 +39,11 @@
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnGrupo = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnManifestacao = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnMovEstoque = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnManifestacao = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnNfEntradaXml = new System.Windows.Forms.Button();
             this.tbPgNotaFiscal = new System.Windows.Forms.TabPage();
@@ -53,15 +54,64 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnAux = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.BtnRelatorioPedido = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001CadastroGrupo = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002CadastroProduto = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM003CadastroParticipante = new System.Windows.Forms.ToolStripMenuItem();
+            this.movimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001MovimentoPedido = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001Movimento001Pedido = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001Movimento002Cancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.caixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002Caixa001Abrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002Caixa002Pagamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM003Estoque001Consulta = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM003Estoque002Movimentar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM004Financeiro001ContaPagar = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasAPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM004Financeiro001ContaPagar001Nova = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM004Financeiro001ContaPagar002Pagamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notaFiscalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001NotaFiscalManifestar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002NotaFiscalEntrada = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002NotaFiscalEntrada001Cadastrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM003NotaFiscalSaida = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM003NotaFiscalSaida001Pedido = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM003NotaFiscalSaida002Outras = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM003NotaFiscalSaida002ListarNFe = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001RelatorioPedido = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001RelatorioPedido001ListaPedido = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001RelatorioPedido002CurvaABC = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001RelatorioNotaFiscal = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001RelatorioNotaFiscal001ListaNFe = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001ConfigLoja = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002ConfigTabAux = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grupoFinanceiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tbPgNotaFiscal.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -84,6 +134,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Faturamento";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(153, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 94);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar Pedido";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnPagamento
             // 
@@ -182,45 +248,19 @@
             // 
             this.tabControl1.Controls.Add(this.TbCadastro);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tbPgNotaFiscal);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(12, 89);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(755, 125);
             this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.btnManifestacao);
-            this.tabPage3.Location = new System.Drawing.Point(4, 21);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(747, 100);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "Manifestação";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // btnManifestacao
-            // 
-            this.btnManifestacao.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnManifestacao.FlatAppearance.BorderSize = 0;
-            this.btnManifestacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManifestacao.Image = ((System.Drawing.Image)(resources.GetObject("btnManifestacao.Image")));
-            this.btnManifestacao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnManifestacao.Location = new System.Drawing.Point(3, 3);
-            this.btnManifestacao.Name = "btnManifestacao";
-            this.btnManifestacao.Size = new System.Drawing.Size(75, 94);
-            this.btnManifestacao.TabIndex = 3;
-            this.btnManifestacao.Text = "Manifestação";
-            this.btnManifestacao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnManifestacao.UseVisualStyleBackColor = true;
-            this.btnManifestacao.Click += new System.EventHandler(this.btnManifestacao_Click);
+            this.tabControl1.Visible = false;
             // 
             // tabPage5
             // 
@@ -264,6 +304,33 @@
             this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEstoque.UseVisualStyleBackColor = true;
             this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.btnManifestacao);
+            this.tabPage3.Location = new System.Drawing.Point(4, 21);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(747, 100);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "Manifestação";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnManifestacao
+            // 
+            this.btnManifestacao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnManifestacao.FlatAppearance.BorderSize = 0;
+            this.btnManifestacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManifestacao.Image = ((System.Drawing.Image)(resources.GetObject("btnManifestacao.Image")));
+            this.btnManifestacao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnManifestacao.Location = new System.Drawing.Point(3, 3);
+            this.btnManifestacao.Name = "btnManifestacao";
+            this.btnManifestacao.Size = new System.Drawing.Size(75, 94);
+            this.btnManifestacao.TabIndex = 3;
+            this.btnManifestacao.Text = "Manifestação";
+            this.btnManifestacao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManifestacao.UseVisualStyleBackColor = true;
+            this.btnManifestacao.Click += new System.EventHandler(this.btnManifestacao_Click);
             // 
             // tabPage4
             // 
@@ -415,43 +482,419 @@
             this.btnAux.UseVisualStyleBackColor = true;
             this.btnAux.Click += new System.EventHandler(this.btnAux_Click);
             // 
-            // btnCancelar
+            // tabPage6
             // 
-            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(153, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 94);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar Pedido";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.tabPage6.Controls.Add(this.BtnRelatorioPedido);
+            this.tabPage6.Location = new System.Drawing.Point(4, 21);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(747, 100);
+            this.tabPage6.TabIndex = 7;
+            this.tabPage6.Text = "Relatórios";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // BtnRelatorioPedido
+            // 
+            this.BtnRelatorioPedido.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnRelatorioPedido.FlatAppearance.BorderSize = 0;
+            this.BtnRelatorioPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRelatorioPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnRelatorioPedido.Image")));
+            this.BtnRelatorioPedido.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnRelatorioPedido.Location = new System.Drawing.Point(0, 0);
+            this.BtnRelatorioPedido.Name = "BtnRelatorioPedido";
+            this.BtnRelatorioPedido.Size = new System.Drawing.Size(75, 100);
+            this.BtnRelatorioPedido.TabIndex = 2;
+            this.BtnRelatorioPedido.Text = "Pedido";
+            this.BtnRelatorioPedido.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnRelatorioPedido.UseVisualStyleBackColor = true;
+            this.BtnRelatorioPedido.Click += new System.EventHandler(this.BtnRelatorioPedido_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroToolStripMenuItem,
+            this.movimentoToolStripMenuItem,
+            this.notaFiscalToolStripMenuItem,
+            this.relatóriosToolStripMenuItem,
+            this.configuraçãoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(755, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001CadastroGrupo,
+            this.TSM002CadastroProduto,
+            this.TSM003CadastroParticipante});
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            // 
+            // TSM001CadastroGrupo
+            // 
+            this.TSM001CadastroGrupo.Name = "TSM001CadastroGrupo";
+            this.TSM001CadastroGrupo.Size = new System.Drawing.Size(137, 22);
+            this.TSM001CadastroGrupo.Text = "Grupo";
+            this.TSM001CadastroGrupo.Click += new System.EventHandler(this.TSM001CadastroGrupo_Click);
+            // 
+            // TSM002CadastroProduto
+            // 
+            this.TSM002CadastroProduto.Name = "TSM002CadastroProduto";
+            this.TSM002CadastroProduto.Size = new System.Drawing.Size(137, 22);
+            this.TSM002CadastroProduto.Text = "Produto";
+            this.TSM002CadastroProduto.Click += new System.EventHandler(this.TSM002CadastroProduto_Click);
+            // 
+            // TSM003CadastroParticipante
+            // 
+            this.TSM003CadastroParticipante.Name = "TSM003CadastroParticipante";
+            this.TSM003CadastroParticipante.Size = new System.Drawing.Size(137, 22);
+            this.TSM003CadastroParticipante.Text = "Participante";
+            this.TSM003CadastroParticipante.Click += new System.EventHandler(this.TSM003CadastroParticipante_Click);
+            // 
+            // movimentoToolStripMenuItem
+            // 
+            this.movimentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001MovimentoPedido,
+            this.caixaToolStripMenuItem,
+            this.estoqueToolStripMenuItem,
+            this.TSM004Financeiro001ContaPagar});
+            this.movimentoToolStripMenuItem.Name = "movimentoToolStripMenuItem";
+            this.movimentoToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.movimentoToolStripMenuItem.Text = "Movimento";
+            // 
+            // TSM001MovimentoPedido
+            // 
+            this.TSM001MovimentoPedido.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001Movimento001Pedido,
+            this.TSM001Movimento002Cancelar});
+            this.TSM001MovimentoPedido.Name = "TSM001MovimentoPedido";
+            this.TSM001MovimentoPedido.Size = new System.Drawing.Size(129, 22);
+            this.TSM001MovimentoPedido.Text = "Pedido";
+            // 
+            // TSM001Movimento001Pedido
+            // 
+            this.TSM001Movimento001Pedido.Name = "TSM001Movimento001Pedido";
+            this.TSM001Movimento001Pedido.Size = new System.Drawing.Size(143, 22);
+            this.TSM001Movimento001Pedido.Text = "Novo Pedido";
+            this.TSM001Movimento001Pedido.Click += new System.EventHandler(this.TSM001Movimento001Pedido_Click);
+            // 
+            // TSM001Movimento002Cancelar
+            // 
+            this.TSM001Movimento002Cancelar.Name = "TSM001Movimento002Cancelar";
+            this.TSM001Movimento002Cancelar.Size = new System.Drawing.Size(143, 22);
+            this.TSM001Movimento002Cancelar.Text = "Cancelar";
+            this.TSM001Movimento002Cancelar.Click += new System.EventHandler(this.TSM001Movimento002Cancelar_Click);
+            // 
+            // caixaToolStripMenuItem
+            // 
+            this.caixaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM002Caixa001Abrir,
+            this.TSM002Caixa002Pagamento});
+            this.caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
+            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.caixaToolStripMenuItem.Text = "Caixa";
+            // 
+            // TSM002Caixa001Abrir
+            // 
+            this.TSM002Caixa001Abrir.Name = "TSM002Caixa001Abrir";
+            this.TSM002Caixa001Abrir.Size = new System.Drawing.Size(180, 22);
+            this.TSM002Caixa001Abrir.Text = "Abrir Caixa";
+            // 
+            // TSM002Caixa002Pagamento
+            // 
+            this.TSM002Caixa002Pagamento.Name = "TSM002Caixa002Pagamento";
+            this.TSM002Caixa002Pagamento.Size = new System.Drawing.Size(180, 22);
+            this.TSM002Caixa002Pagamento.Text = "Receber Pagamento";
+            this.TSM002Caixa002Pagamento.Click += new System.EventHandler(this.TSM002Caixa002Pagamento_Click);
+            // 
+            // estoqueToolStripMenuItem
+            // 
+            this.estoqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM003Estoque001Consulta,
+            this.TSM003Estoque002Movimentar});
+            this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.estoqueToolStripMenuItem.Text = "Estoque";
+            // 
+            // TSM003Estoque001Consulta
+            // 
+            this.TSM003Estoque001Consulta.Name = "TSM003Estoque001Consulta";
+            this.TSM003Estoque001Consulta.Size = new System.Drawing.Size(142, 22);
+            this.TSM003Estoque001Consulta.Text = "Consulta";
+            this.TSM003Estoque001Consulta.Click += new System.EventHandler(this.TSM003Estoque001Consulta_Click);
+            // 
+            // TSM003Estoque002Movimentar
+            // 
+            this.TSM003Estoque002Movimentar.Name = "TSM003Estoque002Movimentar";
+            this.TSM003Estoque002Movimentar.Size = new System.Drawing.Size(142, 22);
+            this.TSM003Estoque002Movimentar.Text = "Movimentar ";
+            this.TSM003Estoque002Movimentar.Click += new System.EventHandler(this.TSM003Estoque002Movimentar_Click);
+            // 
+            // TSM004Financeiro001ContaPagar
+            // 
+            this.TSM004Financeiro001ContaPagar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.grupoFinanceiroToolStripMenuItem,
+            this.contasAPagarToolStripMenuItem,
+            this.contasAReceberToolStripMenuItem});
+            this.TSM004Financeiro001ContaPagar.Name = "TSM004Financeiro001ContaPagar";
+            this.TSM004Financeiro001ContaPagar.Size = new System.Drawing.Size(152, 22);
+            this.TSM004Financeiro001ContaPagar.Text = "Financeiro";
+            // 
+            // contasAPagarToolStripMenuItem
+            // 
+            this.contasAPagarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM004Financeiro001ContaPagar001Nova,
+            this.TSM004Financeiro001ContaPagar002Pagamento});
+            this.contasAPagarToolStripMenuItem.Name = "contasAPagarToolStripMenuItem";
+            this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.contasAPagarToolStripMenuItem.Text = "Contas a Pagar";
+            // 
+            // TSM004Financeiro001ContaPagar001Nova
+            // 
+            this.TSM004Financeiro001ContaPagar001Nova.Name = "TSM004Financeiro001ContaPagar001Nova";
+            this.TSM004Financeiro001ContaPagar001Nova.Size = new System.Drawing.Size(137, 22);
+            this.TSM004Financeiro001ContaPagar001Nova.Text = "Nova Conta";
+            this.TSM004Financeiro001ContaPagar001Nova.Click += new System.EventHandler(this.TSM004Financeiro001ContaPagar001Nova_Click);
+            // 
+            // TSM004Financeiro001ContaPagar002Pagamento
+            // 
+            this.TSM004Financeiro001ContaPagar002Pagamento.Name = "TSM004Financeiro001ContaPagar002Pagamento";
+            this.TSM004Financeiro001ContaPagar002Pagamento.Size = new System.Drawing.Size(137, 22);
+            this.TSM004Financeiro001ContaPagar002Pagamento.Text = "Pagamento";
+            // 
+            // contasAReceberToolStripMenuItem
+            // 
+            this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
+            this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
+            // 
+            // notaFiscalToolStripMenuItem
+            // 
+            this.notaFiscalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001NotaFiscalManifestar,
+            this.TSM002NotaFiscalEntrada,
+            this.TSM003NotaFiscalSaida});
+            this.notaFiscalToolStripMenuItem.Name = "notaFiscalToolStripMenuItem";
+            this.notaFiscalToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.notaFiscalToolStripMenuItem.Text = "Nota Fiscal";
+            // 
+            // TSM001NotaFiscalManifestar
+            // 
+            this.TSM001NotaFiscalManifestar.Name = "TSM001NotaFiscalManifestar";
+            this.TSM001NotaFiscalManifestar.Size = new System.Drawing.Size(145, 22);
+            this.TSM001NotaFiscalManifestar.Text = "Manifestação";
+            this.TSM001NotaFiscalManifestar.Click += new System.EventHandler(this.TSM001NotaFiscalManifestar_Click);
+            // 
+            // TSM002NotaFiscalEntrada
+            // 
+            this.TSM002NotaFiscalEntrada.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM002NotaFiscalEntrada001Cadastrar});
+            this.TSM002NotaFiscalEntrada.Name = "TSM002NotaFiscalEntrada";
+            this.TSM002NotaFiscalEntrada.Size = new System.Drawing.Size(145, 22);
+            this.TSM002NotaFiscalEntrada.Text = "Entrada";
+            // 
+            // TSM002NotaFiscalEntrada001Cadastrar
+            // 
+            this.TSM002NotaFiscalEntrada001Cadastrar.Name = "TSM002NotaFiscalEntrada001Cadastrar";
+            this.TSM002NotaFiscalEntrada001Cadastrar.Size = new System.Drawing.Size(124, 22);
+            this.TSM002NotaFiscalEntrada001Cadastrar.Text = "Cadastrar";
+            this.TSM002NotaFiscalEntrada001Cadastrar.Click += new System.EventHandler(this.TSM002NotaFiscalEntrada001Cadastrar_Click);
+            // 
+            // TSM003NotaFiscalSaida
+            // 
+            this.TSM003NotaFiscalSaida.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM003NotaFiscalSaida001Pedido,
+            this.TSM003NotaFiscalSaida002Outras,
+            this.TSM003NotaFiscalSaida002ListarNFe});
+            this.TSM003NotaFiscalSaida.Name = "TSM003NotaFiscalSaida";
+            this.TSM003NotaFiscalSaida.Size = new System.Drawing.Size(145, 22);
+            this.TSM003NotaFiscalSaida.Text = "Saída";
+            // 
+            // TSM003NotaFiscalSaida001Pedido
+            // 
+            this.TSM003NotaFiscalSaida001Pedido.Name = "TSM003NotaFiscalSaida001Pedido";
+            this.TSM003NotaFiscalSaida001Pedido.Size = new System.Drawing.Size(158, 22);
+            this.TSM003NotaFiscalSaida001Pedido.Text = "Associar Pedido";
+            this.TSM003NotaFiscalSaida001Pedido.Click += new System.EventHandler(this.TSM003NotaFiscalSaida001Pedido_Click);
+            // 
+            // TSM003NotaFiscalSaida002Outras
+            // 
+            this.TSM003NotaFiscalSaida002Outras.Name = "TSM003NotaFiscalSaida002Outras";
+            this.TSM003NotaFiscalSaida002Outras.Size = new System.Drawing.Size(158, 22);
+            this.TSM003NotaFiscalSaida002Outras.Text = "NFe Outras";
+            this.TSM003NotaFiscalSaida002Outras.Click += new System.EventHandler(this.TSM003NotaFiscalSaida002Outras_Click);
+            // 
+            // TSM003NotaFiscalSaida002ListarNFe
+            // 
+            this.TSM003NotaFiscalSaida002ListarNFe.Name = "TSM003NotaFiscalSaida002ListarNFe";
+            this.TSM003NotaFiscalSaida002ListarNFe.Size = new System.Drawing.Size(158, 22);
+            this.TSM003NotaFiscalSaida002ListarNFe.Text = "Listar NFe";
+            this.TSM003NotaFiscalSaida002ListarNFe.Click += new System.EventHandler(this.TSM003NotaFiscalSaida002ListarNFe_Click);
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001RelatorioPedido,
+            this.TSM001RelatorioNotaFiscal});
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // TSM001RelatorioPedido
+            // 
+            this.TSM001RelatorioPedido.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001RelatorioPedido001ListaPedido,
+            this.TSM001RelatorioPedido002CurvaABC});
+            this.TSM001RelatorioPedido.Name = "TSM001RelatorioPedido";
+            this.TSM001RelatorioPedido.Size = new System.Drawing.Size(132, 22);
+            this.TSM001RelatorioPedido.Text = "Pedido";
+            // 
+            // TSM001RelatorioPedido001ListaPedido
+            // 
+            this.TSM001RelatorioPedido001ListaPedido.Name = "TSM001RelatorioPedido001ListaPedido";
+            this.TSM001RelatorioPedido001ListaPedido.Size = new System.Drawing.Size(147, 22);
+            this.TSM001RelatorioPedido001ListaPedido.Text = "Listar Pedidos";
+            this.TSM001RelatorioPedido001ListaPedido.Click += new System.EventHandler(this.TSM001RelatorioPedido001ListaPedido_Click);
+            // 
+            // TSM001RelatorioPedido002CurvaABC
+            // 
+            this.TSM001RelatorioPedido002CurvaABC.Name = "TSM001RelatorioPedido002CurvaABC";
+            this.TSM001RelatorioPedido002CurvaABC.Size = new System.Drawing.Size(147, 22);
+            this.TSM001RelatorioPedido002CurvaABC.Text = "Curva ABC";
+            this.TSM001RelatorioPedido002CurvaABC.Click += new System.EventHandler(this.TSM001RelatorioPedido002CurvaABC_Click);
+            // 
+            // TSM001RelatorioNotaFiscal
+            // 
+            this.TSM001RelatorioNotaFiscal.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001RelatorioNotaFiscal001ListaNFe});
+            this.TSM001RelatorioNotaFiscal.Name = "TSM001RelatorioNotaFiscal";
+            this.TSM001RelatorioNotaFiscal.Size = new System.Drawing.Size(132, 22);
+            this.TSM001RelatorioNotaFiscal.Text = "Nota Fiscal";
+            // 
+            // TSM001RelatorioNotaFiscal001ListaNFe
+            // 
+            this.TSM001RelatorioNotaFiscal001ListaNFe.Name = "TSM001RelatorioNotaFiscal001ListaNFe";
+            this.TSM001RelatorioNotaFiscal001ListaNFe.Size = new System.Drawing.Size(175, 22);
+            this.TSM001RelatorioNotaFiscal001ListaNFe.Text = "Lista de Nota Fiscal";
+            this.TSM001RelatorioNotaFiscal001ListaNFe.Click += new System.EventHandler(this.TSM001RelatorioNotaFiscal001ListaNFe_Click);
+            // 
+            // configuraçãoToolStripMenuItem
+            // 
+            this.configuraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001ConfigLoja,
+            this.TSM002ConfigTabAux});
+            this.configuraçãoToolStripMenuItem.Name = "configuraçãoToolStripMenuItem";
+            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.configuraçãoToolStripMenuItem.Text = "Configuração";
+            // 
+            // TSM001ConfigLoja
+            // 
+            this.TSM001ConfigLoja.Name = "TSM001ConfigLoja";
+            this.TSM001ConfigLoja.Size = new System.Drawing.Size(161, 22);
+            this.TSM001ConfigLoja.Text = "Lojas";
+            this.TSM001ConfigLoja.Click += new System.EventHandler(this.TSM001ConfigLoja_Click);
+            // 
+            // TSM002ConfigTabAux
+            // 
+            this.TSM002ConfigTabAux.Name = "TSM002ConfigTabAux";
+            this.TSM002ConfigTabAux.Size = new System.Drawing.Size(161, 22);
+            this.TSM002ConfigTabAux.Text = "Tabela Auxiliares";
+            this.TSM002ConfigTabAux.Click += new System.EventHandler(this.TSM002ConfigTabAux_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 294);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(755, 61);
+            this.panel1.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 34);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(755, 24);
+            this.panel3.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Font = new System.Drawing.Font("Candara", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(601, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Suporte:(085) 9 9704.1177";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(755, 34);
+            this.panel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(640, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 33);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "DevLegal";
+            // 
+            // grupoFinanceiroToolStripMenuItem
+            // 
+            this.grupoFinanceiroToolStripMenuItem.Name = "grupoFinanceiroToolStripMenuItem";
+            this.grupoFinanceiroToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.grupoFinanceiroToolStripMenuItem.Text = "Grupo Financeiro";
+            this.grupoFinanceiroToolStripMenuItem.Click += new System.EventHandler(this.grupoFinanceiroToolStripMenuItem_Click);
             // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(755, 377);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DevLegal - Sistemas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FMenu_Load);
             this.tabPage2.ResumeLayout(false);
             this.TbCadastro.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tbPgNotaFiscal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,5 +927,50 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnMovEstoque;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button BtnRelatorioPedido;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM001CadastroGrupo;
+        private System.Windows.Forms.ToolStripMenuItem TSM002CadastroProduto;
+        private System.Windows.Forms.ToolStripMenuItem TSM003CadastroParticipante;
+        private System.Windows.Forms.ToolStripMenuItem movimentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM001MovimentoPedido;
+        private System.Windows.Forms.ToolStripMenuItem TSM001Movimento001Pedido;
+        private System.Windows.Forms.ToolStripMenuItem TSM001Movimento002Cancelar;
+        private System.Windows.Forms.ToolStripMenuItem caixaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM002Caixa001Abrir;
+        private System.Windows.Forms.ToolStripMenuItem TSM002Caixa002Pagamento;
+        private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM003Estoque001Consulta;
+        private System.Windows.Forms.ToolStripMenuItem TSM003Estoque002Movimentar;
+        private System.Windows.Forms.ToolStripMenuItem notaFiscalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM001NotaFiscalManifestar;
+        private System.Windows.Forms.ToolStripMenuItem TSM002NotaFiscalEntrada;
+        private System.Windows.Forms.ToolStripMenuItem TSM002NotaFiscalEntrada001Cadastrar;
+        private System.Windows.Forms.ToolStripMenuItem TSM003NotaFiscalSaida;
+        private System.Windows.Forms.ToolStripMenuItem TSM003NotaFiscalSaida001Pedido;
+        private System.Windows.Forms.ToolStripMenuItem TSM003NotaFiscalSaida002Outras;
+        private System.Windows.Forms.ToolStripMenuItem TSM003NotaFiscalSaida002ListarNFe;
+        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM001RelatorioPedido;
+        private System.Windows.Forms.ToolStripMenuItem TSM001RelatorioPedido001ListaPedido;
+        private System.Windows.Forms.ToolStripMenuItem TSM001RelatorioNotaFiscal;
+        private System.Windows.Forms.ToolStripMenuItem TSM001RelatorioNotaFiscal001ListaNFe;
+        private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM001ConfigLoja;
+        private System.Windows.Forms.ToolStripMenuItem TSM002ConfigTabAux;
+        private System.Windows.Forms.ToolStripMenuItem TSM001RelatorioPedido002CurvaABC;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar;
+        private System.Windows.Forms.ToolStripMenuItem contasAPagarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar001Nova;
+        private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar002Pagamento;
+        private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grupoFinanceiroToolStripMenuItem;
     }
 }

@@ -209,6 +209,7 @@ namespace Sdistribuidor.Model
             return BancoDados.Consultar(" SELECT * FROM vw_pesquisapedido WHERE id_participante = " + idparticiapante + " dt_pedido between '" + string.Format("{0:dd/MM/yyyy} ", dtini) + "' AND '" + string.Format("{0:dd/MM/yyyy} ", dtfim) + " 23:59:59'");
         }
 
+        #region Cancelar Pedido
         public bool CancelarPedido(int idpedido, bool flrecebcaixa = false)
         {
             ObjMovEstoque = new MovimentacaoEstoque();
@@ -245,6 +246,33 @@ namespace Sdistribuidor.Model
             {
                 return false;
             }
+        }
+        #endregion
+
+
+        public DataTable RelatorioVenda(DateTime DtIni, DateTime DtFim, string TipoVenda)
+        {
+            if(TipoVenda == "T")
+            {
+                return BancoDados.Consultar("SELECT * FROM vw_relatoriovenda WHERE dt_pedido between '" + string.Format("{0:dd/MM/yyyy} ", DtIni) + "' AND '" + string.Format("{0:dd/MM/yyyy} ", DtFim) + " 23:59:59' ORDER BY dt_pedido");
+            }
+            else
+            {
+                return BancoDados.Consultar("SELECT * FROM vw_relatoriovenda WHERE stpedido ='"+ TipoVenda.Trim() +"' AND dt_pedido between '" + string.Format("{0:dd/MM/yyyy} ", DtIni) + "' AND '" + string.Format("{0:dd/MM/yyyy} ", DtFim) + " 23:59:59' ORDER BY dt_pedido");
+            }
+        }
+
+        public DataTable RelatorioCurvaABC(DateTime DtIni, DateTime DtFim)
+        {
+            return BancoDados.Consultar("SELECT \n" +
+                                        " it.id_produto,prod.descricao,sum(qt_pedido) as qtdvendido, it.vl_unitario, (it.vl_unitario * sum(qt_pedido))::numeric(12,2) as totalvendido,(((it.vl_unitario * sum(qt_pedido)) / sptotalgeralvendaporperiodo('" + string.Format("{0:dd/MM/yyyy} ", DtIni) + "','" + string.Format("{0:dd/MM/yyyy} ", DtFim) + " 23:59:59')) * 100)::numeric(12,2) as porcentagem " +
+                                        " FROM pedido p \n" +
+                                        " INNER JOIN itempedido it on p.id_pedido = it.id_pedido \n" +
+                                        " INNER JOIN produto prod on prod.id_produto = it.id_produto \n" +
+                                        " WHERE dt_pedido between '" + string.Format("{0:dd/MM/yyyy} ", DtIni) + "' AND '" + string.Format("{0:dd/MM/yyyy} ", DtFim) + " 23:59:59' AND stpedido not in('C','N') \n" +
+                                        " GROUP BY it.id_produto,prod.descricao,it.vl_unitario \n" +
+                                        " ORDER BY totalvendido desc ");
+
         }
     }
 }
