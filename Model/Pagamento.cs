@@ -12,7 +12,7 @@ namespace Sdistribuidor.Model
     {
         public DataTable ListaPedidoPagamento(string StPedido)
         {
-            return BancoDados.Consultar("SELECT * FROM listapedidopagamento WHERE StPedido = '" + StPedido + "' AND (flcartao= true OR flavista=true)");
+            return BancoDados.Consultar("SELECT * FROM listapedidopagamento WHERE StPedido = '" + StPedido + "' AND (flcartao= true OR flavista=true) ORDER BY dt_pedido desc");
         }
         /// <summary>
         /// Consulta de Pedidos Recebidos no caixa ou que a forma de pagamento é diferente de avista
@@ -24,7 +24,12 @@ namespace Sdistribuidor.Model
         {
             return BancoDados.Consultar(" SELECT * FROM listapedidopagamento WHERE StPedido = '" + StPedido + "'\n" +
                                         " UNION \n" +
-                                        " SELECT * FROM listapedidopagamento WHERE StPedido = 'A' AND FlAvista=false");
+                                        " SELECT * FROM listapedidopagamento WHERE StPedido = 'A' AND FlAvista=false AND stanalise='P' ORDER BY dt_pedido desc");
+        }
+
+        public DataTable ListaPedidoEmAnalise(DateTime DtIni,DateTime DtFim, string StPedido, string StAnalise)
+        {
+            return BancoDados.Consultar(" SELECT * FROM listapedidopagamento WHERE dt_pedido between '"+ string.Format("{0:dd/MM/yyyy}", DtIni) +"' AND '"+ string.Format("{0:dd/MM/yyyy}", DtFim) + " 23:59:59' AND StPedido = '"+ StPedido +"' AND FlAvista=false AND stanalise='" + StAnalise + "' ORDER BY dt_pedido");
         }
     }
 }

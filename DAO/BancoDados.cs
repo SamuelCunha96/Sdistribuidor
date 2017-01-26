@@ -36,8 +36,6 @@ namespace Sdistribuidor.DAO
                 {
                     conexao.ConnectionString = ConfigurationManager.ConnectionStrings["BancoDados"].ToString();
                     conexao.Open();
-
-                    
                     //Host=192.168.3.7;Username=postgres;Password=v83ay74;Database=comercio
                 }
                 catch (Exception Ex)

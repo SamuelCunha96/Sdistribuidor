@@ -122,7 +122,8 @@ namespace Sdistribuidor.View
         }
         void PesquisaDados()
         {
-            PreencherDados(objProd.Pesquisa(long.Parse( TxtCodProd.Text)));
+            if(TxtCodProd.Text != string.Empty)
+                PreencherDados(objProd.Pesquisa(long.Parse( TxtCodProd.Text)));
         }
         void CalcularTotalItem()
         {

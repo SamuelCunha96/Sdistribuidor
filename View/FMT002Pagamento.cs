@@ -30,6 +30,9 @@ namespace Sdistribuidor.View
         {
             MPedidos = new Pagamento();
 
+            if (grdPedidosPagamento.Rows.Count > 0)
+                grdPedidosPagamento.Rows.Clear();
+
             var dt = MPedidos.ListaPedidoPagamento("A");
 
             for (int i = 0; i < dt.Rows.Count; i++)

@@ -104,6 +104,7 @@
     <Compile Include="Entidade\Entidade_CartaoBandeira.cs" />
     <Compile Include="Entidade\Entidade_Cfop.cs" />
     <Compile Include="Entidade\Entidade_Cidade.cs" />
+    <Compile Include="Entidade\Entidade_ContaPagar.cs" />
     <Compile Include="Entidade\Entidade_Cst.cs" />
     <Compile Include="Entidade\Entidade_Estoque.cs" />
     <Compile Include="Entidade\Entidade_Fatura.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Entidade\Entidade_GeralInformcoes.cs" />
     <Compile Include="Entidade\Entidade_Grupo.cs" />
     <Compile Include="Entidade\Entidade_GrupoFinanc.cs" />
+    <Compile Include="Entidade\Entidade_ItemContaPagar.cs" />
     <Compile Include="Entidade\Entidade_ItemFormaPagto.cs" />
     <Compile Include="Entidade\Entidade_ItemManifestacao.cs" />
     <Compile Include="Entidade\Entidade_ItemNFe.cs" />
@@ -139,6 +141,7 @@
     <Compile Include="Model\CartaoBandeira.cs" />
     <Compile Include="Model\Cfop.cs" />
     <Compile Include="Model\Cidade.cs" />
+    <Compile Include="Model\ContaPagar.cs" />
     <Compile Include="Model\Cst.cs" />
     <Compile Include="Model\DownloadNFe.cs" />
     <Compile Include="Model\FormaPagtoItemFormaPagto.cs" />
@@ -350,6 +353,24 @@
     <Compile Include="View\FMT012ContaPagar.Designer.cs">
       <DependentUpon>FMT012ContaPagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FMT013PagamentoConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT013PagamentoConta.Designer.cs">
+      <DependentUpon>FMT013PagamentoConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FMT014CancelarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT014CancelarConta.Designer.cs">
+      <DependentUpon>FMT014CancelarConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FMT015Analise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FMT015Analise.Designer.cs">
+      <DependentUpon>FMT015Analise.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FP001Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -477,6 +498,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FMT012ContaPagar.resx">
       <DependentUpon>FMT012ContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT013PagamentoConta.resx">
+      <DependentUpon>FMT013PagamentoConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT014CancelarConta.resx">
+      <DependentUpon>FMT014CancelarConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FMT015Analise.resx">
+      <DependentUpon>FMT015Analise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FP001Produto.resx">
       <DependentUpon>FP001Produto.cs</DependentUpon>

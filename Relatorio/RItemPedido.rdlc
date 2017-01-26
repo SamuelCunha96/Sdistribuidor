@@ -207,7 +207,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Vl Desc.</Value>
+                              <Value>Desc. %</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>SemiBold</FontWeight>
@@ -534,7 +534,7 @@
         </TablixRowHierarchy>
         <DataSetName>DsItemPedido</DataSetName>
         <Height>1.04125cm</Height>
-        <Width>18.34667cm</Width>
+        <Width>18.34666cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

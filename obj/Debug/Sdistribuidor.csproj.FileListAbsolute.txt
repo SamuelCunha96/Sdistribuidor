@@ -398,3 +398,6 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.F
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FR005CurvaABC.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT012ContaPagar.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FC004GrupoFinanceiro.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT013PagamentoConta.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT014CancelarConta.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT015Analise.resources

@@ -72,9 +72,11 @@
             this.TSM003Estoque001Consulta = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM003Estoque002Movimentar = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM004Financeiro001ContaPagar = new System.Windows.Forms.ToolStripMenuItem();
+            this.grupoFinanceiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM004Financeiro001ContaPagar001Nova = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM004Financeiro001ContaPagar002Pagamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM004Financeiro001ContaPagar002Cancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM004Financeiro001ContaPagar003Pagamento = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notaFiscalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM001NotaFiscalManifestar = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +100,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.grupoFinanceiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002Caixa003Analise = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -570,7 +572,7 @@
             this.TSM001Movimento001Pedido,
             this.TSM001Movimento002Cancelar});
             this.TSM001MovimentoPedido.Name = "TSM001MovimentoPedido";
-            this.TSM001MovimentoPedido.Size = new System.Drawing.Size(129, 22);
+            this.TSM001MovimentoPedido.Size = new System.Drawing.Size(152, 22);
             this.TSM001MovimentoPedido.Text = "Pedido";
             // 
             // TSM001Movimento001Pedido
@@ -591,9 +593,10 @@
             // 
             this.caixaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM002Caixa001Abrir,
-            this.TSM002Caixa002Pagamento});
+            this.TSM002Caixa002Pagamento,
+            this.TSM002Caixa003Analise});
             this.caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
-            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.caixaToolStripMenuItem.Text = "Caixa";
             // 
             // TSM002Caixa001Abrir
@@ -615,7 +618,7 @@
             this.TSM003Estoque001Consulta,
             this.TSM003Estoque002Movimentar});
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.estoqueToolStripMenuItem.Text = "Estoque";
             // 
             // TSM003Estoque001Consulta
@@ -642,11 +645,19 @@
             this.TSM004Financeiro001ContaPagar.Size = new System.Drawing.Size(152, 22);
             this.TSM004Financeiro001ContaPagar.Text = "Financeiro";
             // 
+            // grupoFinanceiroToolStripMenuItem
+            // 
+            this.grupoFinanceiroToolStripMenuItem.Name = "grupoFinanceiroToolStripMenuItem";
+            this.grupoFinanceiroToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.grupoFinanceiroToolStripMenuItem.Text = "Grupo Financeiro";
+            this.grupoFinanceiroToolStripMenuItem.Click += new System.EventHandler(this.grupoFinanceiroToolStripMenuItem_Click);
+            // 
             // contasAPagarToolStripMenuItem
             // 
             this.contasAPagarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM004Financeiro001ContaPagar001Nova,
-            this.TSM004Financeiro001ContaPagar002Pagamento});
+            this.TSM004Financeiro001ContaPagar002Cancelar,
+            this.TSM004Financeiro001ContaPagar003Pagamento});
             this.contasAPagarToolStripMenuItem.Name = "contasAPagarToolStripMenuItem";
             this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.contasAPagarToolStripMenuItem.Text = "Contas a Pagar";
@@ -658,11 +669,19 @@
             this.TSM004Financeiro001ContaPagar001Nova.Text = "Nova Conta";
             this.TSM004Financeiro001ContaPagar001Nova.Click += new System.EventHandler(this.TSM004Financeiro001ContaPagar001Nova_Click);
             // 
-            // TSM004Financeiro001ContaPagar002Pagamento
+            // TSM004Financeiro001ContaPagar002Cancelar
             // 
-            this.TSM004Financeiro001ContaPagar002Pagamento.Name = "TSM004Financeiro001ContaPagar002Pagamento";
-            this.TSM004Financeiro001ContaPagar002Pagamento.Size = new System.Drawing.Size(137, 22);
-            this.TSM004Financeiro001ContaPagar002Pagamento.Text = "Pagamento";
+            this.TSM004Financeiro001ContaPagar002Cancelar.Name = "TSM004Financeiro001ContaPagar002Cancelar";
+            this.TSM004Financeiro001ContaPagar002Cancelar.Size = new System.Drawing.Size(137, 22);
+            this.TSM004Financeiro001ContaPagar002Cancelar.Text = "Cancelar";
+            this.TSM004Financeiro001ContaPagar002Cancelar.Click += new System.EventHandler(this.TSM004Financeiro001ContaPagar002Cancelar_Click);
+            // 
+            // TSM004Financeiro001ContaPagar003Pagamento
+            // 
+            this.TSM004Financeiro001ContaPagar003Pagamento.Name = "TSM004Financeiro001ContaPagar003Pagamento";
+            this.TSM004Financeiro001ContaPagar003Pagamento.Size = new System.Drawing.Size(137, 22);
+            this.TSM004Financeiro001ContaPagar003Pagamento.Text = "Pagamento";
+            this.TSM004Financeiro001ContaPagar003Pagamento.Click += new System.EventHandler(this.TSM004Financeiro001ContaPagar003Pagamento_Click);
             // 
             // contasAReceberToolStripMenuItem
             // 
@@ -856,12 +875,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "DevLegal";
             // 
-            // grupoFinanceiroToolStripMenuItem
+            // TSM002Caixa003Analise
             // 
-            this.grupoFinanceiroToolStripMenuItem.Name = "grupoFinanceiroToolStripMenuItem";
-            this.grupoFinanceiroToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.grupoFinanceiroToolStripMenuItem.Text = "Grupo Financeiro";
-            this.grupoFinanceiroToolStripMenuItem.Click += new System.EventHandler(this.grupoFinanceiroToolStripMenuItem_Click);
+            this.TSM002Caixa003Analise.Name = "TSM002Caixa003Analise";
+            this.TSM002Caixa003Analise.Size = new System.Drawing.Size(180, 22);
+            this.TSM002Caixa003Analise.Text = "Análise de Pedido";
+            this.TSM002Caixa003Analise.Click += new System.EventHandler(this.TSM002Caixa003Analise_Click);
             // 
             // FMenu
             // 
@@ -969,8 +988,10 @@
         private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar;
         private System.Windows.Forms.ToolStripMenuItem contasAPagarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar001Nova;
-        private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar002Pagamento;
+        private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar003Pagamento;
         private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grupoFinanceiroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar002Cancelar;
+        private System.Windows.Forms.ToolStripMenuItem TSM002Caixa003Analise;
     }
 }

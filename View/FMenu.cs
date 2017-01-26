@@ -268,5 +268,26 @@ namespace Sdistribuidor.View
             ObjForm.MdiParent = this;
             ObjForm.Show();
         }
+
+        private void TSM004Financeiro001ContaPagar003Pagamento_Click(object sender, EventArgs e)
+        {
+            FMT013PagamentoConta ObjForm = new FMT013PagamentoConta();
+            ObjForm.MdiParent = this;
+            ObjForm.Show();
+        }
+
+        private void TSM004Financeiro001ContaPagar002Cancelar_Click(object sender, EventArgs e)
+        {
+            FMT014CancelarConta ObjForm = new FMT014CancelarConta();
+            ObjForm.MdiParent = this;
+            ObjForm.Show();
+        }
+
+        private void TSM002Caixa003Analise_Click(object sender, EventArgs e)
+        {
+            FMT015Analise ObjForm = new FMT015Analise();
+            ObjForm.MdiParent = this;
+            ObjForm.Show();
+        }
     }
 }
