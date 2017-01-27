@@ -99,6 +99,7 @@
     <Compile Include="EntidadeView\Entidade_CurvaABC.cs" />
     <Compile Include="EntidadeView\Entidade_VwImpressaoItemPedido.cs" />
     <Compile Include="EntidadeView\Entidade_VwImpressaoPedido.cs" />
+    <Compile Include="EntidadeView\Entidade_VwListaCarne.cs" />
     <Compile Include="EntidadeView\Entidade_VWRelatorioNfEmitida.cs" />
     <Compile Include="EntidadeView\Entidade_VWVenda.cs" />
     <Compile Include="Entidade\Entidade_CartaoBandeira.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Entidade\Entidade_Cidade.cs" />
     <Compile Include="Entidade\Entidade_ContaPagar.cs" />
     <Compile Include="Entidade\Entidade_Cst.cs" />
+    <Compile Include="Entidade\Entidade_Duplicata.cs" />
     <Compile Include="Entidade\Entidade_Estoque.cs" />
     <Compile Include="Entidade\Entidade_Fatura.cs" />
     <Compile Include="Entidade\Entidade_FormaPagto.cs" />
@@ -144,6 +146,7 @@
     <Compile Include="Model\ContaPagar.cs" />
     <Compile Include="Model\Cst.cs" />
     <Compile Include="Model\DownloadNFe.cs" />
+    <Compile Include="Model\Duplicata.cs" />
     <Compile Include="Model\FormaPagtoItemFormaPagto.cs" />
     <Compile Include="Model\FuncoesGerais.cs" />
     <Compile Include="Model\Grupo.cs" />
@@ -188,6 +191,12 @@
     </Compile>
     <Compile Include="Relatorio\FR005CurvaABC.Designer.cs">
       <DependentUpon>FR005CurvaABC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FR006Carne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FR006Carne.Designer.cs">
+      <DependentUpon>FR006Carne.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatorio\FRDanfe.cs">
       <SubType>Form</SubType>
@@ -404,6 +413,9 @@
     <EmbeddedResource Include="Relatorio\FR005CurvaABC.resx">
       <DependentUpon>FR005CurvaABC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FR006Carne.resx">
+      <DependentUpon>FR006Carne.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\FRDanfe.resx">
       <DependentUpon>FRDanfe.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +429,7 @@
     <EmbeddedResource Include="Relatorio\R003Venda.rdlc" />
     <EmbeddedResource Include="Relatorio\R004NotasEmitidas.rdlc" />
     <EmbeddedResource Include="Relatorio\R005CurvaABC.rdlc" />
+    <EmbeddedResource Include="Relatorio\R006Carne.rdlc" />
     <EmbeddedResource Include="Relatorio\RItemPedido.rdlc" />
     <EmbeddedResource Include="Uc\UCFormaPagto.resx">
       <DependentUpon>UCFormaPagto.cs</DependentUpon>
@@ -523,6 +536,7 @@
     <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_CurvaABC.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VwImpressaoItemPedido.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VwImpressaoPedido.datasource" />
+    <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VwListaCarne.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VWRelatorioNfEmitida.datasource" />
     <None Include="Properties\DataSources\Sdistribuidor.EntidadeView.Entidade_VWVenda.datasource" />
     <None Include="Properties\Settings.settings">

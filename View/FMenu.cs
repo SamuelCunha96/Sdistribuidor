@@ -289,5 +289,12 @@ namespace Sdistribuidor.View
             ObjForm.MdiParent = this;
             ObjForm.Show();
         }
+
+        private void TSM001Caixa001Carne_Click(object sender, EventArgs e)
+        {
+            FR006Carne ObjForm = new FR006Carne();
+            ObjForm.MdiParent = this;
+            ObjForm.Show();
+        }
     }
 }

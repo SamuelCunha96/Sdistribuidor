@@ -401,3 +401,4 @@ C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FC004G
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT013PagamentoConta.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT014CancelarConta.resources
 C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.View.FMT015Analise.resources
+C:\Users\dp\Documents\Sistemas\Sdistribuidor\obj\Debug\Sdistribuidor.Relatorio.FR006Carne.resources

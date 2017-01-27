@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Sdistribuidor.Entidade;
 using Sdistribuidor.DAO;
+using System.Data;
 
 namespace Sdistribuidor.Model
 {
@@ -87,6 +88,21 @@ namespace Sdistribuidor.Model
         public bool Delete(Entidade_FormaPagto ObjFormaPagto)
         {
             return true;
+        }
+
+        public DataTable FormaPagtoParcelas(int idformpagto)
+        {
+            try
+            {
+                var dtret = BancoDados.Consultar(" SELECT * FROM itemformapagto WHERE id_formapagto=" + idformpagto);
+
+                return dtret;
+                
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

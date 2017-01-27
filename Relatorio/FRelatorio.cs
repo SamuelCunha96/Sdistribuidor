@@ -25,21 +25,25 @@ namespace Sdistribuidor.Relatorio
         public DateTime DtIni { get; set; }
         public DateTime DtFim { get; set; }
         public string Titulo { get; set; }
+        public bool FlContemDataEmissao = true;
         private void FRelatorio_Load(object sender, EventArgs e)
         {
             this.RVBase.LocalReport.ReportEmbeddedResource = NmRelatorioBaseLoad;
             ReportDataSource ReportDs = new ReportDataSource();
             ReportDs.Name = NmDataSet;
             ReportDs.Value = DtBaseLoad;
-            ReportParameter ParameterDtIni = new ReportParameter("DtIni", DtIni.ToShortDateString());
-            ReportParameter ParameterDtFim = new ReportParameter("DtFim", DtFim.ToShortDateString());
+            if (FlContemDataEmissao)
+            {
+                ReportParameter ParameterDtIni = new ReportParameter("DtIni", DtIni.ToShortDateString());
+                ReportParameter ParameterDtFim = new ReportParameter("DtFim", DtFim.ToShortDateString());
+                this.RVBase.LocalReport.SetParameters(ParameterDtIni);
+                this.RVBase.LocalReport.SetParameters(ParameterDtFim);
+            }
             if (!string.IsNullOrEmpty(Titulo))
             {
                 ReportParameter ParameterTitulo = new ReportParameter("Titulo", Titulo);
                 this.RVBase.LocalReport.SetParameters(ParameterTitulo);
             }
-            this.RVBase.LocalReport.SetParameters(ParameterDtIni);
-            this.RVBase.LocalReport.SetParameters(ParameterDtFim);
             this.RVBase.LocalReport.DataSources.Add(ReportDs);
             this.RVBase.RefreshReport();
         }

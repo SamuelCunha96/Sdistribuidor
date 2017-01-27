@@ -68,6 +68,7 @@
             this.caixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM002Caixa001Abrir = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM002Caixa002Pagamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM002Caixa003Analise = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM003Estoque001Consulta = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM003Estoque002Movimentar = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,6 +91,9 @@
             this.TSM001RelatorioPedido = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM001RelatorioPedido001ListaPedido = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM001RelatorioPedido002CurvaABC = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001RelatorioPedido003Reemprimir = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001Caixa = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM001Caixa001Carne = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM001RelatorioNotaFiscal = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM001RelatorioNotaFiscal001ListaNFe = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,8 +103,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TSM002Caixa003Analise = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.TbCadastro.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -572,7 +576,7 @@
             this.TSM001Movimento001Pedido,
             this.TSM001Movimento002Cancelar});
             this.TSM001MovimentoPedido.Name = "TSM001MovimentoPedido";
-            this.TSM001MovimentoPedido.Size = new System.Drawing.Size(152, 22);
+            this.TSM001MovimentoPedido.Size = new System.Drawing.Size(129, 22);
             this.TSM001MovimentoPedido.Text = "Pedido";
             // 
             // TSM001Movimento001Pedido
@@ -596,7 +600,7 @@
             this.TSM002Caixa002Pagamento,
             this.TSM002Caixa003Analise});
             this.caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
-            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.caixaToolStripMenuItem.Text = "Caixa";
             // 
             // TSM002Caixa001Abrir
@@ -612,13 +616,20 @@
             this.TSM002Caixa002Pagamento.Text = "Receber Pagamento";
             this.TSM002Caixa002Pagamento.Click += new System.EventHandler(this.TSM002Caixa002Pagamento_Click);
             // 
+            // TSM002Caixa003Analise
+            // 
+            this.TSM002Caixa003Analise.Name = "TSM002Caixa003Analise";
+            this.TSM002Caixa003Analise.Size = new System.Drawing.Size(180, 22);
+            this.TSM002Caixa003Analise.Text = "Análise de Crédito";
+            this.TSM002Caixa003Analise.Click += new System.EventHandler(this.TSM002Caixa003Analise_Click);
+            // 
             // estoqueToolStripMenuItem
             // 
             this.estoqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM003Estoque001Consulta,
             this.TSM003Estoque002Movimentar});
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.estoqueToolStripMenuItem.Text = "Estoque";
             // 
             // TSM003Estoque001Consulta
@@ -642,7 +653,7 @@
             this.contasAPagarToolStripMenuItem,
             this.contasAReceberToolStripMenuItem});
             this.TSM004Financeiro001ContaPagar.Name = "TSM004Financeiro001ContaPagar";
-            this.TSM004Financeiro001ContaPagar.Size = new System.Drawing.Size(152, 22);
+            this.TSM004Financeiro001ContaPagar.Size = new System.Drawing.Size(129, 22);
             this.TSM004Financeiro001ContaPagar.Text = "Financeiro";
             // 
             // grupoFinanceiroToolStripMenuItem
@@ -756,6 +767,7 @@
             // 
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM001RelatorioPedido,
+            this.TSM001Caixa,
             this.TSM001RelatorioNotaFiscal});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
@@ -765,31 +777,53 @@
             // 
             this.TSM001RelatorioPedido.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM001RelatorioPedido001ListaPedido,
-            this.TSM001RelatorioPedido002CurvaABC});
+            this.TSM001RelatorioPedido002CurvaABC,
+            this.TSM001RelatorioPedido003Reemprimir});
             this.TSM001RelatorioPedido.Name = "TSM001RelatorioPedido";
-            this.TSM001RelatorioPedido.Size = new System.Drawing.Size(132, 22);
+            this.TSM001RelatorioPedido.Size = new System.Drawing.Size(152, 22);
             this.TSM001RelatorioPedido.Text = "Pedido";
             // 
             // TSM001RelatorioPedido001ListaPedido
             // 
             this.TSM001RelatorioPedido001ListaPedido.Name = "TSM001RelatorioPedido001ListaPedido";
-            this.TSM001RelatorioPedido001ListaPedido.Size = new System.Drawing.Size(147, 22);
+            this.TSM001RelatorioPedido001ListaPedido.Size = new System.Drawing.Size(165, 22);
             this.TSM001RelatorioPedido001ListaPedido.Text = "Listar Pedidos";
             this.TSM001RelatorioPedido001ListaPedido.Click += new System.EventHandler(this.TSM001RelatorioPedido001ListaPedido_Click);
             // 
             // TSM001RelatorioPedido002CurvaABC
             // 
             this.TSM001RelatorioPedido002CurvaABC.Name = "TSM001RelatorioPedido002CurvaABC";
-            this.TSM001RelatorioPedido002CurvaABC.Size = new System.Drawing.Size(147, 22);
+            this.TSM001RelatorioPedido002CurvaABC.Size = new System.Drawing.Size(165, 22);
             this.TSM001RelatorioPedido002CurvaABC.Text = "Curva ABC";
             this.TSM001RelatorioPedido002CurvaABC.Click += new System.EventHandler(this.TSM001RelatorioPedido002CurvaABC_Click);
+            // 
+            // TSM001RelatorioPedido003Reemprimir
+            // 
+            this.TSM001RelatorioPedido003Reemprimir.Name = "TSM001RelatorioPedido003Reemprimir";
+            this.TSM001RelatorioPedido003Reemprimir.Size = new System.Drawing.Size(165, 22);
+            this.TSM001RelatorioPedido003Reemprimir.Text = "Reeprimir Pedido";
+            // 
+            // TSM001Caixa
+            // 
+            this.TSM001Caixa.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM001Caixa001Carne});
+            this.TSM001Caixa.Name = "TSM001Caixa";
+            this.TSM001Caixa.Size = new System.Drawing.Size(152, 22);
+            this.TSM001Caixa.Text = "Caixa";
+            // 
+            // TSM001Caixa001Carne
+            // 
+            this.TSM001Caixa001Carne.Name = "TSM001Caixa001Carne";
+            this.TSM001Caixa001Carne.Size = new System.Drawing.Size(152, 22);
+            this.TSM001Caixa001Carne.Text = "Carnê";
+            this.TSM001Caixa001Carne.Click += new System.EventHandler(this.TSM001Caixa001Carne_Click);
             // 
             // TSM001RelatorioNotaFiscal
             // 
             this.TSM001RelatorioNotaFiscal.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM001RelatorioNotaFiscal001ListaNFe});
             this.TSM001RelatorioNotaFiscal.Name = "TSM001RelatorioNotaFiscal";
-            this.TSM001RelatorioNotaFiscal.Size = new System.Drawing.Size(132, 22);
+            this.TSM001RelatorioNotaFiscal.Size = new System.Drawing.Size(152, 22);
             this.TSM001RelatorioNotaFiscal.Text = "Nota Fiscal";
             // 
             // TSM001RelatorioNotaFiscal001ListaNFe
@@ -835,6 +869,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 34);
@@ -856,31 +891,40 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(75)))), ((int)(((byte)(109)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(755, 34);
             this.panel2.TabIndex = 2;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(640, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 33);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "DevLegal";
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(255)))), ((int)(((byte)(3)))));
+            this.label3.Location = new System.Drawing.Point(625, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 33);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Dev";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // TSM002Caixa003Analise
+            // label6
             // 
-            this.TSM002Caixa003Analise.Name = "TSM002Caixa003Analise";
-            this.TSM002Caixa003Analise.Size = new System.Drawing.Size(180, 22);
-            this.TSM002Caixa003Analise.Text = "Análise de Pedido";
-            this.TSM002Caixa003Analise.Click += new System.EventHandler(this.TSM002Caixa003Analise_Click);
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label6.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(682, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 33);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Legal";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FMenu
             // 
@@ -984,7 +1028,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar;
         private System.Windows.Forms.ToolStripMenuItem contasAPagarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar001Nova;
@@ -993,5 +1037,9 @@
         private System.Windows.Forms.ToolStripMenuItem grupoFinanceiroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TSM004Financeiro001ContaPagar002Cancelar;
         private System.Windows.Forms.ToolStripMenuItem TSM002Caixa003Analise;
+        private System.Windows.Forms.ToolStripMenuItem TSM001RelatorioPedido003Reemprimir;
+        private System.Windows.Forms.ToolStripMenuItem TSM001Caixa;
+        private System.Windows.Forms.ToolStripMenuItem TSM001Caixa001Carne;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -31,5 +31,17 @@ namespace Sdistribuidor.Model
         {
             return BancoDados.Consultar(" SELECT * FROM listapedidopagamento WHERE dt_pedido between '"+ string.Format("{0:dd/MM/yyyy}", DtIni) +"' AND '"+ string.Format("{0:dd/MM/yyyy}", DtFim) + " 23:59:59' AND StPedido = '"+ StPedido +"' AND FlAvista=false AND stanalise='" + StAnalise + "' ORDER BY dt_pedido");
         }
+        public bool ResultadoAnalise(int idpedido, string stanalise)
+        {
+            try
+            {
+                BancoDados.InsertAlterarExcluir("UPDATE pedido SET stanalise='" + stanalise + "' WHERE id_pedido =" + idpedido);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false; 
+            }
+        }
     }
 }
